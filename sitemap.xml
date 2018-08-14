@@ -26,6 +26,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://nus-cs1010.github.io/1819-s1/policies/index.html</loc>
+     <lastmod>2018-08-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://nus-cs1010.github.io/1819-s1/01-program/index.html</loc>
      <lastmod>2018-08-14</lastmod>
      <changefreq>daily</changefreq>
@@ -36,47 +41,7 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://nus-cs1010.github.io/1819-s1/03-func/index.html</loc>
-     <lastmod>2018-08-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://nus-cs1010.github.io/1819-s1/04-type/index.html</loc>
-     <lastmod>2018-08-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://nus-cs1010.github.io/1819-s1/05-first-c/index.html</loc>
-     <lastmod>2018-08-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://nus-cs1010.github.io/1819-s1/06-cs1010-io/index.html</loc>
-     <lastmod>2018-08-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://nus-cs1010.github.io/1819-s1/07-arithmetic-ops/index.html</loc>
-     <lastmod>2018-08-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>https://nus-cs1010.github.io/1819-s1/readings/index.html</loc>
-     <lastmod>2018-08-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://nus-cs1010.github.io/1819-s1/style/index.html</loc>
-     <lastmod>2018-08-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://nus-cs1010.github.io/1819-s1/unix/index.html</loc>
-     <lastmod>2018-08-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://nus-cs1010.github.io/1819-s1/vim/index.html</loc>
      <lastmod>2018-08-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
