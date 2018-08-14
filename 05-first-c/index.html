@@ -1,0 +1,1083 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="https://nus-cs1010.github.io/1819-s1/05-first-c/index.html">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.2">
+    
+    
+      
+        <title>5. 1st C Program - CS1010 Programming Methodology</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.ba0fd1a6.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#unit-5-first-c-program" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://nus-cs1010.github.io/1819-s1" title="CS1010 Programming Methodology" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                CS1010 Programming Methodology
+              </span>
+              <span class="md-header-nav__topic">
+                5. 1st C Program
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/nus-cs1010/1819-s1/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    CS1010 Programming Methodology
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/nus-cs1010/1819-s1/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      About
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../about/index.html" title="About CS1010" class="md-nav__link">
+      About CS1010
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../outcomes/index.html" title="Learning Outcomes" class="md-nav__link">
+      Learning Outcomes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../schedule/index.html" title="Schedule" class="md-nav__link">
+      Schedule
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../accounts/index.html" title="Accounts" class="md-nav__link">
+      Accounts
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Notes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../01-program/index.html" title="1. Programming" class="md-nav__link">
+      1. Programming
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02-algo/index.html" title="2. Algorithms" class="md-nav__link">
+      2. Algorithms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../03-func/index.html" title="3. Functions" class="md-nav__link">
+      3. Functions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../04-type/index.html" title="4. Types" class="md-nav__link">
+      4. Types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        5. 1st C Program
+      </label>
+    
+    <a href="index.html" title="5. 1st C Program" class="md-nav__link md-nav__link--active">
+      5. 1st C Program
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variable-declaration" title="Variable Declaration" class="md-nav__link">
+    Variable Declaration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assignment-statement" title="Assignment Statement" class="md-nav__link">
+    Assignment Statement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recap" title="Recap" class="md-nav__link">
+    Recap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-2" title="Example 2" class="md-nav__link">
+    Example 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-types-in-c" title="Other Types in C" class="md-nav__link">
+    Other Types in C
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signed-vs-unsigned" title="Signed vs. Unsigned" class="md-nav__link">
+    Signed vs. Unsigned
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdinth" title="stdint.h" class="md-nav__link">
+    stdint.h
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-set-5" title="Problem Set 5" class="md-nav__link">
+    Problem Set 5
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" title="5.1" class="md-nav__link">
+    5.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" title="5.2" class="md-nav__link">
+    5.2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" title="5.3" class="md-nav__link">
+    5.3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../06-cs1010-io/index.html" title="6. CS1010 I/O Lib" class="md-nav__link">
+      6. CS1010 I/O Lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../07-arithmetic-ops/index.html" title="7. Arithmatic Ops" class="md-nav__link">
+      7. Arithmatic Ops
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../readings/index.html" title="Readings" class="md-nav__link">
+      Readings
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../style/index.html" title="Coding Style" class="md-nav__link">
+      Coding Style
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Software/Tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Software/Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../unix/index.html" title="UNIX" class="md-nav__link">
+      UNIX
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vim/index.html" title="Vim" class="md-nav__link">
+      Vim
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clang/index.html" title="CLang" class="md-nav__link">
+      CLang
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variable-declaration" title="Variable Declaration" class="md-nav__link">
+    Variable Declaration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assignment-statement" title="Assignment Statement" class="md-nav__link">
+    Assignment Statement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recap" title="Recap" class="md-nav__link">
+    Recap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-2" title="Example 2" class="md-nav__link">
+    Example 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-types-in-c" title="Other Types in C" class="md-nav__link">
+    Other Types in C
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signed-vs-unsigned" title="Signed vs. Unsigned" class="md-nav__link">
+    Signed vs. Unsigned
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stdinth" title="stdint.h" class="md-nav__link">
+    stdint.h
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-set-5" title="Problem Set 5" class="md-nav__link">
+    Problem Set 5
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" title="5.1" class="md-nav__link">
+    5.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" title="5.2" class="md-nav__link">
+    5.2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" title="5.3" class="md-nav__link">
+    5.3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/nus-cs1010/1819-s1/edit/master/docs/05-first-c.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="unit-5-first-c-program">Unit 5: First C Program</h1>
+<p>In this unit, we will write and compile your first C program.  You have already learned, conceptually, what is a variable, what is a type and what is a function.  Let's see how we apply these concepts to C.</p>
+<p>To start, let's look at a simple snippet of C code:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">square</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> 
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>The code above defines a function named <code class="codehilite">square</code>.  The word <code class="codehilite">int</code> appears <em>before</em> the name <code class="codehilite">square</code>.  <code class="codehilite">int</code> is used to signify an integer type.  Appearing before the name <code class="codehilite">square</code> tells the compiler that <code class="codehilite">square</code> is returning a value of type <code class="codehilite">int</code>.</p>
+<p>After the word <code class="codehilite">square</code>, we write the parameters to the function in parenthesis <code class="codehilite">(</code> and <code class="codehilite">)</code>.  In between <code class="codehilite">(</code> and <code class="codehilite">)</code> is <code class="codehilite">int x</code>: <code class="codehilite">x</code> is the name of the parameter, <code class="codehilite">int</code> is the type of that parameter.  </p>
+<p>To summarize, in Line 1, <code class="codehilite">int square(int x)</code> defines a function named <code class="codehilite">square</code> that takes in an integer parameter <code class="codehilite">x</code> and is returning a value which is also an integer.</p>
+<p>The next three lines are written in between curly brackets <code class="codehilite">{</code> and <code class="codehilite">}</code>.  You will see these used a lot in C and other programming languages with C-like syntaxes, such as Javascript, C++, and Java.  These curly brackets group a <em>block</em> of <em>statements</em> together.  In this example, this block defines how the function <code class="codehilite">square</code> computes the square of <code class="codehilite">x</code>, and what it returns.  This is sometimes called the <em>body of a function</em>.</p>
+<p>In this function body, there is only one statement <code class="codehilite">return x*x;</code>  within the block.  A <em>statement</em> is a unit in a programming language that expresses either a command to be executed or declares a new variable or function.  The word <code class="codehilite">return</code> says that this function <code class="codehilite">square</code> should return the following value, computed as <code class="codehilite">x*x</code> (<code class="codehilite">x</code> multiply by <code class="codehilite">x</code>).  This statement is terminated by a semicolon <code class="codehilite">;</code>.</p>
+<p>The words <code class="codehilite">int</code> and <code class="codehilite">return</code> that appears above are <em>keywords</em> defined in the C programming language, and they are reserved for the special meaning that they represent (a type and a command to return a value from a function).  We cannot repurpose keywords in C.</p>
+<p>We are now ready to write our first C program.  The first program computes the square of the hypotenuse of a right-angled triangle with a base of 4 and height of 3.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">square</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> 
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> 
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">hypotenuse_square</span><span class="p">;</span>
+
+  <span class="n">hypotenuse_square</span> <span class="o">=</span> <span class="n">square</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="n">square</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Remember that a C program consists of a bunch of functions, calling each other.  The most important function is called <code class="codehilite">main</code>, and it is the <em>entry point</em> to the program.  It is where the operating system will begin to execute the program.  So every program must define exactly one function called <code class="codehilite">main</code>.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> 
+<span class="p">{</span>
+  <span class="o">:</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p><code class="codehilite">main</code> returns an integer to the operating system, to signal to the operating system whether the program exits successfully or not.  In this case, we always return <code class="codehilite">0</code> (success) assuming that nothing goes wrong for simplicity.  This is the second example where you see the keyword <code class="codehilite">return</code> in action.</p>
+<p>In modern C, the main always return 0 when it exits.  So, we will skip this statement <code class="codehilite">return 0;</code> from now on.</p>
+<h3 id="variable-declaration">Variable Declaration</h3>
+<p>In the example above, you also see the lines</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="n">hypotenuse_square</span><span class="p">;</span>
+</pre></div>
+</td></tr></table>
+
+<p>This is declaration statement (terminated with a semicolon, again).  Each statement declares a variable with its corresponding type (<code class="codehilite">int</code> here).  We gave each variable a name, here we call the variable <code class="codehilite">hypotenuse_square</code>.</p>
+<p>Remember that <em>all variables must be declared with its corresponding type before used in C</em>.</p>
+<p>In C, a function must be either defined or declared before used as well.  In the example above, we define <code class="codehilite">square</code> before <code class="codehilite">main</code>.  If we switch the order of the two, the compiler will complain.  Unless we declare the function first.  Declaring a function means that we simply state the return type, the name, and the parameters, <em>without</em> the body.</p>
+<h3 id="assignment-statement">Assignment Statement</h3>
+<p>The next line of the code shows an example of an assignment statement.  </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>  <span class="n">hypotenuse_square</span> <span class="o">=</span> <span class="n">square</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="n">square</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+</pre></div>
+</td></tr></table>
+
+<p>An assignment operator takes the form of:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>  <span class="n">left_hand_side</span> <span class="o">=</span> <span class="n">right_hand_side</span><span class="p">;</span>
+</pre></div>
+</td></tr></table>
+
+<p>The <code class="codehilite">left_hand_side</code> must be the name of a variable.  We first evaluate the <code class="codehilite">right_hand_side</code> of the assignment statement, find its value, then put the value into the variable named on the <code class="codehilite">left_hand_side</code>.</p>
+<p>Here, on the right-hand side, we call the function <code class="codehilite">square</code>, which we defined earlier.  We call <code class="codehilite">square</code> with <em>arguments</em> <code class="codehilite">3</code> and <code class="codehilite">4</code> respectively.   We use the operator <code class="codehilite">+</code> to add the two results together.  The right-hand side should give the value 25, which we then assign to the variable <code class="codehilite">hypotenuse_square</code>.</p>
+<p>Note that we use <code class="codehilite">=</code> equal sign for assignment, NOT for checking equality.  The C notation for checking for equality is <code class="codehilite">==</code> (we will come back to this later).</p>
+<h3 id="recap">Recap</h3>
+<p>Before we move on, let's recap some concepts:</p>
+<ul>
+<li>A C program consists of functions, invoking each other.</li>
+<li>Each function is defined by its returned type, followed by its name, its parameter(s) (within a pair of parenthesis) and its body (within a pair of curly brackets).  </li>
+<li>Each function must be defined or declared before it is used.  </li>
+<li>The function body consists of one or more statements.  We have seen assignment statements (using the <code class="codehilite">=</code> operator) and return statements, using <code class="codehilite">return</code> as the keyword.</li>
+<li>Each variable must be declared before it is used.  A declaration starts with its type followed by its name.</li>
+</ul>
+<h3 id="example-2">Example 2</h3>
+<p>Let's change the program slightly, so that instead of computing the square of the hypotenuse, we compute the hypotenuse itself.  Recall that we said C provides a bunch of predefined functions, include <code class="codehilite">sqrt</code>, which computes the square root of a given number.  Since a square root of a number is not necessarily an integer, we need to use a variable with a type that can store a real number.  </p>
+<p>To represent real numbers, we commonly use the type <code class="codehilite">float</code> (which is short for a floating point number -- named so due to how a real number is represented in bits).  A <code class="codehilite">float</code> type can store 32 bits.  To double the precision (64 bits), we can use the type <code class="codehilite">double</code>.  A <code class="codehilite">long double</code> type can store either 80-bits or 128-bits, depending on implementation.</p>
+<p>But which one does <code class="codehilite">sqrt</code> returns?  To find out the exact <em>specification</em> of a pre-defined function, we can consult the manual (or <code class="codehilite">man</code> for short) pages for the function.  </p>
+<p>If you type <code class="codehilite">man sqrt</code> on the command line (or place the cursor on <code class="codehilite">sqrt</code> in <code class="codehilite">vim</code> and type <code class="codehilite">K</code> in command mode), you will see that the <code class="codehilite">sqrt</code> method has the following specification:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">double</span> <span class="nf">sqrt</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+</td></tr></table>
+
+<p>The <code class="codehilite">sqrt</code> function returns a <code class="codehilite">double</code> precision real number.  We can now modify the program above to the following:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">double</span> <span class="nf">sqrt</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">);</span> <span class="c1">// not recommended</span>
+
+<span class="kt">long</span> <span class="nf">square</span><span class="p">(</span><span class="kt">long</span> <span class="n">x</span><span class="p">)</span> 
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">double</span> <span class="nf">hypotenuse_of</span><span class="p">(</span><span class="kt">long</span> <span class="n">base</span><span class="p">,</span> <span class="kt">long</span> <span class="n">height</span><span class="p">)</span> 
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">square</span><span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="o">+</span> <span class="n">square</span><span class="p">(</span><span class="n">height</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> 
+<span class="p">{</span>
+  <span class="n">hypotenuse_of</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Note that the first line declares the function <code class="codehilite">sqrt</code>, because we need to declare a function before it is used.  Since <code class="codehilite">sqrt</code> is pre-defined elsewhere, we do not have to supply the function body here.  Such practice of declaring a predefined function ourselves, however, is not recommended.  Different platform, compilers, libraries, may provide a different specification for the same function.  As such, it is better to use the declaration from the library that provides the predefined function itself.  A library usually provides one or more <em>header files</em>, a set of files that contain function declarations, type definitions, and constant definitions.  In the case of <code class="codehilite">sqrt</code>, its declaration is contained in a header file called <code class="codehilite">math.h</code>.  To include this file, you add the line <code class="codehilite"><span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp"></span></code> at the top of the program.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp"></span>
+
+<span class="kt">long</span> <span class="nf">square</span><span class="p">(</span><span class="kt">long</span> <span class="n">x</span><span class="p">)</span> 
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">double</span> <span class="nf">hypotenuse_of</span><span class="p">(</span><span class="kt">long</span> <span class="n">base</span><span class="p">,</span> <span class="kt">long</span> <span class="n">height</span><span class="p">)</span> 
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">square</span><span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="o">+</span> <span class="n">square</span><span class="p">(</span><span class="n">height</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> 
+<span class="p">{</span>
+  <span class="n">hypotenuse_of</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>You might notice the same line appear in the man page for <code class="codehilite">sqrt</code>.  Thus, the man pages tell us which header file to include if you want to use a certain function.</p>
+<div class="admonition tips">
+<p class="admonition-title">File Extension</p>
+<p>The convention for file extension for a C program is <code class="codehilite"><span class="na">.c</span></code> and for a C header file is <code class="codehilite"><span class="na">.h</span></code>.  Even though you are allowed to name the files with any extension you like, you should stick to the convention so that it is clear to other tools/programmers what is the purpose of each file.</p>
+</div>
+<h2 id="other-types-in-c">Other Types in C</h2>
+<p>An <code class="codehilite">int</code> variable is usually 32-bits long.  If we only need 16 bits, we use the type <code class="codehilite">short int</code>, or just <code class="codehilite">short</code>.  If we only need 8-bits, we use the type <code class="codehilite">char</code> (short for character).</p>
+<p>Note that in the above, I said an <code class="codehilite">int</code> is <em>usually</em> 32 bits.  Remember (from <a href="../01-program">Unit 1</a> that a C program gets compiled into machine code for a specific CPU architecture.  The C standard only guarantees that an <code class="codehilite">int</code> is at least 16 bits.  Although most C compilers compile <code class="codehilite">int</code> to 32 bits, there is no guarantee!    </p>
+<p>If we need something more than an <code class="codehilite">int</code>, we can use <code class="codehilite">long int</code>, or just <code class="codehilite">long</code>.  The C standard guarantees that a <code class="codehilite">long</code> is at least 32 bits.  Depending on the implementation, it sometimes compiled to 32-bits, sometimes 64-bits.  To get even longer, we can use the type <code class="codehilite">long long int</code>, or just <code class="codehilite">long long</code>, which is guaranteed to be at least 64 bits<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>.</p>
+<h4 id="signed-vs-unsigned">Signed vs. Unsigned</h4>
+<p>We have seen earlier that the same sequence of bits, if interpreted as signed or unsigned, would result in a different value.  By default, all types in C refer to signed types.  If you want a variable that holds only non-negative integers, you can add the keyword <code class="codehilite">unsigned</code> to the front of the type.  Doing so would mean that the range of values you can store in the variable is doubled, without adding more bits (since the bit used to present the + or - sign is no longer needed).  </p>
+<p>For instance, since we know that <code class="codehilite">square</code> can only return a non-zero integer, we can actually declare it as:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">unsigned</span> <span class="kt">long</span> <span class="nf">square</span><span class="p">(</span><span class="kt">long</span> <span class="n">x</span><span class="p">)</span> 
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<div class="admonition note">
+<p class="admonition-title">Unsigned Real Numbers?</p>
+<p>There are no <code class="codehilite">unsigned</code> versions of <code class="codehilite">float</code> and <code class="codehilite">double</code>.  To understand the reason, we have to go further into how floating points numbers are represented in bits.  That is a topic for another module.</p>
+</div>
+<h4 id="stdinth"><code class="codehilite">stdint.h</code></h4>
+<p>Since the number of bits for <code class="codehilite">int</code>, <code class="codehilite">long</code>, and <code class="codehilite">long long</code> could defer, in order to write a C program that is portable (i.e., works on different platforms, architecture, operating systems), we have two options:</p>
+<ul>
+<li>Do not write a program that assumes a specific number of bits is used for a certain type, or</li>
+<li>Use the type defined in the header file <code class="codehilite">stdint.h</code>: <code class="codehilite">int8_t</code>, <code class="codehilite">uint8_t</code>, <code class="codehilite">int16_t</code>, <code class="codehilite">uint16_t</code>, <code class="codehilite">int32_t</code>, <code class="codehilite">uint32_t</code>, <code class="codehilite">int64_t</code>, <code class="codehilite">uint64_t</code>.  The suffix <code class="codehilite">_t</code> is a convention to indicate that this is a customized type (more on this in later units).  The prefix <code class="codehilite">u</code> indicates that the type is an unsigned type.  The numbers <code class="codehilite">8</code>, <code class="codehilite">16</code>, <code class="codehilite">32</code>, and <code class="codehilite">64</code> indicate the number of bits for each type.  Thus, <code class="codehilite">uint32_t</code> is guaranteed to be of size 32 bits, and can hold unsigned integer values from <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> to <span><span class="MathJax_Preview">2^32-1</span><script type="math/tex">2^32-1</script></span>.</li>
+</ul>
+<h2 id="problem-set-5">Problem Set 5</h2>
+<h4 id="51">5.1</h4>
+<p>In the example above, <code class="codehilite">sqrt</code> is declared to take in a parameter of type <code class="codehilite">double</code> .  But the argument that we pass in is the sum of two <code class="codehilite">int</code>, which is also an <code class="codehilite">int</code>.   Would this result in an error?  </p>
+<h4 id="52">5.2</h4>
+<p>In the code above, you see the following line:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// not recommended</span>
+</pre></div>
+</td></tr></table>
+
+<p>Find out what <code class="codehilite">//</code> means and what it is used for.</p>
+<h4 id="53">5.3</h4>
+<p>Consider the following alternative definition of <code class="codehilite">square</code></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">???</span> <span class="n">square</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>What should the return type of this <code class="codehilite">square</code> be, in order for the return type to be big enough to store all possible value for <code class="codehilite">x*x</code>?</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Adding more <code class="codehilite">long</code> does not make the integer longer, i.e., there is no <code class="codehilite">long long long int</code>.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../04-type/index.html" title="4. Types" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                4. Types
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../06-cs1010-io/index.html" title="6. CS1010 I/O Lib" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                6. CS1010 I/O Lib
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright by Wei Tsang Ooi, Department of Computer Science, National University of Singapore 2018
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.a59e2a89.js"></script>
+      
+      <script>app.initialize({version:"0.17.5",url:{base:".."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
