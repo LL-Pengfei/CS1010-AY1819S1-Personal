@@ -1,0 +1,35 @@
+article p, article li {
+  font-family: "gentium book basic";
+  line-height: 1.7em;
+}
+article p.admonition-title {
+  font-family: "Roboto";
+}
+
+h1 {
+  font-weight: bold;
+}
+
+s {
+  color: #900;
+}
+
+.md-header {
+  background-color: #990033;
+}
+
+nav.md-nav.md-nav--secondary {
+  border-left: .4rem solid #990033;
+}
+
+@media only screen and (max-width: 76.1875em) {
+  html .md-nav--primary .md-nav__title--site {
+    background-color: #990033;
+  }
+}
+
+@media only screen and (max-width: 59.9375em) {
+  .md-nav__source {
+    background-color: #880022;
+  }
+}
