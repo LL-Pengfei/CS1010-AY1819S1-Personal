@@ -12,6 +12,7 @@ pages:
   - Readings: 'readings.md'
   - Software/Tools:
       - CLang: 'clang.md'
+      - CS1010 I/O: 'library.md'
 
 # pip install pymdown-extensions
 # pip install pygments
