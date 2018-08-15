@@ -2,6 +2,37 @@
 
 To help students get started with C programming without worrying too much about the details and pitfalls of using `printf` and `scanf`, we provide a simple-to-use library to read and write integers, floating point numbers, and strings.  
 
+# Installing the Library
+
+1. To get an updated copy of the library, clone it from its git repo on GitHub with the command:
+
+```
+git clone https://github.com/nus-cs1010-1819-s1/libcs1010.git
+```
+
+It is recommended you do this in your home directory.
+
+You should see an output similar to:
+```
+Cloning into 'libcs1010'...
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+```
+
+After that, you should see a subdirectory `libcs1010` created in your current directory.  Inside, there should be a file called `Makefile`, and two subdirectories called `include` and `src`.  
+
+2. To compile the library, run
+
+```
+make
+```
+
+This should compile the file `src/cs1010.c` and create a static C library named `libcs1010.a` under the `lib` directory.
+
+# Using the Library
+
 ## Header
 
 To use the CS1010 I/O library, you should `#include` the file `cs1010.h`, like this:
@@ -14,11 +45,15 @@ at the top of your C program.
 
 ## Linking
 
-The CS1010 I/O library is provided as the file `libcs1010.a`.  To link to the library, you need to compile with `-lcs1010`.  Usually, you need to specify where you can find `cs1010.h` with the `-I` flag, and `libcs1010.a` with the `-L` flag.  Assuming they are in `./include` and `./lib` respectively, you can compile using the command line:
+The CS1010 I/O library is provided as the file `libcs1010.a`.  To link to the library, you need to compile with `-lcs1010`.  Usually, you need to specify where you can find `cs1010.h` with the `-I` flag, and `libcs1010.a` with the `-L` flag.  Assuming that you are compiling in another subdirectory under your home and `libcs1010` are located under your home directory, the header file and the library file are in `../libcs1010/include` and `../libcs1010/lib` respectively.
+
+So you compile using the command line:
 
 ```
-clang -I./include -L./lib hello.c -lcs1010
+clang -I../libcs1010/include -L../libcs1010/lib hello.c -lcs1010
 ```
+
+It is a long string to type.  We suggest that you put this in a shell script so that you just need to run the shell script to compile the program.
 
 ## Reading of a Single Value
 
