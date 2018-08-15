@@ -1,5 +1,14 @@
 # Unit 2: Computational Problems and Algorithms
 
+## Learning Outcomes:
+
+After this unit, students should:
+
+- understand the basic terminologies: computational problem solving, algorithm, flowchart, debugging, testing, variables, value, assignment
+- be familiar with the algorithm to find the maximum among a list of numbers
+- be able to trace through flowcharts and updates of variables, and argue if a given algorithm is correct or incorrect
+
+
 ## Computational Problems
 
 So, what is computational problem solving?  Let's start with the question, what is a _computational problem_?  
@@ -8,7 +17,7 @@ A computational problem is a problem that can be solved step-by-step with a comp
 
 - A _decision problem_ is one where the answer is yes or no.  For instance, "given a number `n`, is `n` even?" is a decision problem.  Some decision problems take more steps to solve than others.  For instance, "given a number `n`, is `n` prime?" takes more steps than just checking the parity of a number.
 
-- A _search problem_ is one where the solution is some values that satisfy a given condition.  For instance, we may want to compute a path from one geographical location to another on a map.
+- A _search problem_ is one where the solution consists of one or more values that satisfies a given condition.  For instance, we may want to compute a path from one geographical location to another on a map.
 
 - A _counting problem_ is one where the answer is the number of solutions to a search problem.
 
@@ -78,7 +87,7 @@ There are different ways one can describe an algorithm.  The easiest way I find 
 
 ![Flowchart](figures/max-flowchart/max-flowchart.001.png)
 
-Please spend some time to trace through the walkthrough above.  The snapshot of the values of the $i$, $l_i$, $k$, and $m$, at the point after "is $i$ equals $k$" is shown in the table below.
+Please spend some time to trace through the walkthrough above.  The snapshot of the values of the $i$, $l_i$, $k$, and $m$, at the point after "is $i$ equals $k$" is shown in the table below (except for the first row, which shows the value just before entering "is $i$ equals $k$.").
 
 | Integers Scanned | $i$ | $l_i$ | $k$ | Maximum So Far ($m$) |
 |------------------|-----|-------|-----|----------------|
