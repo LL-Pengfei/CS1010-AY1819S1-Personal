@@ -1,12 +1,11 @@
-# Unit 1: Introduction
+# Unit 1: What is a Program?
 
-## Learning Outcomes:
+## Learning Outcomes
 
-After this lecture, students should:
+After this unit, students should:
 
 - have an idea of what is a program and how a program is executed by a computer
-- understand the basic terminologies: machine code, assembly language, a (high-level) programming language, computational problem solving, algorithm, flowchart, debugging, testing, variables, value, assignment.
-- be familiar with the algorithm to find the maximum among a list of numbers
+- understand the basic terminologies: machine code, assembly language, and higher-level programming languages
 
 ## What is a (computer) program?
 
@@ -18,7 +17,7 @@ Programming is the art and science of writing a computer program, and that is wh
 
 In order to learn how to write a program, it is important to have an overview of how a computer executes a program.  You will learn in details how this is done in CS2100/CS2106 or EE2024/CG2271, but for CS1010, we will take a very simplistic and high-level view of this process.
 
-The two important components of a computer we will discuss for CS1010 is the CPU, or _central processing unit_ and the RAM, or _random access memory_.  The memory is where we store the data to be processed or manipulated by the CPU, as well as the instructions to do so.  A memory location is addressable using a _memory address_.  
+The two important components of a computer we will discuss for CS1010 is the CPU, or _central processing unit_ and the memory, which is a generalized term for where we store the data to be processed or manipulated by the CPU, as well as the instructions to do so.  A memory location is addressable using a _memory address_.  
 
 The instructions to the CPU comes in the form of _machine code_, a sequence of bits (1s and 0s) that is interpreted and then followed by the CPU to do certain things.  These machine code could instruct the CPU, for instance, to compare if a particular number at a certain memory location is more than 0, to add one number to another, or to execute another instruction at another memory location.  The data stored in the memory is also stored as a sequence of 1s and 0s.
 
