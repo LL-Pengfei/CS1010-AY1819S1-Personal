@@ -6,20 +6,20 @@ This is a tentative schedule for CS1010.
 
 Week | Date       | Topics | Labs | 
 -----| ---------- | ------ | -----| 
-1    | 2018-08-13 | 1. Introduction: What is a program?  What is computational problem solving? |
-2    | 2018-08-20 | 2. Your first C program: From C to executable, types, arrays, and memory model |
-3    | 2018-08-27 | 3. Mathematical expression, functional abstraction, and wishful thinking |  Lab 0: Warm Up
-4    | 2018-09-03 | 4. Conditional and loops I, using libraries | Lab 1
-5    | 2018-09-10 | 5. Conditional and loops II | Lab 2
-6    | 2018-09-17 | 6. Pointers and strings | Lab 3 
-     | 2018-09-24 | Break | |
+1    | 2018-08-13 | Units 1-2: Computational Problem Solving 
+2    | 2018-08-20 | Units 3-4: Functions & Types
+3    | 2018-08-27 | Units 5-7: Basic C programs
+4    | 2018-09-03 | Conditionals | Lab 1
+5    | 2018-09-10 | Arrays and Loops | Lab 2
+6    | 2018-09-17 | Pointers and Strings | Lab 3 
+-    | 2018-09-24 | Break | |
 7    | 2018-10-01 | Midterm | PE 1
-8    | 2018-10-08 | 7. Nested loop, sorting | Lab 4
-9    | 2018-10-15 | 8. Recursion, searching | Lab 5
-10   | 2018-10-22 | 9. Composite data type | Lab 6
-11   | 2018-10-29 | 10. I/O | Lab 7 
-12   | 2018-11-05 | 11. Modular C programming | PE 2
-13   | 2018-11-12 | 12. Recap | Lab 8
+8    | 2018-10-08 | Sorting | Lab 4
+9    | 2018-10-15 | Searching | Lab 5
+10   | 2018-10-22 | Composite Data Type | Lab 6
+11   | 2018-10-29 | I/O | Lab 7 
+12   | 2018-11-05 | Modular C programming | PE 2
+13   | 2018-11-12 | Recap | Lab 8
 
 ## Tutorial Time / Venue
 
