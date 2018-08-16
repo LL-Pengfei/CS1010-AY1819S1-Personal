@@ -1,6 +1,6 @@
 pages:
   - Home: 'index.md'
-  - About:
+  - General:
       - About CS1010: 'about.md'
       - Learning Outcomes: 'outcomes.md'
       - Schedule: 'schedule.md'
@@ -13,13 +13,14 @@ pages:
   - Software/Tools:
       - CLang: 'clang.md'
       - CS1010 I/O: 'library.md'
+      - Programming Environments: 'environments.md'
 
 # pip install pymdown-extensions
 # pip install pygments
 site_name: CS1010 Programming Methodology
 repo_url: https://github.com/nus-cs1010/1819-s1
 site_url: https://nus-cs1010.github.io/1819-s1
-copyright: Copyright by Wei Tsang Ooi, Department of Computer Science, National University of Singapore 2018
+copyright: Copyright by Department of Computer Science, National University of Singapore 2018
 remote_branch: gh-pages
 use_directory_urls: false
 markdown_extensions:
