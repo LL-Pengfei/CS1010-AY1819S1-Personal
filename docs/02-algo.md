@@ -87,7 +87,7 @@ There are different ways one can describe an algorithm.  The easiest way I find 
 
 ![Flowchart](figures/max-flowchart/max-flowchart.001.png)
 
-Please spend some time to trace through the walkthrough above.  The snapshot of the values of the $i$, $l_i$, $k$, and $m$, at the point after "is $i$ equals $k$" is shown in the table below (except for the first row, which shows the value just before entering "is $i$ equals $k$.").
+Please spend some time to trace through the walkthrough above.  The snapshot of the values of the $i$, $l_i$, $k$, and $m$, at the point after "is $i$ equals $k$" is shown in the table below {++(except for the first row, which shows the value just before entering "is $i$ equals $k$")++}.
 
 | Integers Scanned | $i$ | $l_i$ | $k$ | Maximum So Far ($m$) |
 |------------------|-----|-------|-----|----------------|
