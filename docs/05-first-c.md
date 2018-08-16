@@ -179,13 +179,15 @@ unsigned long square(long x)
 }
 ```
 
+For most practical purposes in CS1010, a (signed) `long` suffices.  We introduce the notion of `signed` vs. `unsigned` for your information so that you know what they are when you come across them in others source code.  Mixing `signed` and `unsigned` can lead to subtle bugs in your code.  As such, _we will only use signed `long` for CS1010_.  You may choose to use them appropriately in other context, especially for embedded system or low-level programming.
+
 !!! note "Unsigned Real Numbers?"
     There are no `unsigned` versions of `float` and `double`.  To understand the reason, we have to go further into how floating points numbers are represented in bits.  That is a topic for another module.
 
 
 #### `stdint.h`
 
-Since the number of bits for `int`, `long`, and `long long` could defer, in order to write a C program that is portable (i.e., works on different platforms, architecture, operating systems), we have two options:
+Since the number of bits for `int`, `long`, and `long long` could differ, in order to write a C program that is portable (i.e., works on different platforms, architecture, operating systems), we have two options:
 
 - Do not write a program that assumes a specific number of bits is used for a certain type, or
 - Use the type defined in the header file `stdint.h`: `int8_t`, `uint8_t`, `int16_t`, `uint16_t`, `int32_t`, `uint32_t`, `int64_t`, `uint64_t`.  The suffix `_t` is a convention to indicate that this is a customized type (more on this in later units).  The prefix `u` indicates that the type is an unsigned type.  The numbers `8`, `16`, `32`, and `64` indicate the number of bits for each type.  Thus, `uint32_t` is guaranteed to be of size 32 bits, and can hold unsigned integer values from $0$ to $2^32-1$.
@@ -198,17 +200,7 @@ Since the number of bits for `int`, `long`, and `long long` could defer, in orde
 
 In the example above, `sqrt` is declared to take in a parameter of type `double` .  But the argument that we pass in is the sum of two `int`, which is also an `int`.   Would this result in an error?  
 
-#### 5.2 
-
-In the code above, you see the following line:
-
-```C
-// not recommended
-```
-
-Find out what `//` means and what it is used for.
-
-#### 5.3 
+#### 5.2
 
 Consider the following alternative definition of `square`
 
