@@ -111,7 +111,7 @@ What is the value of variable `half` after the operation above?
 
 It got to be 1.5, right?  
 
-It turns out that, after executing the code above, the value of `half` is 1.0.  
+It turns out that, after executing the code above, the value of `half` is 1.0.  :open_mouth:
 
 To understand this, first, let's see what happen when we assign a floating point number to an integer type:
 
@@ -121,7 +121,7 @@ int x = 1.5;
 
 C truncates the floating number and only stores the integer part of the value, 1 in this case, in `x`.
 
-Second, when we perform an arithmatic operation, the resulting value will be an integer if both values are integer types.  If one of the operands is a floating point number, the result will be a floating point number[^1].  
+Second, when we perform an arithmatic operation, the resulting value will be an integer if both values are integer types.  If one of the operands is a floating point number, the result will be a floating point number[^1].
 
 Since 3 and 2 are both integers, the resulting value 1.5 are stored in an integer, which cause it to become 1.  We then store 1 into a `double` variable, causing the value of `half` to become `1.0`.
 
@@ -140,4 +140,38 @@ double half = 3/(double)2;
 
 The second fix above explicitly convert the type, or _cast_ the type of value 2 into a `double`.
 
-^1: The actual rules used by C, called _integer promotion_ and _usual arithmatic conversion_, are much more complex and are outside the scope of CS1010.  You should take a note of this, however, and in later part of your study or career, if you need to delve deep in writing or debugging C code, take a look at [this](https://wiki.sei.cmu.edu/confluence/display/c/INT02-C.+Understand+integer+conversion+rules).
+[^1]: The actual rules used by C, called _integer promotion_ and _usual arithmatic conversion_, are much more complex and are outside the scope of CS1010.  You should take a note of this, however, and in later part of your study or career, if you need to delve deep in writing or debugging C code, take a look at [this](https://wiki.sei.cmu.edu/confluence/display/c/INT02-C.+Understand+integer+conversion+rules).
+
+## Avoid Increment / Decrement Operator 
+
+If you read C code in other places, you will certainly come across the increment or decrement operator, `++` or `--`.  The operators add one and minus one from the operand respectively.  So, the statement
+
+```C
+index += 1;
+```
+
+can be further shorten into 
+
+```
+index++;
+```
+
+and the statement
+
+```C
+index -= 1;
+```
+
+can be further shorten into 
+
+```
+index--;
+```
+
+Using these two operators only shorten your code by two characters per statement, but introduces several issues.  As such, we _ban the use of both increment and decrement operator in CS1010_.
+
+!!! note "Why `++` and `--` are not welcome in CS1010"
+    The `++` and `--` operators not only modify the value of the operand, it also returns a value.  We can write `j = i++;` to both increment `i` and assign the pre-incremented value of `i` to `j`.  In C, we can also write `j = ++i;`, which again, increment `i`, and assign the post-incremented value of `i` to `j`.  Things get tricky, when we write `i = i++;`, it is not clear how to interpret this.  The C standard leaves this behaviour undefined and leave it to the compiler to define its behavior.  Wei Tsang thinks that introducing all these complexities just to save two characters is not warranted.  So, no `++` and `--` in CS1010 please!
+    
+
+    
