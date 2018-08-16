@@ -11,9 +11,10 @@ pages:
       - 2. Computational Problem &amp; Algorithms: '02-algo.md'
   - Readings: 'readings.md'
   - Software/Tools:
+      - Programming Environments: 'environments.md'
+      - UNIX: 'unix.md'
       - CLang: 'clang.md'
       - CS1010 I/O: 'library.md'
-      - Programming Environments: 'environments.md'
 
 # pip install pymdown-extensions
 # pip install pygments
