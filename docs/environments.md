@@ -66,3 +66,20 @@ ssh -L 1010:pe111.comp.nus.edu.sg:22 <username>@sunfire.comp.nus.edu.sg
 This command opens an SSH tunnel from port `1010` of your machine to port `22` (the default SSH port) of `pe111.comp.nus.edu.sg` via `sunfire`.  After successful login, open a separate SSH (or SCP) connection from your machine to `localhost:1010` to access the VM.
 
 [`PuTTY`](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) supports SSH port forwarding, so this setup can also be used on Windows.
+
+## Setting up SSH Keys
+
+Once you are comfortable with UNIX, you can set up a pair of public/private keys for authentication.  
+
+You can use
+```
+ssh-keygen -t rsa
+```
+
+to generate a pair of keys on your local computer.  Keep the private key `id_rsa` on your local machine in the hidden `~/.ssh` directory, and copy the public key `id_rsa.pub` to your home directory on PE `pe111`.  On `pe111`, run
+```
+cat id_rsa.pub >> ~/.ssh/authorized_keys
+```
+
+Make sure that the permission for `.ssh` both on local machine and on PE is set to `700` and the files `id_rsa` on local machine and `authorized_keys` on remote machine is set to `600`.  Once setup, you need not enter your password every time you run `ssh` or `scp`.  
+
