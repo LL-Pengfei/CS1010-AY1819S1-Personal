@@ -418,30 +418,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../clang/index.html" title="CLang" class="md-nav__link">
-      CLang
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../library/index.html" title="CS1010 I/O" class="md-nav__link">
-      CS1010 I/O
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
 
 
@@ -531,6 +507,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#setting-up-ssh-keys" title="Setting up SSH Keys" class="md-nav__link">
+    Setting up SSH Keys
+  </a>
+  
+</li>
+      
       
       
       
@@ -539,6 +522,42 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../unix/index.html" title="UNIX" class="md-nav__link">
+      UNIX
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clang/index.html" title="CLang" class="md-nav__link">
+      CLang
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../library/index.html" title="CS1010 I/O" class="md-nav__link">
+      CS1010 I/O
+    </a>
   </li>
 
         
@@ -628,6 +647,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#setting-up-ssh-keys" title="Setting up SSH Keys" class="md-nav__link">
+    Setting up SSH Keys
+  </a>
+  
+</li>
+      
       
       
       
@@ -695,6 +721,17 @@
 </td></tr></table>
 This command opens an SSH tunnel from port <code class="codehilite">1010</code> of your machine to port <code class="codehilite">22</code> (the default SSH port) of <code class="codehilite">pe111.comp.nus.edu.sg</code> via <code class="codehilite">sunfire</code>.  After successful login, open a separate SSH (or SCP) connection from your machine to <code class="codehilite"><span class="n">localhost</span><span class="o">:</span><span class="mi">1010</span></code> to access the VM.</p>
 <p><a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html"><code class="codehilite">PuTTY</code></a> supports SSH port forwarding, so this setup can also be used on Windows.</p>
+<h2 id="setting-up-ssh-keys">Setting up SSH Keys</h2>
+<p>Once you are comfortable with UNIX, you can set up a pair of public/private keys for authentication.  </p>
+<p>You can use
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ssh-keygen -t rsa
+</pre></div>
+</td></tr></table></p>
+<p>to generate a pair of keys on your local computer.  Keep the private key <code class="codehilite">id_rsa</code> on your local machine in the hidden <code class="codehilite">~/.ssh</code> directory, and copy the public key <code class="codehilite">id_rsa.pub</code> to your home directory on PE <code class="codehilite">pe111</code>.  On <code class="codehilite">pe111</code>, run
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cat id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys
+</pre></div>
+</td></tr></table></p>
+<p>Make sure that the permission for <code class="codehilite"><span class="na">.ssh</span></code> both on local machine and on PE is set to <code class="codehilite">700</code> and the files <code class="codehilite">id_rsa</code> on local machine and <code class="codehilite">authorized_keys</code> on remote machine is set to <code class="codehilite">600</code>.  Once setup, you need not enter your password every time you run <code class="codehilite">ssh</code> or <code class="codehilite">scp</code>.  </p>
                 
                   
                 
@@ -715,7 +752,7 @@ This command opens an SSH tunnel from port <code class="codehilite">1010</code> 
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../library/index.html" title="CS1010 I/O" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../readings/index.html" title="Readings" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -724,11 +761,25 @@ This command opens an SSH tunnel from port <code class="codehilite">1010</code> 
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                CS1010 I/O
+                Readings
               </span>
             </div>
           </a>
         
+        
+          <a href="../unix/index.html" title="UNIX" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                UNIX
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>
