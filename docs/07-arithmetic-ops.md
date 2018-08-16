@@ -170,8 +170,4 @@ index--;
 
 Using these two operators only shorten your code by two characters per statement, but introduces several issues.  As such, we _ban the use of both increment and decrement operator in CS1010_.
 
-!!! note "Why `++` and `--` are not welcome in CS1010"
-    The `++` and `--` operators not only modify the value of the operand, it also returns a value.  We can write `j = i++;` to both increment `i` and assign the pre-incremented value of `i` to `j`.  In C, we can also write `j = ++i;`, which again, increment `i`, and assign the post-incremented value of `i` to `j`.  Things get tricky, when we write `i = i++;`, it is not clear how to interpret this.  The C standard leaves this behaviour undefined and leave it to the compiler to define its behavior.  Wei Tsang thinks that introducing all these complexities just to save two characters is not warranted.  So, no `++` and `--` in CS1010 please!
-    
-
-    
+So, why aren't `++` and `--` welcomed in CS1010?  The `++` and `--` operators not only modify the value of the operand, it also returns a value.  We can write `j = i++;` to both increment `i` and assign the pre-incremented value of `i` to `j`.  In C, we can also write `j = ++i;`, which again, increment `i`, and assign the post-incremented value of `i` to `j`.  Things get tricky, when we write `i = i++;`, it is not clear how to interpret this.  The C standard leaves this behaviour undefined and leave it to the compiler to define its behavior.  Wei Tsang thinks that introducing all these complexities just to save two characters is not warranted.
