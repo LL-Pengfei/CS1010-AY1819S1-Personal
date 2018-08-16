@@ -471,33 +471,26 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#accessing-the-pe-hosts" title="Accessing the PE Hosts" class="md-nav__link">
-    Accessing the PE Hosts
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#basic-requirements" title="Basic Requirements" class="md-nav__link">
     Basic Requirements
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#the-command-to-ssh" title="The Command to SSH" class="md-nav__link">
     The Command to SSH
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#accessing-the-pe-hosts-from-outside-soc" title="Accessing The PE Hosts from Outside SoC" class="md-nav__link">
     Accessing The PE Hosts from Outside SoC
   </a>
   
-</li>
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#using-soc-vpn" title="Using SoC VPN" class="md-nav__link">
@@ -575,33 +568,26 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#accessing-the-pe-hosts" title="Accessing the PE Hosts" class="md-nav__link">
-    Accessing the PE Hosts
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#basic-requirements" title="Basic Requirements" class="md-nav__link">
     Basic Requirements
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#the-command-to-ssh" title="The Command to SSH" class="md-nav__link">
     The Command to SSH
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#accessing-the-pe-hosts-from-outside-soc" title="Accessing The PE Hosts from Outside SoC" class="md-nav__link">
     Accessing The PE Hosts from Outside SoC
   </a>
   
-</li>
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#using-soc-vpn" title="Using SoC VPN" class="md-nav__link">
@@ -668,8 +654,7 @@
 <p>You can choose which of the 10 hosts to use.  You share the same home directory across all 10 hosts (this home directory, however, is different from that of <code class="codehilite">sunfire</code>).</p>
 <p>For simplicity, the following guide uses <code class="codehilite">pe111</code> in all examples.  Do keep in mind that you can use other hosts for CS1010 to spread out the load.</p>
 <p>While it is possible for you to complete the programming assignments on your own computers, the practical exams are done in a controlled environment using the desktop PCs in the programming labs.  It is therefore advisable for you to familiarize with accessing remote computing servers via <code class="codehilite">ssh</code> and edit your program with either <code class="codehilite">vim</code> or <code class="codehilite">macro</code>.</p>
-<h2 id="accessing-the-pe-hosts">Accessing the PE Hosts</h2>
-<h3 id="basic-requirements">Basic Requirements</h3>
+<h2 id="basic-requirements">Basic Requirements</h2>
 <ol>
 <li>
 <p>You need to have an SoC UNIX account.  If you do not have one, you can <a href="https://mysoc.nus.edu.sg/~newacct/">apply for one online</a>.</p>
@@ -682,7 +667,7 @@
 </li>
 </ol>
 <p>For older versions of Windows, such as those used in the SoC's programming labs, you can check out <a href="https://www.netsarang.com/products/xsh_overview.html">XShell 6</a> (free for home/school use), or <a href="https://www.putty.org">PuTTY</a>.  These are GUI-based programs so the command lines instructions below do not apply.</p>
-<h3 id="the-command-to-ssh">The Command to SSH</h3>
+<h2 id="the-command-to-ssh">The Command to SSH</h2>
 <p>Run:
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ssh &lt;username&gt;@pe111.comp.nus.edu.sg
 </pre></div>
@@ -692,7 +677,7 @@
 </pre></div>
 </td></tr></table></p>
 <p>After the command above, following the instructions on the screen.  The first time you ever connect to <code class="codehilite">pe111.comp.nus.edu.sg</code>, you will be warned that you are connecting to a previously unknown host.  Say <code class="codehilite">yes</code>, and you will be prompted with your SoC UNIX password.</p>
-<h3 id="accessing-the-pe-hosts-from-outside-soc">Accessing The PE Hosts from Outside SoC</h3>
+<h2 id="accessing-the-pe-hosts-from-outside-soc">Accessing The PE Hosts from Outside SoC</h2>
 <p>The PE hosts can only be accessed from within the School of Computing networks.  If you want to access it from outside, there are two ways.</p>
 <h3 id="using-soc-vpn">Using SoC VPN</h3>
 <p>One way is to set up a Virtual Private Network (VPN) (See <a href="https://dochub.comp.nus.edu.sg/cf/guides/network/vpn_setup_guide">instruction here</a>.  The staff at <code class="codehilite">helpdesk@comp.nus.edu.sg</code> or the IT helpdesk in COM1, Level 1, will be able to help with you setting up if needed.</p>
