@@ -12,9 +12,7 @@ For simplicity, the following guide uses `pe111` in all examples.  Do keep in mi
 
 While it is possible for you to complete the programming assignments on your own computers, the practical exams are done in a controlled environment using the desktop PCs in the programming labs.  It is therefore advisable for you to familiarize with accessing remote computing servers via `ssh` and edit your program with either `vim` or `macro`.
 
-## Accessing the PE Hosts
-
-### Basic Requirements
+## Basic Requirements
 
 1. You need to have an SoC UNIX account.  If you do not have one, you can [apply for one online](https://mysoc.nus.edu.sg/~newacct/).
 
@@ -24,7 +22,7 @@ While it is possible for you to complete the programming assignments on your own
 
 For older versions of Windows, such as those used in the SoC's programming labs, you can check out [XShell 6](https://www.netsarang.com/products/xsh_overview.html) (free for home/school use), or [PuTTY](https://www.putty.org).  These are GUI-based programs so the command lines instructions below do not apply.
 
-### The Command to SSH
+## The Command to SSH
 
 Run:
 ```
@@ -38,7 +36,7 @@ ssh ooiwt@pe111.comp.nus.edu.sg
 
 After the command above, following the instructions on the screen.  The first time you ever connect to `pe111.comp.nus.edu.sg`, you will be warned that you are connecting to a previously unknown host.  Say `yes`, and you will be prompted with your SoC UNIX password.
 
-### Accessing The PE Hosts from Outside SoC
+## Accessing The PE Hosts from Outside SoC
 
 The PE hosts can only be accessed from within the School of Computing networks.  If you want to access it from outside, there are two ways.
 
