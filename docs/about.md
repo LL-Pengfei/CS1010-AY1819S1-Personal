@@ -17,6 +17,7 @@ This module introduces the fundamental concepts of problem solving by computing 
 
 - **Undergraduate Discussion Leaders**:
 
+    - Archana Pradeep
     - Au Liang Jun
     - Chai Jie Feng (Jack)
     - Chua Jun Hui
