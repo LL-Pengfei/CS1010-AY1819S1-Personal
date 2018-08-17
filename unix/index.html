@@ -376,6 +376,30 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../03-func/index.html" title="3. Functions" class="md-nav__link">
+      3. Functions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../04-type/index.html" title="4. Types" class="md-nav__link">
+      4. Types
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -742,7 +766,7 @@
 </pre></div>
 </td></tr></table>
 
-<p>This interface is provided by a UNIX shell -- this shell sits in a loop and wait for users to enter a command, then it interprets and executes the command.  There are many versions of shells, the default shell for our PE is <code class="codehilite">bash</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>.</p>
+<p>This interface is provided by a UNIX bash -- this shell sits in a loop and wait for users to enter a command, then it interprets and executes the command.  There are many versions of shells, the default shell for our PE is <code class="codehilite">bash</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>.</p>
 <p><em>The following is adapted for CS1010 from <a href="http://www.comp.nus.edu.sg/~cs1020/4_misc/cs1010_lect/2014/intro_lab/gettingStarted.html">the instructions created by Aaron Tan</a>. Bugs are mine.</em>  </p>
 <p>The power of UNIX stems from the many commands it offers. The following are a few commonly used commands. This list is by no means exhaustive and you are urged to explore on your own. Note that UNIX commands are <em>case-sensitive</em>.</p>
 <p>All commands are to be entered after the UNIX prompt of the form</p>
@@ -770,7 +794,7 @@ ooiwt@pe111:~$
 </pre></div>
 </td></tr></table>
 
-<p>If you do not have any regular files in your home directory, as you should when you first login, you should immediately return to the shell prompt.  </p>
+<p>If you do not have any regular files in your home directory, as you should when you first login, you should immediately return to the bash prompt.  </p>
 <div class="admonition note">
 <p class="admonition-title">Rule of Silence</p>
 <p>UNIX follows the <em>rule of silence</em>: programs should not print unnecessary output, to allow other programs and users to easily parse the output from one program.  So, if <code class="codehilite">ls</code> has nothing to list, it will list nothing (as oppose to, say, printing "This is an empty directory.")</p>
@@ -877,7 +901,7 @@ hello_world.java
 </td></tr></table>
 
 <div class="admonition tip">
-<p class="admonition-title">Use TAB for name Completion</p>
+<p class="admonition-title">Use TAB for Name Completion</p>
 <p>If you have a very long file name, you may use UNIX's filename completion feature to reduce typing. For instance, you may type:
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ooiwt@pe111:~/tut01$ mv h
 </pre></div>
@@ -899,8 +923,23 @@ ooiwt@pe111:~/tut01$
 <p class="admonition-title">rm -rf *</p>
 <p>While UNIX command line provides lots of flexibility and power, with great power comes great responsibility.  Some of the commands are extremely dangerous.  <code class="codehilite">rm -rf *</code> is the most famous one.  The notation <code class="codehilite">*</code> refers to all files, and the flag <code class="codehilite">-f</code> means forceful deletion (no question asked!) and <code class="codehilite">-r</code> means remove recursively everything under the current directory tree.  Accidentally running this command has ruined many files.  <a href="https://www.quora.com/What-are-some-crazy-rm-rf-stories-you-have-heard-about">Read more here</a></p>
 </div>
-<p><code class="codehilite">rm</code> comes with a <code class="codehilite">-i</code> flag that interactively ask you if you are sure if you want to delete a file.  It is a good idea to always run <code class="codehilite">rm -i</code>.  In case you format, I suggest that you <code class="codehilite">alias</code> the command <code class="codehilite">rm</code> to <code class="codehilite">rm -i</code> by inserting this line into the file <code class="codehilite">~/.bashrc</code>.</p>
+<p><code class="codehilite">rm</code> comes with a <code class="codehilite">-i</code> flag that interactively ask you if you are sure if you want to delete a file.  It is a good idea to always run <code class="codehilite">rm -i</code>.  On <code class="codehilite">pe111</code>, we have configured everyone's account so that <code class="codehilite">rm</code> is aliased to <code class="codehilite">rm -i</code> by default.  So when you run <code class="codehilite">rm hello.c</code>, it actually runs <code class="codehilite">rm -i hello.c</code>.  </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ooiwt@pe111:~/tut01$ rm hello.c
+rm: remove regular file <span class="s1">&#39;hello.c&#39;</span>? 
+</pre></div>
+</td></tr></table>
+
+<p>Type <code class="codehilite">y</code> or <code class="codehilite">n</code> to answer yes or no respectively.</p>
+<p>If you setup your own UNIX OS, you should add this alias </p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">alias</span> <span class="nv">rm</span><span class="o">=</span><span class="s2">&quot;rm -i&quot;</span>
+</pre></div>
+</td></tr></table>
+
+<p>to your <code class="codehilite"><span class="na">.bashrc</span></code> (Google to find out how).  Other useful aliases to avoid accidentally overwriting existing files are:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">alias</span> <span class="nv">mv</span><span class="o">=</span><span class="s2">&quot;mv -i&quot;</span>
+<span class="nb">alias</span> <span class="nv">cp</span><span class="o">=</span><span class="s2">&quot;cp -i&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -916,7 +955,7 @@ ooiwt@pe111:~/tut01$
 <p>In <code class="codehilite">less</code>, use <code class="codehilite">&lt;space&gt;</code> to move down one page, <code class="codehilite">b</code> to move Back up one page, and <code class="codehilite">q</code> to Quit.</p>
 <h2 id="man-online-manual"><code class="codehilite">man</code>: Online MANual</h2>
 <p>An online help facility is available in UNIX via the <code class="codehilite">man</code> command (<code class="codehilite">man</code> stands for MANual). To look for more information about any UNIX command, for example, <code class="codehilite">ls</code>, type <code class="codehilite">man ls</code>. Type <code class="codehilite">man man</code> and refer to Man Pages to find out more about the facility. To exit <code class="codehilite">man</code>, press <code class="codehilite">q</code>.</p>
-<p>Now that you are familiar with how the UNIX shell works, I won't show the command prompt any more in the rest of this article.</p>
+<p>Now that you are familiar with how the UNIX bash works, I won't show the command prompt any more in the rest of this article.</p>
 <h2 id="chmod-changing-unix-file-permission"><code class="codehilite">chmod</code>: Changing UNIX File Permission</h2>
 <p>It is important to guide our files properly on a multi-user system where users share the same file system.  UNIX has a simple mechanism to for ensuring that: every file and directory has nine bits of access permission, corresponds to three access operations, read (<code class="codehilite">r</code>), write (<code class="codehilite">w</code>), and execute (<code class="codehilite">x</code>), for four classes of users, the user who owns of the file (<code class="codehilite">u</code>), users in the same group as the owner (<code class="codehilite">g</code>), all other users (<code class="codehilite">o</code>), and all users (<code class="codehilite">a</code>) (union of all three classes before)</p>
 <p>When you run <code class="codehilite">ls -l</code>, you will see the permission encoded as strings that look like <code class="codehilite">-rw-------</code> or <code class="codehilite">drwx--x--x</code> besides other file information.   </p>
@@ -994,7 +1033,7 @@ ooiwt@pe111:~/tut01$
 </td></tr></table>
 
 <p>Recall that a single dot <code class="codehilite">.</code> refers to the current directory.</p>
-<p>The <code class="codehilite">./</code> however is redundant unless you are executing a command.  Since, by specifying a file name or a directory without a path (i.e., not using any <code class="codehilite">/</code>), the shell looks for the file or directory in the current directory.  So, we could just do:</p>
+<p>The <code class="codehilite">./</code> however is redundant unless you are executing a command.  Since, by specifying a file name or a directory without a path (i.e., not using any <code class="codehilite">/</code>), the bash looks for the file or directory in the current directory.  So, we could just do:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cp hello.c hello_world.c
 </pre></div>
 </td></tr></table>
@@ -1008,7 +1047,7 @@ ooiwt@pe111:~/tut01$
 <hr />
 <ol>
 <li id="fn:1">
-<p>I run <code class="codehilite">fish</code> on my macOS, as you might have noticed during the in-class demos.  You can use any shell you like, if you know what you are doing.  Otherwise, <code class="codehilite">bash</code> is a popular one.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>I run <code class="codehilite">fish</code> on my macOS, as you might have noticed during the in-class demos.  You can use any bash you like, if you know what you are doing.  Otherwise, <code class="codehilite">bash</code> is a popular one.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
