@@ -9,6 +9,8 @@ pages:
   - Notes:
       - 1. What is a Program?: '01-program.md'
       - 2. Computational Problem &amp; Algorithms: '02-algo.md'
+      - 3. Functions: '03-func.md'
+      - 4. Types: '04-type.md'
   - Readings: 'readings.md'
   - Software/Tools:
       - Programming Environments: 'environments.md'

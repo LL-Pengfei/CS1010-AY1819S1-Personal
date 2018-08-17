@@ -13,10 +13,10 @@ Once you are connected, you should see a prompt like this.
 ooiwt@pe111:~$
 ```
 
-This interface is provided by a UNIX shell -- this shell sits in a loop and wait for users to enter a command, then it interprets and executes the command.  There are many versions of shells, the default shell for our PE is `bash`[^1].
+This interface is provided by a UNIX bash -- this shell sits in a loop and wait for users to enter a command, then it interprets and executes the command.  There are many versions of shells, the default shell for our PE is `bash`[^1].
 
 
-[^1]: I run `fish` on my macOS, as you might have noticed during the in-class demos.  You can use any shell you like, if you know what you are doing.  Otherwise, `bash` is a popular one.
+[^1]: I run `fish` on my macOS, as you might have noticed during the in-class demos.  You can use any bash you like, if you know what you are doing.  Otherwise, `bash` is a popular one.
 
 _The following is adapted for CS1010 from [the instructions created by Aaron Tan](http://www.comp.nus.edu.sg/~cs1020/4_misc/cs1010_lect/2014/intro_lab/gettingStarted.html). Bugs are mine._  
 
@@ -55,7 +55,7 @@ ooiwt@pe111:~$ ls
 ooiwt@pe111:~$
 ```
 
-If you do not have any regular files in your home directory, as you should when you first login, you should immediately return to the shell prompt.  
+If you do not have any regular files in your home directory, as you should when you first login, you should immediately return to the bash prompt.  
 
 !!! note "Rule of Silence"
     UNIX follows the _rule of silence_: programs should not print unnecessary output, to allow other programs and users to easily parse the output from one program.  So, if `ls` has nothing to list, it will list nothing (as oppose to, say, printing "This is an empty directory.")
@@ -142,7 +142,7 @@ The directory `tut01` and everything under it will be copied to the current dire
 
 `mv` can move files from one directory to another.
 
-```shell
+```bash
 ooiwt@pe111:~/tut01$ ls
 hello.c
 ooiwt@pe111:~/tut01$ mv hello.c ..
@@ -162,7 +162,7 @@ ooiwt@pe111:~/tut01$ ls
 hello_world.java
 ```
 
-!!! tip "Use TAB for name Completion"
+!!! tip "Use TAB for Name Completion"
     If you have a very long file name, you may use UNIX's filename completion feature to reduce typing. For instance, you may type:
     ```
     ooiwt@pe111:~/tut01$ mv h
@@ -174,7 +174,7 @@ hello_world.java
 
 Be careful with this command -- files deleted cannot be restored.  There is no trash or recycled bin like in Mac or Windows.
 
-```shell
+```bash
 ooiwt@pe111:~/tut01$ rm hello.c
 ooiwt@pe111:~/tut01$ ls
 ooiwt@pe111:~/tut01$
@@ -183,21 +183,36 @@ ooiwt@pe111:~/tut01$
 !!! warning "rm -rf *"
     While UNIX command line provides lots of flexibility and power, with great power comes great responsibility.  Some of the commands are extremely dangerous.  `rm -rf *` is the most famous one.  The notation `*` refers to all files, and the flag `-f` means forceful deletion (no question asked!) and `-r` means remove recursively everything under the current directory tree.  Accidentally running this command has ruined many files.  [Read more here](https://www.quora.com/What-are-some-crazy-rm-rf-stories-you-have-heard-about)
     
-`rm` comes with a `-i` flag that interactively ask you if you are sure if you want to delete a file.  It is a good idea to always run `rm -i`.  In case you format, I suggest that you `alias` the command `rm` to `rm -i` by inserting this line into the file `~/.bashrc`.
+`rm` comes with a `-i` flag that interactively ask you if you are sure if you want to delete a file.  It is a good idea to always run `rm -i`.  On `pe111`, we have configured everyone's account so that `rm` is aliased to `rm -i` by default.  So when you run `rm hello.c`, it actually runs `rm -i hello.c`.  
 
-```shell
+```bash
+ooiwt@pe111:~/tut01$ rm hello.c
+rm: remove regular file 'hello.c'? 
+```
+
+Type `y` or `n` to answer yes or no respectively.
+
+If you setup your own UNIX OS, you should add this alias 
+
+```bash
 alias rm="rm -i"
 ```
 
+to your `.bashrc` (Google to find out how).  Other useful aliases to avoid accidentally overwriting existing files are:
+
+```bash
+alias mv="mv -i"
+alias cp="cp -i"
+```
 
 ## `cat`: CATenate file content to screen
 
-```shell
+```bash
 ooiwt@pe111:~/tut01$ cat hello.c
 ```
 
 `less` is variant of `cat` that includes features to read each page leisurely)
-```shell
+```bash
 ooiwt@pe111:~/tut01$ less hello.c
 ```
 
@@ -207,7 +222,7 @@ In `less`, use `<space>` to move down one page, `b` to move Back up one page, an
 
 An online help facility is available in UNIX via the `man` command (`man` stands for MANual). To look for more information about any UNIX command, for example, `ls`, type `man ls`. Type `man man` and refer to Man Pages to find out more about the facility. To exit `man`, press `q`.
 
-Now that you are familiar with how the UNIX shell works, I won't show the command prompt any more in the rest of this article.
+Now that you are familiar with how the UNIX bash works, I won't show the command prompt any more in the rest of this article.
 
 ## `chmod`: Changing UNIX File Permission 
 It is important to guide our files properly on a multi-user system where users share the same file system.  UNIX has a simple mechanism to for ensuring that: every file and directory has nine bits of access permission, corresponds to three access operations, read (`r`), write (`w`), and execute (`x`), for four classes of users, the user who owns of the file (`u`), users in the same group as the owner (`g`), all other users (`o`), and all users (`a`) (union of all three classes before)
@@ -221,7 +236,7 @@ When you run `ls -l`, you will see the permission encoded as strings that look l
 
 To change permission, we use the `chmod` command.  Let's say that we want to remove the read and write permission from all other users in the group.  You can run:
 
-```shell
+```bash
 chmod g-rw <file>
 ```
 
@@ -229,7 +244,7 @@ where `<file>` is the name of the file whose permission you want to change.  Thi
 
 To add executable permission to everyone, you can run:
 
-```shell
+```bash
 chmod a+x <file>
 ```
 
@@ -239,13 +254,13 @@ Another way to change the permission is set the permission directly, instead of 
 
 To set the permission of a file to `-r--r--r--` (readable by everyone), run:
 
-```shell
+```bash
 chmod 444 <file>
 ```
 
 To set the permission to `-rw-------`, run:
 
-```shell
+```bash
 chmod 600 <file>
 ```
 
@@ -257,7 +272,7 @@ It is important to ensure that your code is not readable and writable by other s
 
 Secure copy, or `scp`, is one way to transfer files from the programming environments to your local computer for archiving or storage.  Let's say you want to transfer a set of C files from the directory `a01` to your local computer, then, on your local computer, run:
 
-```shell
+```bash
 ooiwt@macbook:~$ scp ooiwt@pe111:~/a01/*.c .
 ```
 
@@ -266,7 +281,7 @@ ooiwt@macbook:~$ scp ooiwt@pe111:~/a01/*.c .
 
 The expression `*.c` is a _regular expression_ that means all files with filename ending with `.c`.  You can copy specific files as well.  For instance,
 
-```shell
+```bash
 ooiwt@macbook:~$ scp ooiwt@pe111:~/a01/hello.c .
 ```
 
@@ -277,7 +292,7 @@ ooiwt@macbook:~$ scp ooiwt@pe111:~/a01/hello.c .
 
 In any command above, when we need to refer to a directory or a file, we need to specify an _unambiguous location_ of the directory or the file.  The most precise way to specify the location is to use the full path, or the _absolute path_.  For instance:
 
-```shell
+```bash
 cp /home/o/ooiwt/tut01/hello.c /home/o/ooiwt/tut01/hello_world.c
 ```
 
@@ -285,32 +300,32 @@ That's a lot of characters to type.  We could shorten it in a few ways.
 
 - We could specify the location with respect to the home directory using `~`.  `~ooiwt` refers to the home directory of user `ooiwt`.  
 
-```shell
+```bash
 cp ~ooiwt/tut01/hello.c ~ooiwt/tut01/hello_world.c
 ```
 
 If you are `ooiwt`, then you can omit `ooiwt`, since `~` without any username refers to your home directory.
 
-```shell
+```bash
 cp ~/tut01/hello.c ~/tut01/hello_world.c
 ```
  
 - Or we could specify the location with respect to the current directory.  Suppose the current working directory is `~/tut01` (i.e., we have `cd` into `~/tut01`), then we could say this:
 
-```shell
+```bash
 cp ./hello.c ./hello_world.c
 ```
 
 Recall that a single dot `.` refers to the current directory.
 
-The `./` however is redundant unless you are executing a command.  Since, by specifying a file name or a directory without a path (i.e., not using any `/`), the shell looks for the file or directory in the current directory.  So, we could just do:
+The `./` however is redundant unless you are executing a command.  Since, by specifying a file name or a directory without a path (i.e., not using any `/`), the bash looks for the file or directory in the current directory.  So, we could just do:
 
-```shell
+```bash
 cp hello.c hello_world.c
 ```
 
 Another important short form for relative location is `..`.  Recall that this refers to the parent directory.  Suppose that the current directory is in `~/tut02`.  Then, to copy the files in `~/tut01`, you can run:
 
-```shell
+```bash
 cp ../tut01/hello.c ../tut01/hello_world.c
 ```

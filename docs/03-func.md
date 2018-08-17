@@ -1,12 +1,14 @@
 # Unit 3: Functions
 
+Let's start with another problem.
+
 ### Problem: Finding the Range 
 
 The _range_ of a finite list of at least one integers $L$ is defined as the difference between the maximum and the minimum.  For example, the range for `4 1 -4 0 9 9 3 5 8` is `13`.  How do we find the range of a given list? 
 
 To find the range of a list, we can break the solution down into three subtasks: first find the maximum, then find the minimum, and finally, find the difference between the two.  
 
-From the previous lecture, you already know how to find the maximum and the minimum (from Problem 2)!  So, in expressing the algorithm to find the range, we can refer to a previous solution to a sub-problem, which we assume we already know how to solve.  
+From the previous lecture, you already know how to find the maximum and the minimum (from Problem 1.2)!  So, in expressing the algorithm to find the range, _we can refer to a previous solution to a sub-problem, which we assume we already know how to solve_.  
 
 Let's call our solution to find the maximum value from a given list $L$ as $max$.  $max$ takes as input (i) a list $L$ and (ii) $k$, the number of integers in $L$.  It produces, or _returns_, the maximum value among the integers in $L$.  Borrowing from mathematical notation, we use the notation $max(L, k)$ to represent the maximum value of $L$.  
 
@@ -26,9 +28,9 @@ The algorithm again, can be written in one line:
 
 $$sum(L, k) / k$$
 
-if we assume that we have a function $sum$ that can help us find the total of all $k$ integers.  It turns out, in this case, that you should also know how to solve the subproblem $sum$, since it is Problem 3 from last week.
+if we assume that we have a function $sum$ that can help us find the total of all $k$ integers.  It turns out, in this case, that you should also know how to solve the subproblem $sum$, since it is Problem 1.3 from last week.
 
-We can then make this into a function itself ($mean(L, k)$) which we can then use to solve other problems.
+We can then make this into a function itself, $mean(L, k)$, which we can now use to solve other more complex problems.
 
 Thinking in terms of functions also have another advantage: given a function, we only need to worry about _what_ it does, but not _how_ it is done.   We can treat a function as a black box -- given an input, it will produce an output satisfying certain conditions.  Many programming languages, including C which we will be using in CS1010, come with a rich set of predefined functions that we can use to help us solve computational problems.  In CS1010, we will also provide you with some functions to help you with your lab assignments.  You will also define your own functions when solving problems with C.  In fact, a C program is just a collection of functions calling each other.
 
@@ -52,19 +54,19 @@ For now, let's apply wishful thinking and assume that we know how to compute the
 - set $\mu$ to $mean(L, k)$
 - set $L'$ to $substract(L, k, \mu)$
 - set $L''$ to $square(L', k)$
-- set $sum$ to $sum(L'', k)$.
+- set $total$ to $sum(L'', k)$.
 
 We can also write it in one line:
 
-- set $sum$ to $sum(square(substract(L, k, mean(L, k)), k), k)$
+- set $total$ to $sum(square(substract(L, k, mean(L, k)), k), k)$
 
-Now, to compute the standard deviation, we need to divide $sum$ by $k$ and find the square root.  But, finding $sum$ and divide by $k$ is just $mean$.  To compute square root, we again apply wishful thinking and assume that there is a function $sqrt$ to do so.
+Now, to compute the standard deviation, we need to divide $total$ by $k$ and find the square root.  But, finding $total$ and dividing the result by $k$ is just $mean$.  To compute square root, we again apply wishful thinking and assume that there is a function $sqrt$ to do so.
 
 We can now compute the standard deviation with one line: 
 
 $$sqrt(mean(square(substract(L, k, mean(L, k)), k), k))$$
 
-Using functions, we can easily pass the output from one function as input to another, essentially chain the functions together, like Lego(R) blocks, to solve problems.  We also see an example of _reuse_ here -- $mean$ is used twice with different inputs.
+Using functions, we can easily pass the output from one function as input to another, essentially chain the functions together, like Lego blocks, to solve problems.  We also see an example of _reuse_ here -- $mean$ is used twice with different inputs.
 
 !!! warning "Returning a list"
     While the above one-liner is an elegant solution, when we actually implement this in C later, it will not so simple and elegant.  Let's worry about that later.
@@ -96,7 +98,7 @@ The algorithm to do this can be expressed by the following diagram:
 
 ![Flowchart](figures/max-flowchart/max-flowchart.010.png)
 
-Let's look at an example.  Let's say we want to compute $factorial(4)$.  We assume we know how to solve this for a smaller problem --  $factorial(3)$, which is 6.  $factorial(4) is thus 4 $\times$ 6, i.e., 24.
+Let's look at an example.  Let's say we want to compute $factorial(4)$.  We assume we know how to solve this for a smaller problem --  $factorial(3)$, which is 6.  $factorial(4)$ is thus 4 $\times$ 6, i.e., 24.
 
 ### Recursion: Function Calling Itself
 
@@ -109,11 +111,12 @@ $max'$ and $factorial$ are examples of functions which calls itself to solve a s
 
 The mean absolute deviation, or MAD, of a set of integers measures how spread out a set of data is.  The _absolute deviation_ is the absolute difference between an element in the list with the mean of values of the list.  The mean absolute deviation is the mean of all the absolute difference.  In other words, given $L = \{l_0, ... l_{k-1}\}$, the MAD of $L$ is:
 
-$$\frac{\sum_{i=0}^{k-1} |l_i - \mu|}{k}}$$
+$$\frac{\sum_{i=0}^{k-1} |l_i - \mu|}{k}$$
 
 How do you find MAD by composing various functions we have seen?  Do you need a new function?
 
 #### Problem 3.2 : Ownself calls ownself
 
 (a) Give an algorithm for finding the sum of all the integers in the list $L$ with $k$ integers ($k > 0$) that is recursive.
+
 (b) The function $pow(i, j)$ computes $i^j$.  Give an algorithm to compute $pow(i, j)$ recursively.
