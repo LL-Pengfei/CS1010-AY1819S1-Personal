@@ -148,7 +148,7 @@ hello.c
 ooiwt@pe111:~/tut01$ mv hello.c ..
 ooiwt@pe111:~/tut01$ ls
 ooiwt@pe111:~/tut01$ ls ..
-hello.java
+hello.c
 ooiwt@pe111:~/tut01$ mv ../hello.c .
 ```
 
@@ -157,9 +157,9 @@ Here, we tell `mv` to copy a file `hello.c` from the parent directory to the cur
 `mv` can also be used to rename files.
 
 ```
-ooiwt@pe111:~/tut01$ mv hello.c hello_world.java
+ooiwt@pe111:~/tut01$ mv hello.c hello_world.c
 ooiwt@pe111:~/tut01$ ls
-hello_world.java
+hello_world.c
 ```
 
 !!! tip "Use TAB for Name Completion"
