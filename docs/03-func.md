@@ -22,7 +22,7 @@ $max$ and $min$ are examples of a powerful and important concept with many names
 
 Such an assumption, that we already know how to solve a subproblem, is known as _wishful thinking_.  Sometimes, it is useful to solve a problem assuming that you know how to solve the subproblem first, then worry about solving the subproblem later.  
 
-For instance, consider the following problem: Given a finite list of $k$ integers ($k > 0), find the mean.  
+For instance, consider the following problem: Given a finite list of $k$ integers ($k > 0$), find the mean.  
 
 The algorithm again, can be written in one line:
 
