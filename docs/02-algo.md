@@ -160,7 +160,7 @@ If an algorithm is buggy, give a counter-example where the output is incorrect. 
 
 #### Problem 1.2
 
-Change the algorithm above to find the minimum value instead of the maximum value from the given list $L = \{l_0, ..., l_{k-1}\}$.
+Change the algorithm above to find the minimum value instead of the maximum value from the given list $L = \{l_0, ..., l_{k-1}\}$. {++You can also assume that the list $L$ is finite and $k > 0$ for this question++}.
 
 #### Problem 1.3
 
