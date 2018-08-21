@@ -539,6 +539,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../vim/index.html" title="Vim" class="md-nav__link">
+      Vim
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../library/index.html" title="CS1010 I/O" class="md-nav__link">
       CS1010 I/O
     </a>
@@ -620,7 +632,7 @@
                 <h1 id="unit-4-types">Unit 4: Types</h1>
 <p>Recall from Unit 1 that machine code and data manipulated by machine code are all stored as a sequence of 1s and 0s in the memory.  Each unit of either 1 or 0 is known as a <em>bit</em>.  8 bits form a <em>byte</em>.</p>
 <p>Remember from Unit 2 that a variable is a memory location that stores a value, as a sequence of bits.  The bits stored in the memory has no meaning by itself.  It has to be interpreted by the machine code.  Does a sequence of 1s and 0s represent an integer?  A pixel of an image?  A sound sample in an audio clip?  A month?   As a programmer, we have to tag the variable with its <em>type</em>, so that the machine code knows how to interpret the sequence of bits.  In addition, the type also tells the machine code, how many bits "belong" to this variable.  The number of bits of a type is also known as the <em>size</em> of a type.</p>
-<p>The size of a type determines how many different values a variable of that type can hold.  For instance, a type of one bit can only hold two possible values (e.g., <code class="codehilite">0</code> or <code class="codehilite">1</code>, <code class="codehilite">true</code> or <code class="codehilite">false</code>, <code class="codehilite">black</code> or <code class="codehilite">white</code>).  A type of two bits can hold four values, represented as <code class="codehilite">00</code>, <code class="codehilite">01,</code>10<code class="codehilite">,</code>11`.  In general, a type of <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> bits can hold <span><span class="MathJax_Preview">2^k</span><script type="math/tex">2^k</script></span> values.</p>
+<p>The size of a type determines how many different values a variable of that type can hold.  For instance, a type of one bit can only hold two possible values (e.g., <code class="codehilite">0</code> or <code class="codehilite">1</code>, <code class="codehilite">true</code> or <code class="codehilite">false</code>, <code class="codehilite">black</code> or <code class="codehilite">white</code>).  A type of two bits can hold four values, represented as <code class="codehilite">00</code>, <code class="codehilite">01</code>, <code class="codehilite">10</code>, <code class="codehilite">11</code>.  In general, a type of <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> bits can hold <span><span class="MathJax_Preview">2^k</span><script type="math/tex">2^k</script></span> values.</p>
 <h3 id="integers">Integers</h3>
 <p>To represent integers, a type of 8 bits can represent 256 different values.  If the type only represents non-negative integers (called <code class="codehilite">unsigned</code>), then it can hold any value between 0 to 255.  If it represents both positive and negative integers (called <code class="codehilite">signed</code>), it can hold any value between -128 to 127.  Depending on the needs (how much memory we have, how big is the number we need to represent), programmers have to decide on the size of the type used for a variable in their programs.  With 64 bits, a signed integer can store any value between -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.  This might look big enough for you -- but we can't even fit the results from <span><span class="MathJax_Preview">factorial(21)</span><script type="math/tex">factorial(21)</script></span> here!<br />
 We have to go to 128 bits to represent larger integers.</p>
