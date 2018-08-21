@@ -16,6 +16,7 @@ pages:
       - Programming Environments: 'environments.md'
       - UNIX: 'unix.md'
       - CLang: 'clang.md'
+      - Vim: 'vim.md'
       - CS1010 I/O: 'library.md'
 
 # pip install pymdown-extensions

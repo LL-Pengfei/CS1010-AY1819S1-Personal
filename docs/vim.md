@@ -1,10 +1,14 @@
 # Vim Tips
 
-I collected below some tips on `vim` that I find helpful.
+I collected below some tips on `vim` that I find helpful.  If you are new to `vim`, please try out the command `vimtutor` on any machine where `vim` is installed, and check out the nice article [Learn vim Progressively]( 
+http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/).  
 
-## Configuration
+# 1. Useful Configuration
 
 You can configure your `vim` by putting your configuration options and scripts in the `~/.vimrc` file (a hidden file named `.vimrc` in your home directory).  This file will be loaded whenever you starts `vim`.
+
+You can copy a sample `.vimrc` file from `~cs1010/.vimrc` to your home directory. 
+You can edit this file `~/.vimrc` just like any other file, using `vim`.
 
 ## Help
 
@@ -30,11 +34,7 @@ set backupdir=~/.backup
 
 and create a directory named `~/.backup` to store my backup files.
 
-The settings above are the default in your `cs2030-i` account.  So if you made changes to a file that you regreted on `cs2030-i`, or if accidentally deleted a file, you can check under `~/.backup` to see if the backup can save you.
-
-## Undo
-
-Since we are on the topic of correcting mistakes, `u` in command mode undo your changes.  Prefix it with a number $n$ to undo $n$ times.  If you regreted your undo, `<CTRL-R>` will redo.
+So if you made changes to a file that you regreted, or if you accidentally deleted a file, you can check under `~/.backup` to see if the backup can save you.
 
 ## Syntax Highlighting
 
@@ -61,11 +61,13 @@ set number
 
 to label each line with a line number.
 
-## Jumping to a Line
+# 2. Navigation
 
-If the compiler tells you there is an error on Line $x$, you can issue `:<x>` to jump to Line $x$.  For instance, `:40` will go to Line 40.
+## Basic Navigation
 
-## Navigation
+Use `k` and `j` keys to move up and down (just like Gmail and Facebook!).  `h` and `l` to move left and right.
+
+Others shortcut:
 
 - `w`   jump to the beginning of the next word
 - `b`   jump to the beginning of the previous word (reverse of `w`)
@@ -77,6 +79,16 @@ If the compiler tells you there is an error on Line $x$, you can issue `:<x>` to
 - `$` jump to end of line
 - `0` jump to the beginning of the line
 - `%` jump between matching parentheses
+
+## Jumping to a Line
+
+If the compiler tells you there is an error on Line $x$, you can issue `:<x>` to jump to Line $x$.  For instance, `:40` will go to Line 40.
+
+# 3. Editing Operations
+
+## Undo
+
+Since we are on the topic of correcting mistakes, `u` in command mode undo your changes.  Prefix it with a number $n$ to undo $n$ times.  If you want to undo your undo, `<CTRL-R>` will redo.
 
 ## Navigation + Editing
 
@@ -98,24 +110,14 @@ You can add a number before an operation to specify how many times you want to r
 
 See the article [Operator, the True Power of `Vim`](http://whileimautomaton.net/2008/11/vimm3/operator) for more details.
 
-## Other Editing Operations
+## Swapping Lines
 
-- `A` jump to end of line and enter insert mode
-- `o` open next line and enter insert mode
-- `O` open previous line and enter insert mode
+Sometimes you want to swap the order of two lines of code, in command mode, `ddp` will do the trick.  `dd` deletes the current line, `p` paste it after the current line, in effect swapping the order of the two lines.
 
-## Search and Replace in `vim`
-
-
-```
-:%s/oldWord/newWord/gc 
-```
-
-`:` enters the command mode.  `%` means apply to the whole document, `s` means substitute, `g` means global (otherwise, only the first occurance of each line is replaced). `c` is optional -- adding it cause `vim` to confirm with you before each replacement  
 
 ## Commenting blocks of code
 
-Sometimes we need to comment out a whole block of code in Java for testing purposes. There are several ways to do it in `vim`:
+Sometimes we need to comment out a whole block of code in C for testing purposes. There are several ways to do it in `vim`:
 
 - Place the cursor on the first line of the block of code you want to comment.
 - `0` to jump to the beginning of the line
@@ -132,6 +134,16 @@ To uncomment,
 - `<CTRL-v>` enter block visual mode
 - Use arrow key to select the columns of text containing `//`
 - `x` to delete them
+
+# 4. Other Advanced Features
+
+## Search and Replace in `vim`
+
+```
+:%s/oldWord/newWord/gc 
+```
+
+`:` enters the command mode.  `%` means apply to the whole document, `s` means substitute, `g` means global (otherwise, only the first occurance of each line is replaced). `c` is optional -- adding it cause `vim` to confirm with you before each replacement  
 
 ## Shell Command
 
@@ -150,7 +162,13 @@ will issue the command to shell.  E.g.,
 You can use this to compile your current file, without exiting `vim`.
 
 ```
-:!javac %
+:!make
+```
+
+`make` is actually a builtin command for `vim` so you can also simply run
+
+```
+:make
 ```
 
 ## Abbreviation
@@ -158,10 +176,10 @@ You can use this to compile your current file, without exiting `vim`.
 You can use the command `ab` to abbreviate frequently typed commands.  E.g., in your `~/.vimrc`, 
 
 ```
-ab Sop System.out.println("
+ab pl cs1010_print_long(
 ```
 
-Now, when you type `Sop `, it will be expanded into `System.out.println(" `
+Now, when you type `Sop `, it will be expanded into `cs1010_print_long(`
 
 ## Auto-Completion
 
@@ -171,13 +189,13 @@ You can `<CTRL-P>` to auto-complete.  By default, the auto-complete dictionary i
 
 You can `gg=G` in command mode to auto-indent the whole file.  `gg` is the command to go to the beginning of the file.  `=` is the command to indent.  `G` is the command to go to the end of the file.
 
-## Swapping Lines
+## Splitting `vim`'s Viewport
 
-Sometimes you want to swap the order of two lines of code, in command mode, `ddp` will do the trick.  `dd` deletes the current line, `p` paste it after the current line, in effect swapping the order of the two lines.
+- `:sp file.c` splits the `vim` window horizontally
+- `:vsp file.c` splits the `vim` window vertically
+- `Ctrl-w Ctrl-w` moves between the different `vim` viewports
 
-## Goto File
-
-Place your cursor on the name of a class (e.g., `Event`), then in command mode, issue the `gf` command (goto file).  `vim` will open `Event.java`.  You can set the `path` to load files from directories other than the current directory.   "Ctrl-^" will get out and back to the previous file.
+# 6. Plugins
 
 ## Syntax and Style Checker
 
@@ -192,19 +210,18 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '⚠'
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_java_checkers = [ "checkstyle", "javac" ]
-let g:syntastic_java_checkstyle_classpath = "~cs2030/bin/checkstyle-8.2-all.jar"
-let g:syntastic_java_checkstyle_conf_file = "~cs2030/bin/cs2030_checks.xml"
+
+let g:syntastic_c_checkers = [ 'clang_tidy', 'clang' ]
+let g:syntastic_c_compiler = 'clang'
+let g:syntastic_c_clang_args = '-Wall -Werror -Wextra -Iinclude'
+let g:syntastic_c_clang_tidy_args = '-checks=*'
+let g:syntastic_c_compiler_options = '-Wall -Iinclude'
+let g:syntastic_c_include_dirs = [ '../include', 'include' ]
+let g:syntastic_c_clang_tidy_post_args = ""
 ```
-
-The last two lines refer to [`checkstyle`](http://checkstyle.sourceforge.net) tool and its configuration file available from `~cs2030/bin` on the host `cs2030-i.comp.nus.edu.sg`.
-
-## Splitting `vim`'s Viewport
-
-- `:sp file.java` splits the `vim` window horizontally
-- `:vsp file.java` splits the `vim` window vertically
-- `Ctrl-w Ctrl-w` moves between the different `vim` viewports
