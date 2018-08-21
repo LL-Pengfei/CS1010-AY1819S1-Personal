@@ -1,4 +1,7 @@
+dev.yml
 *.swp
 site/*
+docs/figures/unix
+docs/figures/*key
 
 *.class
