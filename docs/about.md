@@ -12,7 +12,7 @@ This module introduces the fundamental concepts of problem solving by computing 
 - **Teaching Assistants**:
      
 	- Wu Biao
-	- Yu Xiaoliang
+	- Yu Xiao Liang
 	- Dou Rengan
 
 - **Undergraduate Discussion Leaders**:
