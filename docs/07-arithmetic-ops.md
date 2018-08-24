@@ -48,7 +48,7 @@ long a = (b + 2) * c / 4; // 6
 long a = b + (2 * c / 4); // 11
 ```
 
-The expression in the paranthesis will be evaluated first.  To make your code easier to understand, _you should add parenthesis even if the order of evaluation is from left to right_ to make the order of evaluation explicit.
+The expression in the parenthesis will be evaluated first.  To make your code easier to understand, _you should add parenthesis even if the order of evaluation is from left to right_ to make the order of evaluation explicit.
 
 ## Compound Operators
 
@@ -80,7 +80,7 @@ a = a op b
 
 ## Common Mistakes Using Arithmatic Operations
 
-It is important to remember that, when arithmatic operations in C is performed on a sequence of bits, where the value that it can represent is limited and is determined by its type.  A common mistake for beginner programmers is to forget this fact and treat the arithmatic operations as the same as the ones seen in mathematics.  
+It is important to remember that, when arithmetic operations in C is performed on a sequence of bits, where the value that it can represent is limited and is determined by its type.  A common mistake for beginner programmers is to forget this fact and treat the arithmetic operations as the same as the ones seen in mathematics.  
 
 Let's look at two common gotchas.
 
@@ -97,7 +97,9 @@ What is the value of variable `c` after the operation above?
 
 Here, we are adding one to the value 255, so `c` must store the value 256, right?
 
-It turns out that after the execution above, `c` contains the value 0.  The variable `c` is of the type `uint8_t`, which is the unsigned 8-bit integer.  Being 8-bit, the variable can store values from 0 to 255.  When we add 1 to 255, even though we get the result 256, mathematically, we cannot store 256 in `c` -- there is no enough bits!  In this case, the value stored is "wrap around", and we get the value 0 instead.
+It turns out that after the execution above, `c` contains the value 0.  The variable `c` is of the type `uint8_t`, which is the unsigned 8-bit integer.  Being 8-bit, the variable can store values from 0 to 255.  When we add 1 to 255, even though we get the result 256, mathematically, we cannot store 256 in `c` -- there is not enough bits!  In this case, the value stored is "wrap around", and we get the value 0 instead.
+
+The variable `c` above is unsigned. It gets trickier if `c` is signed.  In the case of overflowing signed integer, the behavior depends on the compiler and is undefined in the C standard.
 
 ### Integer Division
 
@@ -121,9 +123,9 @@ int x = 1.5;
 
 C truncates the floating number and only stores the integer part of the value, 1 in this case, in `x`.
 
-Second, when we perform an arithmatic operation, the resulting value will be an integer if both values are integer types.  If one of the operands is a floating point number, the result will be a floating point number[^1].
+Second, when we perform an arithmetic operation, the resulting value will be an integer if both values are integer types.  If one of the operands is a floating point number, the result will be a floating point number[^1].
 
-Since 3 and 2 are both integers, the resulting value 1.5 are stored in an integer, which cause it to become 1.  We then store 1 into a `double` variable, causing the value of `half` to become `1.0`.
+Since 3 and 2 are both integers, the resulting value 1.5 are stored in an integer, which causes it to become 1.  We then store 1 into a `double` variable, causing the value of `half` to become `1.0`.
 
 Because of this limitation, the operation `/` is sometimes also known as integer division when both operands are integers.  
 
@@ -140,7 +142,7 @@ double half = 3/(double)2;
 
 The second fix above explicitly convert the type, or _cast_ the type of value 2 into a `double`.
 
-[^1]: The actual rules used by C, called _integer promotion_ and _usual arithmatic conversion_, are much more complex and are outside the scope of CS1010.  You should take a note of this, however, and in later part of your study or career, if you need to delve deep in writing or debugging C code, take a look at [this](https://wiki.sei.cmu.edu/confluence/display/c/INT02-C.+Understand+integer+conversion+rules).
+[^1]: The actual rules used by C, called _integer promotion_ and _usual arithmetic conversion_, are much more complex and are outside the scope of CS1010.  You should take a note of this, however, and in a later part of your study or career, if you need to delve deeper into writing or debugging C code, take a look at [this](https://wiki.sei.cmu.edu/confluence/display/c/INT02-C.+Understand+integer+conversion+rules).
 
 ## Avoid Increment / Decrement Operator 
 
@@ -150,7 +152,7 @@ If you read C code in other places, you will certainly come across the increment
 index += 1;
 ```
 
-can be further shorten into 
+can be further shortened into 
 
 ```
 index++;
@@ -170,4 +172,4 @@ index--;
 
 Using these two operators only shorten your code by two characters per statement, but introduces several issues.  As such, we _ban the use of both increment and decrement operator in CS1010_.
 
-So, why aren't `++` and `--` welcomed in CS1010?  The `++` and `--` operators not only modify the value of the operand, it also returns a value.  We can write `j = i++;` to both increment `i` and assign the pre-incremented value of `i` to `j`.  In C, we can also write `j = ++i;`, which again, increment `i`, and assign the post-incremented value of `i` to `j`.  Things get tricky, when we write `i = i++;`, it is not clear how to interpret this.  The C standard leaves this behaviour undefined and leave it to the compiler to define its behavior.  Wei Tsang thinks that introducing all these complexities just to save two characters is not warranted.
+So, why aren't `++` and `--` welcomed in CS1010?  The `++` and `--` operators not only modify the value of the operand, it also returns a value.  We can write `j = i++;` to both increment `i` and assign the pre-incremented value of `i` to `j`.  In C, we can also write `j = ++i;`, which again, increment `i`, and assign the post-incremented value of `i` to `j`.  Things get tricky, when we write `i = i++;`, it is not clear how to interpret this.  The C standard leaves this behavior undefined and leaves it to the compiler to define its behavior.  Wei Tsang thinks that introducing all these complexities just to save two characters is not warranted.

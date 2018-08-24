@@ -21,7 +21,9 @@ The next three lines are written in between curly brackets `{` and `}`.  You wil
 
 In this function body, there is only one statement `return x*x;`  within the block.  A _statement_ is a unit in a programming language that expresses either a command to be executed or declares a new variable or function.  The word `return` says that this function `square` should return the following value, computed as `x*x` (`x` multiply by `x`).  This statement is terminated by a semicolon `;`.
 
-The words `int` and `return` that appears above are _keywords_ defined in the C programming language, and they are reserved for the special meaning that they represent (a type and a command to return a value from a function).  We cannot repurpose keywords in C.
+You also see that the line that starts with `return` is indented.  We use indentation extensively to indicate the body of a block.  Since we can have nested blocks, indentation makes our code easier to read and understand.
+
+The words `int` and `return` that appear above are _keywords_ defined in the C programming language, and they are reserved for the special meaning that they represent (a type and a command to return a value from a function).  We cannot repurpose keywords in C.  For instance, we cannot introduce a variable called `int`.
 
 We are now ready to write our first C program.  The first program computes the square of the hypotenuse of a right-angled triangle with a base of 4 and height of 3.
 
@@ -40,7 +42,7 @@ int main()
 }
 ```
 
-Remember that a C program consists of a bunch of functions, calling each other.  The most important function is called `main`, and it is the _entry point_ to the program.  It is where the operating system will begin to execute the program.  So every program must define exactly one function called `main`.
+Remember that a C program consists of a bunch of functions, calling each other.  The most important function is called `main`, and it is the _entry point_ to the program.  It is where the operating system will begin to execute the program.  Every program must define _exactly one function_ called `main`.
 
 ```C 
 int main() 
@@ -65,7 +67,25 @@ This is declaration statement (terminated with a semicolon, again).  Each statem
 
 Remember that _all variables must be declared with its corresponding type before used in C_.
 
-In C, a function must be either defined or declared before used as well.  In the example above, we define `square` before `main`.  If we switch the order of the two, the compiler will complain.  Unless we declare the function first.  Declaring a function means that we simply state the return type, the name, and the parameters, _without_ the body.
+In C, a function must be either defined or declared before used as well.  In the example above, we define `square` before `main`.  If we switch the order of the two, the compiler will complain.  Unless we declare the function first.  Declaring a function means that we simply state the return type, the name, and the parameters, _without_ the body.  Here is an example:
+
+```C
+int square(int x); // declaring the function square
+
+int main() 
+{
+  int hypotenuse_square;
+  
+  hypotenuse_square = square(3) + square(4);
+  return 0;
+}
+
+int square(int x)  // defining the function square
+{
+  return x*x;
+}
+
+```
 
 ### Assignment Statement
 
@@ -101,7 +121,7 @@ Before we move on, let's recap some concepts:
 
 Let's change the program slightly, so that instead of computing the square of the hypotenuse, we compute the hypotenuse itself.  Recall that we said C provides a bunch of predefined functions, include `sqrt`, which computes the square root of a given number.  Since a square root of a number is not necessarily an integer, we need to use a variable with a type that can store a real number.  
 
-To represent real numbers, we commonly use the type `float` (which is short for a floating point number -- named so due to how a real number is represented in bits).  A `float` type can store 32 bits.  To double the precision (64 bits), we can use the type `double`.  A `long double` type can store either 80-bits or 128-bits, depending on implementation.
+To represent real numbers, we commonly use the type `float` (which is short for a floating point number -- named so due to how a real number is represented in bits).  A `float` type can store 32 bits.  To double the precision (64 bits), we can use the type `double`.  A `long double` type can store either 80-bits or 128-bits, depending on the implementation.
 
 But which one does `sqrt` returns?  To find out the exact _specification_ of a pre-defined function, we can consult the manual (or `man` for short) pages for the function.  
 
@@ -132,7 +152,7 @@ int main()
 }
 ```
 
-Note that the first line declares the function `sqrt`, because we need to declare a function before it is used.  Since `sqrt` is pre-defined elsewhere, we do not have to supply the function body here.  Such practice of declaring a predefined function ourselves, however, is not recommended.  Different platform, compilers, libraries, may provide a different specification for the same function.  As such, it is better to use the declaration from the library that provides the predefined function itself.  A library usually provides one or more _header files_, a set of files that contain function declarations, type definitions, and constant definitions.  In the case of `sqrt`, its declaration is contained in a header file called `math.h`.  To include this file, you add the line `#include <math.h>` at the top of the program.
+Note that the first line declares the function `sqrt`, because we need to declare a function before it is used.  Since `sqrt` is pre-defined elsewhere, we do not have to supply the function body here.  Such practice of declaring a predefined function ourselves, however, is not recommended.  Different platform, compilers, libraries, may provide a different specification for the same function.  As such, it is better to use the declaration from the library that provides the predefined function itself.  A library usually provides one or more _header files_, a set of files that contain function declarations, type definitions, and constant definitions.  In the case of `sqrt`, its declaration is contained in a header file called `math.h` (which we found out through consulting the `man` pages).  To include this file, you add the line `#include <math.h>` at the top of the program.
 
 ```C
 #include <math.h>
@@ -179,7 +199,7 @@ unsigned long square(long x)
 }
 ```
 
-For most practical purposes in CS1010, a (signed) `long` suffices.  We introduce the notion of `signed` vs. `unsigned` for your information so that you know what they are when you come across them in others source code.  Mixing `signed` and `unsigned` can lead to subtle bugs in your code.  As such, _we will only use signed `long` for CS1010_.  You may choose to use them appropriately in other context, especially for embedded system or low-level programming.
+For most practical purposes in CS1010, a (signed) `long` suffices.  We introduce the notion of `signed` vs. `unsigned` for your information so that you know what they are when you come across them in others source code.  Mixing `signed` and `unsigned` can lead to subtle bugs in your code.  As such, _we will only use signed `long` for CS1010_.  You may choose to use them appropriately in another context, especially for embedded system or low-level programming.
 
 !!! note "Unsigned Real Numbers?"
     There are no `unsigned` versions of `float` and `double`.  To understand the reason, we have to go further into how floating points numbers are represented in bits.  That is a topic for another module.
