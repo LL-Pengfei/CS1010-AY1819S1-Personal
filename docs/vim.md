@@ -179,7 +179,7 @@ You can use the command `ab` to abbreviate frequently typed commands.  E.g., in 
 ab pl cs1010_print_long(
 ```
 
-Now, when you type `Sop `, it will be expanded into `cs1010_print_long(`
+Now, when you type `pl `, it will be expanded into `cs1010_print_long(`
 
 ## Auto-Completion
 
