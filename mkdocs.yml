@@ -11,6 +11,9 @@ pages:
       - 2. Computational Problem &amp; Algorithms: '02-algo.md'
       - 3. Functions: '03-func.md'
       - 4. Types: '04-type.md'
+      - 5. First C Program:  '05-first-c.md'
+      - 6. CS1010 I/O Library:  '06-cs1010-io.md'
+      - 7. Arithmetic Operations:  '07-arithmetic-ops.md'
   - Readings: 'readings.md'
   - Software/Tools:
       - Programming Environments: 'environments.md'
