@@ -2,7 +2,11 @@
 
 To help students get started with C programming without worrying too much about the details and pitfalls of using `printf` and `scanf`, we provide a simple-to-use library to read and write integers, floating point numbers, and strings.  
 
+The libraries are pre-installed in [CS1010 programming environments](environments.md), with `cs1010.h` located under `~cs1010/include` and `libcs1010.a` located under `~cs1010/lib`.
+
 # Installing the Library
+
+If you want to install the libraries on your own version of Ubuntu, do the following:
 
 1. To get an updated copy of the library, clone it from its git repo on GitHub with the command:
 
