@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://nus-cs1010.github.io/1819-s1/04-type/index.html">
+        <link rel="canonical" href="https://nus-cs1010.github.io/1819-s1/06-cs1010-io/index.html">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>4. Types - CS1010 Programming Methodology</title>
+        <title>6. CS1010 I/O Library - CS1010 Programming Methodology</title>
       
     
     
@@ -100,7 +100,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#unit-4-types" tabindex="1" class="md-skip">
+      <a href="#unit-6-the-cs1010-io-library" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -126,7 +126,7 @@
                 CS1010 Programming Methodology
               </span>
               <span class="md-header-nav__topic">
-                4. Types
+                6. CS1010 I/O Library
               </span>
             
           
@@ -394,70 +394,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        4. Types
-      </label>
-    
-    <a href="index.html" title="4. Types" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../04-type/index.html" title="4. Types" class="md-nav__link">
       4. Types
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#integers" title="Integers" class="md-nav__link">
-    Integers
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#characters" title="Characters" class="md-nav__link">
-    Characters
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#real-numbers" title="Real Numbers" class="md-nav__link">
-    Real Numbers
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#type-declaration" title="Type Declaration" class="md-nav__link">
-    Type Declaration
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -477,11 +418,63 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../06-cs1010-io/index.html" title="6. CS1010 I/O Library" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        6. CS1010 I/O Library
+      </label>
+    
+    <a href="index.html" title="6. CS1010 I/O Library" class="md-nav__link md-nav__link--active">
       6. CS1010 I/O Library
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#standard-input-and-standard-output" title="Standard Input and Standard Output" class="md-nav__link">
+    Standard Input and Standard Output
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no-printf-and-scanf-yet" title="No printf and scanf (yet)" class="md-nav__link">
+    No printf and scanf (yet)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-cs1010-io-library" title="Using the CS1010 I/O Library" class="md-nav__link">
+    Using the CS1010 I/O Library
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -619,29 +612,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#integers" title="Integers" class="md-nav__link">
-    Integers
+  <a href="#standard-input-and-standard-output" title="Standard Input and Standard Output" class="md-nav__link">
+    Standard Input and Standard Output
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#characters" title="Characters" class="md-nav__link">
-    Characters
+  <a href="#no-printf-and-scanf-yet" title="No printf and scanf (yet)" class="md-nav__link">
+    No printf and scanf (yet)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#real-numbers" title="Real Numbers" class="md-nav__link">
-    Real Numbers
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#type-declaration" title="Type Declaration" class="md-nav__link">
-    Type Declaration
+  <a href="#using-the-cs1010-io-library" title="Using the CS1010 I/O Library" class="md-nav__link">
+    Using the CS1010 I/O Library
   </a>
   
 </li>
@@ -662,41 +648,79 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/nus-cs1010/1819-s1/edit/master/docs/04-type.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/nus-cs1010/1819-s1/edit/master/docs/06-cs1010-io.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="unit-4-types">Unit 4: Types</h1>
-<p>Recall from Unit 1 that machine code and data manipulated by machine code are all stored as a sequence of 1s and 0s in the memory.  Each unit of either 1 or 0 is known as a <em>bit</em>.  8 bits form a <em>byte</em>.</p>
-<p>Remember from Unit 2 that a variable is a memory location that stores a value, as a sequence of bits.  The bits stored in the memory has no meaning by itself.  It has to be interpreted by the machine code.  Does a sequence of 1s and 0s represent an integer?  A pixel of an image?  A sound sample in an audio clip?  A month?   As a programmer, we have to tag the variable with its <em>type</em>, so that the machine code knows how to interpret the sequence of bits.  In addition, the type also tells the machine code, how many bits "belong" to this variable.  The number of bits of a type is also known as the <em>size</em> of a type.</p>
-<p>The size of a type determines how many different values a variable of that type can hold.  For instance, a type of one bit can only hold two possible values (e.g., <code class="codehilite">0</code> or <code class="codehilite">1</code>, <code class="codehilite">true</code> or <code class="codehilite">false</code>, <code class="codehilite">black</code> or <code class="codehilite">white</code>).  A type of two bits can hold four values, represented as <code class="codehilite">00</code>, <code class="codehilite">01</code>, <code class="codehilite">10</code>, <code class="codehilite">11</code>.  In general, a type of <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> bits can hold <span><span class="MathJax_Preview">2^k</span><script type="math/tex">2^k</script></span> values.</p>
-<h3 id="integers">Integers</h3>
-<p>To represent integers, a type of 8 bits can represent 256 different values.  If the type only represents non-negative integers (called <code class="codehilite">unsigned</code>), then it can hold any value between 0 to 255.  If it represents both positive and negative integers (called <code class="codehilite">signed</code>), it can hold any value between -128 to 127.  Depending on the needs (how much memory we have, how big is the number we need to represent), programmers have to decide on the size of the type used for a variable in their programs.  With 64 bits, a signed integer can store any value between -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.  This might look big enough for you -- but we can't even fit the results from <span><span class="MathJax_Preview">factorial(21)</span><script type="math/tex">factorial(21)</script></span> here!<br />
-We have to go to 128 bits to represent larger integers.</p>
-<h3 id="characters">Characters</h3>
-<p>To represent a character (i.e., a symbol representing a letter, number, punctuation, etc), we use 8 bits for English characters.  The ASCII standard maps 127 binary sequences to common characters you can type on your keyboard (including 0-9, A-Z, a-z, all sorts of punctuations: &lt;&gt;?:"{}!@#$%^&amp;*()_+-=[]\';/., and special characters like return and escape).  The unicode standard uses up to 32 bits per character, allowing many non-English letter characters (e.g., <a href="https://www.unicode.org/charts/PDF/U1F600.pdf">Emoticons</a>, <a href="https://www.unicode.org/charts/PDF/U2800.pdf">Braille</a>, <a href="https://www.unicode.org/charts/PDF/U1F000.pdf">Mahjong Tiles</a>) to be represented.</p>
-<h3 id="real-numbers">Real Numbers</h3>
-<p>For real numbers, because we need to represent a huge number of possible values, we normally use 32 bits or 64 bits.  In CS1231, you will learn that there are uncountably many possible real numbers.  But, no matter how many bits we use, we can only represent a finite number of possible values for real numbers.  Here, we run into a limit of digitizing information into 0s and 1s -- we can never represent all possible real numbers in a computer!  Because of this, programs that manipulate real numbers leads to weird answers (such as 0.1 + 0.2 is not exactly the same as 0.3) and so, we have to take special care when dealing with real numbers when writing programs (not just in C, but in many other languages as well).  Hence, if we only expect a variable to hold an integer, we should not choose a type that represents real numbers.</p>
-<p>The details of how a sequence of bits can represent integers and real numbers (both positive and negative numbers) are covered in CS2100. </p>
-<p>You should have also noticed that in the discussion above, we talk about types that are 8, 16, 32, 64, 128 bits -- all power of twos.  We do not have a type of size, say, 41 bits.  The reason for this has to do with how memory location is addressed.  This will again be explained in CS2100.</p>
-<h2 id="type-declaration">Type Declaration</h2>
-<p>In C, which we will use in CS1010, we have to associate <em>every</em> variable with a type, and once a variable is <em>declared</em> with a type, the type cannot be changed<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>.</p>
-<p>When we write a function, we have to declare the types of each of the parameters and the return value as well.  </p>
-<p>Take the function <span><span class="MathJax_Preview">mean(L, k)</span><script type="math/tex">mean(L, k)</script></span> as an example.  We have said that <span><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span> is a list<sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup> of integers.  So each element in <span><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span> should have an integer type (how many bits to use will depend on the range of numbers we want the program to possibly handle and how frugal we are about memory usage).  What about <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>?  <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> refers to the number of elements in <span><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>, so it has to be an integer.  As for the value returned by <span><span class="MathJax_Preview">mean(L, k)</span><script type="math/tex">mean(L, k)</script></span>, even when the inputs are all integers (and thus, the sum is an integer), the mean value can be a real number.  So we should choose a type that represents a real number for the return value.  </p>
-<div class="admonition warning">
-<p class="admonition-title">Importance of Type</p>
-<p>Choosing a wrong type to represent a variable can lead to buggy code.  Suppose we say that <span><span class="MathJax_Preview">mean(L, k)</span><script type="math/tex">mean(L, k)</script></span> returns an integer, then when we call <span><span class="MathJax_Preview">mean</span><script type="math/tex">mean</script></span> on the input <code class="codehilite">1 2 3 4</code>, we will get <code class="codehilite">2</code> as the answer, instead of <code class="codehilite">2.5</code> as it should.</p>
-</div>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p>This behavior is known as static typing.  Some programming languages, such as Javascript and Python, are dynamically typed.  The type of a variable may change depending on the value the variable is assigned to.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-<li id="fn:2">
-<p>We have not talked about how to represent a list yet.  I will do that in a later unit.&#160;<a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
+                <h1 id="unit-6-the-cs1010-io-library">Unit 6: The CS1010 I/O Library</h1>
+<p>Our first C program that computes the hypotenuse doesn't do much -- it simply computes <span><span class="MathJax_Preview">\sqrt(3^2 + 4^2)</span><script type="math/tex">\sqrt(3^2 + 4^2)</script></span>.  The value to be computed is hard-coded, and the result computed is not displayed.</p>
+<p>To make this program more general and useful, first, we need to compute the hypotenuse for any length of the base and the height of a right-angled triangle.  We cannot hardcode the length in the program.   We should read these values from the users.  Second, we need to output the result of the computation to the users.  In other words, to make the program more general and useful, we need to add input and output, or I/O, functions.</p>
+<h2 id="standard-input-and-standard-output">Standard Input and Standard Output</h2>
+<p>Before we talk about how to read the input values and display the output values, we have to first talk about where an input comes from and where an output goes to.</p>
+<p>In UNIX-flavored operating systems, an input is read from an abstract channel called the <em>standard input</em>, or <code class="codehilite">stdin</code> for short, and an output is sent to an abstract channel called the <em>standard output</em>, or <code class="codehilite">stdout</code> for short.  </p>
+<p>The fact that these channels are abstract is a powerful concept -- when we write our code, we do not have to worry about where the inputs come from and where the outputs go to.  It will depend on how the user runs our program.  Thus, it allows the users of our program the flexibility to control where the data comes from or goes to.</p>
+<p>For instance, the standard input, by default, reads from the keyboard.  But the user can choose to read from a file, using the redirection <code class="codehilite">&lt;</code> operator <em>from the command line</em> or from the output of another process, using the pipe <code class="codehilite">|</code> operator <em>from the command line</em>.  Similarly, the standard output, by default, writes to the terminal.  But the user can choose to write to a file using the redirection <code class="codehilite">&gt;</code> operator <em>on the command line</em> or to the input of another process, using the pipe <code class="codehilite">|</code> operator, again, on the command line when invoking the program.  You will see how cool these are later.  But for the purpose of C programming, it suffices to know for now that we only need to read from <code class="codehilite">stdin</code> and write to <code class="codehilite">stdout</code> in our code, and we let the users decide where they come from / go to.</p>
+<h2 id="no-printf-and-scanf-yet">No <code class="codehilite">printf</code> and <code class="codehilite">scanf</code> (yet)</h2>
+<p>In almost all articles and textbooks on C that I have seen, the <code class="codehilite">scanf</code> and <code class="codehilite">printf</code> functions are taught as the standard C library functions to perform the input and output respectively.  The function <code class="codehilite">scanf</code>, however, is tricky to use correctly and securely.  The function <code class="codehilite">printf</code> comes with many nuances, such as remembering the different conversion specifiers and modifiers.  I would rather not teach you <code class="codehilite">scanf</code> and <code class="codehilite">printf</code> at this stage.  As such, CS1010 is providing you a library to perform I/O -- the library provides a small set of essential functions to read and write <code class="codehilite">long</code> values, <code class="codehilite">double</code> values, space-separated words, and lines of text. </p>
+<p>You can find the <a href="../library/index.html">documentation for the CS1010 I/O Library here</a>.  We will see how to use the library to improve our hypotenuse computation program here.</p>
+<h2 id="using-the-cs1010-io-library">Using the CS1010 I/O Library</h2>
+<p>Let's modify our earlier program to now read the base and height from <code class="codehilite">stdin</code>, compute the hypotenuse, and print the results out to <code class="codehilite">stdout</code>.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;cs1010.h&quot;</span><span class="cp"></span>
+
+<span class="kt">long</span> <span class="nf">square</span><span class="p">(</span><span class="kt">long</span> <span class="n">x</span><span class="p">)</span> 
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">double</span> <span class="nf">hypotenuse_of</span><span class="p">(</span><span class="kt">long</span> <span class="n">base</span><span class="p">,</span> <span class="kt">long</span> <span class="n">height</span><span class="p">)</span> 
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">square</span><span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="o">+</span> <span class="n">square</span><span class="p">(</span><span class="n">height</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> 
+<span class="p">{</span>
+  <span class="kt">double</span> <span class="n">hypotenuse</span><span class="p">;</span>
+  <span class="kt">long</span> <span class="n">base</span> <span class="o">=</span> <span class="n">cs1010_read_long</span><span class="p">();</span>
+  <span class="kt">long</span> <span class="n">height</span> <span class="o">=</span> <span class="n">cs1010_read_long</span><span class="p">();</span>
+  <span class="n">hypotenuse</span> <span class="o">=</span> <span class="n">hypotenuse_of</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">height</span><span class="p">);</span>
+  <span class="n">cs1010_println_double</span><span class="p">(</span><span class="n">hypotenuse</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>The first change you see (on Line 2) is to include the file <code class="codehilite">cs1010.h</code>, which includes the declaration of functions provided by the library.  On Lines 17 and 18, we introduce two new <code class="codehilite">long</code> variables named <code class="codehilite">base</code> and <code class="codehilite">height</code>, which we initialized with the returned value from <code class="codehilite">cs1010_read_long()</code>.  The function <code class="codehilite">cs1010_read_long</code> reads a <code class="codehilite">long</code> value from <code class="codehilite">stdin</code> and returns the value.  For now, we assume that the inputs are correctly passed to the program.</p>
+<p>Finally, on Line 20, we print the resulting hypotenuse to <code class="codehilite">stdout</code> using the library function <code class="codehilite">cs1010_println_double</code>.  Note that there are two versions of functions to print a <code class="codehilite">double</code> value: <code class="codehilite">cs1010_println_double</code> and <code class="codehilite">cs1010_print_double</code>.  The one with <code class="codehilite">println</code> prints a new line character so that the text that got printed after appears in the next line.</p>
+<p>Refer to <a href="../clang/index.html">CS1010 Compilation Guide</a> on how to compile a program that uses the CS1010 I/O library.</p>
+<p>Note that the <code class="codehilite">main</code> function above can be written as a single statement without any state and assignment.  The resulting code, however, is not necessarily easier to understand.
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> 
+<span class="p">{</span>
+  <span class="n">cs1010_println_double</span><span class="p">(</span><span class="n">hypotenuse_of</span><span class="p">(</span><span class="n">cs1010_read_long</span><span class="p">(),</span> <span class="n">cs1010_read_long</span><span class="p">()));</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></p>
                 
                   
                 
@@ -717,7 +741,7 @@ We have to go to 128 bits to represent larger integers.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../03-func/index.html" title="3. Functions" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../05-first-c/index.html" title="5. First C Program" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -726,19 +750,19 @@ We have to go to 128 bits to represent larger integers.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                3. Functions
+                5. First C Program
               </span>
             </div>
           </a>
         
         
-          <a href="../05-first-c/index.html" title="5. First C Program" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../07-arithmetic-ops/index.html" title="7. Arithmetic Operations" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                5. First C Program
+                7. Arithmetic Operations
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
