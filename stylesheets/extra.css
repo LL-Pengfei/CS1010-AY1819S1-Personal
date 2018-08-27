@@ -6,8 +6,9 @@ article p.admonition-title {
   font-family: "Roboto";
 }
 
-h1 {
+.md-typeset h1, .md-typeset h2 {
   font-weight: bold;
+  color: black;
 }
 
 s {
