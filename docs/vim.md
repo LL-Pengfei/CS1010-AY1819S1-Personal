@@ -67,18 +67,20 @@ to label each line with a line number.
 
 Use `k` and `j` keys to move up and down (just like Gmail and Facebook!).  `h` and `l` to move left and right.
 
-Others shortcut:
+Other shortcuts (no need to memorize them now, just refer back when you feel like you are typing too many `hjkl` to see how you can navigate faster).
 
 - `w`   jump to the beginning of the next word
 - `b`   jump to the beginning of the previous word (reverse of `w`)
 - `e`   jump to the end of the word (or next word when pressed again)
 - `f` + char: search forward in the line and sit on the next matching char
 - `t` + char:  search forward in the line and sit on one space before the matching char
-- <CTRL-d> jump forward half page
-- <CTRL-u> jump backward half page
 - `$` jump to end of line
 - `0` jump to the beginning of the line
 - `%` jump between matching parentheses
+- <CTRL-d> jump forward (Down) half page
+- <CTRL-f> jump Forward one page
+- <CTRL-u> jump backward (Up) half page
+- <CTRL-b> jump Backward half page
 
 ## Jumping to a Line
 
