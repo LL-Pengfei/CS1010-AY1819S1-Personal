@@ -210,17 +210,17 @@ For most practical purposes in CS1010, a (signed) `long` suffices.  We introduce
 Since the number of bits for `int`, `long`, and `long long` could differ, in order to write a C program that is portable (i.e., works on different platforms, architecture, operating systems), we have two options:
 
 - Do not write a program that assumes a specific number of bits is used for a certain type, or
-- Use the type defined in the header file `stdint.h`: `int8_t`, `uint8_t`, `int16_t`, `uint16_t`, `int32_t`, `uint32_t`, `int64_t`, `uint64_t`.  The suffix `_t` is a convention to indicate that this is a customized type (more on this in later units).  The prefix `u` indicates that the type is an unsigned type.  The numbers `8`, `16`, `32`, and `64` indicate the number of bits for each type.  Thus, `uint32_t` is guaranteed to be of size 32 bits, and can hold unsigned integer values from $0$ to $2^32-1$.
+- Use the type defined in the header file `stdint.h`: `int8_t`, `uint8_t`, `int16_t`, `uint16_t`, `int32_t`, `uint32_t`, `int64_t`, `uint64_t`.  The suffix `_t` is a convention to indicate that this is a customized type (more on this in later units).  The prefix `u` indicates that the type is an unsigned type.  The numbers `8`, `16`, `32`, and `64` indicate the number of bits for each type.  Thus, `uint32_t` is guaranteed to be of size 32 bits, and can hold unsigned integer values from $0$ to $2^{32}-1$.
 
 [^1]: Adding more `long` does not make the integer longer, i.e., there is no `long long long int`.
 
 ## Problem Set 5
 
-#### 5.1
+#### Problem 5.1
 
 In the example above, `sqrt` is declared to take in a parameter of type `double` .  But the argument that we pass in is the sum of two `int`, which is also an `int`.   Would this result in an error?  
 
-#### 5.2
+#### Problem 5.2
 
 Consider the following alternative definition of `square`
 
