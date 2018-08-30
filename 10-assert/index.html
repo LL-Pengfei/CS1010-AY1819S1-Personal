@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://nus-cs1010.github.io/1819-s1/readings/index.html">
+        <link rel="canonical" href="https://nus-cs1010.github.io/1819-s1/10-assert/index.html">
       
       
       
@@ -34,7 +34,7 @@
     
     
       
-        <title>Readings - CS1010 Programming Methodology</title>
+        <title>10. Assertion - CS1010 Programming Methodology</title>
       
     
     
@@ -78,7 +78,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#readings" tabindex="1" class="md-skip">
+      <a href="#unit-10-assertion" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -104,7 +104,7 @@
                 CS1010 Programming Methodology
               </span>
               <span class="md-header-nav__topic">
-                Readings
+                10. Assertion
               </span>
             
           
@@ -315,10 +315,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Notes
@@ -442,23 +444,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../10-assert/index.html" title="10. Assertion" class="md-nav__link">
-      10. Assertion
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
   
 
 
@@ -470,11 +455,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Readings
+        10. Assertion
       </label>
     
-    <a href="index.html" title="Readings" class="md-nav__link md-nav__link--active">
-      Readings
+    <a href="index.html" title="10. Assertion" class="md-nav__link md-nav__link--active">
+      10. Assertion
     </a>
     
       
@@ -488,23 +473,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-c" title="Why C?" class="md-nav__link">
-    Why C?
+  <a href="#de-morgans-law" title="De Morgan's Law" class="md-nav__link">
+    De Morgan's Law
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vim" title="Vim" class="md-nav__link">
-    Vim
+  <a href="#problem-set-10" title="Problem Set 10" class="md-nav__link">
+    Problem Set 10
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-101" title="Problem 10.1" class="md-nav__link">
+    Problem 10.1
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#vim-video-tutorial-from-aaron-tan" title="Vim Video Tutorial (from Aaron Tan)" class="md-nav__link">
-    Vim Video Tutorial (from Aaron Tan)
+        
+          <li class="md-nav__item">
+  <a href="#problem-102" title="Problem 10.2" class="md-nav__link">
+    Problem 10.2
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -514,6 +512,23 @@
   
 </nav>
     
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../readings/index.html" title="Readings" class="md-nav__link">
+      Readings
+    </a>
   </li>
 
     
@@ -622,23 +637,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-c" title="Why C?" class="md-nav__link">
-    Why C?
+  <a href="#de-morgans-law" title="De Morgan's Law" class="md-nav__link">
+    De Morgan's Law
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vim" title="Vim" class="md-nav__link">
-    Vim
+  <a href="#problem-set-10" title="Problem Set 10" class="md-nav__link">
+    Problem Set 10
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-101" title="Problem 10.1" class="md-nav__link">
+    Problem 10.1
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#vim-video-tutorial-from-aaron-tan" title="Vim Video Tutorial (from Aaron Tan)" class="md-nav__link">
-    Vim Video Tutorial (from Aaron Tan)
+        
+          <li class="md-nav__item">
+  <a href="#problem-102" title="Problem 10.2" class="md-nav__link">
+    Problem 10.2
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -656,35 +684,206 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/nus-cs1010/1819-s1/edit/master/docs/readings.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/nus-cs1010/1819-s1/edit/master/docs/10-assert.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="readings">Readings</h1>
-<h3 id="why-c">Why C?</h3>
+                <h1 id="unit-10-assertion">Unit 10: Assertion</h1>
+<p>An assertion is a logical expression that must always be true for the program to be correct.  We can write assertions either as part of the comment for the code, or use the <code class="codehilite">assert()</code> macro in C.  Let's look at what is assertion first.  We will introduce the use of <code class="codehilite">assert()</code> later.</p>
+<p>To get started, let's first look at the most trivial assertion:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">long</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="c1">// { x == 1 }</span>
+</pre></div>
+</td></tr></table>
+
+<p>The line above initialize the variable <code class="codehilite">x</code> to be <code class="codehilite">1</code>.  The next line, a comment, uses the curly braces <code class="codehilite">{</code> and <code class="codehilite">}</code> with a logical expression in between, to indicate that <code class="codehilite">x</code> must be equals to <code class="codehilite">1</code> after the assignment.  We use the curly braces as a notation in CS1010, following <a href="https://en.wikipedia.org/wiki/Tony_Hoare">C. A. R. Hoare</a>'s notation, but this is not part of any C standard.</p>
+<p>The assertion above is kind of trivial and not very meaningful. </p>
+<p>Let's revisit this snippet:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">max</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="n">max</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Let's consider the true block and the false block.  Inside the true block, since <code class="codehilite">x &gt; y</code>, we can assert that, well, <code class="codehilite">x &gt; y</code>, and inside the false block, we have the negation, so <code class="codehilite">x &lt;= y</code>.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// { x &gt; y }</span>
+  <span class="n">max</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="c1">// { x &lt;= y }</span>
+  <span class="n">max</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Let's now consider what happens after initializing <code class="codehilite">max</code> to either <code class="codehilite">x</code> or <code class="codehilite">y</code>.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// { x &gt; y }</span>
+  <span class="n">max</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+  <span class="c1">// { max == x &amp;&amp; max &gt; y }</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="c1">// { x &lt;= y }</span>
+  <span class="n">max</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span>
+  <span class="c1">// { max &gt;= x &amp;&amp; max == y }</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>The assertion on Line 4 consists of two parts: <code class="codehilite">max == x</code> which is the result of the assignment (the trivial assertion), but since inside this block, <code class="codehilite">x &gt; y</code>, we must have <code class="codehilite">max &gt; y</code> to be true as well.</p>
+<p>Similarly, we can argue the assertion in Line 8 to be true.  </p>
+<p>What can we assert after we exit from the <code class="codehilite">if</code>-<code class="codehilite">else</code> block?  We have either <code class="codehilite">max == x &amp;&amp; max &gt; y</code> or <code class="codehilite">max &gt;= x &amp;&amp; max == y</code>.  This is exactly the property we are looking for in <code class="codehilite">max</code> when we set it to the maximum of <code class="codehilite">x</code> and <code class="codehilite">y</code>!  </p>
+<p>Let's look at another example:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>  <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">8</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;C&quot;</span><span class="p">);</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;D&quot;</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Let's focus on the case of printing <code class="codehilite">C</code>.  We should print <code class="codehilite">C</code> if <code class="codehilite">score</code> is less than 5 but is 3 or higher.  Let's check if this is correct by finding out what we can assert wrt <code class="codehilite">score</code> just before printing <code class="codehilite">C</code>.  We first add the assert condition to all the true blocks and the false block by negating the <code class="codehilite">if</code> condition.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>  <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">8</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// { score &gt;= 5 }</span>
+      <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="c1">// { score &lt; 5 }</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// { score &lt; 5 &amp;&amp; score &gt;= 3 }</span>
+        <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;C&quot;</span><span class="p">);</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">// { score &lt; 5 &amp;&amp; score &lt; 3 }</span>
+        <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;D&quot;</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>We can see that, we are printing <code class="codehilite">C</code> when <code class="codehilite">score &lt; 5 &amp;&amp; score &gt;= 3</code>, which is what we want.  </p>
+<p>Note that the last assert <code class="codehilite">score &lt; 5 &amp;&amp; score &lt; 3</code> can be simplified to <code class="codehilite">score &lt; 3</code>.</p>
+<h2 id="de-morgans-law">De Morgan's Law</h2>
+<p>To write an assertion for the false block, it is useful to know the De Morgan's law, which tells us how to negate some logical expression.  Suppose we have two logical expressions <code class="codehilite">e1</code> and <code class="codehilite">e2</code>. </p>
 <ul>
-<li><a href="https://www.zeroequalsfalse.press/2017/11/29/c/index.html">Learn C programming and the rest will come, by Marty Jacobs</a></li>
-<li><a href="https://www.oreilly.com/learning/the-resurgence-of-c-programming">The Resurgence of C Programming, by Mark Barlow</a></li>
-<li><a href="http://www.evanmiller.org/you-cant-dig-upwards.html">You Can't Dig Upwards, by Evan Miller</a></li>
+<li><code class="codehilite">!(e1 &amp;&amp; e2)</code> is the same as <code class="codehilite">(!e1) || (!e2)</code></li>
+<li><code class="codehilite">!(e1 || e2)</code> is the same as <code class="codehilite">(!e1) &amp;&amp; (!e2)</code></li>
 </ul>
-<h3 id="vim">Vim</h3>
-<ul>
-<li><a href="https://stackoverflow.com/questions/597077/what-are-the-benefits-of-learning-vim">What are the benefits of learning Vim?</a> on Stack Overflow</li>
-<li><a href="http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/">Learn <code class="codehilite">vim</code> Progressively</a></li>
-<li><a href="https://twobithistory.org/2018/08/05/where-vim-came-from.html">Where Vim Came From</a> -- from TwoBitHistory</li>
-<li><a href="https://medium.com/@mkozlows/why-atom-cant-replace-vim-433852f4b4d1">Vim's Big Idea</a> - by Mike Kozlowski</li>
-<li><a href="https://dispatches.artifexdeus.com/vim-pays-excellent-dividends-814241804984">VIM Pays Excellent Dividends</a> - by John Bjorn Nelson</li>
-<li><a href="http://dudarev.com/blog/powers-of-vim/">The Powers of VIM</a> - by Artem Dudarev</li>
-<li><a href="https://github.com/damassi/learn-vim/blob/master/README.md">The 11 Steps to LEarning Vim</a> - by <a href="https://github.com/damassi">damassi</a></li>
-<li><a href="https://csswizardry.com/2014/06/vim-for-people-who-think-things-like-vim-are-weird-and-hard/">Vim for People Who Think Things like Vim and Weird and Hard</a> - by <a href="https://csswizardry.com/">Harry Roberts</a></li>
-<li><a href="https://pascalprecht.github.io/posts/why-i-use-vim/">Why I use Vim</a> - Pascal Precht</li>
-</ul>
-<h3 id="vim-video-tutorial-from-aaron-tan">Vim Video Tutorial (from Aaron Tan)</h3>
-<ul>
-<li><a href="http://vidcast.nus.edu.sg/camtasiarelay/vim-1_-_MP4_with_Smart_Player_%28Large%29_-_20130805_08.51.47AM.html">Lesson 1</a></li>
-<li><a href="http://vidcast.nus.edu.sg/camtasiarelay/vim_-_MP4_with_Smart_Player_%28Large%29_-_20130806_10.47.38AM.html">Lesson 2</a></li>
-<li><a href="http://vidcast.nus.edu.sg/camtasiarelay/vim-3_-_MP4_with_Smart_Player_%28Large%29_-_20130809_01.26.24PM.html">Lesson 3</a></li>
-<li><a href="http://vidcast.nus.edu.sg/camtasiarelay/vim-4_-_MP4_with_Smart_Player_%28Large%29_-_20130811_10.59.20AM.html">Lesson 4</a></li>
-</ul>
+<p>We have actually seen it in action.  Recall the expression for Generation Z: </p>
+<p><code class="codehilite">(birth_year &gt;= 1995) &amp;&amp; (birth_year &lt;= 2005)</code>.  </p>
+<p>To check for NOT Generation Z, we can write it as </p>
+<p><code class="codehilite">!((birth_year &gt;= 1995) &amp;&amp; (birth_year &lt;= 2005))</code>, </p>
+<p>which according to De Morgan's law, is the same as </p>
+<p><code class="codehilite">!(birth_year &gt;= 1995) || !(birth_year &lt;= 2005)</code>, </p>
+<p>which is just </p>
+<p><code class="codehilite">(birth_year &lt; 1995) || (birth_year &gt; 2005)</code>, </p>
+<p>exactly as we have written before!</p>
+<h2 id="problem-set-10">Problem Set 10</h2>
+<h3 id="problem-101">Problem 10.1</h3>
+<p>Negate the following logical expression, then apply De Morgan's Law to simplify the resulting expression.  Assume all variable names mentioned are boolean variables.</p>
+<p>(a) <code class="codehilite">(x &gt; 1) &amp;&amp; (y != 10)</code></p>
+<p>(b) <code class="codehilite"><span class="sx">!eating &amp;&amp; drinking</span></code></p>
+<p>(C) <code class="codehilite">(has_cs2030 || has_cs2113) &amp;&amp; has_cs2040c</code></p>
+<h3 id="problem-102">Problem 10.2</h3>
+<p>In the code below, replace <code class="codehilite">???</code> with the appropriate assertion.  What will be printed?</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">long</span> <span class="n">score</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">something</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">score</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// { ??? }</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">score</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">score</span> <span class="o">+=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// { ??? }</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;ok&quot;</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;failed&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
                 
                   
                 
@@ -703,7 +902,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../10-assert/index.html" title="10. Assertion" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../09-logical-exp/index.html" title="9. Logical Expression" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -712,19 +911,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                10. Assertion
+                9. Logical Expression
               </span>
             </div>
           </a>
         
         
-          <a href="../environments/index.html" title="Programming Environments" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../readings/index.html" title="Readings" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Programming Environments
+                Readings
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
