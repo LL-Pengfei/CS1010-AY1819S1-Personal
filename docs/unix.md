@@ -248,7 +248,7 @@ To add executable permission to everyone, you can run:
 chmod a+x <file>
 ```
 
-This would change the permission from `-rw-rw-rw-` to `-rwx--xrwx`, or from `-rwxr--r--` to `-rwx--xr-x`, and so on.  You get the idea.
+This would change the permission from `-rw-rw-rw-` to {--`-rwx--xrwx`--} `-rwxrwxrwx`, or from `-rwxr--r--` to {--`-rwx--xr-x`--} `-rwxr-xr-x`, and so on.  You get the idea.
 
 Another way to change the permission is set the permission directly, instead of adding with `+` and removing with `-`.  To do this, one convenient way is to treat the permission for each class of user as a 3-bit binary number between 0 to 7.  So, `rwx` is 7, `rw-` is 6, `-w-` is 2, `---` is 0, etc.  
 
