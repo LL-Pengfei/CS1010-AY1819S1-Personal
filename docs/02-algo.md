@@ -91,7 +91,7 @@ Please spend some time to trace through the walkthrough above.  The snapshot of 
 
 | Integers Scanned | $i$ | $l_i$ | $k$ | Maximum So Far ($m$) |
 |------------------|-----|-------|-----|----------------|
-| `4` | `1` | `4` | `9` | `4` | 
+| `4` | `1` | {--`4`--} `1` | `9` | `4` | 
 | `4 1` | `1` | `1` | `9` | `4` | 
 | `4 1 -4` | `2` | `-4` | `9` | `4` |
 | `4 1 -4 0` | `3` | `0` | `9` | `4` | 
