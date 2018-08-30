@@ -49,7 +49,7 @@ For beginners, it is _highly recommended_ that you _always_ compile with `-Wall`
 
 ## 4. Generating additional information for debugging.
 
-In order to use the debugger `lldb` to trace through and debug your program, `clang` needs to generate additional information and store them in the executable file.  We can instruct `clang` to generate them with the flag `-g` (`g` for **g**enerate or debu**g**).  
+In order to use the debugger `lldb` to trace through and debug your program, `clang` needs to generate additional information and store them in the executable file.  We can instruct `clang` to generate them with the flag `-g` (`g` for generate).  
 
 ```
 happytan@host:~[xxx]$ clang -Wall -g teh.c -o teh
