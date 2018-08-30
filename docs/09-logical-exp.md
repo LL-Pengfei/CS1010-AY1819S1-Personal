@@ -26,7 +26,7 @@ if (is_diff) {
 }
 ```
 
-Although not required by C, we will name a `bool` variable with prefix `is_` or `has_` as a convention.  
+Although not required by C, we will name a `bool` variable with a prefix `is_` or `has_` as a convention.  
 
 The code above can also be written as:
 ```C
@@ -40,7 +40,7 @@ The comparison with `true` is redundant, however, and should be skipped.
 
 ## Logical Operators
 
-Just like we can perform arithmetic opereration on integers and real numbers, we can perform logical operations on boolean values.  These allow us to write complex logical expressions.
+Just like we can perform arithmetic operations on integers and real numbers, we can perform logical operations on boolean values.  These allow us to write complex logical expressions.
 
 Consider the example problem: Write a function that, given the birth year of a person, determine if he or she belongs to Generation Z, defined as someone whose birth is between 1995 and 2005, inclusive. 
 
@@ -95,7 +95,7 @@ Generally, we prefer to write functions that check for the positives, as it is g
 
 ```C
 if (!is_gen_z(birth_year)) {
-	 :
+     :
 }
 ```
 
@@ -110,7 +110,7 @@ bool is_not_gen_z(long birth_year)
 
 ## Short Circuiting
 
-When evaluating the logical expressions that involve `&&` and `||`, C uses "short circuiting".  This means that, if we already know, for sure, that a logical expression is true or is false, there is no need to continue the evaluation.  The corresponding `true` and `false` value will be returned.
+When evaluating the logical expressions that involve `&&` and `||`, C uses "short-circuiting".  This means that, if we already know, for sure, that a logical expression is true or is false, there is no need to continue the evaluation.  The corresponding `true` and `false` value will be returned.
 
 Consider the following:
 ```C
@@ -132,14 +132,14 @@ bool is_not_gen_z(long birth_year)
 
 When `birth_year` is `1970`, the expression `(birth_year < 1995)` is `true`, so we know that the whole statement is `true`.  There is no need to check if `(birth_year > 2005)`.
 
-In both examples above, the savings due to short circuiting is not much -- since we are basically comparing two numbers, and there is no _side effects_ in comparing `birth_year` to `2005`.  But, let's suppose that we introduce two functions with side effects (of printing to screen):
+In both examples above, the savings due to short-circuiting is not much -- since we are basically comparing two numbers, and there is no _side effects_ in comparing `birth_year` to `2005`.  But, let's suppose that we introduce two functions with side effects (of printing to screen):
 
 ```C
 bool not_too_old(long birth_year)
 {
   if (birth_year >= 1995) {
     cs1010_print_string("not too old..");
-	return true;
+    return true;
   }
   cs1010_print_string("too old..");
   return false;
@@ -149,7 +149,7 @@ bool not_too_young(long birth_year)
 {
   if (birth_year <= 2005) {
     cs1010_print_string("not too young..");
-	return true;
+    return true;
   }
   cs1010_print_string("too young..");
   return false;
@@ -161,31 +161,31 @@ bool is_gen_z(long birth_year)
 }
 ```
 
-When we call `is_gen_z(1984)`, you might expect `too old..not too young..` to be printed, but due to short circuting, the code only prints `too old..`.
+When we call `is_gen_z(1984)`, you might expect `too old..not too young..` to be printed, but due to short-circuiting, the code only prints `too old..`.
 
-Another reason to keep short circuiting in mind is that the order of the logical expressions matter: we would want to put the logical expression that involves more work in the second half of the expression.  Take the following example:
+Another reason to keep short-circuiting in mind is that the order of the logical expressions matter: we would want to put the logical expression that involves more work in the second half of the expression.  Take the following example:
 
 ```C
 if (number < 100000 && is_prime(number)) {
-	:
+    :
 }
 ```
 
-Checking whether a number is below 100,000 is easier than checking if a number is prime.  So, we can skip checking for primarity if the `number` is too big.  Compare this to:
+Checking whether a number is below 100,000 is easier than checking if a number is prime.  So, we can skip checking for primality if the `number` is too big.  Compare this to:
 
 ```C
 if (is_prime(number) && number < 100000) {
-	:
+    :
 }
 ```
 
-Suppose `number` is a gigantic integer, then we would have spend lots of effort checking if `number` is a prime, only to find out that it is too big anyway!
+Suppose `number` is a gigantic integer, then we would have spent lots of effort checking if `number` is a prime, only to find out that it is too big anyway!
 
 ## Problem Sets
 
 ### Problem 9.1
 
-Given two `bool` variables, `a` and `b`, there are four possible combinations of `true` `false` values.  What are the values of `a && b`, `a || b`, and `!a` for each these combinations?  Fill in the table below.
+Given two `bool` variables, `a` and `b`, there are four possible combinations of `true` `false` values.  What are the values of `a && b`, `a || b`, and `!a` for each of these combinations?  Fill in the table below.
 
 | `a` | `b` | `a && b` | `a || b` | `!a` |
 |---- |-----|----------|----------|------|
@@ -203,15 +203,15 @@ long max_of_three(long a, long b, long c)
 {
   long max = 0;
   if ((a > b) && (a > c)) {
-	// a is larger than b and c
+    // a is larger than b and c
     max = a;
   }
   if ((b > a) && (b > c)) {
-	// b is larger than a and c
+    // b is larger than a and c
     max = b;
   }
   if ((c > a) && (c > b)) {
-	// c is larger than a and b
+    // c is larger than a and b
     max = c;
   }
   return max;
