@@ -219,8 +219,11 @@ long max_of_three(long a, long b, long c)
 ```
 
 (a) What is wrong with the code above?
+
 (b) Give a sample test value of `a`, `b`, and `c` that would expose the bug.
+
 (C) Fix the code above to remove the bug.
+
 (d) Replace the three `if` statements in the code above with `if`-`else` statements.  Draw the corresponding flowchart.
 
 ### Problem 9.3

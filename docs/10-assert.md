@@ -107,7 +107,22 @@ To write an assertion for the false block, it is useful to know the De Morgan's 
 - `!(e1 || e2)` is the same as `(!e1) && (!e2)`
 
 We have actually seen it in action.  Recall the expression for Generation Z: 
-  `(birth_year >= 1995) && (birth_year <= 2005)`.  To check for NOT Generation Z, we can write it as `!((birth_year >= 1995) && (birth_year <= 2005))`, which according to De Morgan's law, is the same as `!(birth_year >= 1995) || !(birth_year <= 2005)`, which is just `(birth_year < 1995) || (birth_year > 2005)`, exactly as we have written before!
+  
+  `(birth_year >= 1995) && (birth_year <= 2005)`.  
+
+To check for NOT Generation Z, we can write it as 
+
+`!((birth_year >= 1995) && (birth_year <= 2005))`, 
+
+which according to De Morgan's law, is the same as 
+
+`!(birth_year >= 1995) || !(birth_year <= 2005)`, 
+
+which is just 
+
+`(birth_year < 1995) || (birth_year > 2005)`, 
+
+exactly as we have written before!
 
 ## Problem Set 10
 
@@ -116,7 +131,9 @@ We have actually seen it in action.  Recall the expression for Generation Z:
 Negate the following logical expression, then apply De Morgan's Law to simplify the resulting expression.  Assume all variable names mentioned are boolean variables.
 
 (a) `(x > 1) && (y != 10)`
+
 (b) `!eating && drinking`
+
 (C) `(has_cs2030 || has_cs2113) && has_cs2040c`
 
 ### Problem 10.2
