@@ -63,7 +63,11 @@ To use local port forwarding (from local port `1010`), connect to `sunfire` usin
 ```
 ssh -L 1010:pe111.comp.nus.edu.sg:22 <username>@sunfire.comp.nus.edu.sg
 ```
-This command opens an SSH tunnel from port `1010` of your machine to port `22` (the default SSH port) of `pe111.comp.nus.edu.sg` via `sunfire`.  After successful login, open a separate SSH (or SCP) connection from your machine to `localhost:1010` to access the VM.
+This command opens an SSH tunnel from port `1010` of your machine to port `22` (the default SSH port) of `pe111.comp.nus.edu.sg` via `sunfire`.  After successful login, open a separate SSH (or SCP) connection from your machine to `localhost` at port `1010` to access the PE host:
+
+```
+ssh <username>@localhost -p 1000
+```
 
 [`PuTTY`](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) supports SSH port forwarding, so this setup can also be used on Windows.
 
