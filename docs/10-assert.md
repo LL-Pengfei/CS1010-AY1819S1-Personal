@@ -1,6 +1,6 @@
 # Unit 10: Assertion
 
-Assertion is a logical expression that must always be true for the program to be correct.  We can write assertions either as part of the comment for the code, or use the `assert()` macro in C.  Let's look at what is assertion first.  We will introduce the use of `assert()` later.
+An assertion is a logical expression that must always be true for the program to be correct.  We can write assertions either as part of the comment for the code, or use the `assert()` macro in C.  Let's look at what is assertion first.  We will introduce the use of `assert()` later.
 
 To get started, let's first look at the most trivial assertion:
 
@@ -49,11 +49,11 @@ if (x > y) {
 }
 ```
 
-The assertion on Line 4 consists of two parts: `max == x` which is the result of assignment (the trivial assertion), but since inside this block, `x > y`, we must have `max > y` to be true as well.
+The assertion on Line 4 consists of two parts: `max == x` which is the result of the assignment (the trivial assertion), but since inside this block, `x > y`, we must have `max > y` to be true as well.
 
 Similarly, we can argue the assertion in Line 8 to be true.  
 
-What can we assert after we exit from the `if`-`else` block?  We have either `max == x && max > y` or `max >= x && max == y`.  This is exactly the property we are looking for in `max` when we set it to the maximum of `x` and `y`.
+What can we assert after we exit from the `if`-`else` block?  We have either `max == x && max > y` or `max >= x && max == y`.  This is exactly the property we are looking for in `max` when we set it to the maximum of `x` and `y`!  
 
 Let's look at another example:
 
@@ -83,12 +83,12 @@ Let's focus on the case of printing `C`.  We should print `C` if `score` is less
       // { score >= 5 }
       cs1010_println_string("B");
     } else {
-	  // { score < 5 }
+      // { score < 5 }
       if (score >= 3) {
         // { score < 5 && score >= 3 }
         cs1010_println_string("C");
       } else {
-		// { score < 5 && score < 3 }
+        // { score < 5 && score < 3 }
         cs1010_println_string("D");
       }
     }
@@ -101,7 +101,7 @@ Note that the last assert `score < 5 && score < 3` can be simplified to `score <
 
 ## De Morgan's Law
 
-To write assertion for the false block, it is useful to know the De Morgan's law, which tells us how to negate some logical expression.  Suppose we have two logical expressions `e1` and `e2`. 
+To write an assertion for the false block, it is useful to know the De Morgan's law, which tells us how to negate some logical expression.  Suppose we have two logical expressions `e1` and `e2`. 
 
 - `!(e1 && e2)` is the same as `(!e1) || (!e2)`
 - `!(e1 || e2)` is the same as `(!e1) && (!e2)`
@@ -117,7 +117,7 @@ Negate the following logical expression, then apply De Morgan's Law to simplify 
 
 (a) `(x > 1) && (y != 10)`
 (b) `!eating && drinking`
-(C) `(has_cs2030 || has_cs2113) && has_cs2040`
+(C) `(has_cs2030 || has_cs2113) && has_cs2040c`
 
 ### Problem 10.2
 
@@ -133,15 +133,15 @@ if (something) {
 // { ??? }
 
 if (score == 4) {
-	score = 1;
+    score = 1;
 } else {
-	score += 10;
+    score += 10;
 }
 // { ??? }
 
 if (score >= 10) {
-	cs1010_println_string("ok");
+    cs1010_println_string("ok");
 } else {
-	cs1010_println_string("failed");
+    cs1010_println_string("failed");
 }
 ```
