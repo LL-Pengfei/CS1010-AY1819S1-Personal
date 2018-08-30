@@ -1,13 +1,13 @@
 # Unit 8: Conditional Statement
 
-So far the C programs that we have written has a straight forward _execution path_.  The execution flows from top to bottom in `main`, jumping to a function being called (or _callee_), and back to the caller when the function returns.
+So far the C programs that we have written has a straightforward _execution path_.  The execution flows from top to bottom in `main`, jumping to a function being called (or _callee_), and back to the caller when the function returns.
 
 We have, however, seen a few examples so far where the execution path can _branch_ off to either one of two paths, depends on a condition:
 
 - In the algorithm to compute the $max(L, k)$, we check if $l_i > m$, and update $m$ only if this is true.  
 - In the algorithm to compute the $factorial(n)$, we check if $n$ equals 0, and return 1 if it is true, otherwise, we return $n \times factorial(n-1)$.
 
-We are not ready to write C code that process a list yet, so let's use the $factorial(n)$ function as an example.  In C, the $factorial(n)$ would look like this:
+We are not ready to write C code that processes a list yet, so let's use the $factorial(n)$ function as an example.  In C, the $factorial(n)$ would look like this:
 
 ```C
 long factorial(long n) 
@@ -29,7 +29,7 @@ if (<logical expression>) {
 }
 ```
 
-The `if` keyword is followed by a _logical expression_ in parenthesis.  This is followed by a block of statements (in curly braces `{` and `}`).  If the logical expression is true, then the statements are executed, otherwise, they are skipped.  For this reason, the group of statements is known as true block.
+The `if` keyword is followed by a _logical expression_ in parenthesis.  This is followed by a block of statements (in curly braces `{` and `}`).  If the logical expression is true, then the statements are executed, otherwise, they are skipped.  For this reason, the group of statements is known as a _true block_.
 
 ## Comparison Operator
 
@@ -43,9 +43,9 @@ The logical expression `n == 0` is true if the variable `n` holds the value of `
   }
 ```
 
-The `==` is known as a _comparison operator_.  It compares if the left hand side has the same value as the right hand side. Other comparison operators include: `>` (greater than), `<` (less than), `>=` (greater or equal to), `<=` (less than or equal to), and `!=` (not equal).
+The `==` is known as a _comparison operator_.  It compares if the left-hand side has the same value as the right-hand side. Other comparison operators include `>` (greater than), `<` (less than), `>=` (greater or equal to), `<=` (less than or equal to), and `!=` (not equal).
 
-In other words, the function `factorial` will exit and return `1` if the parameter `n` is equals to `0`.  The rest of the code (particularly, Line 5) will be skipped.
+In other words, the function `factorial` will exit and return `1` if the parameter `n` equals to `0`.  The rest of the code (particularly, Line 5) will be skipped.
 
 What if `n` is not `0`?  The block that contains Line 3 `return 1;` will be skipped, and Line 5 `return n * factorial(n - 1);` will be executed instead, which is what we intended for the `factorial` function to do.
 
@@ -67,13 +67,13 @@ Take a moment to understand the code above, and see if you can figure out what i
 
 When we think about writing conditionals, we have to exhaustively reason about what are all the possible scenarios that could occur.  In this example, we need to think about what are the possible relationships between `x` and `y` when we compare `x` an `y`.  There are actually three possibilities!
 
-- `x > y`: in this case `x` is larger and we set `max` to `x`
-- `y > x`: in this case `y` is larger and we set `max` to `y`
-- `x == y`: in this case both are equally large, so the maximum of the two can be either `x` or `y`.
+- `x > y`: in this case, `x` is larger and we set `max` to `x`
+- `y > x`: in this case, `y` is larger and we set `max` to `y`
+- `x == y`: in this case, both are equally large, so the maximum of the two can be either `x` or `y`.
 
 In the code above, `max` is not set properly if `x == y`!
 
-The following code adds the third case and arbitrary chooses to set `max` to `y` if both `x` and `y` have the same value.
+The following code adds the third case and arbitrarily chooses to set `max` to `y` if both `x` and `y` have the same value.
 
 ```C
 if (x > y) {
@@ -124,7 +124,7 @@ if (<logical expression>) {
 
 ## Nested Else-If
 
-The example above considers _two_ possible execution paths only.  In some situations, we may need to consider more than two execution paths.  Take the following problem for example: You are given the numerical score for an assignment, ranged between 0 and 10.  Print out the letter grade of the assignment according to the table below:
+The example above considers _two_ possible execution paths only.  In some situations, we may need to consider more than two execution paths.  Take the following problem for example.  You are given the numerical score for an assignment, ranged between 0 and 10.  Print out the letter grade of the assignment according to the table below:
 
 | Score | Letter Grade | 
 |-------|--------------|
@@ -133,7 +133,7 @@ The example above considers _two_ possible execution paths only.  In some situat
 | Less than 5 but 3 or higher | C |
 | Less than 3 | D |
 
-Since the `if`-`else` statement only allows branching into two possibilities, we can branch into multiple possibilities by nesting the `if`-`else` statements hierarchically.  We can first break the table down into three tables, each containing two rows only, that correspond to negation of each other.
+Since the `if`-`else` statement only allows branching into two possibilities, we can branch into multiple possibilities by nesting the `if`-`else` statements hierarchically.  We can first break the table down into three tables, each containing only two rows, with one row a negation of the other row.
 
 | Score | Letter Grade | 
 |-------|--------------|
@@ -179,7 +179,7 @@ void print_score(double score)
 
 There are three nested `if`-`else` in the function above.  Note how I use indentation to clearly indicate the nesting of blocks.  Such nesting or indentation is not required by C standard, but is a commonly accepted coding practice, and is required for CS1010.
 
-The code below compiles perfectly but is not as easy to read by human as the above.
+The code below compiles perfectly but is not as easy to read by a human as the above.
 
 ```C
 void print_score(double score) 
@@ -199,7 +199,7 @@ if (score >= 3) {
 There are also a couple of "first" in the sample code above:
 
 - You see the keyword `void` for the first time.  `void` is a special type that indicates nothing.  The function `print_score` does not return anything, it accepts an input `score` and print something to screen.  As such, we say that the return type of `print_score` is `void`.
-- You see _strings_ for the first time (`"A"`, etc.).  A _string_ basically is a sequence of characters.  We use double quotes `"` to mark the beginning and the end of a string, and use the CS1010 I/O library function `cs1010_println_string` to print the a string to the screen. 
+- You see _strings_ for the first time (`"A"`, etc.).  A _string_ basically is a sequence of characters.  We use double quotes `"` to mark the beginning and the end of a string, and use the CS1010 I/O library function `cs1010_println_string` to print a string to the screen. 
 
 You can imagine that as the number of possible letter grades increases (NUS has 11), we will have many nested `if`-`else`, and the code gets complicated.  To reduce the number of nesting, we can write `else if` directly, without nesting:
 
@@ -296,11 +296,11 @@ with a single line:
 max = (x > y) ? x : y;
 ```
 
-We can nest the conditional operator as well, but it does not necessary makes your code easier to read once you started nesting them up.  We do not encourage you to nest the conditional operator in CS1010 and to limit its usage to simple cases above.
+We can nest the conditional operator as well, but it does not necessarily make your code easier to read once you start nesting them up.  We do not encourage you to nest the conditional operator in CS1010 and to limit its usage to simple cases above.
 
 ## Comparing Real Numbers
 
-Recall that we said real numbers cannot be represented exactly in computers.  Comparing real numbers therefore becomes a little bit trickier in programming.  The `if` statement
+Recall that we said [real numbers cannot be represented exactly in computers](https://nus-cs1010.github.io/1819-s1/04-type/index.html#real-numbers).  Comparing real numbers, therefore, becomes a little bit trickier in programming.  The `if` statement
 
 ```C
 double expected_value = 0.3;
@@ -310,7 +310,7 @@ if (sum == expected_value) {
 }
 ```
 
-would not be evaluated to `true` as expected!
+would not be evaluated as `true` as expected!
 
 Thus, to compare real numbers, we normally allow some errors in comparisons -- we want the absolute difference between `sum` and `expected_value` to be small enough.
 ```C
@@ -377,7 +377,7 @@ long factorial(long n)
 }
 ```
 
-(b) Draw the flowchat for the code snippet
+(b) Draw the flowchart for the code snippet
 
 ```C
 if (x > y) {
