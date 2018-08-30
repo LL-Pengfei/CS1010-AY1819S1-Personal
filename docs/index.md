@@ -6,7 +6,16 @@ Piazza is the Q&A site for students and instructors to ask questions and discuss
 
 ## Notes and Lectures :fa-commenting:
 
+### Lecture 4
+
+In this lecture, we will learn how to write programs that involves branching execution path, using `if`-`else` statements and logical expressions.  We will introduce how to reason about the logical implications of these expressions to the behavior of our program using assertions.
+
+[Unit 8 If-Else](08-if-else.md), [Unit 9 Logical Expression](09-logical-exp.md), and [Unit 10 Assertion](10-assert.md) will be covered.
+
 ### Lecture 3
+
+- [Slides](https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1/slides/cs1010-lec3.pdf) 
+- [Screencast](https://vimeo.com/287220672)
 
 We will cover [Unit 5: First C Program](05-first-c.md), [Unit 6: CS1010 I/O Library](06-cs1010-io.md) and [Unit 7: Arithmetic Operations](07-arithmetic-ops.md).
 
