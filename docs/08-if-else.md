@@ -321,9 +321,9 @@ if (fabs(sum - expected_value) < 0.000001) {
 }
 ```
 
-# Problem Sets
+## Problem Sets
 
-# Problem 8.1
+### Problem 8.1
 
 (a) Do the following two functions behave the same way?  Explain.
 
@@ -377,7 +377,9 @@ long factorial(long n)
 }
 ```
 
-(b) Draw the flowchart for the code snippet
+### Problem 8.2
+
+Draw the flowchart for the code snippet
 
 ```C
 if (x > y) {
@@ -401,7 +403,7 @@ if (x > y) {
 }
 ```
 
-(C) 
+### Problem 8.3
 
 Suppose we break down the table below in a slightly different way.
 
