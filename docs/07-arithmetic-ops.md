@@ -78,7 +78,7 @@ modifies `a` the same way as:
 a = a op b
 ```
 
-## Common Mistakes Using Arithmatic Operations
+## Common Mistakes Using Arithmetic Operations
 
 It is important to remember that, when arithmetic operations in C is performed on a sequence of bits, where the value that it can represent is limited and is determined by its type.  A common mistake for beginner programmers is to forget this fact and treat the arithmetic operations as the same as the ones seen in mathematics.  
 
