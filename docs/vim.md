@@ -21,7 +21,7 @@ You can ask `vim` to automatically backup files that you edit.  This has been a 
 In your `~/.vimrc` file, 
 
 ```
-set backup=on
+set backup
 ```
 
 will cause a copy of your file to be save with suffix `~` appended to its name everytime you save.
@@ -77,10 +77,10 @@ Other shortcuts (no need to memorize them now, just refer back when you feel lik
 - `$` jump to end of line
 - `0` jump to the beginning of the line
 - `%` jump between matching parentheses
-- <CTRL-d> jump forward (Down) half page
-- <CTRL-f> jump Forward one page
-- <CTRL-u> jump backward (Up) half page
-- <CTRL-b> jump Backward half page
+- CTRL-`d` jump forward (Down) half page
+- CTRL-`f` jump Forward one page
+- CTRL-`u` jump backward (Up) half page
+- CTRL-`b` jump Backward half page
 
 ## Jumping to a Line
 
