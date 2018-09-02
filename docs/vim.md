@@ -76,6 +76,7 @@ Other shortcuts (no need to memorize them now, just refer back when you feel lik
 - `t` + char:  search forward in the line and sit on one space before the matching char
 - `$` jump to end of line
 - `0` jump to the beginning of the line
+- `^` jump to the first non-blank character of the line
 - `%` jump between matching parentheses
 - CTRL-`d` jump forward (Down) half page
 - CTRL-`f` jump Forward one page
