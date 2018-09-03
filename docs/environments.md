@@ -41,7 +41,7 @@ After the command above, following the instructions on the screen.  The first ti
 The PE hosts can only be accessed from within the School of Computing networks.  If you want to access it from outside, there are two ways.
 
 ### Using SoC VPN
-One way is to set up a Virtual Private Network (VPN) (See [instruction here](https://dochub.comp.nus.edu.sg/cf/guides/network/vpn_setup_guide).  The staff at `helpdesk@comp.nus.edu.sg` or the IT helpdesk in COM1, Level 1, will be able to help with you setting up if needed.
+One way is to set up a Virtual Private Network (VPN) (See [instruction here](https://dochub.comp.nus.edu.sg/cf/guides/network/vpn)).  The staff at `helpdesk@comp.nus.edu.sg` or the IT helpdesk in COM1, Level 1, will be able to help with you setting up if needed.
 
 ### Tunneling through Sunfire
 
