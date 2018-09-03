@@ -19,6 +19,8 @@ pages:
       - 10. Assertion:  '10-assert.md'
   - Exercises: 
       - 1. Freezer: 'ex01.md'
+  - Assignments: 
+      - General Guide: 'assignment.md'
   - Readings: 'readings.md'
   - Software/Tools:
       - Programming Environments: 'environments.md'
