@@ -4,6 +4,18 @@
 
 Piazza is the Q&A site for students and instructors to ask questions and discuss among each other on all matters related to CS1010.
 
+----
+
+## Programming Exercises 
+
+Exercises are ungraded programming questions for practicing on your own.
+
+### [Exercise 1: Freezer](ex01.md)
+
+Released 3 September 2018, Discussed Week 4 (3 - 7 September)
+
+----
+
 ## Notes and Lectures :fa-commenting:
 
 ### Lecture 4
