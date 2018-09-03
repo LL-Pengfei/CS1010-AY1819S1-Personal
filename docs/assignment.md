@@ -22,15 +22,15 @@ Please note that:
 
 - Copying others' programs or relying on others to help you with these assignments will only offer a short-term reprieve. When Practical Exam (PE) time comes, your inadequacy will be exposed and the consequence would be dire.
 
-### Late Submission
+## Late Submission
 All programming assignments must be submitted on time.  If you need an extension, please ask for one and provide a justification for approval.  Only academic reasons and compassionate reasons can be considered (e.g., representing NUS for a sports event is OK; Attending a wedding is not.)
 
 For late submission, there is a 1% penalty (of the total awarded marks for that particular assignment) for every 5-minute after the deadline, capped at 80%.  For example, if an assignment is awarded 40 marks, and it is submitted 100 minutes after the deadline, the student will get 32 marks instead (20% penalty).  If it is submitted 10 hours after the deadline, the student will get 8 marks (as it has hit the cap of 80% penalty).
 
-### Method of Submission
+## Method of Submission
 Please follow the instructions provided in each programming assignment to submit the programs to GitHub.  Programs submitted through other means, such as emails, will NOT be accepted.
 
-### Grading
+## Grading
 Only the final submission of each exercise will be graded.  For each exercise, we will provide you will a limited set of test data.  During grading, we may grade your program with additional test data.
 
 Each programming assignment will be graded differently.  Generally, marks are given for attempt, correctness, design, and style, and documentation.  The weight of each one will be adjusted over the semester.  
@@ -39,17 +39,17 @@ A program that cannot compile will receive 0 marks for correctness.
 
 Feedback will be provided by the graders on GitHub.
 
-### Use of Piazza
+## Use of Piazza
 If you have doubts about the problem statements of an assignment, you may raise them on Piazza.  But before that, please read through the problem statements carefully first, and check if the same questions have been asked and answered on the forum.
 
 Please exercise discretion when posting to Piazza.  
 
 Before the deadline, you are NOT to post the solution to the assignment, complete or partial, on Piazza (or any publicly accessible online site).
 
-### Disallowed Syntax
+## Disallowed Syntax
 Some programming assignments may explicitly disallow the use of certain syntax. Generally, using syntax or statements which are not yet covered either in class or in the assignment statement is strongly discouraged.  We also discourage the use of certain syntax for this module, (e.g., `++`) you should not use them.  The assignments are designed such that you should not need to do so (even though doing so may result in your program being shorter or more efficient). If the objective of the assignment is undermined, the penalty for using such forbidden syntax will be heavy. If in doubt, please ask for clarification.
 
-### Plagiarism
+## Plagiarism
 You are NOT to copy from others or allow others to copy your programs.  We take plagiarism seriously.  See [our policies](policies.md) page for details.
 
 This means that you should also guard your solution carefully, not posting them to publicly accessible places, or change the permissions of the files on the CS1010 PE hosts so that it is accessible by others.
