@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/index.html",
-            "text": "CS1010\n\n\nPiazza Q&A\n \n\n\nPiazza is the Q&A site for students and instructors to ask questions and discuss among each other on all matters related to CS1010.\n\n\nNotes and Lectures \n\n\nLecture 4\n\n\nIn this lecture, we will learn how to write programs that involves branching execution path, using \nif\n-\nelse\n statements and logical expressions.  We will introduce how to reason about the logical implications of these expressions to the behavior of our program using assertions.\n\n\nUnit 8 If-Else\n, \nUnit 9 Logical Expression\n, and \nUnit 10 Assertion\n will be covered.\n\n\nLecture 3\n\n\n\n\nSlides\n \n\n\nScreencast\n\n\n\n\nWe will cover \nUnit 5: First C Program\n, \nUnit 6: CS1010 I/O Library\n and \nUnit 7: Arithmetic Operations\n.\n\n\nIn this lecture, we will get started with writing simple C programs that read inputs, perform some calculations, and display the result.\n\n\nLecture 2\n\n\n\n\nSlides\n \n\n\nScreencast\n\n\n\n\nWe will cover \nUnit 3: functions\n and \nUnit 4: types\n.\n\n\nIn this lecture, we will learn the concepts of functions, with which we can build up a more complex algorithm from smaller building blocks, such as finding the maximum.  We will also learn the concept of types.\n\n\nLecture 1\n\n\n\n\nSlides\n \n\n\nScreencast\n (password posted on Piazza)\n\n\n\n\nAfter some admin matters, we will introduce what is a program, what is meant by programming, and what is computational problem solving.\n\n\nWe will cover \nUnit 1: What is a Program?\n and \nUnit 2: Computational Problems and Algorithms\n in the first lecture.",
+            "text": "CS1010\n\n\nPiazza Q&A\n \n\n\nPiazza is the Q&A site for students and instructors to ask questions and discuss among each other on all matters related to CS1010.\n\n\n\n\nProgramming Exercises\n\n\nExercises are ungraded programming questions for practicing on your own.\n\n\nExercise 1: Freezer\n\n\nReleased 3 September 2018, Discussed Week 4 (3 - 7 September)\n\n\n\n\nNotes and Lectures \n\n\nLecture 4\n\n\nIn this lecture, we will learn how to write programs that involves branching execution path, using \nif\n-\nelse\n statements and logical expressions.  We will introduce how to reason about the logical implications of these expressions to the behavior of our program using assertions.\n\n\nUnit 8 If-Else\n, \nUnit 9 Logical Expression\n, and \nUnit 10 Assertion\n will be covered.\n\n\nLecture 3\n\n\n\n\nSlides\n \n\n\nScreencast\n\n\n\n\nWe will cover \nUnit 5: First C Program\n, \nUnit 6: CS1010 I/O Library\n and \nUnit 7: Arithmetic Operations\n.\n\n\nIn this lecture, we will get started with writing simple C programs that read inputs, perform some calculations, and display the result.\n\n\nLecture 2\n\n\n\n\nSlides\n \n\n\nScreencast\n\n\n\n\nWe will cover \nUnit 3: functions\n and \nUnit 4: types\n.\n\n\nIn this lecture, we will learn the concepts of functions, with which we can build up a more complex algorithm from smaller building blocks, such as finding the maximum.  We will also learn the concept of types.\n\n\nLecture 1\n\n\n\n\nSlides\n \n\n\nScreencast\n (password posted on Piazza)\n\n\n\n\nAfter some admin matters, we will introduce what is a program, what is meant by programming, and what is computational problem solving.\n\n\nWe will cover \nUnit 1: What is a Program?\n and \nUnit 2: Computational Problems and Algorithms\n in the first lecture.",
             "title": "Home"
         },
         {
@@ -14,6 +14,16 @@
             "location": "/index.html#piazza-qa",
             "text": "Piazza is the Q&A site for students and instructors to ask questions and discuss among each other on all matters related to CS1010.",
             "title": "Piazza Q&amp;A"
+        },
+        {
+            "location": "/index.html#programming-exercises",
+            "text": "Exercises are ungraded programming questions for practicing on your own.",
+            "title": "Programming Exercises"
+        },
+        {
+            "location": "/index.html#exercise-1-freezer",
+            "text": "Released 3 September 2018, Discussed Week 4 (3 - 7 September)",
+            "title": "Exercise 1: Freezer"
         },
         {
             "location": "/index.html#notes-and-lectures",
