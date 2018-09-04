@@ -41,7 +41,7 @@ This module introduces the fundamental concepts of problem solving by computing 
 
 ## Important Dates
 
-- **Midterm Assessment**: Tuesday, 2 October, 2018 (4pm - 6pm)
+- **Midterm Assessment**: Tuesday, 2 October, 2018 (4pm - 6pm), {++MPSH 1B++}
 - **Final Assessment**: Tuesday, 27 Nov, 2018 (9am - 11am)
 - **Practical Exam 1**: Saturday, 6 October, 2018 (9am - 12noon)
 - **Practical Exam 2**: Saturday, 10 November, 2018 {--(9am - 12noon)--} (1pm - 4pm)
