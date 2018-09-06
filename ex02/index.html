@@ -577,13 +577,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#grading" title="Grading" class="md-nav__link">
-    Grading
-  </a>
-  
-</li>
-      
       
       
       
@@ -823,13 +816,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#grading" title="Grading" class="md-nav__link">
-    Grading
-  </a>
-  
-</li>
-      
       
       
       
@@ -850,7 +836,7 @@
                 
                 
                 <h1 id="exercise-2-leap-suffix-days">Exercise 2: Leap, Suffix, Days</h1>
-<p>This is a programming exercise for you to solve on your own.  You can submit them but it will not be graded.  Test cases are provided for the exercises so that you can test and check on your own if your code is correct.  Feel free to discuss your solution with your peers or your TAs.</p>
+<p>This is a programming exercise for you to solve on your own.  You can submit but it will not be graded.  Test cases are provided for the exercises so that you can test and check on your own if your code is correct.  Feel free to discuss your solution with your peers or your TAs.</p>
 <h3 id="prerequisite">Prerequisite</h3>
 <ul>
 <li>You are able to access the <a href="../environments/index.html">CS1010 programming environment</a>.</li>
@@ -859,12 +845,12 @@
 </ul>
 <h3 id="learning-outcomes">Learning Outcomes</h3>
 <ul>
-<li>Be comfortable writing correct C programs that involves <code class="codehilite">if</code>, <code class="codehilite">else</code>, and logical statements.</li>
+<li>Be comfortable writing correct C programs that involve <code class="codehilite">if</code>, <code class="codehilite">else</code>, and logical statements.</li>
 </ul>
 <h3 id="setup">Setup</h3>
 <ul>
-<li>Click on <a href="https://classroom.github.com/a/GejVPTXy">this link</a> to accept the exercise.</li>
-<li>Login to one of the hosts of <a href="../environments/index.html">CS1010 programming environment (PE)</a></li>
+<li>Click on <a href="https://classroom.github.com/a/CRF7rQCd">this link</a> to accept the exercise.</li>
+<li>Log in to one of the hosts of <a href="../environments/index.html">CS1010 programming environment (PE)</a></li>
 <li>Run the following on the command line on one of the PE hosts:</li>
 </ul>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>~cs1010/get-ex02
@@ -875,7 +861,7 @@
 <li>You should see a new subdirectory <code class="codehilite">ex02-&lt;githubid&gt;</code> in your current working directory, where <code class="codehilite">githubid</code> is your GitHub ID.</li>
 <li>Inside that directory, you should see a bunch of files:<ul>
 <li><code class="codehilite">leap.c</code>, <code class="codehilite">suffix.c</code>, and <code class="codehilite">days.c</code> are the most important files.  They are the skeleton C code that you should edit to solve the exercise.</li>
-<li><code class="codehilite">inputs</code> and <code class="codehilite">outputs</code> are sub directories that contain test inputs and test outputs.  We use the same convention as Exercise 1 so you should be familiar with them.</li>
+<li><code class="codehilite">inputs</code> and <code class="codehilite">outputs</code> are subdirectories that contain test inputs and test outputs.  We use the same convention as Exercise 1 so you should be familiar with them.</li>
 <li><code class="codehilite">Makefile</code>: This is the configuration for the tool <code class="codehilite">make</code> that we use to automate the compilation and testing of the programs.  </li>
 <li><code class="codehilite">test.sh</code>: This is a bash script for testing your code.</li>
 </ul>
@@ -883,7 +869,8 @@
 </ul>
 <h3 id="solving-the-assignments">Solving The Assignments</h3>
 <ul>
-<li>Edit the files <code class="codehilite">leap.c</code> to solve the corresponding question as described below.</li>
+<li>Edit the .c files to solve the corresponding question as described below</li>
+<li>You can assume that all test inputs are valid inputs.</li>
 <li>To compile and run the given tests with the sample inputs and outputs, run on the command line,</li>
 </ul>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>make
@@ -897,14 +884,12 @@
 </pre></div>
 </td></tr></table>
 
-<p>The C files will be uploaded to GitHub.  You can submit multiple times.</p>
-<h3 id="grading">Grading</h3>
-<p>This exercise is not graded.</p>
+<p>The .c files will be uploaded to GitHub.  You can submit multiple times.  As an exercise is not graded, submitting your code only serves the purpose of archiving your work for backup purposes.</p>
 <hr />
 <h1 id="question-1-leap-year">Question 1: Leap Year</h1>
-<p>A <a href="https://en.wikipedia.org/wiki/Leap_year">leap year</a> is a calendar year containing an extra day to synchronize the calendar to seasons and astronomical events.  In Gregorian calendar, years that are mulitples of four (with the exception of years divisible by 100 but not by 400) are leap years.</p>
+<p>A <a href="https://en.wikipedia.org/wiki/Leap_year">leap year</a> is a calendar year containing an extra day to synchronize the calendar to seasons and astronomical events.  In the Gregorian calendar, years that are multiples of four (with the exception of years divisible by 100 but not by 400) are leap years.</p>
 <p>Write a program that reads in an integer representing a year from the standard input and prints out "<year> is a leap year" if the input is a leap year.  Otherwise, print "<year> is not a leap year" to the standard output.</p>
-<p>Your program should include a <code class="codehilite">bool</code> function <code class="codehilite">is_leap_year</code> that takes in the input year and returns <code class="codehilite">true</code> if the input is a leap year, and returns <code class="codehilite">false</code> otherwise.</p>
+<p>Your program should include a <code class="codehilite">bool</code> function <code class="codehilite">is_leap_year</code> that takes in the input year and returns <code class="codehilite">true</code> if the input is a leap year and returns <code class="codehilite">false</code> otherwise.</p>
 <h3 id="sample-run">Sample run:</h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -933,7 +918,7 @@ ooiwt@pe112:~/ex02-ooiwt$ ./leap
 </td></tr></table>
 
 <h1 id="question-2-ordinal-suffix">Question 2: Ordinal Suffix</h1>
-<p>In English, an ordinal number is written with numerals, followed by its letter suffixes.  For instance: 1<sup>st</sup>, 2<sup>nd</sup>, 3<sup>rd</sup>, 4<sup>th</sup>, 11<sup>th</sup>, 31<sup>st</sup>, etc.  The rule is that, a number that ends with digit 1 should have a suffix "st" (except if it ends with 11), a number that ends with 2 should have a suffix "nd" (except if it ends with 12), and a number that ends with 3 should have a suffix "rd" (except if it ends with 13).  All other numbers should ends with "th".</p>
+<p>In English, an ordinal number is written with numerals, followed by its letter suffixes.  For instance: 1<sup>st</sup>, 2<sup>nd</sup>, 3<sup>rd</sup>, 4<sup>th</sup>, 11<sup>th</sup>, 31<sup>st</sup>, etc.  The rule is that, a number that ends with digit 1 should have a suffix "st" (except if it ends with 11), a number that ends with 2 should have a suffix "nd" (except if it ends with 12), and a number that ends with 3 should have a suffix "rd" (except if it ends with 13).  All other numbers should end with "th".</p>
 <p>Write a program <code class="codehilite">suffix</code> that reads in an integer number from the standard input and prints out the number with its ordinal suffix.</p>
 <p>Your program should include a <code class="codehilite">void</code> function <code class="codehilite">print_with_suffix(long n)</code> that takes in the input and prints out the number followed by its suffix.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
