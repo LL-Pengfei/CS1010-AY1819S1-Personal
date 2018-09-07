@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/index.html",
-            "text": "CS1010\n\n\nPiazza Q&A\n \n\n\nPiazza is the Q&A site for students and instructors to ask questions and discuss among each other on all matters related to CS1010.\n\n\n\n\nProgramming Exercises\n\n\nExercises are ungraded programming questions for practicing on your own.\n\n\nExercise 1: Freezer\n\n\nReleased 3 September 2018\n\n\nExercise 2: Leap, Suffix, Days\n\n\nReleased 6 September 2018\n\n\n\n\nNotes and Lectures \n\n\nLecture 4\n\n\n\n\nSlides\n | \nScreencast\n | \nKahoot Quiz\n\n\n\n\nIn this lecture, we learned how to write programs that involve branching execution paths, using \nif\n-\nelse\n statements and logical expressions.  \nUnit 8 If-Else\n, \nUnit 9 Logical Expression\n were covered.\n\n\nLecture 3\n\n\n\n\nSlides\n | \nScreencast\n\n\n\n\nWe covered \nUnit 5: First C Program\n, \nUnit 6: CS1010 I/O Library\n and \nUnit 7: Arithmetic Operations\n.\n\n\nIn this lecture, we got started with writing simple C programs that read inputs, perform some calculations, and display the result.\n\n\nLecture 2\n\n\n\n\nSlides\n | \nScreencast\n\n\n\n\nWe covered \nUnit 3: functions\n and \nUnit 4: types\n.\n\n\nIn this lecture, we learned the concepts of functions, with which we can build up a more complex algorithm from smaller building blocks, such as finding the maximum.  We also learned about the concept of types.\n\n\nLecture 1\n\n\n\n\nSlides\n | \nScreencast\n (password posted on Piazza)\n\n\n\n\nAfter some admin matters, we introduced what is a program, what is meant by programming, and what is computational problem solving.\n\n\nWe covered \nUnit 1: What is a Program?\n and \nUnit 2: Computational Problems and Algorithms\n in the first lecture.",
+            "text": "CS1010\n\n\nPiazza Q&A\n \n\n\nPiazza is the Q&A site for students and instructors to ask questions and discuss among each other on all matters related to CS1010.\n\n\n\n\nProgramming Exercises\n\n\nExercises are ungraded programming questions for practicing on your own.\n\n\nExercise 1: Freezer\n\n\nReleased 3 September 2018\n\n\nExercise 2: Leap, Suffix, Days\n\n\nReleased 6 September 2018\n\n\n\n\nProgramming Assignments\n\n\nAssignment 1: Invest, Box, Digits, and Taxi\n\n\nReleased 7 September 2018, Due 14 September 2018, 6pm.\n\n\n\n\nNotes and Lectures \n\n\nLecture 4\n\n\n\n\nSlides\n | \nScreencast\n | \nKahoot Quiz\n\n\n\n\nIn this lecture, we learned how to write programs that involve branching execution paths, using \nif\n-\nelse\n statements and logical expressions.  \nUnit 8 If-Else\n, \nUnit 9 Logical Expression\n were covered.\n\n\nLecture 3\n\n\n\n\nSlides\n | \nScreencast\n\n\n\n\nWe covered \nUnit 5: First C Program\n, \nUnit 6: CS1010 I/O Library\n and \nUnit 7: Arithmetic Operations\n.\n\n\nIn this lecture, we got started with writing simple C programs that read inputs, perform some calculations, and display the result.\n\n\nLecture 2\n\n\n\n\nSlides\n | \nScreencast\n\n\n\n\nWe covered \nUnit 3: functions\n and \nUnit 4: types\n.\n\n\nIn this lecture, we learned the concepts of functions, with which we can build up a more complex algorithm from smaller building blocks, such as finding the maximum.  We also learned about the concept of types.\n\n\nLecture 1\n\n\n\n\nSlides\n | \nScreencast\n (password posted on Piazza)\n\n\n\n\nAfter some admin matters, we introduced what is a program, what is meant by programming, and what is computational problem solving.\n\n\nWe covered \nUnit 1: What is a Program?\n and \nUnit 2: Computational Problems and Algorithms\n in the first lecture.",
             "title": "Home"
         },
         {
@@ -29,6 +29,16 @@
             "location": "/index.html#exercise-2-leap-suffix-days",
             "text": "Released 6 September 2018",
             "title": "Exercise 2: Leap, Suffix, Days"
+        },
+        {
+            "location": "/index.html#programming-assignments",
+            "text": "",
+            "title": "Programming Assignments"
+        },
+        {
+            "location": "/index.html#assignment-1-invest-box-digits-and-taxi",
+            "text": "Released 7 September 2018, Due 14 September 2018, 6pm.",
+            "title": "Assignment 1: Invest, Box, Digits, and Taxi"
         },
         {
             "location": "/index.html#notes-and-lectures",
@@ -809,6 +819,106 @@
             "location": "/assignment/index.html#plagiarism",
             "text": "You are NOT to copy from others or allow others to copy your programs.  We take plagiarism seriously.  See  our policies  page for details.  This means that you should also guard your solution carefully, not posting them to publicly accessible places, or change the permissions of the files on the CS1010 PE hosts so that it is accessible by others.   This guideline is adapted from Aaron Tan's CS1010 guideline.",
             "title": "Plagiarism"
+        },
+        {
+            "location": "/as01/index.html",
+            "text": "Assignment 1\n\n\nDeadline\n\n\n14 September, 2018 (Friday), 6:00pm.\n\n\nPrerequisite\n\n\n\n\nYou are able to access the \nCS1010 programming environment\n.\n\n\nYou are familiar with \nbasic UNIX CLI\n and using terminal-based editor \nvim\n.\n\n\nYou have gone through Exercise 1 and have already setup your \n.gitconfig\n.\n\n\nYou are familiar with the steps of accepting, downloading, and submitting your exercise and assignment.\n\n\nYou are familiar with the directory structure and the common files included in your assignment skeleton.\n\n\n\n\nLearning Outcomes\n\n\n\n\nBe comfortable writing simple C programs that involves arithmetic operations, \nlong\n, \ndouble\n, and \nbool\n types, and conditional \nif\n/\nelse\n statements.\n\n\nBe comfortable breaking down a problem into smaller subproblems which can be resolved using functions, including reusing existing functions written for other programs (with a tweak), writing a function that calls itself, designing what should the inputs and return values/types of a function be.\n\n\n\n\nSetup\n\n\n\n\nClick on this link\n to accept the assignment.\n\n\nLogin to one of the hosts of \nCS1010 programming environment\n\n\nRun:\n\n\n\n\n1\n~cs1010/get-as01\n\n\n\n\n\n\n\n\nYou should see the folder \nas01-<github id>\n in your home directory with the assignment skeleton inside.\n\n\n\n\nSolving The Assignments\n\n\n\n\nEdit the files \ninvest.c\n, \nbox.c\n, \ndigits.c\n, and \ntaxi.c\n to solve the corresponding question as described below.\n\n\nTo compile and run tests with the sample inputs and outputs:\n\n\n\n\n1\nmake \n\n\n\n\n\n\n\n\nThe test cases are given in the \ninputs\n and \noutputs\n subdirectory.  You can use \ncat\n or \nless\n to look at the content of these test cases.  You can add more test cases or edit the given ones if needed.\n\n\n\n\nSubmission\n\n\nWhen you are ready, run the following command to submit:\n\n\n1\n~cs1010/submit-as01\n\n\n\n\n\n\nThe four files \ninvest.c\n, \nbox.c\n, \ndigits.c\n, and \ntaxi.c\n will be uploaded to GitHub.  You can submit multiple times, but only the last submission will be graded.\n\n\nGrading\n\n\nThis assignment contributes towards 3% of your final grade.  The total marks for this assignment is 30.  For Programming Assignment 1, the sole criteria for grading is correctness.\n\n\nQuestion 1: Invest (5 marks)\n\n\nIf you invest \nm\nm\n dollars at \nr\nr\n% interest rate compounded annually, after \nn\nn\n years, your investment will grow to \n\\frac{m(1 - (r/100)^{n+1})}{1 - r/100}\n\\frac{m(1 - (r/100)^{n+1})}{1 - r/100}\n dollars.\n\n\nWrite a program \ninvest.c\n that accepts three integers as input: principal \nm\nm\n, rate \nr\nr\n, and number of years \nn\nn\n, and computes the amount of money earned after \nn\nn\n years.\n\n\nYou may assume that \nr \\le 100\nr \\le 100\n.\n\n\nSample Run\n\n\n1\n2\n3\n4\n5\n6\nooiwt@pe111:~/as01-skeleton$ ./invest\n100 10 5\n111.1110\nooiwt@pe111:~/as01-skeleton$ ./invest\n20000 5 10\n21052.6316\n\n\n\n\n\n\nQuestion 2: Box (5 marks)\n\n\nWrite a program \nbox.c\n that reads three positive integers representing the length, width, and height of a box, and output (i) its surface area, and (ii) the length of the diagonal between two vertices of the box that are furthest apart (see figure).\n\n\n\n\nYou may assume that the surface area of the box does not exceed the maximum value representable in the \nlong\n data type.\n\n\nYou should break down the problem into smaller ones:\n\n\n\n\nWrite a new method \narea_of_rectangle\n that computes the area of a rectangle given the width and height of the rectangle, then use it to compute the surface area.\n\n\nModify the method \nhypotenuse_of\n seen in \nUnit 5\n to compute the diagonal of the box.  (hint: pay attention to the type of the parameter and the return value).\n\n\n\n\nSample Run\n\n\n1\n2\n3\n4\n5\n6\nooiwt@pe111:~/as01-skeleton$ ./box \n12 3 10\n372 15.9060\nooiwt@pe111:~/as01-skeleton$ ./box \n10 20 30\n2200 37.4166\n\n\n\n\n\n\nQuestion 3: Digits (5 marks)\n\n\nWrite a program \ndigits.c\n that reads in a non-negative integer, and prints the sum of the individual digits in this integer. \n\n\nFor instance, if the input is \n1933091\n, then the sum is 1 + 9 + 3 + 3 + 0 + 9 + 1 = 26.\n\n\nYou should not use a loop to solve this, but rather, you should write a function \nsum_of_digits\n that takes in an integer and return the sum of the digits of that integer, that calls itself:\n\n\n\n\nif the input to \nsum_of_digits\n has only one digit, return this digit.\n\n\nOtherwise, use the modulo operator \n%\n and integer division \n/\n to extract the last digit (e.g., \n1\n) and the rest of the digits (e.g., \n193309\n) respectively, and call \nsum_of_digits\n on the rest of the digits to find its sum (e.g., 1+9+3+3+0+9 = 25).  Finally we add the last digit to this sum to get the total we seek (e.g., 1 + 25 = 26).\n\n\n\n\nSample Run\n\n\n1\n2\n3\n4\n5\n6\nooiwt@pe111:~/as01-skeleton$ ./digits \n1933091\n26\nooiwt@pe111:~/as01-skeleton$ ./digits \n0\n0\n\n\n\n\n\n\nQuestion 4: Taxi Fare (15 marks)\n\n\nThe taxi fare structure in Singapore must be one of the most complex in the world! Check out:\n\nhttp://www.taxisingapore.com/taxi-fare/\n.\n\n\nFor the purpose of this exercise, we will just use the following simpli\ufb01ed fare structure: \n\n\n\n\n\n\n\n\nBasic Fare\n\n\n\n\n\n\n\n\n\n\n\n\nThe first 1 km or less (Flag Down)\n\n\n$3.40\n\n\n\n\n\n\nEvery 400 m thereafter or less, up to 10.2 km\n\n\n$0.22\n\n\n\n\n\n\nEvery 350 m thereafter or less, after 10.2 km\n\n\n$0.22\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSurcharge\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMonday to Friday\n\n\n6:00 to 9:29\n\n\n25% of metered fare\n\n\n\n\n\n\nDaily\n\n\n18:00 to 23:59\n\n\n25% of metered fare\n\n\n\n\n\n\nDaily\n\n\n0:00 (midnight) to 5:59\n\n\n50% of metered fare\n\n\n\n\n\n\n\n\nNote that the surcharge is applicable based on the boarding time. For instance, if the trip started at 17:50 and ended at 18:10, then no surcharged is incurred.\n\n\nWrite a program \ntaxi.c\n that computes the taxi fare.  The program, called \ntaxi\n, takes in four integers as inputs:\n\n\n\n\nThe first is the day of the week.  It can only be the value \n1\n to \n7\n, \n1\n being Monday, \n7\n being Sunday.\n\n\nThe second and the third is the starting time of the trip: the second input indicates the hours since midnight of the stated day, the third input indicates the minutes since the beginning of the stated hours.\n\n\nThe forth and final input is the distance of the trip, in meters.\n\n\n\n\nYour program should print a single floating point number, which is the cost of the fare in dollars.\n\n\nExamine the following examples for more details:\n\n\nExample 1\n\n\n1\n2\n3\nooiwt@pe111:~/as01-skeleton$ ./taxi \n1 17 59 1000\n3.4000\n\n\n\n\n\n\n\n\nStart: Mon 17:59 \n\n\nDistance: 1,000 m\n\n\n\n\nThe metered fare is $3.40 since the distance travelled is 1km.  The boarding time is before 18:00 so there is no surcharge.  The total fare is $3.40.\n\n\nExample 2\n\n\n1\n2\n3\nooiwt@pe111:~/as01-skeleton$ ./taxi \n1 17 57 2000\n4.0600\n\n\n\n\n\n\n\n\nStart: Mon 17:57 \n\n\nDistance: 2,000 m\n\n\n\n\nThe metered fare for the first 1,000 m (1km) is $3.40.  The next 1,000 m is charged $0.22 for every 400 m (or less) travelled.  The pessengar is charged an additional 3 x $0.22, giving the total of metered fare of $4.06.\n\nThe boarding time is before 18:00 so there is no surcharge.\n\n\nExample 3\n\n\n1\n2\n3\nooiwt@pe111:~/as01-skeleton$ ./taxi \n1 5 50 15000\n17.3100\n\n\n\n\n\n\n\n\nStart: Mon 05:50\n\n\nDistance: 15,000 m\n\n\n\n\nThe metered fare for the first 1,000 m (1km) is $3.40.  The next 9,200 m is charged $0.22 for every 400 m travelled.  The pessengar is charged an additional 23 x $0.22 = $5.06.  The remaining 4,800 m is charged $0.22 for every 350 m (or less) travelled).  The pessengar is charged an additional 14 x $0.22 = $3.08.  The total metered fare is $11.54.\n\n\nThe boarding time is before 6:00 so there is a 50% surcharge.  Total fare is $17.31.\n\n\nHints\n\n\n\n\n\n\nYou can break down this problem into multiple subproblems, each can be solved by a function.  \nWrite one function to answer each question below\n:\n\n\n\n\ngiven the day of the week, is it a weekday? \n\n\ngiven the time of boarding, does it fall under the morning peak hour (6:00 - 9:29)?\n\n\ngiven the time of boarding, does it fall under the evening peak hour (18:00 - 23:59)?\n\n\ngiven the time of boarding, does it fall under the midnight peak hour (0:00 - 5:59)?\n\n\n\n\n\n\n\n\nYou can further breakdown the calculation of fare into two parts: the basic metered fare and the surcharge. Each of these can be its own function.  Think about the four inputs to the \ntaxi\n program.  Which one is needed to compute the metered fare?  Which ones are used to compute the surcharge?  Pass in the appropriate arguments to the function that computes the metered fare and the function that computes the surcharge.",
+            "title": "1. Invest, Box, Digits, and Taxi"
+        },
+        {
+            "location": "/as01/index.html#assignment-1",
+            "text": "",
+            "title": "Assignment 1"
+        },
+        {
+            "location": "/as01/index.html#deadline",
+            "text": "14 September, 2018 (Friday), 6:00pm.",
+            "title": "Deadline"
+        },
+        {
+            "location": "/as01/index.html#prerequisite",
+            "text": "You are able to access the  CS1010 programming environment .  You are familiar with  basic UNIX CLI  and using terminal-based editor  vim .  You have gone through Exercise 1 and have already setup your  .gitconfig .  You are familiar with the steps of accepting, downloading, and submitting your exercise and assignment.  You are familiar with the directory structure and the common files included in your assignment skeleton.",
+            "title": "Prerequisite"
+        },
+        {
+            "location": "/as01/index.html#learning-outcomes",
+            "text": "Be comfortable writing simple C programs that involves arithmetic operations,  long ,  double , and  bool  types, and conditional  if / else  statements.  Be comfortable breaking down a problem into smaller subproblems which can be resolved using functions, including reusing existing functions written for other programs (with a tweak), writing a function that calls itself, designing what should the inputs and return values/types of a function be.",
+            "title": "Learning Outcomes"
+        },
+        {
+            "location": "/as01/index.html#setup",
+            "text": "Click on this link  to accept the assignment.  Login to one of the hosts of  CS1010 programming environment  Run:   1 ~cs1010/get-as01    You should see the folder  as01-<github id>  in your home directory with the assignment skeleton inside.",
+            "title": "Setup"
+        },
+        {
+            "location": "/as01/index.html#solving-the-assignments",
+            "text": "Edit the files  invest.c ,  box.c ,  digits.c , and  taxi.c  to solve the corresponding question as described below.  To compile and run tests with the sample inputs and outputs:   1 make     The test cases are given in the  inputs  and  outputs  subdirectory.  You can use  cat  or  less  to look at the content of these test cases.  You can add more test cases or edit the given ones if needed.",
+            "title": "Solving The Assignments"
+        },
+        {
+            "location": "/as01/index.html#submission",
+            "text": "When you are ready, run the following command to submit:  1 ~cs1010/submit-as01   The four files  invest.c ,  box.c ,  digits.c , and  taxi.c  will be uploaded to GitHub.  You can submit multiple times, but only the last submission will be graded.",
+            "title": "Submission"
+        },
+        {
+            "location": "/as01/index.html#grading",
+            "text": "This assignment contributes towards 3% of your final grade.  The total marks for this assignment is 30.  For Programming Assignment 1, the sole criteria for grading is correctness.",
+            "title": "Grading"
+        },
+        {
+            "location": "/as01/index.html#question-1-invest-5-marks",
+            "text": "If you invest  m m  dollars at  r r % interest rate compounded annually, after  n n  years, your investment will grow to  \\frac{m(1 - (r/100)^{n+1})}{1 - r/100} \\frac{m(1 - (r/100)^{n+1})}{1 - r/100}  dollars.  Write a program  invest.c  that accepts three integers as input: principal  m m , rate  r r , and number of years  n n , and computes the amount of money earned after  n n  years.  You may assume that  r \\le 100 r \\le 100 .",
+            "title": "Question 1: Invest (5 marks)"
+        },
+        {
+            "location": "/as01/index.html#sample-run",
+            "text": "1\n2\n3\n4\n5\n6 ooiwt@pe111:~/as01-skeleton$ ./invest\n100 10 5\n111.1110\nooiwt@pe111:~/as01-skeleton$ ./invest\n20000 5 10\n21052.6316",
+            "title": "Sample Run"
+        },
+        {
+            "location": "/as01/index.html#question-2-box-5-marks",
+            "text": "Write a program  box.c  that reads three positive integers representing the length, width, and height of a box, and output (i) its surface area, and (ii) the length of the diagonal between two vertices of the box that are furthest apart (see figure).   You may assume that the surface area of the box does not exceed the maximum value representable in the  long  data type.  You should break down the problem into smaller ones:   Write a new method  area_of_rectangle  that computes the area of a rectangle given the width and height of the rectangle, then use it to compute the surface area.  Modify the method  hypotenuse_of  seen in  Unit 5  to compute the diagonal of the box.  (hint: pay attention to the type of the parameter and the return value).",
+            "title": "Question 2: Box (5 marks)"
+        },
+        {
+            "location": "/as01/index.html#sample-run_1",
+            "text": "1\n2\n3\n4\n5\n6 ooiwt@pe111:~/as01-skeleton$ ./box \n12 3 10\n372 15.9060\nooiwt@pe111:~/as01-skeleton$ ./box \n10 20 30\n2200 37.4166",
+            "title": "Sample Run"
+        },
+        {
+            "location": "/as01/index.html#question-3-digits-5-marks",
+            "text": "Write a program  digits.c  that reads in a non-negative integer, and prints the sum of the individual digits in this integer.   For instance, if the input is  1933091 , then the sum is 1 + 9 + 3 + 3 + 0 + 9 + 1 = 26.  You should not use a loop to solve this, but rather, you should write a function  sum_of_digits  that takes in an integer and return the sum of the digits of that integer, that calls itself:   if the input to  sum_of_digits  has only one digit, return this digit.  Otherwise, use the modulo operator  %  and integer division  /  to extract the last digit (e.g.,  1 ) and the rest of the digits (e.g.,  193309 ) respectively, and call  sum_of_digits  on the rest of the digits to find its sum (e.g., 1+9+3+3+0+9 = 25).  Finally we add the last digit to this sum to get the total we seek (e.g., 1 + 25 = 26).",
+            "title": "Question 3: Digits (5 marks)"
+        },
+        {
+            "location": "/as01/index.html#sample-run_2",
+            "text": "1\n2\n3\n4\n5\n6 ooiwt@pe111:~/as01-skeleton$ ./digits \n1933091\n26\nooiwt@pe111:~/as01-skeleton$ ./digits \n0\n0",
+            "title": "Sample Run"
+        },
+        {
+            "location": "/as01/index.html#question-4-taxi-fare-15-marks",
+            "text": "The taxi fare structure in Singapore must be one of the most complex in the world! Check out: http://www.taxisingapore.com/taxi-fare/ .  For the purpose of this exercise, we will just use the following simpli\ufb01ed fare structure:      Basic Fare       The first 1 km or less (Flag Down)  $3.40    Every 400 m thereafter or less, up to 10.2 km  $0.22    Every 350 m thereafter or less, after 10.2 km  $0.22        Surcharge        Monday to Friday  6:00 to 9:29  25% of metered fare    Daily  18:00 to 23:59  25% of metered fare    Daily  0:00 (midnight) to 5:59  50% of metered fare     Note that the surcharge is applicable based on the boarding time. For instance, if the trip started at 17:50 and ended at 18:10, then no surcharged is incurred.  Write a program  taxi.c  that computes the taxi fare.  The program, called  taxi , takes in four integers as inputs:   The first is the day of the week.  It can only be the value  1  to  7 ,  1  being Monday,  7  being Sunday.  The second and the third is the starting time of the trip: the second input indicates the hours since midnight of the stated day, the third input indicates the minutes since the beginning of the stated hours.  The forth and final input is the distance of the trip, in meters.   Your program should print a single floating point number, which is the cost of the fare in dollars.  Examine the following examples for more details:",
+            "title": "Question 4: Taxi Fare (15 marks)"
+        },
+        {
+            "location": "/as01/index.html#example-1",
+            "text": "1\n2\n3 ooiwt@pe111:~/as01-skeleton$ ./taxi \n1 17 59 1000\n3.4000    Start: Mon 17:59   Distance: 1,000 m   The metered fare is $3.40 since the distance travelled is 1km.  The boarding time is before 18:00 so there is no surcharge.  The total fare is $3.40.",
+            "title": "Example 1"
+        },
+        {
+            "location": "/as01/index.html#example-2",
+            "text": "1\n2\n3 ooiwt@pe111:~/as01-skeleton$ ./taxi \n1 17 57 2000\n4.0600    Start: Mon 17:57   Distance: 2,000 m   The metered fare for the first 1,000 m (1km) is $3.40.  The next 1,000 m is charged $0.22 for every 400 m (or less) travelled.  The pessengar is charged an additional 3 x $0.22, giving the total of metered fare of $4.06. \nThe boarding time is before 18:00 so there is no surcharge.",
+            "title": "Example 2"
+        },
+        {
+            "location": "/as01/index.html#example-3",
+            "text": "1\n2\n3 ooiwt@pe111:~/as01-skeleton$ ./taxi \n1 5 50 15000\n17.3100    Start: Mon 05:50  Distance: 15,000 m   The metered fare for the first 1,000 m (1km) is $3.40.  The next 9,200 m is charged $0.22 for every 400 m travelled.  The pessengar is charged an additional 23 x $0.22 = $5.06.  The remaining 4,800 m is charged $0.22 for every 350 m (or less) travelled).  The pessengar is charged an additional 14 x $0.22 = $3.08.  The total metered fare is $11.54.  The boarding time is before 6:00 so there is a 50% surcharge.  Total fare is $17.31.",
+            "title": "Example 3"
+        },
+        {
+            "location": "/as01/index.html#hints",
+            "text": "You can break down this problem into multiple subproblems, each can be solved by a function.   Write one function to answer each question below :   given the day of the week, is it a weekday?   given the time of boarding, does it fall under the morning peak hour (6:00 - 9:29)?  given the time of boarding, does it fall under the evening peak hour (18:00 - 23:59)?  given the time of boarding, does it fall under the midnight peak hour (0:00 - 5:59)?     You can further breakdown the calculation of fare into two parts: the basic metered fare and the surcharge. Each of these can be its own function.  Think about the four inputs to the  taxi  program.  Which one is needed to compute the metered fare?  Which ones are used to compute the surcharge?  Pass in the appropriate arguments to the function that computes the metered fare and the function that computes the surcharge.",
+            "title": "Hints"
         },
         {
             "location": "/kahoot01/index.html",
