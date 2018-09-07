@@ -19,8 +19,12 @@ pages:
       - 10. Assertion:  '10-assert.md'
   - Exercises: 
       - 1. Freezer: 'ex01.md'
+      - 2. Leap, Suffix, Days: 'ex02.md'
   - Assignments: 
       - General Guide: 'assignment.md'
+      - 1. Invest, Box, Digits, and Taxi: 'as01.md'
+  - Quizzes: 
+      - 1. Flowcharts: 'kahoot01.md'
   - Readings: 'readings.md'
   - Software/Tools:
       - Programming Environments: 'environments.md'
