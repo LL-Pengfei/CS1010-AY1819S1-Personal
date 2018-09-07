@@ -238,3 +238,6 @@ void print_blood_pressure(long systolic, long diastolic)
 ```
 
 ![BP chart](figures/hbp/hbp.001.png)
+
+{++The figure does not say how to classify the data if the values fall exactly on the boundary of two regions.  In this case, you can classify it to either region.++}
+
