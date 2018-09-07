@@ -36,11 +36,11 @@ long count(long n) {
   long y = 0;
   long x = n;
   while (x > 0) {
-	// { x > 0 && x <= n }
+    // { x > 0 && x <= n }
     x -= 1;
     // { (x >= 0) && (x < n) }
     if (x % 5 == 0) {
-	  // { (x >= 0) && (x < n) && x is multiple of 5 }
+      // { (x >= 0) && (x < n) && x is multiple of 5 }
       y += 1;
     }
   }
@@ -55,20 +55,20 @@ What can be said about `y`?  It should be clear now that we increment `y` for ev
 
 In the last unit, we say that there are actually five questions that we have to think about when designing loops.  The fifth question is: what is the _loop invariant_?  A loop invariant is an assertion that is true before the loop, during the loop, and after the loop.  Thinking about the loop invariant is helpful to convince ourselves that a loop is correct, or to identify bugs in a loop.
 
-Let's see an example of a loop invariant.  Consider the example of calculating factorial using a loop as before.  To make the invariant simpler, let's tweak the loop slightly and start looping from `i` equals 1 up to `n`.
+Let's see an example of a loop invariant.  Consider the example of calculating a factorial using a loop as before.  To make the invariant simpler, let's tweak the loop slightly and start looping from `i` equals 1 up to `n`.
 
 ```C
 long factorial(long n) 
 {
   if (n == 0) {
-  	return 1;
+      return 1;
   }
   long product = 1;
   int i = 1;
   // Line A
   while (i < n)
-  	i += 1;
-  	product *= i;
+      i += 1;
+      product *= i;
     // Line B
   }
   // Line C
@@ -76,21 +76,21 @@ long factorial(long n)
 }
 ```
 
-The loop invariant for each line A, B, and C, are the same: 
+The loop invariant for each line A, B, and C are the same: 
 
 ```C
 long factorial(long n) 
 {
   if (n == 0) {
-  	return 1;
+      return 1;
   }
   long product = 1;
   int i = 1;
   // A: { product == i! }
   while (i < n)
-  	i += 1;
-  	product *= i;
-	// B: { product == i! }
+      i += 1;
+      product *= i;
+    // B: { product == i! }
   }
   // C: { product == i! }
   return product;
@@ -101,23 +101,19 @@ In Line A, the assertion is obvious.  Let's look at Line B.  Since, at the begin
 
 The key here is that after we exit the loop, we can also assert that `i == n`, and so combining `product == i! && i == n` we have `product == n!`, which is what we want.
 
-## How to Find An Invariant
-
-There is no easy steps to follow to find an invariant for a loop.  One way is to start with the assertion you want to be true after the loop terminates, and work backwards, to see if the same assertion is true in the loop and before the loop.  For many cases, you won't need an invariant to help you figure out what is wrong with your loop.  However, if you are stuck debugging, finding the invariant and see why it does not hold maybe useful to help you identify a bug in your code.
-
 ## Problem Set 12
 
 ### Problem 12.1
 
 ```C
 long i = 10;
-long j = 0
-while (i == 0) {
-	i -= 1;
-	j += 1;
+long j = 0;
+while (i != 0) {
+    i -= 1;
+    j += 1;
 }
 ```
 
 (a) Trace through the program.  What is the value of `j` when the loop exits?
-(b) What is the loop invariant?
-
+(b) Do you recognize any pattern on the relationship of `i` and `j`?
+(c) What is the loop invariant?
