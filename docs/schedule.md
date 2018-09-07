@@ -28,7 +28,7 @@ Week | Starting.. | Topics                                    | Tutorial        
 Day/Time|COM1<br>B108 | COM1<br>B109 | COM1<br>B111 | COM1<br>B112 | COM1<br>0120 | I3<br>0336 | I3<br>0338 | AS6<br>0421 |
 --- ----|----------|-----------|-----------|-----------|-----------|---------|---------|----------|
 Mon<br>1000|C10<br>Joanne |        |           |           |C09<br>Evan |         |         |          |
-Mon<br>1400|          |           |           |C1A<br>XL   |           |         |         |          |
+Mon<br>1400|          |           |           |C1A<br>Xiao Liang   |           |         |         |          |
 Tue<br>1200|          |           |           |           |           |         |03<br>Addison |          | 
 Tue<br>1400|          |           |           |           |           |C03<br>Kyle |C02<br>Thanh|          | 
 Wed<br>1000|C07<br>Jun Hui|        |C08<br>Shui Herng |   |           |            |C06<br>Shu Peng |11<br>Rengan |
