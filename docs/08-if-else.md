@@ -37,17 +37,17 @@ The logical expression `n == 0` is true if the variable `n` holds the value of `
 
 !!! warn "`==` vs `=`"
     Note that use of TWO `=` signs.  This is often confused by newbie programmers with a single `=` sign, which is used for assignment.  A common bug is to write
-```C
-  if (n = 0) {
-     :
-  }
-```
+    ```C
+      if (n = 0) {
+         :
+      }
+    ```
 
 The `==` is known as a _comparison operator_.  It compares if the left-hand side has the same value as the right-hand side. Other comparison operators include `>` (greater than), `<` (less than), `>=` (greater or equal to), `<=` (less than or equal to), and `!=` (not equal).
 
-In other words, the function `factorial` will exit and return `1` if the parameter `n` equals to `0`.  The rest of the code (particularly, Line 5) will be skipped.
+In other words, the function `factorial` will exit and return `1` if the parameter `n` equals to `0`.  The rest of the code (particularly, Line {--5--} 6) will be skipped.
 
-What if `n` is not `0`?  The block that contains Line 3 `return 1;` will be skipped, and Line 5 `return n * factorial(n - 1);` will be executed instead, which is what we intended for the `factorial` function to do.
+What if `n` is not `0`?  The block that contains Line 3 `return 1;` will be skipped, and Line {--5--} 6 `return n * factorial(n - 1);` will be executed instead, which is what we intended for the `factorial` function to do.
 
 ## Example: Max of two numbers
 
