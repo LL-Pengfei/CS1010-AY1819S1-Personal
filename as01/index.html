@@ -1130,7 +1130,7 @@
 <h2 id="question-1-invest-5-marks">Question 1: Invest (5 marks)</h2>
 <p>If you invest <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> dollars at <span><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>% interest rate compounded annually, after <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> years, your investment will grow to <span><span class="MathJax_Preview">\frac{m(1 - (r/100)^{n+1})}{1 - r/100}</span><script type="math/tex">\frac{m(1 - (r/100)^{n+1})}{1 - r/100}</script></span> dollars.</p>
 <p>Write a program <code class="codehilite">invest.c</code> that accepts three integers as input: principal <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>, rate <span><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>, and number of years <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>, and computes the amount of money earned after <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> years.</p>
-<p>You may assume that <span><span class="MathJax_Preview">r \le 100</span><script type="math/tex">r \le 100</script></span>.</p>
+<p>You may assume that <del class="critic">r &lt;= 100</del> <span><span class="MathJax_Preview">r &lt; 100</span><script type="math/tex">r < 100</script></span>.</p>
 <h3 id="sample-run">Sample Run</h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
