@@ -23,7 +23,7 @@ double height;  // The height of the baby
 
 Avoid
 
-```
+```C
 double weight, height;   // Weight and height of the baby
 ```
 
