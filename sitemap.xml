@@ -105,6 +105,18 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>https://nus-cs1010.github.io/1819-s1/11-loop/index.html</loc>
+     <lastmod>2018-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://nus-cs1010.github.io/1819-s1/12-invariant/index.html</loc>
+     <lastmod>2018-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
