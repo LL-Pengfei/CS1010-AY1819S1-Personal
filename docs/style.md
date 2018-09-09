@@ -1,6 +1,6 @@
 # CS1010 C Style 
 
-In CS1010, you should following the following style guide when you write your code for your graded homework and practical examss.  We typically allocate a few marks for coding style (each assignment/exam may have different allocation).  You will loose marks for violation of style.
+In CS1010, you should following the following style guide when you write your code for your graded homework and practical exams.  We typically allocate a few marks for coding style (each assignment/exam may have different allocation).  You will lose marks for violation of style.
 
 This guide is modified from past CS1010 style guide by Aaron Tan.
 
@@ -31,7 +31,7 @@ double weight, height;   // Weight and height of the baby
 
 This is the most important rule to follow.  The name of a type, variable, function, constant should inform us of its purpose clearly without the readers having to guess or look up its meaning.
 
-For example, `int number_of_coins;` is an appropriate variable but not `int c;`. Avoid using single character for variable names.
+For example, `int number_of_coins;` is an appropriate variable but not `int c;`. Avoid using a single character for variable names.
 
 There are some exceptions, however, as shown below:
 
@@ -47,7 +47,7 @@ However, do not invent your own abbreviation. For instance, names like `nm_elemn
 
 ## 4. Avoid Negated Variable or Function Names
 
-Negated variables often results in hard-to-read double-negatives in an expression like `!is_not_err`.
+Negated variables often result in hard-to-read double-negatives in an expression like `!is_not_err`.
 
 So, avoid `is_not_error`, `is_not_found`, `is_not_valid`, `cannot_open_file`.  Instead, we prefer `is_error`, `is_found`, `is_valid`, `can_open_file` etc.
 
@@ -83,7 +83,7 @@ Use lower case letters for variable names and function names, with multiple word
 
 ## 7. Use Consistent Indentation to Emphasize Block Structure
 
-Code should be properly and neatly indented to emphasize the nested logical structure of the program. An indentation of 2 or 4 spaces is recommended (8 is too wide).
+The code should be properly and neatly indented to emphasize the nested logical structure of the program. An indentation of 2 or 4 spaces is recommended (8 is too wide).
 
 Every block that follows a `for`, `while`, `if-else`, `do-while` statement must be indented from its enclosing block.
 
@@ -99,7 +99,7 @@ for (i = 0; i < 3; i += 1) {
 }
 ```
 
-The following are wrong ways to indent the comments.
+The following are the wrong ways to indent the comments.
 
 ```C
 for (i = 0; i < 3; i += 1) {
@@ -161,7 +161,7 @@ for (i = 0; i < 3; i += 1)
 }
 ```
 
-Both styles are acceptable, but you should be consistent and should not mixed both styles in a single program.
+Both styles are acceptable, but you should be consistent and should not mix both styles in a single program.
 
 For close braces, they should be leading close braces aligned with the block of the construct. Close braces should NOT be trailing as that would make it hard to spot them.
 
