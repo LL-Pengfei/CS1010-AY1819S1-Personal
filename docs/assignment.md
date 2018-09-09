@@ -30,6 +30,22 @@ For late submission, there is a 1% penalty (of the total awarded marks for that 
 ## Method of Submission
 Please follow the instructions provided in each programming assignment to submit the programs to GitHub.  Programs submitted through other means, such as emails, will NOT be accepted.
 
+## Identifying Yourself
+
+In every C file that you submit to CS1010, you need to identify yourself by writing your name and tutorial group. Marks will be deducted if you fail to do so. You need to edit the line:
+
+```
+@author XXXX (Group YYYY)
+```
+
+and change it to something like:
+
+```
+@author Gamora (Group 10)
+```
+
+Please follow the instructions provided in each programming assignment to submit the programs to GitHub.  Programs submitted through other means, such as emails, will NOT be accepted.
+
 ## Grading
 Only the final submission of each exercise will be graded.  For each exercise, we will provide you will a limited set of test data.  During grading, we may grade your program with additional test data.
 
