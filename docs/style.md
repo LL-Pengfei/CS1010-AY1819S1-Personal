@@ -190,7 +190,7 @@ i += 1 // add one to i
 
 serves no purpose, adds clutter to a program and does more harm than good.
 
-### 14. Blank lines
+## 14. Blank Lines
 
 It is good to add a blank line between two functions, or two long segments of code for readability.
 
