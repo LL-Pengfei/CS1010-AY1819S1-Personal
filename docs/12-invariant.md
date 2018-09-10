@@ -115,5 +115,7 @@ while (i != 0) {
 ```
 
 (a) Trace through the program.  What is the value of `j` when the loop exits?
+
 (b) Do you recognize any pattern on the relationship of `i` and `j`?
-(c) What is the loop invariant?
+
+(C) What is the loop invariant?
