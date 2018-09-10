@@ -759,6 +759,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#6-linking-with-3rd-party-library" title="6. Linking with 3rd party library" class="md-nav__link">
+    6. Linking with 3rd party library
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -852,6 +859,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#6-linking-with-3rd-party-library" title="6. Linking with 3rd party library" class="md-nav__link">
+    6. Linking with 3rd party library
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -872,23 +886,23 @@
                 <h1 id="cs1010-compilation-guide">CS1010 Compilation Guide</h1>
 <h2 id="1-compile-a-standalone-c-program">1. Compile a standalone C program</h2>
 <p>Suppose we have a standalone C program <code class="codehilite">teh.c</code> that does not use any external libraries.  We can compile the program using the command</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>happytan@host:~[xxx]$ clang teh.c
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ooiwt@pe118:~$ clang teh.c
 </pre></div>
 </td></tr></table>
 
 <p>This command should create an executable called <code class="codehilite">a.out</code> in the current directory, which you can then run with:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>happytan@host:~[xxx]$ ./a.out
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ooiwt@pe118:~$ ./a.out
 </pre></div>
 </td></tr></table>
 
 <h2 id="2-renaming-executable-file">2. Renaming executable file</h2>
 <p>The name <code class="codehilite">a.out</code> is an abbreviation for <em>assembler output</em>, a name that many compilers kept as the default output name since the 60s.  We should, however, give our executable more descriptive name, by using the <code class="codehilite">-o</code> flag.  (<code class="codehilite">o</code> is the mnemonic for output).</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>happytan@host:~[xxx]$ clang teh.c -o teh
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ooiwt@pe118:~$ clang teh.c -o teh
 </pre></div>
 </td></tr></table>
 
 <p>or</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>happytan@host:~[xxx]$ clang -o teh teh.c
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ooiwt@pe118:~$ clang -o teh teh.c
 </pre></div>
 </td></tr></table>
 
@@ -896,28 +910,35 @@
 <div class="admonition warn">
 <p class="admonition-title">Beware of the order</p>
 <p>If you are not careful and run the following command instead:
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>happytan@host:~[xxx]$ clang -o teh.c teh
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ooiwt@pe118:~$ clang -o teh.c teh
 </pre></div>
 </td></tr></table>
 <code class="codehilite">clang</code> would overwrite your code <code class="codehilite">teh.c</code> -- all your hard work will be gone!!</p>
 </div>
 <h2 id="3-warning-for-possible-bugs">3. Warning for possible bugs.</h2>
 <p>The <code class="codehilite">clang</code> checks for syntax errors in your C files -- i.e., things that violate the C syntax rules.  The compiler, however, is smart enough to identify possible bugs -- errors that will cause your program to behave incorrectly, even if the syntax follows C's rules.  You can ask <code class="codehilite">clang</code> to warn you about this, using the <code class="codehilite">-W</code> flag (<code class="codehilite">W</code> is the mnemonic for warning -- note the capital W).  The manual for <code class="codehilite">clang</code> lists different types of warnings that <code class="codehilite">clang</code> can warn you about.  For simplicity, we will ask <code class="codehilite">clang</code> to warn us about everything, by enabling <code class="codehilite">all</code> warnings.  The command to do so is:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>happytan@host:~[xxx]$ clang -Wall teh.c -o teh
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ooiwt@pe118:~$ clang -Wall teh.c -o teh
 </pre></div>
 </td></tr></table>
 
 <p>For beginners, it is <em>highly recommended</em> that you <em>always</em> compile with <code class="codehilite">-Wall</code> flag.</p>
 <h2 id="4-generating-additional-information-for-debugging">4. Generating additional information for debugging.</h2>
 <p>In order to use the debugger <code class="codehilite">lldb</code> to trace through and debug your program, <code class="codehilite">clang</code> needs to generate additional information and store them in the executable file.  We can instruct <code class="codehilite">clang</code> to generate them with the flag <code class="codehilite">-g</code> (<code class="codehilite">g</code> for generate).  </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>happytan@host:~[xxx]$ clang -Wall -g teh.c -o teh
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ooiwt@pe118:~$ clang -Wall -g teh.c -o teh
 </pre></div>
 </td></tr></table>
 
 <p>It is recommended that you always compile with <code class="codehilite">-g</code> flags during development phase.  If you need to measure the performance (e.g., how fast it runs) of your program or when you are releasing the program to the public, you can remove the <code class="codehilite">-g</code> flag and compile with the optimization flags (e.g., <code class="codehilite">-O</code>) instead.  </p>
 <h2 id="5-linking-with-standard-library">5. Linking with standard library.</h2>
 <p>To link with a standard library, we use the <code class="codehilite">-l</code> flag to specify the name of the library to link.  For instance, to link with the C standard math library (abbreviated <code class="codehilite">m</code>), you issue the command:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>happytan@host:~[xxx]$ clang -Wall -g teh.c -o teh -lm
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ooiwt@pe118:~$ clang -Wall -g teh.c -o teh -lm
+</pre></div>
+</td></tr></table>
+
+<h2 id="6-linking-with-3rd-party-library">6. Linking with 3<sup>rd</sup> party library</h2>
+<p>By default, <code class="codehilite">clang</code> looks for headers and libraries in the systems directories (<code class="codehilite">/usr/include</code>, <code class="codehilite">/usr/lib</code>, etc) and the current working directory.  </p>
+<p>If you use a third party library, you usually need to tell <code class="codehilite">clang</code> where to look for the corresponding headers and libraries.  You can use the <code class="codehilite">-I</code> flag and the <code class="codehilite">-L</code> flag for these purposes. For instance, if you have a library installed under your home called <code class="codehilite">citadel</code>, and the file <code class="codehilite">citadel.h</code> can be found under <code class="codehilite">~/citadel/include</code> and the file <code class="codehilite">libcitadel.a</code> can be found under <code class="codehilite">~/citadel/lib</code>, to tell <code class="codehilite">clang</code> where to find these files, you can compile with:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ooiwt@pe118:~$ clang -Wall -g -I ~/citadel/include -L ~/citadel/lib teh.c -o teh -lm -lcitadel
 </pre></div>
 </td></tr></table>
                 
