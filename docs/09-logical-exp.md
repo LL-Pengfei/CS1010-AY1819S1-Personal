@@ -241,3 +241,29 @@ void print_blood_pressure(long systolic, long diastolic)
 
 {++The figure does not say how to classify the data if the values fall exactly on the boundary of two regions.  In this case, you can classify it to either region.++}
 
+## Appendix: Code from Lecture
+
+```C
+#include "cs1010.h"
+#include <stdbool.h>
+
+bool is_gen_z(long year)
+{
+  return ((year >= 1995) && (year <= 2005));
+}
+
+bool is_not_gen_z(long year)
+{
+  return ((year < 1995) || (year > 2005));
+}
+
+int main()
+{
+  long year = cs1010_read_long();
+  if (!is_not_gen_z(year)) {
+    cs1010_println_string("Z!");
+  } else {
+    cs1010_println_string("Not Z!");
+  }
+}
+```

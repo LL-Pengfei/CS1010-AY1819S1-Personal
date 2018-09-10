@@ -20,7 +20,7 @@ long factorial(long n)
 ```
 
 ![factorial](figures/max-flowchart/max-flowchart.010.png)
- 
+
 In this example, you see a new C keyword `if`.  This keyword is used at the beginning of a conditional block of code.  The general syntax is:
 
 ```C
@@ -37,6 +37,7 @@ The logical expression `n == 0` is true if the variable `n` holds the value of `
 
 !!! warn "`==` vs `=`"
     Note that use of TWO `=` signs.  This is often confused by newbie programmers with a single `=` sign, which is used for assignment.  A common bug is to write
+
     ```C
       if (n = 0) {
          :
@@ -54,6 +55,7 @@ What if `n` is not `0`?  The block that contains Line 3 `return 1;` will be skip
 Let's switch to another example: suppose we have three variables, `x`, `y`, and `max`, and we want to set `max` to the maximum of `x` and `y`.
 
 Consider the following code snippet:
+
 ```C
 if (x > y) {
   max = x;
@@ -88,6 +90,7 @@ if (x == y) {
 ```
 
 ## Else
+
 The code snippet above now correctly sets `max` to the maximum of `x` and `y`.
 The code, however, is not very satisfying, since we compare between `x` and `y` three times.   Let's see how we can reduce the number of comparisons to one.  We are going to do some _refactoring_ of the code above.
 
@@ -126,33 +129,33 @@ if (<logical expression>) {
 
 The example above considers _two_ possible execution paths only.  In some situations, we may need to consider more than two execution paths.  Take the following problem for example.  You are given the numerical score for an assignment, ranged between 0 and 10.  Print out the letter grade of the assignment according to the table below:
 
-| Score | Letter Grade | 
-|-------|--------------|
-| 8 or higher | A       |
-| Less than 8 but 5 or higher| B |
-| Less than 5 but 3 or higher | C |
-| Less than 3 | D |
+| Score                       | Letter Grade |
+| --------------------------- | ------------ |
+| 8 or higher                 | A            |
+| Less than 8 but 5 or higher | B            |
+| Less than 5 but 3 or higher | C            |
+| Less than 3                 | D            |
 
 Since the `if`-`else` statement only allows branching into two possibilities, we can branch into multiple possibilities by nesting the `if`-`else` statements hierarchically.  We can first break the table down into three tables, each containing only two rows, with one row a negation of the other row.
 
-| Score | Letter Grade | 
-|-------|--------------|
-| 8 or higher | A       |
-| Less than 8 | See Table 1 |
+| Score       | Letter Grade |
+| ----------- | ------------ |
+| 8 or higher | A            |
+| Less than 8 | See Table 1  |
 
 Table 1 (less than 8)
 
-| Score | Letter Grade | 
-|-------|--------------|
-| 5 or higher | B |
-| Less than 5 | See Table 2 |
+| Score       | Letter Grade |
+| ----------- | ------------ |
+| 5 or higher | B            |
+| Less than 5 | See Table 2  |
 
 Table 2 (less than 5)
 
-| Score | Letter Grade | 
-|-------|--------------|
-| 3 or higher | C |
-| Less than 3 | D |
+| Score       | Letter Grade |
+| ----------- | ------------ |
+| 3 or higher | C            |
+| Less than 3 | D            |
 
 The tables above can then be written into the following function:
 
@@ -264,7 +267,7 @@ Alternatively, if you have code like this:
 ```C
 if (score >= 8)
   if (late_penalty != 0) 
-	  cs1010_println_string("late submission");
+      cs1010_println_string("late submission");
 else 
   cs1010_println_string("you can do better!");
 ```
@@ -272,6 +275,7 @@ else
 It might look like `you can do better!` will be printed if `score` is less than 8, but actually, `you can do better!` will be printed if the `score` is larger or equal to 8 and there is no late penalty, which is not what is intended.
 
 ## Conditional Operator
+
 The conditional operator consists of two special characters `?` and `:` and is used in the format of:
 
 ```
@@ -313,6 +317,7 @@ if (sum == expected_value) {
 would not be evaluated as `true` as expected!
 
 Thus, to compare real numbers, we normally allow some errors in comparisons -- we want the absolute difference between `sum` and `expected_value` to be small enough.
+
 ```C
 double expected_value = 0.3;
 double sum = 0.1 + 0.2;
@@ -407,32 +412,102 @@ if (x > y) {
 
 Suppose we break down the table below in a slightly different way.
 
-| Score | Letter Grade | 
-|-------|--------------|
-| 8 or higher | A       |
-| Less than 8 but 5 or higher| B |
-| Less than 5 but 3 or higher | C |
-| Less than 3 | D |
+| Score                       | Letter Grade |
+| --------------------------- | ------------ |
+| 8 or higher                 | A            |
+| Less than 8 but 5 or higher | B            |
+| Less than 5 but 3 or higher | C            |
+| Less than 3                 | D            |
 
 We rewrite the tables into three smaller tables, as:
 
-| Score | Letter Grade | 
-|-------|--------------|
-| 5 or higher | See Table 3 |
-| Less than 5 | See Table 4 |
+| Score       | Letter Grade |
+| ----------- | ------------ |
+| 5 or higher | See Table 3  |
+| Less than 5 | See Table 4  |
 
 where Table 3 (5 or higher) is
 
-| Score | Letter Grade | 
-|-------|--------------|
-| 8 or higher | A |
-| Less than 8 | B |
+| Score       | Letter Grade |
+| ----------- | ------------ |
+| 8 or higher | A            |
+| Less than 8 | B            |
 
 and Table 4 (less than 5) is
 
-| Score | Letter Grade | 
-|-------|--------------|
-| 3 or higher | C |
-| Less than 3 | D |
+| Score       | Letter Grade |
+| ----------- | ------------ |
+| 3 or higher | C            |
+| Less than 3 | D            |
 
 Write the corresponding `if`-`else` statements to print out the letter grade based on the tables above.
+
+
+
+## Appendix: Code From Lecture
+
+Here are the C files that Wei Tsang wrote during the lecture.
+
+```c
+#include "cs1010.h"
+
+long factorial(long n)
+{
+  if (n == 0) {
+    return 1;
+  } 
+  return n * factorial(n-1);
+}
+
+int main()
+{
+  long n = cs1010_read_long();
+  long fac = factorial(n);
+  cs1010_println_long(fac);
+}
+```
+
+```C
+#include "cs1010.h"
+
+long max(long x, long y)
+{
+  if (x > y) {
+    return x;
+  } else {
+    return y;
+  }
+  // alternatively, using the conditional operator ? :
+  // return (x > y) ? x : y;
+}
+
+int main()
+{
+  long x = cs1010_read_long();
+  long y = cs1010_read_long();
+  long m = max(x, y);
+  cs1010_println_long(m);
+}
+```
+
+```C
+#include "cs1010.h"
+
+void print_score(double x)
+{
+  if (x >= 8)
+    cs1010_println_string("A");
+  else if (x >= 5)
+    cs1010_println_string("B");
+  else if (x >= 3)
+    cs1010_println_string("C");
+  else
+    cs1010_println_string("D");
+}
+
+int main()
+{
+  double score = cs1010_read_double();
+  print_score(score);
+}
+```
