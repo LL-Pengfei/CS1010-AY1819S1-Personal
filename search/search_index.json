@@ -1047,7 +1047,7 @@
         },
         {
             "location": "/quiz/index.html",
-            "text": "Quizzes\n\n\nWe have setup some quizzes to help you check for yourself how much you know about the topics we cover in CS1010.\n\n\nThere are two types of quizzes: (a) in-class Kahoot! quizzes, and (b) out-of-class Google Form quizzes.  The quizzes are linked here:\n\n\nKahoot! Quizzes\n\n\nWeek 4: Flow Charts\n (3 September 2018)\n\n\nGoogle Form Quizzes\n\n\nQuiz 1: Using PE and UNIX",
+            "text": "Quizzes\n\n\nWe have setup some quizzes to help you check for yourself how much you know about the topics we cover in CS1010.\n\n\nThere are two types of quizzes: (a) in-class Kahoot! quizzes, and (b) out-of-class Google Form quizzes.  The quizzes are linked here:\n\n\nKahoot! Quizzes\n\n\nWeek 4: Flow Charts\n (3 September 2018)\n\n\nGoogle Form Quizzes\n\n\nQuiz 1: Using PE and UNIX\n\n\nQuiz 2: Compiling Your Code",
             "title": "Quizzes"
         },
         {
@@ -1074,6 +1074,11 @@
             "location": "/quiz/index.html#quiz-1-using-pe-and-unix",
             "text": "",
             "title": "Quiz 1: Using PE and UNIX"
+        },
+        {
+            "location": "/quiz/index.html#quiz-2-compiling-your-code",
+            "text": "",
+            "title": "Quiz 2: Compiling Your Code"
         },
         {
             "location": "/kahoot01/index.html",
