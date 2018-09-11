@@ -995,9 +995,9 @@
   <span class="kt">long</span> <span class="n">product</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
   <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
   <span class="c1">// Line A</span>
-  <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">)</span>
-      <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
-      <span class="n">product</span> <span class="o">*=</span> <span class="n">i</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">product</span> <span class="o">*=</span> <span class="n">i</span><span class="p">;</span>
     <span class="c1">// Line B</span>
   <span class="p">}</span>
   <span class="c1">// Line C</span>
@@ -1030,9 +1030,9 @@
   <span class="kt">long</span> <span class="n">product</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
   <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
   <span class="c1">// A: { product == i! }</span>
-  <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">)</span>
-      <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
-      <span class="n">product</span> <span class="o">*=</span> <span class="n">i</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">product</span> <span class="o">*=</span> <span class="n">i</span><span class="p">;</span>
     <span class="c1">// B: { product == i! }</span>
   <span class="p">}</span>
   <span class="c1">// C: { product == i! }</span>
