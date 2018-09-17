@@ -930,11 +930,15 @@ Returns <code class="codehilite">k</code> numbers of <code class="codehilite">lo
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">long</span><span class="o">*</span> <span class="n">values</span> <span class="o">=</span> <span class="n">cs1010_read_long_array</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
-<span class="c1">// Do something with array values</span>
- <span class="o">:</span>
- <span class="o">:</span>
-<span class="n">free</span><span class="p">(</span><span class="n">values</span><span class="p">);</span>
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">long</span><span class="o">*</span> <span class="n">values</span> <span class="o">=</span> <span class="n">cs1010_read_long_array</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">values</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Do something with array values</span>
+   <span class="o">:</span>
+   <span class="o">:</span>
+  <span class="n">free</span><span class="p">(</span><span class="n">values</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </td></tr></table></p>
 </li>
@@ -946,11 +950,15 @@ Returns NULL if there is a memory allocation error.  If the returned value is no
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">double</span><span class="o">*</span> <span class="n">values</span> <span class="o">=</span> <span class="n">cs1010_read_double_array</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
-<span class="c1">// Do something with array values</span>
- <span class="o">:</span>
- <span class="o">:</span>
-<span class="n">free</span><span class="p">(</span><span class="n">values</span><span class="p">);</span>
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">double</span><span class="o">*</span> <span class="n">values</span> <span class="o">=</span> <span class="n">cs1010_read_double_array</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">values</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Do something with array values</span>
+   <span class="o">:</span>
+   <span class="o">:</span>
+  <span class="n">free</span><span class="p">(</span><span class="n">values</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </td></tr></table></p>
 </li>
@@ -958,15 +966,25 @@ Returns NULL if there is a memory allocation error.  If the returned value is no
 <p><code class="codehilite">char** cs1010_read_word_array(int k)</code><br>
 Returns <code class="codehilite">k</code> white-space-separated words read from the standard input stored in an array.  The notion of "word" is the same to <code class="codehilite">cs1010_read_word()</code>.<br />
 Returns NULL if there is a memory allocation error.  If the returned value is non-NULL, the caller is responsible for freeing the memory allocated for each word and for the whole array by calling <code class="codehilite">free</code>.
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">double</span><span class="o">*</span> <span class="n">words</span> <span class="o">=</span> <span class="n">cs1010_read_word_array</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
-<span class="c1">// Do something with array words</span>
- <span class="o">:</span>
- <span class="o">:</span>
-<span class="n">free</span><span class="p">(</span><span class="n">words</span><span class="p">);</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">char</span><span class="o">**</span> <span class="n">words</span> <span class="o">=</span> <span class="n">cs1010_read_word_array</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">words</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Do something with array words</span>
+   <span class="o">:</span>
+   <span class="o">:</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">free</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+  <span class="p">}</span>
+  <span class="n">free</span><span class="p">(</span><span class="n">words</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </td></tr></table></p>
 </li>
@@ -974,21 +992,31 @@ Returns NULL if there is a memory allocation error.  If the returned value is no
 <p><code class="codehilite">char** cs1010_read_line_array(int k)</code><br>
 Returns <code class="codehilite">k</code> new-line-separated words read from the standard input stored in an array.  The notion of line is the same to <code class="codehilite">cs1010_read_line()</code>.<br />
 Returns NULL if there is a memory allocation error.  If the returned value is non-NULL, the caller is responsible for freeing the memory allocated for each line and for the whole array by calling <code class="codehilite">free</code>.
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">double</span><span class="o">*</span> <span class="n">lines</span> <span class="o">=</span> <span class="n">cs1010_read_line_array</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
-<span class="c1">// Do something with array lines</span>
- <span class="o">:</span>
- <span class="o">:</span>
-<span class="n">free</span><span class="p">(</span><span class="n">lines</span><span class="p">);</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">char</span><span class="o">**</span> <span class="n">lines</span> <span class="o">=</span> <span class="n">cs1010_read_line_array</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">lines</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Do something with array lines</span>
+   <span class="o">:</span>
+   <span class="o">:</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">free</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+  <span class="p">}</span>
+  <span class="n">free</span><span class="p">(</span><span class="n">lines</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </td></tr></table></p>
 </li>
 </ul>
 <h2 id="printing-of-a-single-value">Printing of a Single Value</h2>
-<p>The CS1010 library provide a few convenince functions to format and print <code class="codehilite">long</code> and <code class="codehilite">double</code> values to the standard output.</p>
+<p>The CS1010 library provides a few convenince functions to format and print <code class="codehilite">long</code> and <code class="codehilite">double</code> values to the standard output.</p>
 <ul>
 <li>
 <p><code class="codehilite">void cs1010_print_long(long value)</code> and <code class="codehilite">void cs1010_println_long(long value)</code><br>
