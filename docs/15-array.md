@@ -49,14 +49,14 @@ long marks[10];
 marks = {1, 2, 3, 1, 5, 10, 10, 4, 5, 3, };  // error
 ```
 
-## Example 1: Arrays As Lookup Table
+## Example 1: Array As Lookup Table
 
 One way the array is useful is that it can be used as a lookup table.
 
 Consider the following function `days()`, which, given a month, return the number of days from the 1st of January until the 1st of the month.  So `days(1)` returns 0, `days(2)` returns 31 (since January has 31 days), `days(3)` returns 31 + 28 = 59 (assuming non-leap year), etc.
 
 ```C
-long days(long month, long day)
+long days(long month)
 {
   long days_since = 0;
   if (month == 2) {
@@ -102,7 +102,7 @@ long days(long month, long day)
   long days_in_month[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
   long days_since = 0;
   for (long i = 0; i < month - 1; i += 1) {
-  days_since += days_in_month[i];
+    days_since += days_in_month[i];
   }
   return days_since;
 }
