@@ -75,7 +75,7 @@ Here is the example for computing the factorial:
 long factorial(long n) 
 {
     long product = n;
-    for (int i = n-1; i >= 2; i -= 1) {
+    for (long i = n-1; i >= 2; i -= 1) {
         product *= i;
     }
     return product;
@@ -91,7 +91,7 @@ long factorial(long n)
         return 1;
     }
     long product = n;
-    for (int i = n-1; i >= 2; i -= 1) {
+    for (long i = n-1; i >= 2; i -= 1) {
         product *= i;
     }
     return product;
@@ -135,7 +135,7 @@ long factorial(long n)
         return 1;
     }
     long product = n;
-    int i = n - 1;
+    long i = n - 1;
     while (i >= 2) {
         product *= i;
         i -= 1;
@@ -232,9 +232,9 @@ Here is another version of the `factorial` function:
 ```C
 long factorial(long n) 
 {
-    int i = n - 1;
+    long i = n - 1;
     long product;
-    for (product = n; i >= 2; product *= i);
+    for (product = n; i >= 2; product *= i)
     {
         i -= 1;
     }
