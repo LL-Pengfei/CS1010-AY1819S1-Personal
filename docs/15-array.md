@@ -49,14 +49,14 @@ long marks[10];
 marks = {1, 2, 3, 1, 5, 10, 10, 4, 5, 3, };  // error
 ```
 
-## Example 1: Arrays As Lookup Table
+## Example 1: Array As Lookup Table
 
 One way the array is useful is that it can be used as a lookup table.
 
 Consider the following function `days()`, which, given a month, return the number of days from the 1st of January until the 1st of the month.  So `days(1)` returns 0, `days(2)` returns 31 (since January has 31 days), `days(3)` returns 31 + 28 = 59 (assuming non-leap year), etc.
 
 ```C
-long days(long month, long day)
+long days(long month)
 {
   long days_since = 0;
   if (month == 2) {
@@ -97,12 +97,12 @@ The array above is initialized with the number of days in a month.  `days_in_mon
 The code above can then be written as:
 
 ```C
-long days(long month, long day)
+long days(long month)
 {
   long days_in_month[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
   long days_since = 0;
   for (long i = 0; i < month - 1; i += 1) {
-  days_since += days_in_month[i];
+    days_since += days_in_month[i];
   }
   return days_since;
 }
@@ -117,19 +117,19 @@ long max(long list[], long length)
 {
   long max_so_far = list[0];
   for (long i = 1; i != length; i += 1) {
-  if (list[i] > max_so_far) {
-    max_so_far = list[i];
-  }
+    if (list[i] > max_so_far) {
+      max_so_far = list[i];
+    }
   }
   return max_so_far;
 }
 ```
 
-Note that, in the type of the array passed into the function above, we only need to use `[]` without specifying the length.  It is also almost always necessary to pass in the number of elements in the array together with the array so that we know how many elements are there to process.  To understand why we have to understand array decay.
+Note that, in the type of the array passed into the function above, we only need to use `[]` without specifying the length.  It is also almost always necessary to pass in the number of elements in the array together with the array so that we know how many elements are there to process.  To understand why, we have to understand something called _array decay_.
 
 ## Array and Pointers
 
-The relationship between array and pointer can be confusing to beginners.  Some might even think that arrays are pointers due to the way they are passed around and used.  But _arrays are not pointers_.  The relationship between the two,  it boils down to a very simple rule, as follows.
+The relationship between array and pointer can be confusing to beginners.  Some might even think that arrays are pointers due to the way they are passed around and used.  But _arrays are not pointers_.  The relationship between the two, boils down to a very simple rule, as follows.
 
 In C, the name of the variable of an array is treated differently from a non-array variable.  If we declare an array
 
@@ -179,7 +179,7 @@ long max(long list[], long length)
 int main()
 {
   long a[10] = {1, 2, 3, 4, 1, 9, 10, 44, -1, -5};
-  printf("%ld\n", max(a, 10));
+  cs1010_println_long(max(a, 10));
 }
 ```
 
@@ -196,7 +196,7 @@ long max(long *list, long length)
 }
 ```
 
-For readability, however, to convey to the reader of the code that `list` is an array and not just a pointer to `long`, we should still use the `[]` notation.
+For readability, however, we should convey to the reader of the code that `list` is an array and not just a pointer to `long`, thus we should still use the `[]` notation.
 
 Another implication of array decay when passing an array into a function, is that it is possible to write programs that behave incorrectly, without any compiler error or warning.  Consider the following:
 
@@ -220,7 +220,7 @@ long num_of_students = 10;
 long marks[num_of_students];
 ```
 
-Such arrays, where the size depends on the value of a variable, are sometimes called _variable-length array_.  This is a misnomer since once the array is created, the size is fixed.  Changing the value of the variable `num_of_students` above will not change the size of `marks`.  
+Such arrays, where the number of elements (or length) depends on the value of a variable, are sometimes called _variable-length array_.  This is a misnomer since once the array is created, the length is fixed.  Changing the value of the variable `num_of_students` above will not change the length of `marks`.  
 
 ### Skipping Elements During Initialization
 
@@ -234,17 +234,17 @@ This statement initializes `vector[0]` to 1, `vector[5]` to 2, `vector[6]` to 3,
 
 ### Skipping the Size in Declaration
 
-If you supply an initialization list, the number of elements already indicate the size to the compiler, so you can skip the size.
+If you supply an initialization list, the number of elements already indicates the length to the compiler, so you can skip the length.
 
 ```C
 long marks[] = {1, 3, 2, 8, 5,}
 ```
 
-This makes it easy to add or remove items from the array, without having to remember to keep the array size consistent.  
+This makes it easy to add or remove items from the array, without having to remember to keep the array length consistent.  
 
 ### Determining the Number of Elements in the Array
 
-C provides a `sizeof` operator, which returns the number of bytes allocated to a type.  We can use `sizeof long` for instance, to determine the number of bytes allocated to `long` on a platform.  We can also use `sizeof` on a variable instead of the type.  This becomes useful to determine, programmatically, the size of an array (esp if the array size is skipped in the array declaration).  We can calculate the number of elements in `marks` with 
+C provides a `sizeof` operator, which returns the number of bytes allocated to a type.  We can use `sizeof long` for instance, to determine the number of bytes allocated to `long` on a platform.  We can also use `sizeof` on a variable instead of the type.  This becomes useful to determine, programmatically, the length of an array (esp if the array length is skipped in the array declaration).  We can calculate the number of elements in `marks` with 
 
 ```C
 long num_of_elem = sizeof marks/sizeof marks[0];
@@ -254,7 +254,7 @@ Note that array decay does not apply for only two operators: the `sizeof` operat
 
 ## Dynamically Allocated Array
 
-It is often not possible to determine the size of the array beforehand.  So, it is useful to be able to allocate an array with a size that is determined during runtime (not hard-coding the size of the array in the program).
+It is often not possible to determine the length of the array beforehand.  So, it is useful to be able to allocate an array with a length that is determined during runtime (not hard-coding the length of the array in the program).
 
 For instance, if I want to keep a `marks` array for a module, it is unclear how big I should set the array to.  How big is big enough?  While I can use a variable-length array for this purpose, it is not ideal -- if the system does not have enough memory to store the array, the program would simply crash with a segfault and there is no way to recover from this.
 
@@ -286,7 +286,8 @@ if (marks == NULL) {
 for (long i = 0; i < 100; i += 1) {
   cs1010_println_long(marks[i]);
 }
-// do other things to marks
+// do other things to marks 
+  :
 free(marks);
 ```
 
@@ -308,7 +309,7 @@ int main()
 }
 ```
 
-How about?  Would the output be correct?
+How about the following? Would the output be correct?
 
 ```C
 int main()
@@ -320,7 +321,7 @@ int main()
 
 ### Problem 15.3
 
-Explain how the following code iterates through every element in the list.
+Explain how the following code iterates through every element in the list, when called with an array of length `length` as the first argument.
 
 ```C
 long max(long *list, long length)

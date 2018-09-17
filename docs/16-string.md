@@ -2,7 +2,8 @@
 
 We have seen strings as a sequence of characters stored in double quotes, e.g., "hello!".  In C, a string is nothing more than just an array of `char` values (Recall from [Unit 5](05-first-c.md#other-types-in-c) that `sizeof char` is 1).
 
-The only thing special about a string is that it _always_ end with a `0` value (note: not character '0' which has a value of 48, but the value 0).  Since the character with value 0 is called the null character, we refer that strings in C as null-terminated strings.
+## Just a `char` Array
+The only thing special about a string is that it _always_ end with a `0` value (note: not character '0' which has a value of 48, but the value 0).  Since the character with value 0 is called the null character, written as '\0', we refer that strings in C as null-terminated strings.
 
 In C, we distinguish between a string and a `char` by the quotes used.  String uses double quotes `"`, while a `char` uses single quote `'`.  So we can do the following and they are equivalent:
 
@@ -19,6 +20,16 @@ char hello3[] = "hello!";
 char *hello4 = "hello!";
 ```
 
+## Special Characters
+
+The null character is written as '\0'.  The use of the backslash `\` creates an escape sequence that can be used to denote characters that would otherwise not visible on screen.  For instance, besides '\0', we will likely encounter '\n' (the newline character) '\t' (the tab character) and '\a' (the beep character) regularly.  
+
+Furthermore, since we already use `\` to indicate the escape sequence, `'` to indicate a character, and `"` to indicate a string, in order to use these characters, we need to "escape" them -- we use '\\' for the backslash character, '\'', the single quote character, and the '\"' double quote character.
+
+## Empty String
+
+We commonly use the empty string `""` to indicate a special condition or to initialize a string variable, where appropriate.  The empty string is basically an array where the 0-th element is '\0'.
+
 ## CS1010 I/O Library
 
 The CS1010 I/O library provides two functions, one to read a word (separated by white-space characters) and the other to read a line (separated by a newline character).  They are `cs1010_read_word()` and `cs1010_read_line()` respectively.  We can also read multiple words and multiple lines with `cs1010_read_word_array()` and `cs1010_read_line_array()`.  The results are stored in an array of strings.
@@ -27,10 +38,10 @@ The CS1010 I/O library provides two functions, one to read a word (separated by 
 
 ### Problem 16.1
 
-Write the following functions (without calling the standard C functions declared in `<string.h>` such as `strlen`, `strcmp`, `strcpy`, `strncpy`):
+Write the following functions (without calling the standard C functions declared in `<string.h>` such as `strlen`, `strcmp`, `strstr`):
 
-a. `long string_length(char *str)` return the length (i.e., the number of characters) of the string `str`.
+a) `long string_length(char *str)` return the length (i.e., the number of characters) of the string `str`.
 
-b. `bool string_equal(char *str1, char *str2)` return `true` if the two strings `str1` and `str2` contains exactly the same content, `false` otherwise.  (Note: `str1 == str2` does not compare if two strings have the same content. (Why?))
+b) `bool string_equal(char *str1, char *str2)` return `true` if the two strings `str1` and `str2` contains exactly the same content, `false` otherwise.  (Note: `str1 == str2` does not compare if two strings have the same content. (Why?))
 
-c. `void string_n_copy(char *dst, char *src, long n)` copy at most `n` characters from string `src` to `dst`.  If `src` has less than `n` characters, then `dst` is padded with null character 0.  If `src` has `n` or more characters, `dst` is not null-terminated.  Assume that `dst` and `src` do not overlap.
+c) `char *string_in_string(char *needle, char *haystack)` return a pointer to the first character of the first occurance of `needle` in `haystack`, if found.  If `needle` does not occur anywhere in `haystack`, return NULL.  If `needle` is an empty string, `haystack` is returned.
