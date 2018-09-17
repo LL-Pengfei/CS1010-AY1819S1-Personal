@@ -178,7 +178,7 @@ This deference can go on since `ptrptr` is also a variable and have been allocat
 We use `NULL` to indicate that the pointer is invalid, typically to mean that we have not initialized the pointer or to flag an error condition.
 
 !!! note "Billion Dollar Mistakes"
-    Sir Tony Hoare (the same one whom we met when we talked about [Assertion](10-assertion.md)) also invented the null pointer.  He called it his billion-dollar mistake.  Quoting from him: "I couldn't resist the temptation to put in a null reference, simply because it was so easy to implement. This has led to innumerable errors, vulnerabilities, and system crashes, which have probably caused a billion dollars of pain and damage in the last forty years."  As you start to use pointers in CS1010, you will see why it is a pain.
+    Sir Tony Hoare (the same one whom we met when we talked about [Assertion](10-assert.md)) also invented the null pointer.  He called it his billion-dollar mistake.  Quoting from him: "I couldn't resist the temptation to put in a null reference, simply because it was so easy to implement. This has led to innumerable errors, vulnerabilities, and system crashes, which have probably caused a billion dollars of pain and damage in the last forty years."  As you start to use pointers in CS1010, you will see why it is a pain.
 
 ## Problem Set 14
 ### Problem 14.1
