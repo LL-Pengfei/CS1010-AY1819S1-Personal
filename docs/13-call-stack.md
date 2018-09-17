@@ -1,10 +1,10 @@
 # Unit 13: Call Stack
 
-In this unit, we will delve deeper into how variables are stored in the memory and what happen when we call a function.
+In this unit, we will delve deeper into how variables are stored in the memory and what happens when we call a function.
 
 ## Stack Frame
 
-Modern OS typically divide the memory into several regions.  The region that we are concern with for now, is called the _call stack_.  
+Modern OS typically divide the memory into several regions.  The region that we are concerned with for now is called the _call stack_.  
 Every function invocation causes the OS to allocate some memory on the call stack to store (among other things) the parameters passed into the function and the variables declared and used in the function.  The memory allocated to each function call is called a _stack frame_.  When a function returns, the stack frame is deallocated and freed up for other uses.
 
 Let's start with the following simple program as an example.
@@ -17,7 +17,7 @@ int main()
 }
 ```
 
-When the OS runs the program above, it invokes, or calls, the function `main`.  A new stack frame is created for `main()`.  There are two variables `x` and `y` declared in `main`.  Recall from [Unit 2](02-algo.md) that a variable is a location in the memory which holds a value.  Thus, the stack frame of `main` will include these two variables.  We initialize `x` to 1 in the code above, so the value 1 will be placed into the memory location of `x`.  The variable `y` remains uninitialized, so it will contain whatever value the happen to be in the memory at that time.
+When the OS runs the program above, it invokes, or calls, the function `main`.  A new stack frame is created for `main()`.  There are two variables `x` and `y` declared in `main`.  Recall from [Unit 2](02-algo.md) that a variable is a location in the memory which holds a value.  Thus, the stack frame of `main` will include these two variables.  We initialize `x` to 1 in the code above, so the value 1 will be placed in the memory location of `x`.  The variable `y` remains uninitialized, so it will contain whatever value that happens to be in the memory at that time.
 
 ![stack](figures/stack/stack.001.png)
 
@@ -40,9 +40,9 @@ int main()
 }
 ```
 
-Now, the program invoke the function `add` with two parameters, using `x` and 10 as arguments.  What the OS does when `add` is called, is that it allocates another stack frame for `add`.  We can visualize the stack frame for `add` as being placed on top of the stack frame of `main`.  The stack frame for `add` includes two variables corresponding to the parameters `a`, `b`, and the variable `sum` declared in the function `add`.
+Now, the program invokes the function `add` with two parameters, using `x` and 10 as arguments.  What the OS does when `add` is called, is that it allocates another stack frame for `add`.  We can visualize the stack frame for `add` as being placed on top of the stack frame of `main`.  The stack frame for `add` includes two variables corresponding to the parameters `a`, `b`, and the variable `sum` declared in the function `add`.
 
-When the stack frame for `add` is created, `sum` is uninitialized, but `a` is initialized to whatever the value of `x` is when the function is invoked (1 in this example), and `b` is intialized to 10, since that is the argument passed into `add`.
+When the stack frame for `add` is created, `sum` is uninitialized, but `a` is initialized to whatever the value of `x` is when the function is invoked (1 in this example), and `b` is initialized to 10, since that is the argument passed into `add`.
 
 ![stack](figures/stack/stack.002.png)
 
@@ -88,9 +88,9 @@ int main()
 }
 ```
 
-Here, there are actually two versions of `sum`, one in the stack frame of `main`, the other in the stack frame of `add`.  When we change `sum` in `add`, we are changing a local copy which will eventually gets deleted.  The assignment to `sum` in Line 2 has no effect on the variable `sum` on Line 8 of `main`.
+Here, there are actually two versions of `sum`, one in the stack frame of `main`, the other in the stack frame of `add`.  When we change `sum` in `add`, we are changing a local copy which will eventually get deleted.  The assignment to `sum` in Line 2 has no effect on the variable `sum` on Line 8 of `main`.
 
-This explaination explains why a function is a black box, we can only pass in parameters and get a value in return.  Nothing else gets in and out.  There is no "side effects" -- what ever happen in the function, stays in the function and does not affect the caller (excepts if it reads or write to the standnard input/output).   Such function is sometimes called a "pure function".
+This explanation explains why a function is a black box, we can only pass in parameters and get a value in return.  Nothing else gets in and out.  There are no "side effects" -- whatever happen in the function, stays in the function and does not affect the caller (excepts if it reads or writes to the standard input/output).   Such a function is sometimes called a "pure function".
 
 ## Automatic Variable
 
@@ -100,7 +100,7 @@ There are two other types of variables, _global variable_, which we have mention
 
 ## Stack Size
 
-The OS typically reserves a limited amount of memory for each program for stack.  You can find out, on your system, what is the maximum allocated stack size with the command 
+The OS typically reserves a limited amount of memory for each program for the stack.  You can find out, on your system, what is the maximum allocated stack size with the command 
 ```
 ulimit -s
 ```
@@ -111,7 +111,7 @@ On our CS1010 PE hosts, the limit is 8 MB.
 
 ### Problem 13.1
 
-Trace through what get stored in the call stack when we run the following programs:
+Trace through what gets stored in the call stack when we run the following programs:
 
 ```C
 #include <math.h>
@@ -134,7 +134,7 @@ int main()
 
 ### Problem 13.2
 
-Trace through what get stored in the call stack when we run the following programs:
+Trace through what gets stored in the call stack when we run the following programs:
 
 ```C
 #include "cs1010.h"
@@ -156,20 +156,20 @@ int main()
 ### Problem 13.3
 
 What will be printed by the program below?
-Trace through what get stored in the call stack when we run the following programs:
+Trace through what gets stored in the call stack when we run the following programs:
 
 ```C
 #include "cs1010.h"
 
 void incr(long x) {
-	x += 1;
+    x += 1;
 }
 
 int main()
 {
-	long x = 10;
-	incr(x);
-	incr(x);
-	cs1010_print_long(x);
+    long x = 10;
+    incr(x);
+    incr(x);
+    cs1010_print_long(x);
 }
 ```
