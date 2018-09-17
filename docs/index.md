@@ -10,16 +10,24 @@ Piazza is the Q&A site for students and instructors to ask questions and discuss
 
 Exercises are ungraded programming questions for practicing on your own.
 
-### [Exercise 1: Freezer](ex01.md)
+### [Exercise 3: Binary, Rectangle, Fibonacci, Prime](ex03.md)
 
-Released 3 September 2018
+Released 13 September 2018
 
 ### [Exercise 2: Leap, Suffix, Days](ex02.md)
 
 Released 6 September 2018
 
+### [Exercise 1: Freezer](ex01.md)
+
+Released 3 September 2018
+
 ----
 ## Programming Assignments 
+
+### [Assignment 2: Collatz, Weekday, Circle, Pattern](as02.md)
+
+Released 14 September 2018, Due 21 September 2018, 6pm.
 
 ### [Assignment 1: Invest, Box, Digits, and Taxi](as01.md)
 
@@ -28,6 +36,20 @@ Released 7 September 2018, Due 14 September 2018, 6pm.
 ----
 
 ## Notes and Lectures :fa-commenting:
+
+### Lecture 6
+
+In this lecture, we will discuss how call stack works, giving more insights about how a C program is executed, particularly when we call a function and when a function returns.  We then discuss about pointers and arrays, ending with a brief introduction to strings as an array of `char`.
+
+Units covered are Units 13 - 16: [Unit 13: Call Stack](13-call-stack.md), [Unit 14: Pointers](14-pointers.md), [Unit 15: Arrays](15-array.md) and [Unit 16: Strings](16-string.md).
+
+### Lecture 5
+
+- [Slides](https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1/slides/cs1010-lec5.pdf) | [Screencast](https://vimeo.com/289833096)
+
+In this lecture, we talked about how to write loops, followed by using assertions to reason about the behavior and logic of our programs.
+
+Units covered are Units [10 Assertions](10-assert.md), [11 Loops](11-loop.md), and [12 Reasoning About Loops](12-invariant.md).
 
 ### Lecture 4
 
