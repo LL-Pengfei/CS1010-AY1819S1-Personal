@@ -1,6 +1,6 @@
 # Unit 16: Strings
 
-We have seen strings as a sequence of characters stored in double quotes, e.g., "hello!".  In C, a string is nothing more than just an array of `char` values (Recall from [Unit 5](http://0.0.0.0:8000/05-first-c/index.html#other-types-in-c) that `sizeof char` is 1).
+We have seen strings as a sequence of characters stored in double quotes, e.g., "hello!".  In C, a string is nothing more than just an array of `char` values (Recall from [Unit 5](05-first-c.md#other-types-in-c) that `sizeof char` is 1).
 
 The only thing special about a string is that it _always_ end with a `0` value (note: not character '0' which has a value of 48, but the value 0).  Since the character with value 0 is called the null character, we refer that strings in C as null-terminated strings.
 
