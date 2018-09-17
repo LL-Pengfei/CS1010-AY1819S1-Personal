@@ -227,10 +227,14 @@ However, guard against the use of excessive blank lines. Double blank lines and 
 If a line (be it a statement or a comment) is too long (more than 80 characters), do not let it run through the screen and wrap around. Instead, split it into a few lines.
 
 ```C
-    // This is not advisable
-    printf("%s: name = %s; age = %d; gender = %c\n", header, player.name, player.age, player.gender);
-
-    // This is preferred
-    printf("%s: name = %s; age = %d; gender = %c\n", header;
-           player.name, player.age, player.gender);
+if ((has_cs2010 || has_cs2020 || has_cs2040 || has_cs2040C) && (has_st1232 || has_st2131 || has_st2132 || has_st2334) && (has_ma1102R || has_ma1505 || (has_ma1511 && has_ma1512) || has_ma1521) && (has_ma1101R || has_ma1311 || has_ma1506 || has_ma1508E)) 
 ```
+is bad
+
+```C
+if ((has_cs2010 || has_cs2020 || has_cs2040 || has_cs2040c) && 
+   (has_st1232 || has_st2131 ||  has_st2132 || has_st2334) && 
+   (has_ma1102r || has_ma1505 || (has_ma1511 && has_ma1512) || has_ma1521) &&    
+   (has_ma1101r || has_ma1311 || has_ma1506 || has_ma1508e)) 
+```
+is better.
