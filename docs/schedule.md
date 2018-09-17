@@ -4,21 +4,21 @@ This is a tentative schedule for CS1010.
 
 # Lecture Schedule (Tentative)
 
-Week | Starting.. | Topics                                    | Tutorial              | Assignment |
------| ---------- | ----------------------------------------- | ----------------------| -----------|
-1    | 2018-08-13 | Units 1-2: Computational Problem Solving  |                       |            |
-2    | 2018-08-20 | Units 3-4: Functions & Types              |                       |            |
-3    | 2018-08-27 | Units 5-7: Basic C programs               | PS 1; Unix            |            |
-4    | 2018-09-03 | Units 8-10: Conditionals                  | PS 3-5; Vim; Exercise 1 | Assignment 1 Released |
-5    | 2018-09-10 | Arrays and Loops                          | PS 8-10               | Assignment 2 Released | 
-6    | 2018-09-17 | Pointers and Strings                      |                       | Assignment 3 Released |  
--    | 2018-09-24 | Break | | |
-7    | 2018-10-01 | Midterm | Practical Exam 1 | PA4 Released |
-8    | 2018-10-08 | Sorting |  | PA5 Released |
-9    | 2018-10-15 | Searching | | PA6 Released |
-10   | 2018-10-22 | Composite Data Type | | PA7 Released |
-11   | 2018-10-29 | I/O | | PA 8 Released |
-12   | 2018-11-05 | Modular C programming | Practical Exam 2 | PA9 Released |
+Week | Starting.. | Topics                                   | Tutorial              | Assignment |
+-----| ---------- | -----------------------------------------| ----------------------| -----------|
+1    | 2018-08-13 | Units 1-2: Computational Problem Solving |                       |            |
+2    | 2018-08-20 | Units 3-4: Functions & Types             |                       |            |
+3    | 2018-08-27 | Units 5-7: Basic C programs              | PS 1; Unix            |            |
+4    | 2018-09-03 | Units 8-9: Conditionals                  | PS 3-5; Vim; Exercise 1 | Assignment 1 Released |
+5    | 2018-09-10 | Units 10-12 Loops                        | PS 8-9                | Assignment 2 Released | 
+6    | 2018-09-17 | Units 13-16 Memory, Array, Strings       | PS 10-12              | Assignment 3 Released |  
+-    | 2018-09-24 | Break                                    |                       | |
+7    | 2018-10-01 | Midterm & Practical Exam 1               | PA4 Released |
+8    | 2018-10-08 | Searching & Sorting                         |                       | PA5 Released |
+9    | 2018-10-15 | Composite Data Type                      | Searching | | PA6 Released |
+10   | 2018-10-22 |  | | PA7 Released |
+11   | 2018-10-29 |  | | PA 8 Released |
+12   | 2018-11-05 |  | Practical Exam 2 | PA9 Released |
 13   | 2018-11-12 | Recap | | |
 
 ## Tutorial Time / Venue
