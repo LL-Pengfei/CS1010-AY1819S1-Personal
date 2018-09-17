@@ -1,6 +1,6 @@
 # Unit 14: Memory Addresses or Pointers
 
-Every memory location has an address.  Unlike many higher level languages, such as Java, Python, and JavaScript, C allows us direct access to memory addresses.  This empower programmers to do wonderful things that cannot be done in other languages.  But, it is also dangerous at the same time -- using it improperly can lead to bugs that are hard to track down and debug.
+Every memory location has an address.  Unlike many higher level languages, such as Java, Python, and JavaScript, C allows us direct access to memory addresses.  This empowers programmers to do wonderful things that cannot be done in other languages.  But, it is also dangerous at the same time -- using it improperly can lead to bugs that are hard to track down and debug.
 
 ## The Address-of Operator
 
@@ -39,7 +39,7 @@ Your results will most likely be different, since the OS allocates different reg
 
 The dereference operator is the reversed of address-of, and is denoted by `*`.  I call it "location-of-address".  We use this operator in two places:
 
-- to declare an "address" variable , and
+- to declare an "address" variable, and
 - to reference the location of an address.
 
 We can declare a variable that is an address type.  We need to tell C the type of the variable this address is referencing.  For instance,
@@ -48,7 +48,7 @@ We can declare a variable that is an address type.  We need to tell C the type o
 double *addr;
 ```
 
-declares a variable `addr` that is an address to a variable of type `double`.  The way to read this is that `*addr`, or location-of-address `addr` is of type `double`, so `addr` is an address-of a location containing a `double`.
+declares a variable `addr` that is an address to a variable of type `double`.  The way to read this is that `*addr`, or location-of-address `addr` is of type `double`, so `addr` is an address of a location containing a `double`.
 
 !!! warn "Common Bug"
     It is possible to write as
@@ -81,7 +81,7 @@ This is where things can get dangerous.  You could be changing the value in a me
 
 ![pointers](figures/pointers/pointers.002.png)
 
-So, _always make sure that your pointer is pointing to the right location before deferencing and writing to the location._
+So, _always make sure that your pointer is pointing to the right location before dereferencing and writing to the location._
 
 [^2]: I leave it to the later OS classes CG2271 / CS2016 to explain the term "segmentation" and "fault".  Interested students can always google and [read on Wikipedia](https://en.wikipedia.org/wiki/Segmentation_fault).
 
@@ -91,7 +91,7 @@ double *addr;
 *addr = 1.0;
 ```
 
-back-to-back, the program will almost certainly segfault, because the pointer variable `addr` is not initialized, so it is pointing to the location of whatever address happen to be in the memory at that time.
+back-to-back, the program will almost certainly segfault, because the pointer variable `addr` is not initialized, so it is pointing to the location of whatever address happens to be in the memory at that time.
 
 We should point addr to a value location first, like this:
 ```C
@@ -121,9 +121,9 @@ addr = &pi; // ok
 addr = &radius; // not ok
 ```
 
-Line 4 above would lead to a compilation error, since we try to point a `double` pointer to a `long`.  
+Line 4 above would lead to a compilation error since we try to point a `double` pointer to a `long`.  
 
-2. We cannot change the address-of a variable.  For instance
+2. We cannot change the address of a variable.  For instance
 
 ```C
 long x = 1;
@@ -147,7 +147,7 @@ ptr += 1;
 Suppose that `x` is stored in memory address 1000, after Line 4, `ptr` would have the value of 1000. 
 After the line `ptr += 1`, using normal arithmetic operation, we would think that `ptr` will have the value of 1001.  However, the semantic for arithmetic operation is different for pointers.  The `+` operation for `ptr` causes the `ptr` variable to move forward by the size of the variable pointed to by the pointer.  In this example, `ptr` points to `long`, assuming that `long` is 8 bytes, after `ptr += 1`, `ptr` will have the value of 1008.
 
-We can only do addition and substraction for pointers.
+We can only do addition and subtraction for pointers.
 
 ## Pointer of Pointer (of Pointer..)
 
@@ -169,13 +169,13 @@ ptr = &x;
 ptrptr = &ptr;
 ```
 
-This deference can go on, since `ptrptr` is also a variable and have been allocated in some memory location on the stack.  We rarely need to dereference more than twice in practice, but if the situation arises, such multiple layers of dereferencing is possible.
+This deference can go on since `ptrptr` is also a variable and have been allocated in some memory location on the stack.  We rarely need to dereference more than twice in practice, but if the situation arises, such multiple layers of dereferencing is possible.
 
 ## The `NULL` Pointer
 
 `NULL` is a special value that is used to indicate that a pointer is pointing to nothing.  In C, `NULL` is actually 0 (i.e., pointing to memory location 0).
 
-We use `NULL` to indicate that the pointer is invalid, typically to mean that we have not initialize the pointer or to flag an error condition.
+We use `NULL` to indicate that the pointer is invalid, typically to mean that we have not initialized the pointer or to flag an error condition.
 
 !!! note "Billion Dollar Mistakes"
     Sir Tony Hoare (the same one whom we met when we talked about [Assertion](10-assertion.md)) also invented the null pointer.  He called it his billion-dollar mistake.  Quoting from him: "I couldn't resist the temptation to put in a null reference, simply because it was so easy to implement. This has led to innumerable errors, vulnerabilities, and system crashes, which have probably caused a billion dollars of pain and damage in the last forty years."  As you start to use pointers in CS1010, you will see why it is a pain.
