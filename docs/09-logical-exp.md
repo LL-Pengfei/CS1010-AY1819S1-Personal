@@ -260,7 +260,7 @@ bool is_not_gen_z(long year)
 int main()
 {
   long year = cs1010_read_long();
-  if (!is_not_gen_z(year)) {
+  if (is_gen_z(year)) {
     cs1010_println_string("Z!");
   } else {
     cs1010_println_string("Not Z!");
