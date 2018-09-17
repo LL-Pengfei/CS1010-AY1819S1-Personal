@@ -3,18 +3,18 @@
 I collected below some tips on `vim` that I find helpful.  If you are new to `vim`, please try out the command `vimtutor` on any machine where `vim` is installed, and check out the nice article [Learn vim Progressively]( 
 http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/).  
 
-# 1. Useful Configuration
+## 1. Useful Configuration
 
 You can configure your `vim` by putting your configuration options and scripts in the `~/.vimrc` file (a hidden file named `.vimrc` in your home directory).  This file will be loaded whenever you starts `vim`.
 
 You can copy a sample `.vimrc` file from `~cs1010/.vimrc` to your home directory. 
 You can edit this file `~/.vimrc` just like any other file, using `vim`.
 
-## Help
+### Help
 
 In `vim,` the command `:help <topic>` shows help about a particular topic in `vim`.  Example, `:help backup`.
 
-## Backup Files
+### Backup Files
 
 You can ask `vim` to automatically backup files that you edit.  This has been a life saver for me in multiple  occasions.
 
@@ -36,7 +36,7 @@ and create a directory named `~/.backup` to store my backup files.
 
 So if you made changes to a file that you regreted, or if you accidentally deleted a file, you can check under `~/.backup` to see if the backup can save you.
 
-## Syntax Highlighting
+### Syntax Highlighting
 
 If for some reasons, syntax highlighting is not on by default, add this to your `~/.vimrc`:
 
@@ -44,7 +44,7 @@ If for some reasons, syntax highlighting is not on by default, add this to your 
 syntax on
 ```
 
-## Ruler and Numbers
+### Ruler and Numbers
 
 If you prefer to show the line number you are on and the column number you are on, adding the commands to `~/.vimrc`
 
@@ -61,9 +61,24 @@ set number
 
 to label each line with a line number.
 
-# 2. Navigation
+### Auto Indentation {++(new)++}
 
-## Basic Navigation
+Proper indentation is important to make your code readable (to yourself and others).  You should enable this in `vim` with:
+
+```
+set autoindent 
+set smartindent
+```
+
+Autoindent will cause the next line to have the same indentation as the previous line; while smartindent has some understanding of C-like syntax (such as recognizing `{` and `}`) and indent your code accordingly.  The size of the indentation is based on the setting `shiftwidth`.  For CS1010, please set it to either `2` or `4`:
+
+```
+set shiftwidth=2
+```
+
+## 2. Navigation
+
+### Basic Navigation
 
 Use `k` and `j` keys to move up and down (just like Gmail and Facebook!).  `h` and `l` to move left and right.
 
@@ -83,17 +98,17 @@ Other shortcuts (no need to memorize them now, just refer back when you feel lik
 - CTRL-`u` jump backward (Up) half page
 - CTRL-`b` jump Backward half page
 
-## Jumping to a Line
+### Jumping to a Line
 
 If the compiler tells you there is an error on Line $x$, you can issue `:<x>` to jump to Line $x$.  For instance, `:40` will go to Line 40.
 
-# 3. Editing Operations
+## 3. Editing Operations
 
-## Undo
+### Undo
 
 Since we are on the topic of correcting mistakes, `u` in command mode undo your changes.  Prefix it with a number $n$ to undo $n$ times.  If you want to undo your undo, `<CTRL-R>` will redo.
 
-## Navigation + Editing
+### Navigation + Editing
 
 `vim` is powerful because you can combine _operations_ with _navigation_.  For instance `c` to change, `d` to delete, `y` to yank (copy).  Since `w` is the navigation command to move over the current word, combining them we get:
 
@@ -113,12 +128,12 @@ You can add a number before an operation to specify how many times you want to r
 
 See the article [Operator, the True Power of `Vim`](http://whileimautomaton.net/2008/11/vimm3/operator) for more details.
 
-## Swapping Lines
+### Swapping Lines
 
 Sometimes you want to swap the order of two lines of code, in command mode, `ddp` will do the trick.  `dd` deletes the current line, `p` paste it after the current line, in effect swapping the order of the two lines.
 
 
-## Commenting blocks of code
+### Commenting blocks of code
 
 Sometimes we need to comment out a whole block of code in C for testing purposes. There are several ways to do it in `vim`:
 
@@ -138,9 +153,9 @@ To uncomment,
 - Use arrow key to select the columns of text containing `//`
 - `x` to delete them
 
-# 4. Other Advanced Features
+## 4. Other Advanced Features
 
-## Search and Replace in `vim`
+### Search and Replace in `vim`
 
 ```
 :%s/oldWord/newWord/gc 
@@ -148,7 +163,7 @@ To uncomment,
 
 `:` enters the command mode.  `%` means apply to the whole document, `s` means substitute, `g` means global (otherwise, only the first occurance of each line is replaced). `c` is optional -- adding it cause `vim` to confirm with you before each replacement  
 
-## Shell Command
+### Shell Command
 
 If you need to issue a shell command quickly, you don't have to exit `vim`, run the command, and launch `vim` again.  You can use `!`, 
 
@@ -174,7 +189,7 @@ You can use this to compile your current file, without exiting `vim`.
 :make
 ```
 
-## Abbreviation
+### Abbreviation
 
 You can use the command `ab` to abbreviate frequently typed commands.  E.g., in your `~/.vimrc`, 
 
@@ -184,23 +199,23 @@ ab pl cs1010_print_long(
 
 Now, when you type `pl `, it will be expanded into `cs1010_print_long(`
 
-## Auto-Completion
+### Auto-Completion
 
 You can `<CTRL-P>` to auto-complete.  By default, the auto-complete dictionary is based on text in your current editing buffers.  This is a very useful keystroke saver for long function and variable names.
 
-## Auto-Indent the Whole File
+### Auto-Indent the Whole File
 
-You can `gg=G` in command mode to auto-indent the whole file.  `gg` is the command to go to the beginning of the file.  `=` is the command to indent.  `G` is the command to go to the end of the file.
+You can `gg=G` in command mode to auto-indent the whole file.  `gg` is the command to go to the beginning of the file.  `=` is the command to indent.  `G` is the command to go to the end of the file.  
 
-## Splitting `vim`'s Viewport
+### Splitting `vim`'s Viewport
 
 - `:sp file.c` splits the `vim` window horizontally
 - `:vsp file.c` splits the `vim` window vertically
 - `Ctrl-w Ctrl-w` moves between the different `vim` viewports
 
-# 6. Plugins
+## 5. Plugins
 
-## Syntax and Style Checker
+### Syntax and Style Checker
 
 I use `syntastic` to check for style and syntax whenever I save a file.  [`syntastic`](https://github.com/vim-syntastic/syntastic) is a `vim` plugin. 
 
@@ -227,4 +242,13 @@ let g:syntastic_c_clang_tidy_args = '-checks=*'
 let g:syntastic_c_compiler_options = '-Wall -Iinclude'
 let g:syntastic_c_include_dirs = [ '../include', 'include' ]
 let g:syntastic_c_clang_tidy_post_args = ""
+```
+
+{++New Addition:++} By default, `clang-tidy` does not know where to find the header files.  So if you include non-standard C headers, it will complain that it cannot find headers.  To resolve this, we need to tell `clang-tidy` the compilation flags that we use when compiling our program.  
+
+We can do this by creating a file named `compile_flags.txt` in your working directory (where your C files are located), containing one compilation flag per line.  For instance, if the header files are located in `/home/course/cs1010/include`, your `compile_flags.txt` should contain the following two lines:
+
+```
+-Wall
+-I/home/course/cs1010/include
 ```
