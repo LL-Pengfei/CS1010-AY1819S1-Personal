@@ -107,47 +107,48 @@ Of course, the above could be simply written as:
 ```C
 double c = 1.0;
 ```
+
 I am just doing it the complicated way (which you should avoid unless you have good reasons to do so) to demonstrate the concept of pointers.
 
 ## Basic Rules About Using Pointers
 
 1. When we use pointers, it must point to the variable of the same type as that declared by the pointer.  For instance,
 
-```C
-double pi = 3.1415926;
-long radius = 5;
-double *addr;
-addr = &pi; // ok
-addr = &radius; // not ok
-```
+	```C
+	double pi = 3.1415926;
+	long radius = 5;
+	double *addr;
+	addr = &pi; // ok
+	addr = &radius; // not ok
+	```
 
-Line 4 above would lead to a compilation error since we try to point a `double` pointer to a `long`.  
+	Line 4 above would lead to a compilation error since we try to point a `double` pointer to a `long`.  
 
 2. We cannot change the address of a variable.  For instance
 
-```C
-long x = 1;
-long y = 2;
-&x = &y; 
-```
+	```C
+	long x = 1;
+	long y = 2;
+	&x = &y; 
+	```
 
-We try to set the address of `x` to be the address of `y`.  This is not allowed since allocation of variables in the memory is determined by the OS, a process we have no control over.
+	We try to set the address of `x` to be the address of `y`.  This is not allowed since allocation of variables in the memory is determined by the OS, a process we have no control over.
 
 3. We can perform arithmetic operations on pointers, but not in the way you expect.
 
-Suppose we have a pointer:
-```C
-long x;
-long *ptr;
-x = 1;
-ptr = &x;
-ptr += 1;
-```
+	Suppose we have a pointer:
+	```C
+	long x;
+	long *ptr;
+	x = 1;
+	ptr = &x;
+	ptr += 1;
+	```
 
-Suppose that `x` is stored in memory address 1000, after Line 4, `ptr` would have the value of 1000. 
-After the line `ptr += 1`, using normal arithmetic operation, we would think that `ptr` will have the value of 1001.  However, the semantic for arithmetic operation is different for pointers.  The `+` operation for `ptr` causes the `ptr` variable to move forward by the size of the variable pointed to by the pointer.  In this example, `ptr` points to `long`, assuming that `long` is 8 bytes, after `ptr += 1`, `ptr` will have the value of 1008.
+	Suppose that `x` is stored in memory address 1000, after Line 4, `ptr` would have the value of 1000. 
+	After the line `ptr += 1`, using normal arithmetic operation, we would think that `ptr` will have the value of 1001.  However, the semantic for arithmetic operation is different for pointers.  The `+` operation for `ptr` causes the `ptr` variable to move forward by the size of the variable pointed to by the pointer.  In this example, `ptr` points to `long`, assuming that `long` is 8 bytes, after `ptr += 1`, `ptr` will have the value of 1008.
 
-We can only do addition and subtraction for pointers.
+	We can only do addition and subtraction for pointers.
 
 ## Pointer of Pointer (of Pointer..)
 
