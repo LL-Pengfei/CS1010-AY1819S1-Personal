@@ -17,14 +17,24 @@ pages:
       - 8. If Else:  '08-if-else.md'
       - 9. Logical Expression:  '09-logical-exp.md'
       - 10. Assertion:  '10-assert.md'
+      - 11. Loops:  '11-loop.md'
+      - 12. Reasoning About Loops:  '12-invariant.md'
+      - 13. Call Stack:  '13-call-stack.md'
+      - 14. Pointers:  '14-pointers.md'
+      - 15. Arrays:  '15-array.md'
+      - 16. Strings:  '16-string.md'
   - Exercises: 
       - 1. Freezer: 'ex01.md'
       - 2. Leap, Suffix, Days: 'ex02.md'
+      - 3. Binary, Rectangle, Fibonacci, Prime: 'ex03.md'
   - Assignments: 
       - General Guide: 'assignment.md'
       - 1. Invest, Box, Digits, and Taxi: 'as01.md'
-  - Quizzes: 
-      - 1. Flowcharts: 'kahoot01.md'
+      - 2. Collatz, Weekday, Circle, Pattern: 'as02.md'
+  - Quizzes: 'quiz.md'
+  - Kahoot!:
+      - Flow Charts: 'kahoot01.md'
+  - Style Guide: 'style.md'
   - Readings: 'readings.md'
   - Software/Tools:
       - Programming Environments: 'environments.md'
