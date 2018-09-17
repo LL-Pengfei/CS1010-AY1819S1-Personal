@@ -472,30 +472,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../11-loop/index.html" title="11. Loops" class="md-nav__link">
-      11. Loops
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../12-invariant/index.html" title="12. Reasoning About Loops" class="md-nav__link">
-      12. Reasoning About Loops
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -540,18 +516,6 @@
   <li class="md-nav__item">
     <a href="../ex02/index.html" title="2. Leap, Suffix, Days" class="md-nav__link">
       2. Leap, Suffix, Days
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../ex03/index.html" title="3. Binary, Rectangle, Fibonacci, Prime" class="md-nav__link">
-      3. Binary, Rectangle, Fibonacci, Prime
     </a>
   </li>
 
@@ -604,32 +568,8 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../as02/index.html" title="2. Collatz, Weekday, Circle, Pattern" class="md-nav__link">
-      2. Collatz, Weekday, Circle, Pattern
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../quiz/index.html" title="Quizzes" class="md-nav__link">
-      Quizzes
-    </a>
   </li>
 
     
@@ -640,14 +580,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
-    <label class="md-nav__link" for="nav-7">
-      Kahoot!
+    <label class="md-nav__link" for="nav-6">
+      Quizzes
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
-        Kahoot!
+      <label class="md-nav__title" for="nav-6">
+        Quizzes
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -658,26 +598,14 @@
 
 
   <li class="md-nav__item">
-    <a href="../kahoot01/index.html" title="Flow Charts" class="md-nav__link">
-      Flow Charts
+    <a href="../kahoot01/index.html" title="1. Flowcharts" class="md-nav__link">
+      1. Flowcharts
     </a>
   </li>
 
         
       </ul>
     </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../style/index.html" title="Style Guide" class="md-nav__link">
-      Style Guide
-    </a>
   </li>
 
     
@@ -702,13 +630,13 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
     
-    <label class="md-nav__link" for="nav-10">
+    <label class="md-nav__link" for="nav-8">
       Software/Tools
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
+      <label class="md-nav__title" for="nav-8">
         Software/Tools
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -867,57 +795,26 @@ Unpacking objects: 100% (6/6), done.
 </pre></div>
 </td></tr></table>
 
-<p><ins class="critic">
-Of course if your header and library files are located in another directory that is not <code class="codehilite"><span class="cp">../libcs1010/include</span></code> and <code class="codehilite"><span class="cp">../libcs1010/lib</span></code>, you should change the command above accordingly.</p>
-<p>Although it is a long string to type, you should type it once and use up arrow in bash to go back to this command over-and-over again.   For advanced students, we suggest that you put this in a shell script so that you just need to run the shell script to compile the program.  We have also automate this for you for your assignments and exercises using the <code class="codehilite">make</code> command.
-</ins></p>
+<p>It is a long string to type.  We suggest that you put this in a shell script so that you just need to run the shell script to compile the program.</p>
 <h2 id="reading-of-a-single-value">Reading of a Single Value</h2>
 <p>The CS1010 library supports reading of <code class="codehilite">long</code> value, <code class="codehilite">double</code> value, and strings (both space-separated words and newline-separated lines) from the standard input.  For <code class="codehilite">long</code> and <code class="codehilite">double</code>. The relevant methods are:</p>
 <ul>
 <li>
 <p><code class="codehilite">long cs1010_read_long()</code><br>
-Returns a <code class="codehilite">long</code> value from the standard input.  An error message will be printed (to <code class="codehilite">stderr</code>) if the input sequence is not a valid <code class="codehilite">long</code> value -- in which case the value <code class="codehilite">LONG_MAX</code> will be returned.  Example:
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">long</span> <span class="n">year</span> <span class="o">=</span> <span class="n">cs1010_read_long</span><span class="p">();</span>
-</pre></div>
-</td></tr></table></p>
+Returns a <code class="codehilite">long</code> value from the standard input.  An error message will be printed (to <code class="codehilite">stderr</code>) if the input sequence is not a valid <code class="codehilite">long</code> value -- in which case the value <code class="codehilite">LONG_MAX</code> will be returned.</p>
 </li>
 <li>
 <p><code class="codehilite">double cs1010_read_double()</code><br>
-Returns a <code class="codehilite">double</code> value from the standard input.  An error message will be printed (to <code class="codehilite">stderr</code>) if the input sequence is not a valid <code class="codehilite">double</code> value -- in which case the value <code class="codehilite">DBL_MAX</code> will be returned. Example:
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">double</span> <span class="n">cap</span> <span class="o">=</span> <span class="n">cs1010_read_double</span><span class="p">();</span>
-</pre></div>
-</td></tr></table></p>
+Returns a <code class="codehilite">double</code> value from the standard input.  An error message will be printed (to <code class="codehilite">stderr</code>) if the input sequence is not a valid <code class="codehilite">double</code> value -- in which case the value <code class="codehilite">DBL_MAX</code> will be returned.</p>
 </li>
 <li>
 <p><code class="codehilite">char* cs1010_read_word()</code><br>
-Returns a <code class="codehilite">char *</code> pointing to the next white-space-separated string from the standard input.  A white-space character is defined based on the standard C function <code class="codehilite">isspace()</code> and includes the space <code class="codehilite"></code>, tab <code class="codehilite">\t</code>, and newline <code class="codehilite">\n</code> character.  Returns NULL if there is an error.  If the returned value is non-NULL, the caller is responsible for freeing the memory allocated by calling <code class="codehilite">free</code>.<br />
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">char</span><span class="o">*</span> <span class="n">word</span> <span class="o">=</span> <span class="n">cs1010_read_word</span><span class="p">();</span>
-<span class="c1">// use word to do something</span>
- <span class="o">:</span>
- <span class="o">:</span>
-<span class="n">free</span><span class="p">(</span><span class="n">word</span><span class="p">);</span>
-</pre></div>
-</td></tr></table></p>
+Returns a <code class="codehilite">char *</code> pointing to the next white-space-separated string from the standard input.  A white-space character is defined based on the standard C function <code class="codehilite">isspace()</code> and includes the space <code class="codehilite"></code>, tab <code class="codehilite">\t</code>, and newline <code class="codehilite">\n</code> character.  Returns NULL if there is an error.  If the returned value is non-NULL, the caller is responsible for freeing the memory allocated by calling <code class="codehilite">free</code>.  </p>
 </li>
 <li>
 <p><code class="codehilite">char* cs1010_read_line()</code><br>
 Returns a <code class="codehilite">char *</code> pointing to the next new-line-separated string from the standard input.   The string returns from <code class="codehilite">cs1010_read_line()</code> includes the newline character (if one is found).
-Returns NULL if there is an error.  If the returned value is non-NULL, the caller is responsible for freeing the memory allocated by calling <code class="codehilite">free</code>.
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">char</span><span class="o">*</span> <span class="n">line</span> <span class="o">=</span> <span class="n">cs1010_read_line</span><span class="p">();</span>
-<span class="c1">// use line to do something</span>
- <span class="o">:</span>
- <span class="o">:</span>
-<span class="n">free</span><span class="p">(</span><span class="n">line</span><span class="p">);</span>
-</pre></div>
-</td></tr></table></p>
+Returns NULL if there is an error.  If the returned value is non-NULL, the caller is responsible for freeing the memory allocated by calling <code class="codehilite">free</code>.</p>
 </li>
 </ul>
 <h2 id="reading-of-multiple-values">Reading of Multiple Values</h2>
@@ -925,129 +822,40 @@ Returns NULL if there is an error.  If the returned value is non-NULL, the calle
 <ul>
 <li>
 <p><code class="codehilite">long* cs1010_read_long_array(int k)</code><br>
-Returns <code class="codehilite">k</code> numbers of <code class="codehilite">long</code> values read from the standard input stored in an array.  An error message will be printed (to <code class="codehilite">stderr</code>) for each input that is not a valid <code class="codehilite">long</code> value -- in which case the value <code class="codehilite">LONG_MAX</code> will be populated in the corresponding array element.  Returns NULL if there is a memory allocation error.  If the returned value is non-NULL, the caller is responsible for freeing the memory allocated by calling <code class="codehilite">free</code>.
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">long</span><span class="o">*</span> <span class="n">values</span> <span class="o">=</span> <span class="n">cs1010_read_long_array</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">values</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1">// Do something with array values</span>
-   <span class="o">:</span>
-   <span class="o">:</span>
-  <span class="n">free</span><span class="p">(</span><span class="n">values</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table></p>
+Returns <code class="codehilite">k</code> numbers of <code class="codehilite">long</code> values read from the standard input stored in an array.  An error message will be printed (to <code class="codehilite">stderr</code>) for each input that is not a valid <code class="codehilite">long</code> value -- in which case the value <code class="codehilite">LONG_MAX</code> will be populated in the corresponding array element.  Returns NULL if there is a memory allocation error.  If the returned value is non-NULL, the caller is responsible for freeing the memory allocated by calling <code class="codehilite">free</code>.</p>
 </li>
 <li>
 <p><code class="codehilite">double* cs1010_read_double_array(int k)</code><br>
 Returns <code class="codehilite">k</code> numbers of <code class="codehilite">double</code> values read from the standard input stored in an array.  An error message will be printed (to <code class="codehilite">stderr</code>) for each input that is not a valid <code class="codehilite">double</code> value -- in which case the value <code class="codehilite">DBL_MAX</code> will be populated in the corresponding array element.<br />
-Returns NULL if there is a memory allocation error.  If the returned value is non-NULL, the caller is responsible for freeing the memory allocated by calling <code class="codehilite">free</code>.
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">double</span><span class="o">*</span> <span class="n">values</span> <span class="o">=</span> <span class="n">cs1010_read_double_array</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">values</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1">// Do something with array values</span>
-   <span class="o">:</span>
-   <span class="o">:</span>
-  <span class="n">free</span><span class="p">(</span><span class="n">values</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table></p>
+Returns NULL if there is a memory allocation error.  If the returned value is non-NULL, the caller is responsible for freeing the memory allocated by calling <code class="codehilite">free</code>.</p>
 </li>
 <li>
 <p><code class="codehilite">char** cs1010_read_word_array(int k)</code><br>
 Returns <code class="codehilite">k</code> white-space-separated words read from the standard input stored in an array.  The notion of "word" is the same to <code class="codehilite">cs1010_read_word()</code>.<br />
-Returns NULL if there is a memory allocation error.  If the returned value is non-NULL, the caller is responsible for freeing the memory allocated for each word and for the whole array by calling <code class="codehilite">free</code>.
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">char</span><span class="o">**</span> <span class="n">words</span> <span class="o">=</span> <span class="n">cs1010_read_word_array</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">words</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1">// Do something with array words</span>
-   <span class="o">:</span>
-   <span class="o">:</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">free</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-  <span class="p">}</span>
-  <span class="n">free</span><span class="p">(</span><span class="n">words</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table></p>
+Returns NULL if there is a memory allocation error.  If the returned value is non-NULL, the caller is responsible for freeing the memory allocated for each word and for the whole array by calling <code class="codehilite">free</code>.</p>
 </li>
 <li>
 <p><code class="codehilite">char** cs1010_read_line_array(int k)</code><br>
 Returns <code class="codehilite">k</code> new-line-separated words read from the standard input stored in an array.  The notion of line is the same to <code class="codehilite">cs1010_read_line()</code>.<br />
-Returns NULL if there is a memory allocation error.  If the returned value is non-NULL, the caller is responsible for freeing the memory allocated for each line and for the whole array by calling <code class="codehilite">free</code>.
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">char</span><span class="o">**</span> <span class="n">lines</span> <span class="o">=</span> <span class="n">cs1010_read_line_array</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">lines</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1">// Do something with array lines</span>
-   <span class="o">:</span>
-   <span class="o">:</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">free</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-  <span class="p">}</span>
-  <span class="n">free</span><span class="p">(</span><span class="n">lines</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table></p>
+Returns NULL if there is a memory allocation error.  If the returned value is non-NULL, the caller is responsible for freeing the memory allocated for each line and for the whole array by calling <code class="codehilite">free</code>.</p>
 </li>
 </ul>
 <h2 id="printing-of-a-single-value">Printing of a Single Value</h2>
-<p>The CS1010 library provides a few convenince functions to format and print <code class="codehilite">long</code> and <code class="codehilite">double</code> values to the standard output.</p>
+<p>The CS1010 library provide a few convenince functions to format and print <code class="codehilite">long</code> and <code class="codehilite">double</code> values to the standard output.</p>
 <ul>
 <li>
 <p><code class="codehilite">void cs1010_print_long(long value)</code> and <code class="codehilite">void cs1010_println_long(long value)</code><br>
 Print <code class="codehilite">value</code> to the standard output (with printf format <code class="codehilite"><span class="nf">%ld</span></code>).<br />
-The <code class="codehilite">cs1010_println_long</code> version prints a newline after the value.
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>  <span class="kt">long</span> <span class="n">x</span><span class="p">;</span>
-    <span class="o">:</span>
-  <span class="n">cs1010_print_long</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
-</pre></div>
-</td></tr></table></p>
+The <code class="codehilite">cs1010_println_long</code> version prints a newline after the value.</p>
 </li>
 <li>
 <p><code class="codehilite">void cs1010_print_double(double value)</code> and <code class="codehilite">void cs1010_println_double(double value)</code><br>
 Print <code class="codehilite">value</code> to the standard output (with printf format <code class="codehilite"><span class="c">%.4f</span></code>).
-The <code class="codehilite">cs1010_println_double</code> version prints a newline after the value.
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>  <span class="kt">double</span> <span class="n">x</span><span class="p">;</span>
-    <span class="o">:</span>
-  <span class="n">cs1010_println_double</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
-</pre></div>
-</td></tr></table></p>
+The <code class="codehilite">cs1010_println_double</code> version prints a newline after the value.</p>
 </li>
 <li>
 <p><code class="codehilite">void cs1010_print_string(char *str)</code> and <code class="codehilite">void cs1010_println_string(char *str)</code><br>
-Print a given string <code class="codehilite">str</code> to the standard output.  These functions are provided for completeness and is a simple wrapper around <code class="codehilite">printf(str)</code> and <code class="codehilite">printf(&quot;%s\n&quot;, str)</code> repsectively.
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>  <span class="n">cs1010_println_string</span><span class="p">(</span><span class="s">&quot;hello world!&quot;</span><span class="p">);</span>
-</pre></div>
-</td></tr></table></p>
+Print a given string <code class="codehilite">str</code> to the standard output.  These functions are provided for completeness and is a simple wrapper around <code class="codehilite">printf(str)</code> and <code class="codehilite">printf(&quot;%s\n&quot;, str)</code> repsectively.</p>
 </li>
 </ul>
                 
