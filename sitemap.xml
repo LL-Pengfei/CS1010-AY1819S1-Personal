@@ -81,12 +81,47 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://nus-cs1010.github.io/1819-s1/11-loop/index.html</loc>
+     <lastmod>2018-09-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://nus-cs1010.github.io/1819-s1/12-invariant/index.html</loc>
+     <lastmod>2018-09-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://nus-cs1010.github.io/1819-s1/13-call-stack/index.html</loc>
+     <lastmod>2018-09-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://nus-cs1010.github.io/1819-s1/14-pointers/index.html</loc>
+     <lastmod>2018-09-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://nus-cs1010.github.io/1819-s1/15-array/index.html</loc>
+     <lastmod>2018-09-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://nus-cs1010.github.io/1819-s1/16-string/index.html</loc>
+     <lastmod>2018-09-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://nus-cs1010.github.io/1819-s1/ex01/index.html</loc>
      <lastmod>2018-09-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://nus-cs1010.github.io/1819-s1/ex02/index.html</loc>
+     <lastmod>2018-09-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://nus-cs1010.github.io/1819-s1/ex03/index.html</loc>
      <lastmod>2018-09-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -101,7 +136,22 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://nus-cs1010.github.io/1819-s1/as02/index.html</loc>
+     <lastmod>2018-09-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://nus-cs1010.github.io/1819-s1/quiz/index.html</loc>
+     <lastmod>2018-09-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://nus-cs1010.github.io/1819-s1/kahoot01/index.html</loc>
+     <lastmod>2018-09-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://nus-cs1010.github.io/1819-s1/style/index.html</loc>
      <lastmod>2018-09-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
