@@ -1137,12 +1137,12 @@ thinking that both <code class="codehilite">from_addr</code> and <code class="co
 <p>Of course, the above could be simply written as:
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">double</span> <span class="n">c</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
 </pre></div>
-</td></tr></table>
-I am just doing it the complicated way (which you should avoid unless you have good reasons to do so) to demonstrate the concept of pointers.</p>
+</td></tr></table></p>
+<p>I am just doing it the complicated way (which you should avoid unless you have good reasons to do so) to demonstrate the concept of pointers.</p>
 <h2 id="basic-rules-about-using-pointers">Basic Rules About Using Pointers</h2>
 <ol>
-<li>When we use pointers, it must point to the variable of the same type as that declared by the pointer.  For instance,</li>
-</ol>
+<li>
+<p>When we use pointers, it must point to the variable of the same type as that declared by the pointer.  For instance,</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -1156,9 +1156,9 @@ I am just doing it the complicated way (which you should avoid unless you have g
 </td></tr></table>
 
 <p>Line 4 above would lead to a compilation error since we try to point a <code class="codehilite">double</code> pointer to a <code class="codehilite">long</code>.  </p>
-<ol>
-<li>We cannot change the address of a variable.  For instance</li>
-</ol>
+</li>
+<li>
+<p>We cannot change the address of a variable.  For instance</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">long</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
@@ -1168,9 +1168,9 @@ I am just doing it the complicated way (which you should avoid unless you have g
 </td></tr></table>
 
 <p>We try to set the address of <code class="codehilite">x</code> to be the address of <code class="codehilite">y</code>.  This is not allowed since allocation of variables in the memory is determined by the OS, a process we have no control over.</p>
-<ol>
-<li>We can perform arithmetic operations on pointers, but not in the way you expect.</li>
-</ol>
+</li>
+<li>
+<p>We can perform arithmetic operations on pointers, but not in the way you expect.</p>
 <p>Suppose we have a pointer:
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -1186,6 +1186,8 @@ I am just doing it the complicated way (which you should avoid unless you have g
 <p>Suppose that <code class="codehilite">x</code> is stored in memory address 1000, after Line 4, <code class="codehilite">ptr</code> would have the value of 1000. 
 After the line <code class="codehilite">ptr += 1</code>, using normal arithmetic operation, we would think that <code class="codehilite">ptr</code> will have the value of 1001.  However, the semantic for arithmetic operation is different for pointers.  The <code class="codehilite">+</code> operation for <code class="codehilite">ptr</code> causes the <code class="codehilite">ptr</code> variable to move forward by the size of the variable pointed to by the pointer.  In this example, <code class="codehilite">ptr</code> points to <code class="codehilite">long</code>, assuming that <code class="codehilite">long</code> is 8 bytes, after <code class="codehilite">ptr += 1</code>, <code class="codehilite">ptr</code> will have the value of 1008.</p>
 <p>We can only do addition and subtraction for pointers.</p>
+</li>
+</ol>
 <h2 id="pointer-of-pointer-of-pointer">Pointer of Pointer (of Pointer..)</h2>
 <p>A pointer variable is also stored in the memory, so it itself has an address too.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1

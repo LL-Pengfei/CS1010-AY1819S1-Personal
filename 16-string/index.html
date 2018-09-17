@@ -567,6 +567,27 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#just-a-char-array" title="Just a char Array" class="md-nav__link">
+    Just a char Array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-characters" title="Special Characters" class="md-nav__link">
+    Special Characters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#empty-string" title="Empty String" class="md-nav__link">
+    Empty String
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cs1010-io-library" title="CS1010 I/O Library" class="md-nav__link">
     CS1010 I/O Library
   </a>
@@ -906,6 +927,27 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#just-a-char-array" title="Just a char Array" class="md-nav__link">
+    Just a char Array
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-characters" title="Special Characters" class="md-nav__link">
+    Special Characters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#empty-string" title="Empty String" class="md-nav__link">
+    Empty String
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cs1010-io-library" title="CS1010 I/O Library" class="md-nav__link">
     CS1010 I/O Library
   </a>
@@ -953,7 +995,8 @@
                 
                 <h1 id="unit-16-strings">Unit 16: Strings</h1>
 <p>We have seen strings as a sequence of characters stored in double quotes, e.g., "hello!".  In C, a string is nothing more than just an array of <code class="codehilite">char</code> values (Recall from <a href="../05-first-c/index.html#other-types-in-c">Unit 5</a> that <code class="codehilite">sizeof char</code> is 1).</p>
-<p>The only thing special about a string is that it <em>always</em> end with a <code class="codehilite">0</code> value (note: not character '0' which has a value of 48, but the value 0).  Since the character with value 0 is called the null character, we refer that strings in C as null-terminated strings.</p>
+<h2 id="just-a-char-array">Just a <code class="codehilite">char</code> Array</h2>
+<p>The only thing special about a string is that it <em>always</em> end with a <code class="codehilite">0</code> value (note: not character '0' which has a value of 48, but the value 0).  Since the character with value 0 is called the null character, written as '\0', we refer that strings in C as null-terminated strings.</p>
 <p>In C, we distinguish between a string and a <code class="codehilite">char</code> by the quotes used.  String uses double quotes <code class="codehilite">&quot;</code>, while a <code class="codehilite">char</code> uses single quote <code class="codehilite">&#39;</code>.  So we can do the following and they are equivalent:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">char</span> <span class="n">hello1</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="sc">&#39;h&#39;</span><span class="p">,</span> <span class="sc">&#39;e&#39;</span><span class="p">,</span> <span class="sc">&#39;l&#39;</span><span class="p">,</span> <span class="sc">&#39;l&#39;</span><span class="p">,</span> <span class="sc">&#39;o&#39;</span><span class="p">,</span> <span class="sc">&#39;!&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">};</span> 
@@ -968,14 +1011,19 @@
 <span class="kt">char</span> <span class="o">*</span><span class="n">hello4</span> <span class="o">=</span> <span class="s">&quot;hello!&quot;</span><span class="p">;</span>
 </pre></div>
 </td></tr></table></p>
+<h2 id="special-characters">Special Characters</h2>
+<p>The null character is written as '\0'.  The use of the backslash <code class="codehilite">\</code> creates an escape sequence that can be used to denote characters that would otherwise not visible on screen.  For instance, besides '\0', we will likely encounter '\n' (the newline character) '\t' (the tab character) and '\a' (the beep character) regularly.  </p>
+<p>Furthermore, since we already use <code class="codehilite">\</code> to indicate the escape sequence, <code class="codehilite">&#39;</code> to indicate a character, and <code class="codehilite">&quot;</code> to indicate a string, in order to use these characters, we need to "escape" them -- we use '\' for the backslash character, '\'', the single quote character, and the '\"' double quote character.</p>
+<h2 id="empty-string">Empty String</h2>
+<p>We commonly use the empty string <code class="codehilite">&quot;&quot;</code> to indicate a special condition or to initialize a string variable, where appropriate.  The empty string is basically an array where the 0-th element is '\0'.</p>
 <h2 id="cs1010-io-library">CS1010 I/O Library</h2>
 <p>The CS1010 I/O library provides two functions, one to read a word (separated by white-space characters) and the other to read a line (separated by a newline character).  They are <code class="codehilite">cs1010_read_word()</code> and <code class="codehilite">cs1010_read_line()</code> respectively.  We can also read multiple words and multiple lines with <code class="codehilite">cs1010_read_word_array()</code> and <code class="codehilite">cs1010_read_line_array()</code>.  The results are stored in an array of strings.</p>
 <h2 id="problem-set-16">Problem Set 16</h2>
 <h3 id="problem-161">Problem 16.1</h3>
-<p>Write the following functions (without calling the standard C functions declared in <code class="codehilite">&lt;string.h&gt;</code> such as <code class="codehilite">strlen</code>, <code class="codehilite">strcmp</code>, <code class="codehilite">strcpy</code>, <code class="codehilite">strncpy</code>):</p>
-<p>a. <code class="codehilite">long string_length(char *str)</code> return the length (i.e., the number of characters) of the string <code class="codehilite">str</code>.</p>
-<p>b. <code class="codehilite">bool string_equal(char *str1, char *str2)</code> return <code class="codehilite">true</code> if the two strings <code class="codehilite">str1</code> and <code class="codehilite">str2</code> contains exactly the same content, <code class="codehilite">false</code> otherwise.  (Note: <code class="codehilite">str1 == str2</code> does not compare if two strings have the same content. (Why?))</p>
-<p>c. <code class="codehilite">void string_n_copy(char *dst, char *src, long n)</code> copy at most <code class="codehilite">n</code> characters from string <code class="codehilite">src</code> to <code class="codehilite">dst</code>.  If <code class="codehilite">src</code> has less than <code class="codehilite">n</code> characters, then <code class="codehilite">dst</code> is padded with null character 0.  If <code class="codehilite">src</code> has <code class="codehilite">n</code> or more characters, <code class="codehilite">dst</code> is not null-terminated.  Assume that <code class="codehilite">dst</code> and <code class="codehilite">src</code> do not overlap.</p>
+<p>Write the following functions (without calling the standard C functions declared in <code class="codehilite">&lt;string.h&gt;</code> such as <code class="codehilite">strlen</code>, <code class="codehilite">strcmp</code>, <code class="codehilite">strstr</code>):</p>
+<p>a) <code class="codehilite">long string_length(char *str)</code> return the length (i.e., the number of characters) of the string <code class="codehilite">str</code>.</p>
+<p>b) <code class="codehilite">bool string_equal(char *str1, char *str2)</code> return <code class="codehilite">true</code> if the two strings <code class="codehilite">str1</code> and <code class="codehilite">str2</code> contains exactly the same content, <code class="codehilite">false</code> otherwise.  (Note: <code class="codehilite">str1 == str2</code> does not compare if two strings have the same content. (Why?))</p>
+<p>c) <code class="codehilite">char *string_in_string(char *needle, char *haystack)</code> return a pointer to the first character of the first occurance of <code class="codehilite">needle</code> in <code class="codehilite">haystack</code>, if found.  If <code class="codehilite">needle</code> does not occur anywhere in <code class="codehilite">haystack</code>, return NULL.  If <code class="codehilite">needle</code> is an empty string, <code class="codehilite">haystack</code> is returned.</p>
                 
                   
                 

@@ -576,8 +576,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-1-arrays-as-lookup-table" title="Example 1: Arrays As Lookup Table" class="md-nav__link">
-    Example 1: Arrays As Lookup Table
+  <a href="#example-1-array-as-lookup-table" title="Example 1: Array As Lookup Table" class="md-nav__link">
+    Example 1: Array As Lookup Table
   </a>
   
 </li>
@@ -1031,8 +1031,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-1-arrays-as-lookup-table" title="Example 1: Arrays As Lookup Table" class="md-nav__link">
-    Example 1: Arrays As Lookup Table
+  <a href="#example-1-array-as-lookup-table" title="Example 1: Array As Lookup Table" class="md-nav__link">
+    Example 1: Array As Lookup Table
   </a>
   
 </li>
@@ -1202,7 +1202,7 @@
 </pre></div>
 </td></tr></table>
 
-<h2 id="example-1-arrays-as-lookup-table">Example 1: Arrays As Lookup Table</h2>
+<h2 id="example-1-array-as-lookup-table">Example 1: Array As Lookup Table</h2>
 <p>One way the array is useful is that it can be used as a lookup table.</p>
 <p>Consider the following function <code class="codehilite">days()</code>, which, given a month, return the number of days from the 1<sup>st</sup> of January until the 1<sup>st</sup> of the month.  So <code class="codehilite">days(1)</code> returns 0, <code class="codehilite">days(2)</code> returns 31 (since January has 31 days), <code class="codehilite">days(3)</code> returns 31 + 28 = 59 (assuming non-leap year), etc.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -1232,7 +1232,7 @@
 25
 26
 27
-28</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">long</span> <span class="nf">days</span><span class="p">(</span><span class="kt">long</span> <span class="n">month</span><span class="p">,</span> <span class="kt">long</span> <span class="n">day</span><span class="p">)</span>
+28</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">long</span> <span class="nf">days</span><span class="p">(</span><span class="kt">long</span> <span class="n">month</span><span class="p">)</span>
 <span class="p">{</span>
   <span class="kt">long</span> <span class="n">days_since</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">month</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
@@ -1278,12 +1278,12 @@
 6
 7
 8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">long</span> <span class="nf">days</span><span class="p">(</span><span class="kt">long</span> <span class="n">month</span><span class="p">,</span> <span class="kt">long</span> <span class="n">day</span><span class="p">)</span>
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">long</span> <span class="nf">days</span><span class="p">(</span><span class="kt">long</span> <span class="n">month</span><span class="p">)</span>
 <span class="p">{</span>
   <span class="kt">long</span> <span class="n">days_in_month</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">31</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">};</span>
   <span class="kt">long</span> <span class="n">days_since</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
   <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">month</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">days_since</span> <span class="o">+=</span> <span class="n">days_in_month</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">days_since</span> <span class="o">+=</span> <span class="n">days_in_month</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
   <span class="p">}</span>
   <span class="k">return</span> <span class="n">days_since</span><span class="p">;</span>
 <span class="p">}</span>
@@ -1305,18 +1305,18 @@
 <span class="p">{</span>
   <span class="kt">long</span> <span class="n">max_so_far</span> <span class="o">=</span> <span class="n">list</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
   <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">length</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">max_so_far</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">max_so_far</span> <span class="o">=</span> <span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-  <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">max_so_far</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">max_so_far</span> <span class="o">=</span> <span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
   <span class="p">}</span>
   <span class="k">return</span> <span class="n">max_so_far</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
 
-<p>Note that, in the type of the array passed into the function above, we only need to use <code class="codehilite">[]</code> without specifying the length.  It is also almost always necessary to pass in the number of elements in the array together with the array so that we know how many elements are there to process.  To understand why we have to understand array decay.</p>
+<p>Note that, in the type of the array passed into the function above, we only need to use <code class="codehilite">[]</code> without specifying the length.  It is also almost always necessary to pass in the number of elements in the array together with the array so that we know how many elements are there to process.  To understand why, we have to understand something called <em>array decay</em>.</p>
 <h2 id="array-and-pointers">Array and Pointers</h2>
-<p>The relationship between array and pointer can be confusing to beginners.  Some might even think that arrays are pointers due to the way they are passed around and used.  But <em>arrays are not pointers</em>.  The relationship between the two,  it boils down to a very simple rule, as follows.</p>
+<p>The relationship between array and pointer can be confusing to beginners.  Some might even think that arrays are pointers due to the way they are passed around and used.  But <em>arrays are not pointers</em>.  The relationship between the two, boils down to a very simple rule, as follows.</p>
 <p>In C, the name of the variable of an array is treated differently from a non-array variable.  If we declare an array</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">type</span> <span class="n">name</span><span class="p">[</span><span class="n">num_of_elems</span><span class="p">];</span>
 </pre></div>
@@ -1377,7 +1377,7 @@
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
   <span class="kt">long</span> <span class="n">a</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">};</span>
-  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%ld</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">10</span><span class="p">));</span>
+  <span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">10</span><span class="p">));</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
@@ -1395,7 +1395,7 @@
 </pre></div>
 </td></tr></table>
 
-<p>For readability, however, to convey to the reader of the code that <code class="codehilite">list</code> is an array and not just a pointer to <code class="codehilite">long</code>, we should still use the <code class="codehilite">[]</code> notation.</p>
+<p>For readability, however, we should convey to the reader of the code that <code class="codehilite">list</code> is an array and not just a pointer to <code class="codehilite">long</code>, thus we should still use the <code class="codehilite">[]</code> notation.</p>
 <p>Another implication of array decay when passing an array into a function, is that it is possible to write programs that behave incorrectly, without any compiler error or warning.  Consider the following:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -1419,7 +1419,7 @@
 </pre></div>
 </td></tr></table>
 
-<p>Such arrays, where the size depends on the value of a variable, are sometimes called <em>variable-length array</em>.  This is a misnomer since once the array is created, the size is fixed.  Changing the value of the variable <code class="codehilite">num_of_students</code> above will not change the size of <code class="codehilite">marks</code>.  </p>
+<p>Such arrays, where the number of elements (or length) depends on the value of a variable, are sometimes called <em>variable-length array</em>.  This is a misnomer since once the array is created, the length is fixed.  Changing the value of the variable <code class="codehilite">num_of_students</code> above will not change the length of <code class="codehilite">marks</code>.  </p>
 <h3 id="skipping-elements-during-initialization">Skipping Elements During Initialization</h3>
 <p>If we have a large array, and we want most of it to be initialized to 0, and only some non-zero, we can use <em>element designators</em>, putting the index of the element we want to initialize to non-zero in square brackets <code class="codehilite">[</code> and <code class="codehilite">]</code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">long</span> <span class="n">vector</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">100</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">};</span>
@@ -1428,21 +1428,21 @@
 
 <p>This statement initializes <code class="codehilite">vector[0]</code> to 1, <code class="codehilite">vector[5]</code> to 2, <code class="codehilite">vector[6]</code> to 3, and <code class="codehilite">vector[99]</code> to -1.  The rest of the elements will be 0.</p>
 <h3 id="skipping-the-size-in-declaration">Skipping the Size in Declaration</h3>
-<p>If you supply an initialization list, the number of elements already indicate the size to the compiler, so you can skip the size.</p>
+<p>If you supply an initialization list, the number of elements already indicates the length to the compiler, so you can skip the length.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">long</span> <span class="n">marks</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,}</span>
 </pre></div>
 </td></tr></table>
 
-<p>This makes it easy to add or remove items from the array, without having to remember to keep the array size consistent.  </p>
+<p>This makes it easy to add or remove items from the array, without having to remember to keep the array length consistent.  </p>
 <h3 id="determining-the-number-of-elements-in-the-array">Determining the Number of Elements in the Array</h3>
-<p>C provides a <code class="codehilite">sizeof</code> operator, which returns the number of bytes allocated to a type.  We can use <code class="codehilite">sizeof long</code> for instance, to determine the number of bytes allocated to <code class="codehilite">long</code> on a platform.  We can also use <code class="codehilite">sizeof</code> on a variable instead of the type.  This becomes useful to determine, programmatically, the size of an array (esp if the array size is skipped in the array declaration).  We can calculate the number of elements in <code class="codehilite">marks</code> with </p>
+<p>C provides a <code class="codehilite">sizeof</code> operator, which returns the number of bytes allocated to a type.  We can use <code class="codehilite">sizeof long</code> for instance, to determine the number of bytes allocated to <code class="codehilite">long</code> on a platform.  We can also use <code class="codehilite">sizeof</code> on a variable instead of the type.  This becomes useful to determine, programmatically, the length of an array (esp if the array length is skipped in the array declaration).  We can calculate the number of elements in <code class="codehilite">marks</code> with </p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">long</span> <span class="n">num_of_elem</span> <span class="o">=</span> <span class="k">sizeof</span> <span class="n">marks</span><span class="o">/</span><span class="k">sizeof</span> <span class="n">marks</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
 </pre></div>
 </td></tr></table>
 
 <p>Note that array decay does not apply for only two operators: the <code class="codehilite">sizeof</code> operator, and the address-of <code class="codehilite">&amp;</code> operator.  So the expression above works as intended.</p>
 <h2 id="dynamically-allocated-array">Dynamically Allocated Array</h2>
-<p>It is often not possible to determine the size of the array beforehand.  So, it is useful to be able to allocate an array with a size that is determined during runtime (not hard-coding the size of the array in the program).</p>
+<p>It is often not possible to determine the length of the array beforehand.  So, it is useful to be able to allocate an array with a length that is determined during runtime (not hard-coding the length of the array in the program).</p>
 <p>For instance, if I want to keep a <code class="codehilite">marks</code> array for a module, it is unclear how big I should set the array to.  How big is big enough?  While I can use a variable-length array for this purpose, it is not ideal -- if the system does not have enough memory to store the array, the program would simply crash with a segfault and there is no way to recover from this.</p>
 <p>For this reason, it is useful to request memory from the OS which we will manage ourselves in our program.  Unlike memory space on the call stack which is managed entirely by the OS, there is another region of memory called the <em>heap</em>, which we can use.  We can request for memory from <em>heap</em> using the method <code class="codehilite">calloc()</code> and return the memory back to the heap when we are done with <code class="codehilite">free()</code>.  We will visit these in more details later, but this shallow understanding is enough for now.</p>
 <h2 id="cs1010-io-library">CS1010 I/O Library</h2>
@@ -1471,7 +1471,8 @@
  8
  9
 10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">long</span> <span class="o">*</span><span class="n">marks</span><span class="p">;</span>
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">long</span> <span class="o">*</span><span class="n">marks</span><span class="p">;</span>
 <span class="n">marks</span> <span class="o">=</span> <span class="n">cs1010_read_long_array</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">marks</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">// signal error and return</span>
@@ -1480,7 +1481,8 @@
 <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">marks</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
 <span class="p">}</span>
-<span class="c1">// do other things to marks</span>
+<span class="c1">// do other things to marks </span>
+  <span class="o">:</span>
 <span class="n">free</span><span class="p">(</span><span class="n">marks</span><span class="p">);</span>
 </pre></div>
 </td></tr></table>
@@ -1502,7 +1504,7 @@
 </pre></div>
 </td></tr></table>
 
-<p>How about?  Would the output be correct?</p>
+<p>How about the following? Would the output be correct?</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -1516,7 +1518,7 @@
 </td></tr></table>
 
 <h3 id="problem-153">Problem 15.3</h3>
-<p>Explain how the following code iterates through every element in the list.</p>
+<p>Explain how the following code iterates through every element in the list, when called with an array of length <code class="codehilite">length</code> as the first argument.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
