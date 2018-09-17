@@ -64,11 +64,11 @@ long factorial(long n)
       return 1;
   }
   long product = 1;
-  int i = 1;
+  long i = 1;
   // Line A
-  while (i < n)
-      i += 1;
-      product *= i;
+  while (i < n) {
+    i += 1;
+    product *= i;
     // Line B
   }
   // Line C
@@ -85,11 +85,11 @@ long factorial(long n)
       return 1;
   }
   long product = 1;
-  int i = 1;
+  long i = 1;
   // A: { product == i! }
-  while (i < n)
-      i += 1;
-      product *= i;
+  while (i < n) {
+    i += 1;
+    product *= i;
     // B: { product == i! }
   }
   // C: { product == i! }
