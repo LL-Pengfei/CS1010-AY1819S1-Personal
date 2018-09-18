@@ -27,7 +27,7 @@ Now, let's consider the program[^1]:
 
 ```C
 long add(long a, long b) {
-  int sum;
+  long sum;
   sum = a + b;
   return sum;
 }
