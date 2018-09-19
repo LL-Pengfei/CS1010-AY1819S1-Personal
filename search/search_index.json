@@ -2,13 +2,43 @@
     "docs": [
         {
             "location": "/index.html",
-            "text": "CS1010\n\n\nPiazza Q&A\n \n\n\nPiazza is the Q&A site for students and instructors to ask questions and discuss among each other on all matters related to CS1010.\n\n\n\n\nProgramming Exercises\n\n\nExercises are ungraded programming questions for practicing on your own.\n\n\nExercise 3: Binary, Rectangle, Fibonacci, Prime\n\n\nReleased 13 September 2018\n\n\nExercise 2: Leap, Suffix, Days\n\n\nReleased 6 September 2018\n\n\nExercise 1: Freezer\n\n\nReleased 3 September 2018\n\n\n\n\nProgramming Assignments\n\n\nAssignment 2: Collatz, Weekday, Circle, Pattern\n\n\nReleased 14 September 2018, Due 21 September 2018, 6pm.\n\n\nAssignment 1: Invest, Box, Digits, and Taxi\n\n\nReleased 7 September 2018, Due 14 September 2018, 6pm.\n\n\n\n\nNotes and Lectures \n\n\nLecture 6\n\n\nIn this lecture, we will discuss how call stack works, giving more insights about how a C program is executed, particularly when we call a function and when a function returns.  We then discuss about pointers and arrays, ending with a brief introduction to strings as an array of \nchar\n.\n\n\nUnits covered are Units 13 - 16: \nUnit 13: Call Stack\n, \nUnit 14: Pointers\n, \nUnit 15: Arrays\n and \nUnit 16: Strings\n.\n\n\nLecture 5\n\n\n\n\nSlides\n | \nScreencast\n\n\n\n\nIn this lecture, we talked about how to write loops, followed by using assertions to reason about the behavior and logic of our programs.\n\n\nUnits covered are Units \n10 Assertions\n, \n11 Loops\n, and \n12 Reasoning About Loops\n.\n\n\nLecture 4\n\n\n\n\nSlides\n | \nScreencast\n | \nKahoot Quiz\n\n\n\n\nIn this lecture, we learned how to write programs that involve branching execution paths, using \nif\n-\nelse\n statements and logical expressions.  \nUnit 8 If-Else\n, \nUnit 9 Logical Expression\n were covered.\n\n\nLecture 3\n\n\n\n\nSlides\n | \nScreencast\n\n\n\n\nWe covered \nUnit 5: First C Program\n, \nUnit 6: CS1010 I/O Library\n and \nUnit 7: Arithmetic Operations\n.\n\n\nIn this lecture, we got started with writing simple C programs that read inputs, perform some calculations, and display the result.\n\n\nLecture 2\n\n\n\n\nSlides\n | \nScreencast\n\n\n\n\nWe covered \nUnit 3: functions\n and \nUnit 4: types\n.\n\n\nIn this lecture, we learned the concepts of functions, with which we can build up a more complex algorithm from smaller building blocks, such as finding the maximum.  We also learned about the concept of types.\n\n\nLecture 1\n\n\n\n\nSlides\n | \nScreencast\n (password posted on Piazza)\n\n\n\n\nAfter some admin matters, we introduced what is a program, what is meant by programming, and what is computational problem solving.\n\n\nWe covered \nUnit 1: What is a Program?\n and \nUnit 2: Computational Problems and Algorithms\n in the first lecture.",
+            "text": "CS1010\n\n\nWhat's New\n\n\nInfo on \nMidterm\n and \nPractical Exam 1\n\n\nSummary of CS1010's Rules on C\n\n\nExercise 3: Binary, Rectangle, Fibonacci, Prime\n\n\nReleased 13 September 2018\n\n\nAssignment 2: Collatz, Weekday, Circle, Pattern\n\n\nReleased 14 September 2018, Due 21 September 2018, 6pm.\n\n\nLecture 6\n\n\nIn this lecture, we will discuss how call stack works, giving more insights about how a C program is executed, particularly when we call a function and when a function returns.  We then discuss about pointers and arrays, ending with a brief introduction to strings as an array of \nchar\n.\n\n\nUnits covered are Units 13 - 16: \nUnit 13: Call Stack\n, \nUnit 14: Pointers\n, \nUnit 15: Arrays\n and \nUnit 16: Strings\n.\n\n\n\n\nPiazza Q&A\n \n\n\nPiazza is the Q&A site for students and instructors to ask questions and discuss among each other on all matters related to CS1010.\n\n\n\n\nProgramming Exercises\n\n\nExercises are ungraded programming questions for practicing on your own.\n\n\nExercise 3: Binary, Rectangle, Fibonacci, Prime\n\n\nReleased 13 September 2018\n\n\nExercise 2: Leap, Suffix, Days\n\n\nReleased 6 September 2018\n\n\nExercise 1: Freezer\n\n\nReleased 3 September 2018\n\n\n\n\nProgramming Assignments\n\n\nAssignment 2: Collatz, Weekday, Circle, Pattern\n\n\nReleased 14 September 2018, Due 21 September 2018, 6pm.\n\n\nAssignment 1: Invest, Box, Digits, and Taxi\n\n\nReleased 7 September 2018, Due 14 September 2018, 6pm.\n\n\n\n\nNotes and Lectures \n\n\nLecture 6\n\n\nIn this lecture, we will discuss how call stack works, giving more insights about how a C program is executed, particularly when we call a function and when a function returns.  We then discuss about pointers and arrays, ending with a brief introduction to strings as an array of \nchar\n.\n\n\nUnits covered are Units 13 - 16: \nUnit 13: Call Stack\n, \nUnit 14: Pointers\n, \nUnit 15: Arrays\n and \nUnit 16: Strings\n.\n\n\nLecture 5\n\n\n\n\nSlides\n | \nScreencast\n\n\n\n\nIn this lecture, we talked about how to write loops, followed by using assertions to reason about the behavior and logic of our programs.\n\n\nUnits covered are Units \n10 Assertions\n, \n11 Loops\n, and \n12 Reasoning About Loops\n.\n\n\nLecture 4\n\n\n\n\nSlides\n | \nScreencast\n | \nKahoot Quiz\n\n\n\n\nIn this lecture, we learned how to write programs that involve branching execution paths, using \nif\n-\nelse\n statements and logical expressions.  \nUnit 8 If-Else\n, \nUnit 9 Logical Expression\n were covered.\n\n\nLecture 3\n\n\n\n\nSlides\n | \nScreencast\n\n\n\n\nWe covered \nUnit 5: First C Program\n, \nUnit 6: CS1010 I/O Library\n and \nUnit 7: Arithmetic Operations\n.\n\n\nIn this lecture, we got started with writing simple C programs that read inputs, perform some calculations, and display the result.\n\n\nLecture 2\n\n\n\n\nSlides\n | \nScreencast\n\n\n\n\nWe covered \nUnit 3: functions\n and \nUnit 4: types\n.\n\n\nIn this lecture, we learned the concepts of functions, with which we can build up a more complex algorithm from smaller building blocks, such as finding the maximum.  We also learned about the concept of types.\n\n\nLecture 1\n\n\n\n\nSlides\n | \nScreencast\n (password posted on Piazza)\n\n\n\n\nAfter some admin matters, we introduced what is a program, what is meant by programming, and what is computational problem solving.\n\n\nWe covered \nUnit 1: What is a Program?\n and \nUnit 2: Computational Problems and Algorithms\n in the first lecture.",
             "title": "Home"
         },
         {
             "location": "/index.html#cs1010",
             "text": "",
             "title": "CS1010"
+        },
+        {
+            "location": "/index.html#whats-new",
+            "text": "",
+            "title": "What's New"
+        },
+        {
+            "location": "/index.html#info-on-midterm-and-practical-exam-1",
+            "text": "",
+            "title": "Info on Midterm and Practical Exam 1"
+        },
+        {
+            "location": "/index.html#summary-of-cs1010s-rules-on-c",
+            "text": "",
+            "title": "Summary of CS1010's Rules on C"
+        },
+        {
+            "location": "/index.html#exercise-3-binary-rectangle-fibonacci-prime",
+            "text": "Released 13 September 2018",
+            "title": "Exercise 3: Binary, Rectangle, Fibonacci, Prime"
+        },
+        {
+            "location": "/index.html#assignment-2-collatz-weekday-circle-pattern",
+            "text": "Released 14 September 2018, Due 21 September 2018, 6pm.",
+            "title": "Assignment 2: Collatz, Weekday, Circle, Pattern"
+        },
+        {
+            "location": "/index.html#lecture-6",
+            "text": "In this lecture, we will discuss how call stack works, giving more insights about how a C program is executed, particularly when we call a function and when a function returns.  We then discuss about pointers and arrays, ending with a brief introduction to strings as an array of  char .  Units covered are Units 13 - 16:  Unit 13: Call Stack ,  Unit 14: Pointers ,  Unit 15: Arrays  and  Unit 16: Strings .",
+            "title": "Lecture 6"
         },
         {
             "location": "/index.html#piazza-qa",
@@ -21,7 +51,7 @@
             "title": "Programming Exercises"
         },
         {
-            "location": "/index.html#exercise-3-binary-rectangle-fibonacci-prime",
+            "location": "/index.html#exercise-3-binary-rectangle-fibonacci-prime_1",
             "text": "Released 13 September 2018",
             "title": "Exercise 3: Binary, Rectangle, Fibonacci, Prime"
         },
@@ -41,7 +71,7 @@
             "title": "Programming Assignments"
         },
         {
-            "location": "/index.html#assignment-2-collatz-weekday-circle-pattern",
+            "location": "/index.html#assignment-2-collatz-weekday-circle-pattern_1",
             "text": "Released 14 September 2018, Due 21 September 2018, 6pm.",
             "title": "Assignment 2: Collatz, Weekday, Circle, Pattern"
         },
@@ -56,7 +86,7 @@
             "title": "Notes and Lectures"
         },
         {
-            "location": "/index.html#lecture-6",
+            "location": "/index.html#lecture-6_1",
             "text": "In this lecture, we will discuss how call stack works, giving more insights about how a C program is executed, particularly when we call a function and when a function returns.  We then discuss about pointers and arrays, ending with a brief introduction to strings as an array of  char .  Units covered are Units 13 - 16:  Unit 13: Call Stack ,  Unit 14: Pointers ,  Unit 15: Arrays  and  Unit 16: Strings .",
             "title": "Lecture 6"
         },
@@ -84,6 +114,51 @@
             "location": "/index.html#lecture-1",
             "text": "Slides  |  Screencast  (password posted on Piazza)   After some admin matters, we introduced what is a program, what is meant by programming, and what is computational problem solving.  We covered  Unit 1: What is a Program?  and  Unit 2: Computational Problems and Algorithms  in the first lecture.",
             "title": "Lecture 1"
+        },
+        {
+            "location": "/midterm/index.html",
+            "text": "Midterm\n\n\nImportant Information\n\n\n\n\nDate: 2 October, 2018 (Tuesday)\n\n\nTime: 4pm to 6pm\n\n\nVenue: MPSH 1 (Section B)\n\n\nScope: Units 1-12, Assignments 1-2, Tutorials 1-4\n\n\nMCQs and Short Structured Questions\n\n\nDuration: 90 minutes\n\n\nOpen Book (You can bring analog references)",
+            "title": "Midterm"
+        },
+        {
+            "location": "/midterm/index.html#midterm",
+            "text": "",
+            "title": "Midterm"
+        },
+        {
+            "location": "/midterm/index.html#important-information",
+            "text": "Date: 2 October, 2018 (Tuesday)  Time: 4pm to 6pm  Venue: MPSH 1 (Section B)  Scope: Units 1-12, Assignments 1-2, Tutorials 1-4  MCQs and Short Structured Questions  Duration: 90 minutes  Open Book (You can bring analog references)",
+            "title": "Important Information"
+        },
+        {
+            "location": "/pe1/index.html",
+            "text": "Practice Exam 1\n\n\n\n\nDate: 6 October, 2018 (Saturday)\n\n\nTime: 9pm to 12noon\n\n\nVenue: Various programming labs\n\n\nScope: Units 1-12, Assignments 1-2, Tutorials 1-4\n\n\n4-5 programming questions, very easy to hard\n\n\nDuration: 2 hours and 30 minutes\n\n\nOpen Book (You can bring analog references)\n\n\n\n\nLab Allocation\n\n\n\n\nEvery student is assigned to a programming lab.  \n\n\nPlease see the allocation below.\n\n\nYou should acclimatize yourself to the use of the PC desktops in the lab assigned to you.\n\n\nSpecial access has been given to students assigned to ES Lab 1 and 2 (Embedded System Teaching Lab 1 and 2)\n\n\nHere are the \nlocatons for the respective labs\n\n\n\n\nSpecial Restrictions\n\n\n\n\n\n\nYou will be issued a special account on the PE day to solve the exam questions.  \n\n\n\n\n\n\nThere will be no Internet access.\n\n\n\n\n\n\nVim Configuration\n\n\nYour default account will have the same \n.vimrc\n as \n~cs1010/.vimrc\n on the CS1010 PE hosts.  \n\n\nYou are free to edit this during the practical exams.  \n\n\nYou, however, will not be able to download nor install \nvim\n plugins.\n\n\nLab Allocation\n\n\n\n\n\n\n\n\nNAME\n\n\nPE1 Venue\n\n\n\n\n\n\n\n\n\n\nAARUSHI SINGH\n\n\nPL1\n\n\n\n\n\n\nADELYN KOH JING YING\n\n\nPL1\n\n\n\n\n\n\nAHMAD MUDAAFI' B ZAINUDDIN\n\n\nPL1\n\n\n\n\n\n\nAI ZHENGWEI\n\n\nPL1\n\n\n\n\n\n\nALEX TEO KANG JIE\n\n\nPL1\n\n\n\n\n\n\nAMIR AZHAR B AZIZAN\n\n\nPL1\n\n\n\n\n\n\nANDREW LAU JIA JUN\n\n\nPL1\n\n\n\n\n\n\nANG KENG SIANG\n\n\nPL1\n\n\n\n\n\n\nANG KIANG YANG\n\n\nPL1\n\n\n\n\n\n\nAW CHIAN HAO\n\n\nPL1\n\n\n\n\n\n\nBALAM SAI ROHIT REDDY\n\n\nPL1\n\n\n\n\n\n\nBEATRICE CHAN TONG\n\n\nPL1\n\n\n\n\n\n\nBENEDICT YU CHENG EN\n\n\nPL1\n\n\n\n\n\n\nBENJAMIN CHIA SHAN HONG\n\n\nPL1\n\n\n\n\n\n\nBRANSON LEE JUN XIAN\n\n\nPL1\n\n\n\n\n\n\nCAI RONG\n\n\nPL1\n\n\n\n\n\n\nCHAN EE ZHENG, BENJAMIN\n\n\nPL1\n\n\n\n\n\n\nCHAN HIN, SEAN\n\n\nPL1\n\n\n\n\n\n\nCHAN WEI FONG, MAX\n\n\nPL1\n\n\n\n\n\n\nCHAN YEE CHONG PHILIP\n\n\nPL1\n\n\n\n\n\n\nCHAN YEW CHUN DANIEL\n\n\nPL1\n\n\n\n\n\n\nCHAN ZHI ZHENG, AMOS\n\n\nPL1\n\n\n\n\n\n\nCHANG HUI ZHEN\n\n\nPL1\n\n\n\n\n\n\nCHANG ZHONG KAI\n\n\nPL1\n\n\n\n\n\n\nCHEN CHAO\n\n\nPL1\n\n\n\n\n\n\nCHEN TONG\n\n\nPL1\n\n\n\n\n\n\nCHENG LE DA, CLEMENT\n\n\nPL1\n\n\n\n\n\n\nCHENG WANYIN\n\n\nPL1\n\n\n\n\n\n\nCHENG WEIXUAN\n\n\nPL1\n\n\n\n\n\n\nCHERYL NG YUN LIN\n\n\nPL1\n\n\n\n\n\n\nCHEW JUN KONG\n\n\nPL1\n\n\n\n\n\n\nCHIA BIING HANN\n\n\nPL1\n\n\n\n\n\n\nCHNG XIAN YI\n\n\nPL1\n\n\n\n\n\n\nCHOI WONJAE\n\n\nPL1\n\n\n\n\n\n\nCHU JUI HUNG @JEFFERSON CHU\n\n\nPL1\n\n\n\n\n\n\nCHUA MAI FENG, CARL\n\n\nPL1\n\n\n\n\n\n\nCHUA WEN XUAN\n\n\nPL1\n\n\n\n\n\n\nCHUA ZONG WEI\n\n\nPL1\n\n\n\n\n\n\nCLAIRE CHAN YEN HWA\n\n\nPL1\n\n\n\n\n\n\nCYNTHIA LEE WENG YAN\n\n\nPL1\n\n\n\n\n\n\nDANIEL TAN WEE LIANG\n\n\nPL2\n\n\n\n\n\n\nDANISH B EDDIE\n\n\nPL2\n\n\n\n\n\n\nDARREN ONG\n\n\nPL2\n\n\n\n\n\n\nDEBBIE TAN JIA MIN\n\n\nPL2\n\n\n\n\n\n\nDING NING\n\n\nPL2\n\n\n\n\n\n\nDIVAKARAN HARITHA\n\n\nPL2\n\n\n\n\n\n\nEDMUND TEO WEI XIN\n\n\nPL2\n\n\n\n\n\n\nEU JING SEN\n\n\nPL2\n\n\n\n\n\n\nEVELYN YI-WEN CHEN\n\n\nPL2\n\n\n\n\n\n\nFATIN NABILAH BTE SUHAIMI\n\n\nPL2\n\n\n\n\n\n\nFOO CHI HEN\n\n\nPL2\n\n\n\n\n\n\nGINA QUAH JIE XI\n\n\nPL2\n\n\n\n\n\n\nGLEN WONG SHU ZE\n\n\nPL2\n\n\n\n\n\n\nGOH RUI PING SAMANTHA\n\n\nPL2\n\n\n\n\n\n\nGOH ZHEN HAO JOEY\n\n\nPL2\n\n\n\n\n\n\nGONDHALEKAR SUKRUT YOGESH\n\n\nPL2\n\n\n\n\n\n\nGREGORY TAN WEI YUAN\n\n\nPL2\n\n\n\n\n\n\nGUI XIXIAN\n\n\nPL2\n\n\n\n\n\n\nGUO HAOREN\n\n\nPL2\n\n\n\n\n\n\nHANS KURNIA WIDJAJA\n\n\nPL2\n\n\n\n\n\n\nHAO YUN\n\n\nPL2\n\n\n\n\n\n\nHASHIR ZAHIR\n\n\nPL2\n\n\n\n\n\n\nHENG HONG CHUAN\n\n\nPL2\n\n\n\n\n\n\nHO JING YANG DANIEL\n\n\nPL2\n\n\n\n\n\n\nHO SI SHI ANNETTE\n\n\nPL2\n\n\n\n\n\n\nHO WEI BIN, JERRY\n\n\nPL2\n\n\n\n\n\n\nHU XINYING\n\n\nPL2\n\n\n\n\n\n\nHUANG XUANKUN\n\n\nPL2\n\n\n\n\n\n\nIAN CHUA\n\n\nPL2\n\n\n\n\n\n\nISABELLA CHEONG XIAO XUAN\n\n\nPL2\n\n\n\n\n\n\nIVAN ANDIKA LIE\n\n\nPL2\n\n\n\n\n\n\nJANEL ANG YEE HUEY\n\n\nPL2\n\n\n\n\n\n\nJASON SATHYA CITRO\n\n\nPL2\n\n\n\n\n\n\nJASPER ONG SHAO YONG\n\n\nPL2\n\n\n\n\n\n\nJAZHTEN LOW YONGSHEN\n\n\nPL2\n\n\n\n\n\n\nJERRY ZHANG ZHUORAN\n\n\nPL2\n\n\n\n\n\n\nJESS TEO XI ZHI\n\n\nPL2\n\n\n\n\n\n\nJOEL CHANG ZHI KAI\n\n\nPL2\n\n\n\n\n\n\nJOHN CUTHBERT KHOO TENG FONG\n\n\nPL2\n\n\n\n\n\n\nJOSEPH WONG YEFENG\n\n\nPL2\n\n\n\n\n\n\nJUSTIN CHIA JIA JIN\n\n\nPL3\n\n\n\n\n\n\nK ALAGES\n\n\nPL3\n\n\n\n\n\n\nKARAN SARAT\n\n\nPL3\n\n\n\n\n\n\nKARNATI SAI ABHISHEK\n\n\nPL3\n\n\n\n\n\n\nKEE KAH LOK\n\n\nPL3\n\n\n\n\n\n\nKEITH CHAN JUN KAI\n\n\nPL3\n\n\n\n\n\n\nKELVIN HARRIS\n\n\nPL3\n\n\n\n\n\n\nKEVIN PUTERA\n\n\nPL3\n\n\n\n\n\n\nKEZIA KEW KAI YUN\n\n\nPL3\n\n\n\n\n\n\nKHAIRUL IMAN NASRI B AZHARIE\n\n\nPL3\n\n\n\n\n\n\nKHOO TZE YANG RAYSON\n\n\nPL3\n\n\n\n\n\n\nKISHORE R\n\n\nPL3\n\n\n\n\n\n\nKWOK KUIN EK JEREMY\n\n\nPL3\n\n\n\n\n\n\nKYAWT KYAWT SAN\n\n\nPL3\n\n\n\n\n\n\nLAI WEN XUAN JEREMY\n\n\nPL3\n\n\n\n\n\n\nLAM TIAN WEI JUSTIN\n\n\nPL3\n\n\n\n\n\n\nLE HONG LONG\n\n\nPL3\n\n\n\n\n\n\nLEE HONG CHIEN, KENNETH\n\n\nPL3\n\n\n\n\n\n\nLEE LI XIN\n\n\nPL3\n\n\n\n\n\n\nLEE RAIYAN BIN ZULKIFLI\n\n\nPL3\n\n\n\n\n\n\nLEE WEI HERN, JASON\n\n\nPL3\n\n\n\n\n\n\nLEE YUEYU\n\n\nPL3\n\n\n\n\n\n\nLEE ZHEN YU\n\n\nPL4\n\n\n\n\n\n\nLEOW YONG HENG\n\n\nPL4\n\n\n\n\n\n\nLEOW YONG KANG ANDREW\n\n\nPL4\n\n\n\n\n\n\nLI JIAYU\n\n\nPL4\n\n\n\n\n\n\nLI ZIHAN\n\n\nPL4\n\n\n\n\n\n\nLIAO LIXIN\n\n\nPL4\n\n\n\n\n\n\nLIAO TIANCHANG\n\n\nPL4\n\n\n\n\n\n\nLIM CHEE SENG BRIAN\n\n\nPL4\n\n\n\n\n\n\nLIM CHEK JUN\n\n\nPL4\n\n\n\n\n\n\nLIM CHENG YIN, RYAN\n\n\nPL4\n\n\n\n\n\n\nLIM HAO XIANG, SEAN\n\n\nPL4\n\n\n\n\n\n\nLIM JIA WEI\n\n\nPL4\n\n\n\n\n\n\nLIM JIAYI, TAMELLY\n\n\nPL4\n\n\n\n\n\n\nLIM JUN KUANG, LIONEL\n\n\nPL4\n\n\n\n\n\n\nLIM LI LINCOLN\n\n\nPL4\n\n\n\n\n\n\nLIM SI YING\n\n\nPL4\n\n\n\n\n\n\nLIM TING WEI\n\n\nPL4\n\n\n\n\n\n\nLIM WEN HAN, EUGENE\n\n\nPL4\n\n\n\n\n\n\nLIM YAN TING\n\n\nPL4\n\n\n\n\n\n\nLIN JIAYUE\n\n\nPL4\n\n\n\n\n\n\nLING WEN JIAN\n\n\nPL4\n\n\n\n\n\n\nLIU JINGXUAN\n\n\nPL4\n\n\n\n\n\n\nLIU PEIZE\n\n\nPL5\n\n\n\n\n\n\nLIU SHIRU\n\n\nPL5\n\n\n\n\n\n\nLIU SONGTAO\n\n\nPL5\n\n\n\n\n\n\nLIU WEI JIE NICHOLAS\n\n\nPL5\n\n\n\n\n\n\nLOH CHING WEI, JOSHUA\n\n\nPL5\n\n\n\n\n\n\nLOH YONG ZEE\n\n\nPL5\n\n\n\n\n\n\nLOW EE TER\n\n\nPL5\n\n\n\n\n\n\nLOW JIA YEE\n\n\nPL5\n\n\n\n\n\n\nLOW QIRAN\n\n\nPL5\n\n\n\n\n\n\nLOW SIU YUAN, FRANCIS\n\n\nPL5\n\n\n\n\n\n\nLUCAS FOO SOO QUAN\n\n\nPL5\n\n\n\n\n\n\nLYE JUN WEI ANANDA\n\n\nPL5\n\n\n\n\n\n\nMARC PHUA HSIAO MENG\n\n\nPL5\n\n\n\n\n\n\nMATTHEW NATHANAEL SUGIRI\n\n\nPL5\n\n\n\n\n\n\nMERVIN WEE MINGWEN\n\n\nPL5\n\n\n\n\n\n\nMICHELLE TOH HUI PING\n\n\nPL5\n\n\n\n\n\n\nMODAK SHANTANU BHARAT\n\n\nPL5\n\n\n\n\n\n\nMOHAMED RIYAS\n\n\nPL5\n\n\n\n\n\n\nMOHAMMAD YOUSUF MINHAJ ZIA\n\n\nPL5\n\n\n\n\n\n\nMUHAMMAD FAIRUZ B AMIRHAMZAH\n\n\nPL5\n\n\n\n\n\n\nMUHAMMAD HOZEFA ZUMKHAWALA\n\n\nPL6\n\n\n\n\n\n\nMUHAMMAD SHOLIHIN BIN KAMARUDIN\n\n\nPL6\n\n\n\n\n\n\nMUHHAMMAD NUR HAFIDZ BIN HUSSAIN\n\n\nPL6\n\n\n\n\n\n\nNATHAN YEO KEE HERN\n\n\nPL6\n\n\n\n\n\n\nNEO WEN HUI\n\n\nPL6\n\n\n\n\n\n\nNG JIE WU\n\n\nPL6\n\n\n\n\n\n\nNG JING KANG\n\n\nPL6\n\n\n\n\n\n\nNG JING KIAT\n\n\nPL6\n\n\n\n\n\n\nNG SHI QI, CARRIE\n\n\nPL6\n\n\n\n\n\n\nNG SIU HIAN\n\n\nPL6\n\n\n\n\n\n\nNG WEE KIAT\n\n\nPL6\n\n\n\n\n\n\nNG WEI JIE, BRANDON\n\n\nPL6\n\n\n\n\n\n\nNG ZI HUI\n\n\nPL6\n\n\n\n\n\n\nNGAN JI CHENG\n\n\nPL6\n\n\n\n\n\n\nNGUYEN THANH DUC\n\n\nPL6\n\n\n\n\n\n\nNGUYEN TIEN DAT\n\n\nPL6\n\n\n\n\n\n\nNIGEL TAN\n\n\nPL6\n\n\n\n\n\n\nNIGELLE LEO YUWEN\n\n\nPL6\n\n\n\n\n\n\nNISHANTH ELANGO\n\n\nPL6\n\n\n\n\n\n\nNYAN WUN PAING\n\n\nPL6\n\n\n\n\n\n\nOEI CHIU YAN REBECCA\n\n\nPL6\n\n\n\n\n\n\nONG YU XUAN\n\n\nPL6\n\n\n\n\n\n\nOUNG YONG SHENG KENNEDY\n\n\nPL6\n\n\n\n\n\n\nOW ZHENG KUAN\n\n\nPL6\n\n\n\n\n\n\nP PRADEEP\n\n\nPL6\n\n\n\n\n\n\nPANG JIA JUN VERNON\n\n\nPL6\n\n\n\n\n\n\nPARK SO HYUN\n\n\nPL6\n\n\n\n\n\n\nPARMAR VARUN SAMIR\n\n\nPL6\n\n\n\n\n\n\nPARVATHI RANJITH MENON\n\n\nESLab 1\n\n\n\n\n\n\nPATWARI RISHAB\n\n\nESLab 1\n\n\n\n\n\n\nPEI YAN BO\n\n\nESLab 1\n\n\n\n\n\n\nPHOON JIA JUIN\n\n\nESLab 1\n\n\n\n\n\n\nPOH CHOO LEONG, LINSTON\n\n\nESLab 1\n\n\n\n\n\n\nPONG LOONG BOB\n\n\nESLab 1\n\n\n\n\n\n\nPOON KAH ONN, BENJAMIN\n\n\nESLab 1\n\n\n\n\n\n\nPOW JING YONG\n\n\nESLab 1\n\n\n\n\n\n\nQIAN JIE\n\n\nESLab 1\n\n\n\n\n\n\nQUAH YOU JING KANE\n\n\nESLab 1\n\n\n\n\n\n\nQUEK AIK PENG\n\n\nESLab 1\n\n\n\n\n\n\nRAGHAV BHARDWAJ\n\n\nESLab 1\n\n\n\n\n\n\nRAJAMOHAN B PRIYAN\n\n\nESLab 1\n\n\n\n\n\n\nRAVEENDRAN AJEY ASHOK\n\n\nESLab 1\n\n\n\n\n\n\nRISHI MAHADEVAN\n\n\nESLab 1\n\n\n\n\n\n\nRUSDI HAIZIM B RAHIM\n\n\nESLab 1\n\n\n\n\n\n\nRYAN TAN YU\n\n\nESLab 1\n\n\n\n\n\n\nSAI GANESH SURESH\n\n\nESLab 1\n\n\n\n\n\n\nSCOTT FLOYD ZHEN-YAN SMAHON\n\n\nESLab 1\n\n\n\n\n\n\nSEE SHENG CHAO\n\n\nESLab 1\n\n\n\n\n\n\nSENTHIL ARAAVIND\n\n\nESLab 2\n\n\n\n\n\n\nSHA LONG\n\n\nESLab 2\n\n\n\n\n\n\nSHANNON LEE\n\n\nESLab 2\n\n\n\n\n\n\nSHAWN WONG JUN KIT\n\n\nESLab 2\n\n\n\n\n\n\nSHRIYA SAXENA\n\n\nESLab 2\n\n\n\n\n\n\nSIM YU JIE\n\n\nESLab 2\n\n\n\n\n\n\nSITI NADIAH BINTE MOHAMED RAMLI\n\n\nESLab 2\n\n\n\n\n\n\nSUTHER DAVID SAMUEL\n\n\nESLab 2\n\n\n\n\n\n\nTALAGADADIVI DURGA RUKMINI MANASWINI\n\n\nESLab 2\n\n\n\n\n\n\nTAM WEI IAN JOSHUA\n\n\nESLab 2\n\n\n\n\n\n\nTAN GUAN YEW\n\n\nESLab 2\n\n\n\n\n\n\nTAN KAI LI CATHERINE\n\n\nESLab 2\n\n\n\n\n\n\nTAN KOK JOON\n\n\nESLab 2\n\n\n\n\n\n\nTAN LI ANN PETER\n\n\nESLab 2\n\n\n\n\n\n\nTAN YEH HAN, JOHN\n\n\nESLab 2\n\n\n\n\n\n\nTAN YI XIANG\n\n\nESLab 2\n\n\n\n\n\n\nTAN ZHENG FU JUSTIN\n\n\nESLab 2\n\n\n\n\n\n\nTAN ZHENG WEN\n\n\nESLab 2\n\n\n\n\n\n\nTAY JIN WEN\n\n\nESLab 2\n\n\n\n\n\n\nTAY JING XUAN\n\n\nESLab 2\n\n\n\n\n\n\nTAY TZE-WEI, CALEB\n\n\nWSLab 1\n\n\n\n\n\n\nTAY YEE EN, RYAN\n\n\nWSLab 1\n\n\n\n\n\n\nTEH ZI HUAI\n\n\nWSLab 1\n\n\n\n\n\n\nTEO WEI JIE, SHAUN\n\n\nWSLab 1\n\n\n\n\n\n\nTOH YING YING JANICE\n\n\nWSLab 1\n\n\n\n\n\n\nTONG QI WEI\n\n\nWSLab 1\n\n\n\n\n\n\nTRAN MINH DUONG\n\n\nWSLab 1\n\n\n\n\n\n\nTRAN QUANG THANH\n\n\nWSLab 1\n\n\n\n\n\n\nTSHIN QI REN\n\n\nWSLab 1\n\n\n\n\n\n\nUMAR BIN MOIZ\n\n\nWSLab 1\n\n\n\n\n\n\nVASAVADA TEJAS SUDHIR\n\n\nWSLab 1\n\n\n\n\n\n\nVIDHYABHARATHI SOMASUNDARAM\n\n\nWSLab 1\n\n\n\n\n\n\nVIVIAN LEE BOON GEOK\n\n\nWSLab 1\n\n\n\n\n\n\nWANG ZICONG\n\n\nWSLab 1\n\n\n\n\n\n\nWEI FENG\n\n\nWSLab 1\n\n\n\n\n\n\nWENG KEXIN\n\n\nWSLab 1\n\n\n\n\n\n\nWONG JIN EN, SHANNON\n\n\nWSLab 1\n\n\n\n\n\n\nWONG REN-WEI, RYAN\n\n\nWSLab 1\n\n\n\n\n\n\nXUE ZHENGQING\n\n\nWSLab 1\n\n\n\n\n\n\nYANG AN QI\n\n\nWSLab 1\n\n\n\n\n\n\nYANG CHENGLONG\n\n\nWSLab 1\n\n\n\n\n\n\nYANG KAI ZE\n\n\nWSLab 3\n\n\n\n\n\n\nYANG ZI YUN\n\n\nWSLab 3\n\n\n\n\n\n\nYAP JIN FA\n\n\nWSLab 3\n\n\n\n\n\n\nYAP KESIN\n\n\nWSLab 3\n\n\n\n\n\n\nYE GUOQUAN\n\n\nWSLab 3\n\n\n\n\n\n\nYE TONG\n\n\nWSLab 3\n\n\n\n\n\n\nYEN PEI CHIH\n\n\nWSLab 3\n\n\n\n\n\n\nYEW JING HUI\n\n\nWSLab 3\n\n\n\n\n\n\nYU XIAOXUE\n\n\nWSLab 3\n\n\n\n\n\n\nYUAN JIAYI\n\n\nWSLab 3\n\n\n\n\n\n\nYUE JUN YI\n\n\nWSLab 3\n\n\n\n\n\n\nZHANG SHIYU\n\n\nWSLab 3\n\n\n\n\n\n\nZHANG YIHAN\n\n\nWSLab 3\n\n\n\n\n\n\nZHANG YIPING\n\n\nWSLab 3\n\n\n\n\n\n\nZHANG YUE HAN\n\n\nWSLab 3\n\n\n\n\n\n\nZHAO PENGFEI\n\n\nWSLab 3\n\n\n\n\n\n\nZHAO TIANQI\n\n\nWSLab 3\n\n\n\n\n\n\nZHENG KAINING\n\n\nWSLab 3\n\n\n\n\n\n\nZHU BO\n\n\nWSLab 3\n\n\n\n\n\n\nZHU YIJIE\n\n\nWSLab 3\n\n\n\n\n\n\nZOE WONG XIN LEI\n\n\nWSLab 3",
+            "title": "Practical Exam"
+        },
+        {
+            "location": "/pe1/index.html#practice-exam-1",
+            "text": "Date: 6 October, 2018 (Saturday)  Time: 9pm to 12noon  Venue: Various programming labs  Scope: Units 1-12, Assignments 1-2, Tutorials 1-4  4-5 programming questions, very easy to hard  Duration: 2 hours and 30 minutes  Open Book (You can bring analog references)",
+            "title": "Practice Exam 1"
+        },
+        {
+            "location": "/pe1/index.html#lab-allocation",
+            "text": "Every student is assigned to a programming lab.    Please see the allocation below.  You should acclimatize yourself to the use of the PC desktops in the lab assigned to you.  Special access has been given to students assigned to ES Lab 1 and 2 (Embedded System Teaching Lab 1 and 2)  Here are the  locatons for the respective labs",
+            "title": "Lab Allocation"
+        },
+        {
+            "location": "/pe1/index.html#special-restrictions",
+            "text": "You will be issued a special account on the PE day to solve the exam questions.      There will be no Internet access.",
+            "title": "Special Restrictions"
+        },
+        {
+            "location": "/pe1/index.html#vim-configuration",
+            "text": "Your default account will have the same  .vimrc  as  ~cs1010/.vimrc  on the CS1010 PE hosts.    You are free to edit this during the practical exams.    You, however, will not be able to download nor install  vim  plugins.",
+            "title": "Vim Configuration"
+        },
+        {
+            "location": "/pe1/index.html#lab-allocation_1",
+            "text": "NAME  PE1 Venue      AARUSHI SINGH  PL1    ADELYN KOH JING YING  PL1    AHMAD MUDAAFI' B ZAINUDDIN  PL1    AI ZHENGWEI  PL1    ALEX TEO KANG JIE  PL1    AMIR AZHAR B AZIZAN  PL1    ANDREW LAU JIA JUN  PL1    ANG KENG SIANG  PL1    ANG KIANG YANG  PL1    AW CHIAN HAO  PL1    BALAM SAI ROHIT REDDY  PL1    BEATRICE CHAN TONG  PL1    BENEDICT YU CHENG EN  PL1    BENJAMIN CHIA SHAN HONG  PL1    BRANSON LEE JUN XIAN  PL1    CAI RONG  PL1    CHAN EE ZHENG, BENJAMIN  PL1    CHAN HIN, SEAN  PL1    CHAN WEI FONG, MAX  PL1    CHAN YEE CHONG PHILIP  PL1    CHAN YEW CHUN DANIEL  PL1    CHAN ZHI ZHENG, AMOS  PL1    CHANG HUI ZHEN  PL1    CHANG ZHONG KAI  PL1    CHEN CHAO  PL1    CHEN TONG  PL1    CHENG LE DA, CLEMENT  PL1    CHENG WANYIN  PL1    CHENG WEIXUAN  PL1    CHERYL NG YUN LIN  PL1    CHEW JUN KONG  PL1    CHIA BIING HANN  PL1    CHNG XIAN YI  PL1    CHOI WONJAE  PL1    CHU JUI HUNG @JEFFERSON CHU  PL1    CHUA MAI FENG, CARL  PL1    CHUA WEN XUAN  PL1    CHUA ZONG WEI  PL1    CLAIRE CHAN YEN HWA  PL1    CYNTHIA LEE WENG YAN  PL1    DANIEL TAN WEE LIANG  PL2    DANISH B EDDIE  PL2    DARREN ONG  PL2    DEBBIE TAN JIA MIN  PL2    DING NING  PL2    DIVAKARAN HARITHA  PL2    EDMUND TEO WEI XIN  PL2    EU JING SEN  PL2    EVELYN YI-WEN CHEN  PL2    FATIN NABILAH BTE SUHAIMI  PL2    FOO CHI HEN  PL2    GINA QUAH JIE XI  PL2    GLEN WONG SHU ZE  PL2    GOH RUI PING SAMANTHA  PL2    GOH ZHEN HAO JOEY  PL2    GONDHALEKAR SUKRUT YOGESH  PL2    GREGORY TAN WEI YUAN  PL2    GUI XIXIAN  PL2    GUO HAOREN  PL2    HANS KURNIA WIDJAJA  PL2    HAO YUN  PL2    HASHIR ZAHIR  PL2    HENG HONG CHUAN  PL2    HO JING YANG DANIEL  PL2    HO SI SHI ANNETTE  PL2    HO WEI BIN, JERRY  PL2    HU XINYING  PL2    HUANG XUANKUN  PL2    IAN CHUA  PL2    ISABELLA CHEONG XIAO XUAN  PL2    IVAN ANDIKA LIE  PL2    JANEL ANG YEE HUEY  PL2    JASON SATHYA CITRO  PL2    JASPER ONG SHAO YONG  PL2    JAZHTEN LOW YONGSHEN  PL2    JERRY ZHANG ZHUORAN  PL2    JESS TEO XI ZHI  PL2    JOEL CHANG ZHI KAI  PL2    JOHN CUTHBERT KHOO TENG FONG  PL2    JOSEPH WONG YEFENG  PL2    JUSTIN CHIA JIA JIN  PL3    K ALAGES  PL3    KARAN SARAT  PL3    KARNATI SAI ABHISHEK  PL3    KEE KAH LOK  PL3    KEITH CHAN JUN KAI  PL3    KELVIN HARRIS  PL3    KEVIN PUTERA  PL3    KEZIA KEW KAI YUN  PL3    KHAIRUL IMAN NASRI B AZHARIE  PL3    KHOO TZE YANG RAYSON  PL3    KISHORE R  PL3    KWOK KUIN EK JEREMY  PL3    KYAWT KYAWT SAN  PL3    LAI WEN XUAN JEREMY  PL3    LAM TIAN WEI JUSTIN  PL3    LE HONG LONG  PL3    LEE HONG CHIEN, KENNETH  PL3    LEE LI XIN  PL3    LEE RAIYAN BIN ZULKIFLI  PL3    LEE WEI HERN, JASON  PL3    LEE YUEYU  PL3    LEE ZHEN YU  PL4    LEOW YONG HENG  PL4    LEOW YONG KANG ANDREW  PL4    LI JIAYU  PL4    LI ZIHAN  PL4    LIAO LIXIN  PL4    LIAO TIANCHANG  PL4    LIM CHEE SENG BRIAN  PL4    LIM CHEK JUN  PL4    LIM CHENG YIN, RYAN  PL4    LIM HAO XIANG, SEAN  PL4    LIM JIA WEI  PL4    LIM JIAYI, TAMELLY  PL4    LIM JUN KUANG, LIONEL  PL4    LIM LI LINCOLN  PL4    LIM SI YING  PL4    LIM TING WEI  PL4    LIM WEN HAN, EUGENE  PL4    LIM YAN TING  PL4    LIN JIAYUE  PL4    LING WEN JIAN  PL4    LIU JINGXUAN  PL4    LIU PEIZE  PL5    LIU SHIRU  PL5    LIU SONGTAO  PL5    LIU WEI JIE NICHOLAS  PL5    LOH CHING WEI, JOSHUA  PL5    LOH YONG ZEE  PL5    LOW EE TER  PL5    LOW JIA YEE  PL5    LOW QIRAN  PL5    LOW SIU YUAN, FRANCIS  PL5    LUCAS FOO SOO QUAN  PL5    LYE JUN WEI ANANDA  PL5    MARC PHUA HSIAO MENG  PL5    MATTHEW NATHANAEL SUGIRI  PL5    MERVIN WEE MINGWEN  PL5    MICHELLE TOH HUI PING  PL5    MODAK SHANTANU BHARAT  PL5    MOHAMED RIYAS  PL5    MOHAMMAD YOUSUF MINHAJ ZIA  PL5    MUHAMMAD FAIRUZ B AMIRHAMZAH  PL5    MUHAMMAD HOZEFA ZUMKHAWALA  PL6    MUHAMMAD SHOLIHIN BIN KAMARUDIN  PL6    MUHHAMMAD NUR HAFIDZ BIN HUSSAIN  PL6    NATHAN YEO KEE HERN  PL6    NEO WEN HUI  PL6    NG JIE WU  PL6    NG JING KANG  PL6    NG JING KIAT  PL6    NG SHI QI, CARRIE  PL6    NG SIU HIAN  PL6    NG WEE KIAT  PL6    NG WEI JIE, BRANDON  PL6    NG ZI HUI  PL6    NGAN JI CHENG  PL6    NGUYEN THANH DUC  PL6    NGUYEN TIEN DAT  PL6    NIGEL TAN  PL6    NIGELLE LEO YUWEN  PL6    NISHANTH ELANGO  PL6    NYAN WUN PAING  PL6    OEI CHIU YAN REBECCA  PL6    ONG YU XUAN  PL6    OUNG YONG SHENG KENNEDY  PL6    OW ZHENG KUAN  PL6    P PRADEEP  PL6    PANG JIA JUN VERNON  PL6    PARK SO HYUN  PL6    PARMAR VARUN SAMIR  PL6    PARVATHI RANJITH MENON  ESLab 1    PATWARI RISHAB  ESLab 1    PEI YAN BO  ESLab 1    PHOON JIA JUIN  ESLab 1    POH CHOO LEONG, LINSTON  ESLab 1    PONG LOONG BOB  ESLab 1    POON KAH ONN, BENJAMIN  ESLab 1    POW JING YONG  ESLab 1    QIAN JIE  ESLab 1    QUAH YOU JING KANE  ESLab 1    QUEK AIK PENG  ESLab 1    RAGHAV BHARDWAJ  ESLab 1    RAJAMOHAN B PRIYAN  ESLab 1    RAVEENDRAN AJEY ASHOK  ESLab 1    RISHI MAHADEVAN  ESLab 1    RUSDI HAIZIM B RAHIM  ESLab 1    RYAN TAN YU  ESLab 1    SAI GANESH SURESH  ESLab 1    SCOTT FLOYD ZHEN-YAN SMAHON  ESLab 1    SEE SHENG CHAO  ESLab 1    SENTHIL ARAAVIND  ESLab 2    SHA LONG  ESLab 2    SHANNON LEE  ESLab 2    SHAWN WONG JUN KIT  ESLab 2    SHRIYA SAXENA  ESLab 2    SIM YU JIE  ESLab 2    SITI NADIAH BINTE MOHAMED RAMLI  ESLab 2    SUTHER DAVID SAMUEL  ESLab 2    TALAGADADIVI DURGA RUKMINI MANASWINI  ESLab 2    TAM WEI IAN JOSHUA  ESLab 2    TAN GUAN YEW  ESLab 2    TAN KAI LI CATHERINE  ESLab 2    TAN KOK JOON  ESLab 2    TAN LI ANN PETER  ESLab 2    TAN YEH HAN, JOHN  ESLab 2    TAN YI XIANG  ESLab 2    TAN ZHENG FU JUSTIN  ESLab 2    TAN ZHENG WEN  ESLab 2    TAY JIN WEN  ESLab 2    TAY JING XUAN  ESLab 2    TAY TZE-WEI, CALEB  WSLab 1    TAY YEE EN, RYAN  WSLab 1    TEH ZI HUAI  WSLab 1    TEO WEI JIE, SHAUN  WSLab 1    TOH YING YING JANICE  WSLab 1    TONG QI WEI  WSLab 1    TRAN MINH DUONG  WSLab 1    TRAN QUANG THANH  WSLab 1    TSHIN QI REN  WSLab 1    UMAR BIN MOIZ  WSLab 1    VASAVADA TEJAS SUDHIR  WSLab 1    VIDHYABHARATHI SOMASUNDARAM  WSLab 1    VIVIAN LEE BOON GEOK  WSLab 1    WANG ZICONG  WSLab 1    WEI FENG  WSLab 1    WENG KEXIN  WSLab 1    WONG JIN EN, SHANNON  WSLab 1    WONG REN-WEI, RYAN  WSLab 1    XUE ZHENGQING  WSLab 1    YANG AN QI  WSLab 1    YANG CHENGLONG  WSLab 1    YANG KAI ZE  WSLab 3    YANG ZI YUN  WSLab 3    YAP JIN FA  WSLab 3    YAP KESIN  WSLab 3    YE GUOQUAN  WSLab 3    YE TONG  WSLab 3    YEN PEI CHIH  WSLab 3    YEW JING HUI  WSLab 3    YU XIAOXUE  WSLab 3    YUAN JIAYI  WSLab 3    YUE JUN YI  WSLab 3    ZHANG SHIYU  WSLab 3    ZHANG YIHAN  WSLab 3    ZHANG YIPING  WSLab 3    ZHANG YUE HAN  WSLab 3    ZHAO PENGFEI  WSLab 3    ZHAO TIANQI  WSLab 3    ZHENG KAINING  WSLab 3    ZHU BO  WSLab 3    ZHU YIJIE  WSLab 3    ZOE WONG XIN LEI  WSLab 3",
+            "title": "Lab Allocation"
         },
         {
             "location": "/about/index.html",
@@ -1514,6 +1589,216 @@
             "location": "/kahoot01/index.html#question-3",
             "text": "Refer to the flowchart in Question 2.  What is the output of the algorithm if L is 1, 2, 3, 4?   A. 2  B. 3  C. 4  D. No output   (Answer: D)",
             "title": "Question 3"
+        },
+        {
+            "location": "/c-in-cs1010/index.html",
+            "text": "C in CS1010\n\n\nC is a simple and flexible language, providing programmers with many different ways to achieve the same thing.\n\n\nSome of these features that C provides, however, could be bug prone.  Wei Tsang has written enough buggy programs himself and seen enough buggy programs from students.  He feels that some of these features from C are not useful for beginners (or even seasoned programmers).\n\n\nFurthermore, some features in C simply encourages bad programming habits that are widely frowned upon.  Some would lead to insecure programs.  \n\n\nAs such, in CS1010, we \nban\n and \ndiscourage\n the use of certain operators, functions, constructs, and features in C.\n\n\nThis article summarizes this list.  This is a work in progress article. As we learn more about C, we will amend this list.\n\n\nBanned in CS1010\n\n\nThe banned items should not be used in CS1010.  Students should use the alternatives.  The teaching staff reserves the right to apply a penalty while grading the assignments and practical exams if these banned features are used.\n\n\n1. The \n++\n and \n--\n operators.\n\n\nWhy?\n\n\n\n\nThese operators lead to potential undefined behavior.  E.g., \ni = i++;\n\n\nThe potential confusion caused by the difference between \ni++\n and \n++i\n.\n\n\n\n\nWhat should be used instead?\n\n\n\n\nUse \ni += 1\n or \ni -= 1\n instead of \ni++\n or \ni--\n\n\n\n\n2. Skipping of curly braces for single statement conditional or loop body\n\n\nWhy?\n\n\n\n\nCould lead to dangling \nelse\n confusion\n\n\nEasy to forget to put back the \n{}\n pair if the body is modified beyond a single statements\n\n\n\n\nWhat should be used instead?\n\n\n\n\nAlways use \n{}\n even if the conditional or loop body contains only a single statement.\n\n\n\n\n3. Nested conditional operator \n?:\n\n\nWhy?\n\n\n\n\nCan get difficult to read, understand, and modify.  Example:\n\n\n\n\n1\na = (x > y) ? ((y > z) ? y : z) : ((x > z) ? x : z);\n\n\n\n\n\n\nWhat should be used\n\n\n\n\nUse nested \nif-else\n loop\n\n\n\n\n4. Global variables\n\n\nWhy?\n\n\n\n\nIt makes the code hard to reason about and trace, as you have no idea who will modify these variables.  For instance,  if \nx\n is not a global variable, we can safely assert that \nx\n is still 1 after calling \nf()\n.  If \nx\n is a global variable, we can no longer assert anything about \nx\n.\n\n\n\n\n1\n2\n3\nx\n \n=\n \n1\n;\n\n\nf\n();\n\n\n// { x == 1 }\n\n\n\n\n\n\n\nWhat should be used instead\n\n\n\n\nDeclare the variables as local, automatic variables, and pass them around.\n\n\n\n\n5. The type \nint\n and \nshort\n\n\nWhy?\n\n\n\n\nC standard guaratees that both \nshort\n and \nint\n are at least 16 bits, which limits its guaranteed range to only -32,768 to 32,767.  This is too small many purposes.\n\n\nWe are not concerned about memory usage in CS1010.  If we do want to have precise control over memory, we should be anyway using the types from \nstdint.h\n.\n\n\n\n\nWhat should be used instead\n\n\n\n\nlong\n, which is guaranteed to be at least 32 bits.\n\n\n\n\nException\n\n\n\n\nIf a function from C library calls for the use of \nint\n and offers no \nlong\n alternative, then we have to use \nint\n.\n\n\n\n\n6. The type \nfloat\n\n\nWhy?\n\n\n\n\nNot enough precision and will cause floating point errors.\n\n\n\n\nWhat should be used instead\n\n\n\n\ndouble\n\n\n\n\nException\n\n\n\n\nIf a function from C library calls for the use of \nfloat\n and offers no \ndouble\n alternative, then we have to use \nfloat\n.\n\n\n\n\n7. Using integer values for true / false\n\n\nWhy?\n\n\n\n\nConfusing and error prone\n\n\n\n\nWhat should be used instead\n\n\n\n\nUse the \nbool\n type, and the values \ntrue\n and \nfalse\n.\n\n\n\n\n8. \ngoto\n\n\nWhy?\n\n\n\n\nmakes the logical flow of the code hard to follow and trace\n\n\n\n\nWhat should be used instead\n\n\n\n\ncombinations of conditionals and loops\n\n\n\n\n\n\nDiscouraged in CS1010\n\n\nThese are things that are not strictly banned, but their usage is discouraged.  Students should really use them only if they know very well what they are doing.  Use at own perils.\n\n\n1. \nprintf\n and \nscanf\n Functions\n\n\nWhy?\n\n\n\n\nUsing the wrong format modifier for \nprintf\n could lead to strange results\n\n\nUsing the wrong format modifier for \nscanf\n could lead to memory corruption\n\n\nNeed to look up what is the right format modifier to use\n\n\nNeed to preallocate memory for \nscanf\n of strings\n\n\nscanf\n is not secure\n\n\nscanf\n is not a pure function.  Prefers students to learn about the concept of pure functions first.\n\n\netc. etc.\n\n\n\n\nWhat should be used instead\n\n\n\n\nThe CS1010 I/O library\n\n\n\n\n2. \nswitch\n Statements\n\n\nWhy?\n\n\n\n\nBug prone (missing \nbreak\n would cause the case to fall through)\n\n\nOnly works on ordinal types.\n\n\n\n\nWhat should be used instead\n\n\n\n\nif\n-\nelse\n statements\n\n\n\n\n3. \nbreak\n and \ncontinue\n Statements\n\n\nWhy?\n\n\n\n\nUsing \nbreak\n and \ncontinue\n complicates the flow of a loop, marks it harder to reason about the correctness of the loop, and is, therefore, bug-prone.  \n\n\n\n\nWhat should be used instead\n\n\n\n\nSimple loops with a single entry and a single exit point.  Use flag variables to indicate special conditions to exit or continue with the loop.\n\n\n\n\n4. Skipping parenthesis\n\n\nWhy?\n\n\n\n\nParenthesis makes it clear to the reader the order of evaluation of arithmetic operations / logical operations.  We should add parenthesis to make sure the intention of the code is clear.\n\n\n\n\nWhy should be used instead\n\n\n\n\nParenthesis",
+            "title": "C in CS1010"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#c-in-cs1010",
+            "text": "C is a simple and flexible language, providing programmers with many different ways to achieve the same thing.  Some of these features that C provides, however, could be bug prone.  Wei Tsang has written enough buggy programs himself and seen enough buggy programs from students.  He feels that some of these features from C are not useful for beginners (or even seasoned programmers).  Furthermore, some features in C simply encourages bad programming habits that are widely frowned upon.  Some would lead to insecure programs.    As such, in CS1010, we  ban  and  discourage  the use of certain operators, functions, constructs, and features in C.  This article summarizes this list.  This is a work in progress article. As we learn more about C, we will amend this list.",
+            "title": "C in CS1010"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#banned-in-cs1010",
+            "text": "The banned items should not be used in CS1010.  Students should use the alternatives.  The teaching staff reserves the right to apply a penalty while grading the assignments and practical exams if these banned features are used.",
+            "title": "Banned in CS1010"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#1-the-and-operators",
+            "text": "",
+            "title": "1. The ++ and -- operators."
+        },
+        {
+            "location": "/c-in-cs1010/index.html#why",
+            "text": "These operators lead to potential undefined behavior.  E.g.,  i = i++;  The potential confusion caused by the difference between  i++  and  ++i .",
+            "title": "Why?"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#what-should-be-used-instead",
+            "text": "Use  i += 1  or  i -= 1  instead of  i++  or  i--",
+            "title": "What should be used instead?"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#2-skipping-of-curly-braces-for-single-statement-conditional-or-loop-body",
+            "text": "",
+            "title": "2. Skipping of curly braces for single statement conditional or loop body"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#why_1",
+            "text": "Could lead to dangling  else  confusion  Easy to forget to put back the  {}  pair if the body is modified beyond a single statements",
+            "title": "Why?"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#what-should-be-used-instead_1",
+            "text": "Always use  {}  even if the conditional or loop body contains only a single statement.",
+            "title": "What should be used instead?"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#3-nested-conditional-operator",
+            "text": "",
+            "title": "3. Nested conditional operator ?:"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#why_2",
+            "text": "Can get difficult to read, understand, and modify.  Example:   1 a = (x > y) ? ((y > z) ? y : z) : ((x > z) ? x : z);",
+            "title": "Why?"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#what-should-be-used",
+            "text": "Use nested  if-else  loop",
+            "title": "What should be used"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#4-global-variables",
+            "text": "",
+            "title": "4. Global variables"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#why_3",
+            "text": "It makes the code hard to reason about and trace, as you have no idea who will modify these variables.  For instance,  if  x  is not a global variable, we can safely assert that  x  is still 1 after calling  f() .  If  x  is a global variable, we can no longer assert anything about  x .   1\n2\n3 x   =   1 ;  f ();  // { x == 1 }",
+            "title": "Why?"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#what-should-be-used-instead_2",
+            "text": "Declare the variables as local, automatic variables, and pass them around.",
+            "title": "What should be used instead"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#5-the-type-int-and-short",
+            "text": "",
+            "title": "5. The type int and short"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#why_4",
+            "text": "C standard guaratees that both  short  and  int  are at least 16 bits, which limits its guaranteed range to only -32,768 to 32,767.  This is too small many purposes.  We are not concerned about memory usage in CS1010.  If we do want to have precise control over memory, we should be anyway using the types from  stdint.h .",
+            "title": "Why?"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#what-should-be-used-instead_3",
+            "text": "long , which is guaranteed to be at least 32 bits.",
+            "title": "What should be used instead"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#exception",
+            "text": "If a function from C library calls for the use of  int  and offers no  long  alternative, then we have to use  int .",
+            "title": "Exception"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#6-the-type-float",
+            "text": "",
+            "title": "6. The type float"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#why_5",
+            "text": "Not enough precision and will cause floating point errors.",
+            "title": "Why?"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#what-should-be-used-instead_4",
+            "text": "double",
+            "title": "What should be used instead"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#exception_1",
+            "text": "If a function from C library calls for the use of  float  and offers no  double  alternative, then we have to use  float .",
+            "title": "Exception"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#7-using-integer-values-for-true-false",
+            "text": "",
+            "title": "7. Using integer values for true / false"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#why_6",
+            "text": "Confusing and error prone",
+            "title": "Why?"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#what-should-be-used-instead_5",
+            "text": "Use the  bool  type, and the values  true  and  false .",
+            "title": "What should be used instead"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#8-goto",
+            "text": "",
+            "title": "8. goto"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#why_7",
+            "text": "makes the logical flow of the code hard to follow and trace",
+            "title": "Why?"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#what-should-be-used-instead_6",
+            "text": "combinations of conditionals and loops",
+            "title": "What should be used instead"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#discouraged-in-cs1010",
+            "text": "These are things that are not strictly banned, but their usage is discouraged.  Students should really use them only if they know very well what they are doing.  Use at own perils.",
+            "title": "Discouraged in CS1010"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#1-printf-and-scanf-functions",
+            "text": "",
+            "title": "1. printf and scanf Functions"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#why_8",
+            "text": "Using the wrong format modifier for  printf  could lead to strange results  Using the wrong format modifier for  scanf  could lead to memory corruption  Need to look up what is the right format modifier to use  Need to preallocate memory for  scanf  of strings  scanf  is not secure  scanf  is not a pure function.  Prefers students to learn about the concept of pure functions first.  etc. etc.",
+            "title": "Why?"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#what-should-be-used-instead_7",
+            "text": "The CS1010 I/O library",
+            "title": "What should be used instead"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#2-switch-statements",
+            "text": "",
+            "title": "2. switch Statements"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#why_9",
+            "text": "Bug prone (missing  break  would cause the case to fall through)  Only works on ordinal types.",
+            "title": "Why?"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#what-should-be-used-instead_8",
+            "text": "if - else  statements",
+            "title": "What should be used instead"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#3-break-and-continue-statements",
+            "text": "",
+            "title": "3. break and continue Statements"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#why_10",
+            "text": "Using  break  and  continue  complicates the flow of a loop, marks it harder to reason about the correctness of the loop, and is, therefore, bug-prone.",
+            "title": "Why?"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#what-should-be-used-instead_9",
+            "text": "Simple loops with a single entry and a single exit point.  Use flag variables to indicate special conditions to exit or continue with the loop.",
+            "title": "What should be used instead"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#4-skipping-parenthesis",
+            "text": "",
+            "title": "4. Skipping parenthesis"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#why_11",
+            "text": "Parenthesis makes it clear to the reader the order of evaluation of arithmetic operations / logical operations.  We should add parenthesis to make sure the intention of the code is clear.",
+            "title": "Why?"
+        },
+        {
+            "location": "/c-in-cs1010/index.html#why-should-be-used-instead",
+            "text": "Parenthesis",
+            "title": "Why should be used instead"
         },
         {
             "location": "/style/index.html",
