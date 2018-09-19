@@ -1,5 +1,7 @@
 pages:
   - Home: 'index.md'
+  - Midterm: 'midterm.md'
+  - Practical Exam: 'pe1.md'
   - General:
       - About CS1010: 'about.md'
       - Learning Outcomes: 'outcomes.md'
@@ -34,6 +36,7 @@ pages:
   - Quizzes: 'quiz.md'
   - Kahoot!:
       - Flow Charts: 'kahoot01.md'
+  - C in CS1010: 'c-in-cs1010.md'
   - Style Guide: 'style.md'
   - Readings: 'readings.md'
   - Software/Tools:
