@@ -1,5 +1,25 @@
 # CS1010
 
+## What's New
+
+### Info on [Midterm](midterm.md) and [Practical Exam 1](pe1.md)
+
+### [Summary of CS1010's Rules on C](c-in-cs1010.md)
+
+### [Exercise 3: Binary, Rectangle, Fibonacci, Prime](ex03.md)
+  Released 13 September 2018
+
+### [Assignment 2: Collatz, Weekday, Circle, Pattern](as02.md)
+  Released 14 September 2018, Due 21 September 2018, 6pm.
+
+### Lecture 6
+
+In this lecture, we will discuss how call stack works, giving more insights about how a C program is executed, particularly when we call a function and when a function returns.  We then discuss about pointers and arrays, ending with a brief introduction to strings as an array of `char`.
+
+Units covered are Units 13 - 16: [Unit 13: Call Stack](13-call-stack.md), [Unit 14: Pointers](14-pointers.md), [Unit 15: Arrays](15-array.md) and [Unit 16: Strings](16-string.md).
+
+----
+
 ## [Piazza Q&A](https://piazza.com/class/jcaaskvbs754wh) :fa-question-circle: 
 
 Piazza is the Q&A site for students and instructors to ask questions and discuss among each other on all matters related to CS1010.
