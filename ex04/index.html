@@ -1239,6 +1239,21 @@ J
 </pre></div>
 </td></tr></table>
 
+<p><ins class="critic">Addenum:</ins>
+Some students choose to store the check code in an array of <code class="codehilite">char</code> values instead of an array of strings.  Storing the check code as <code class="codehilite">char</code> is indeed more appropriate, but I have not mentioned how to print a <code class="codehilite">char</code> to the standard output.  There is no <code class="codehilite">cs1010_print_char</code> in the CS1010 I/O library.  One way to print a <code class="codehilite">char</code> variable is to use <code class="codehilite">putchar()</code> function.  The example below print <code class="codehilite">A</code>.
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="sc">&#39;A&#39;</span><span class="p">;</span>
+  <span class="n">putchar</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></p>
 <h2 id="question-2-grade">Question 2: Grade</h2>
 <p>In a mirror universe, there is an evil version of your professor who is especially tough on his CS1010 students.  He use the following grading scheme to decide the letter grade to give out.</p>
 <table>

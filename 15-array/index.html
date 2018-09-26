@@ -709,6 +709,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#appendix-complete-code-example" title="Appendix: Complete Code Example" class="md-nav__link">
+    Appendix: Complete Code Example
+  </a>
+  
+</li>
+      
       
       
       
@@ -1212,6 +1219,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#appendix-complete-code-example" title="Appendix: Complete Code Example" class="md-nav__link">
+    Appendix: Complete Code Example
+  </a>
+  
+</li>
+      
       
       
       
@@ -1386,6 +1400,7 @@
 </pre></div>
 </td></tr></table>
 
+<p><ins class="critic">Please see the <a href="#appendix">Appendix</a> for the complete code</ins></p>
 <p>Note that, in the type of the array passed into the function above, we only need to use <code class="codehilite">[]</code> without specifying the length.  It is also almost always necessary to pass in the number of elements in the array together with the array so that we know how many elements are there to process.  To understand why, we have to understand something called <em>array decay</em>.</p>
 <h2 id="array-and-pointers">Array and Pointers</h2>
 <p>The relationship between array and pointer can be confusing to beginners.  Some might even think that arrays are pointers due to the way they are passed around and used.  But <em>arrays are not pointers</em>.  The relationship between the two, boils down to a very simple rule, as follows.</p>
@@ -1620,6 +1635,79 @@
     <span class="n">curr</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
   <span class="p">}</span>
   <span class="k">return</span> <span class="n">max_so_far</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h2 id="appendix-complete-code-example">Appendix: Complete Code Example</h2>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;cs1010.h&quot;</span><span class="cp"></span>
+
+<span class="kt">long</span> <span class="nf">days_till_beginning_of</span><span class="p">(</span><span class="kt">long</span> <span class="n">month</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="n">days_in_month</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">31</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">};</span>
+  <span class="kt">long</span> <span class="n">num_of_days</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">month</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">num_of_days</span> <span class="o">+=</span> <span class="n">days_in_month</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">num_of_days</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="n">month</span> <span class="o">=</span> <span class="n">cs1010_read_long</span><span class="p">();</span>
+  <span class="kt">long</span> <span class="n">day</span> <span class="o">=</span> <span class="n">cs1010_read_long</span><span class="p">();</span>
+  <span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">day</span> <span class="o">+</span> <span class="n">days_till_beginning_of</span><span class="p">(</span><span class="n">month</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">long</span> <span class="nf">max</span><span class="p">(</span><span class="kt">long</span> <span class="n">list</span><span class="p">[],</span> <span class="kt">long</span> <span class="n">length</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="n">max_so_far</span> <span class="o">=</span> <span class="n">list</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">length</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">max_so_far</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">max_so_far</span> <span class="o">=</span> <span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">max_so_far</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="n">a</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">};</span>
+  <span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">10</span><span class="p">));</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
