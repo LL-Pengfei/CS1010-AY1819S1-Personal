@@ -13,7 +13,7 @@
 
 ## Style
 
-Two marks is allocated for each question. We won't penalize for every violation, but instead, the grader judges whether the code is clean, understandable, properly indented, use proper variable names, etc. 0 - 0.5 marks for very bad style, 1.0 - 1.5 for something in the middle, 2 for ok code. 
+Two marks are allocated for each question. We won't penalize for every violation, but instead, the grader judges whether the code is clean, understandable, properly indented, use proper variable names, etc. 0 - 0.5 marks for very bad style, 1.0 - 1.5 for something in the middle, 2 for an ok code. 
 
 To be safe, please follow strictly the CS1010 coding standards.
 
@@ -50,10 +50,10 @@ We noted that there are students who did not understand how `if`-`else` works.  
 
 ```C
 if (day == 0) {
-	cs1010_println_string("Monday");
+    cs1010_println_string("Monday");
 } 
 if (day == 1) {
-	cs1010_println_string("Tuesday");
+    cs1010_println_string("Tuesday");
 } 
 ```
 
@@ -61,18 +61,18 @@ The above actually compares `day` with `0`, `1`, .. multiple times, even after a
 
 ```C
 if (day == 0) {
-	cs1010_println_string("Monday");
+    cs1010_println_string("Monday");
 } else if (day == 1) {
-	cs1010_println_string("Tuesday");
+    cs1010_println_string("Tuesday");
 } 
 ```
 
 Another mistake we see is:
 ```C
 if (dist > 0.7) {
-	cs1010_println_string("+");
+    cs1010_println_string("+");
 } else if (dist <= 0.7 && dist > 0.5) {
-	cs1010_println_string("*");
+    cs1010_println_string("*");
 } 
 ```
 
@@ -84,26 +84,26 @@ This demonstrates that students do not fully understand the meaning of `else`, w
 
 We can break the problem down into three sub-problems.  So, write three functions:
 
-1. Given a number $n$, perform one step of the operation.  This can be solve with a simple `if-else` statement.  Most studnets do not have a problem with this.
+1. Given a number $n$, perform one step of the operation.  This can be solved with a simple `if-else` statement.  Most students do not have a problem with this.
 
-2. Given a number $n$, find the stopping time.  This involves repeatedly calling `one_collatz_step` until we reaches 1, and count how many steps is needed.  Most students do not have problem with this.
+2. Given a number $n$, find the stopping time.  This involves repeatedly calling `one_collatz_step` until we reach 1, and count how many steps are needed.  Most students do not have a problem with this.
 
 3. Given a number $N$, find the number between 1 to $N$, inclusive, that gives the largest stopping time, _breaking tie by choosing the larger number_.
 
-This is similar to the max problem that we have seen since Lecture 1, so most students are able to solve this.  About 1/6 of you, however, did not properly break ties by choosing the larger number.  Recall from your Tutorial 1 that, when you compare with `max_so_far`, whether you use `>` or `>=` makes a big different here.  You get 1 mark deduction if you do not break ties properly.
+This is similar to the max problem that we have seen since Lecture 1, so most students are able to solve this.  About 1/6 of you, however, did not properly break ties by choosing the larger number.  Recall from your Tutorial 1 that, when you compare with `max_so_far`, whether you use `>` or `>=` makes a big difference here.  You get 1 mark deduction if you do not break ties properly.
 
 
 ### Weekday
 
 Let's look at how to solve this problem without using any formula.  The most straightforward way is to count how many days have passed since January 1, 1900, and do a `% 7`.
 
-We can break the problem down into several sub-problems.  Suppose the input date is `year`, `month` and `day`,
+We can break the problem down into several subproblems.  Suppose the input date is `year`, `month` and `day`,
 
-1. Count the number of days from January 1, 1900 to December 31, the year before (i.e., `year-1`).
+1. Count the number of days from January 1, 1900, to December 31, the year before (i.e., `year-1`).
 
 This can be done by just summing up, in a loop, the days in every year from 1900 to `year-1`, inclusive.  For each year, if it is a leap year, add 366, otherwise, add 365.
 
-Some common mistakes include error in loop terminating condition (either add one extra year or one less year).
+Some common mistakes include an error in loop terminating condition (either adds one extra year or one less year).
 
 2. Check if a year is a leap year.
 
@@ -117,7 +117,7 @@ Common bugs include: (i) not checking if the current year is a leap year, and (i
 
 4. Determine the day of the week.
 
-From (1) and (3) you get the total number of days since January 1, 1900.  We can then do a `% 7`.  If we get 0, it is a Monday; 1, a Tuesday; etc.  Some students loose points unnecessarily by having spelling errors in the output.
+From (1) and (3) you get the total number of days since January 1, 1900.  We can then do a `% 7`.  If we get 0, it is a Monday; 1, a Tuesday; etc.  Some students lose points unnecessarily by having spelling errors in the output.
 
 There are other simpler ways to solve this problem.  Some students use the [Zeller's Algorithm](https://en.wikipedia.org/wiki/Zeller%27s_congruence), which is perfectly fine too.
 
@@ -125,26 +125,26 @@ There are other simpler ways to solve this problem.  Some students use the [Zell
 
 Again, break it down into several smaller problems.  
 
-1. Calcuate the distance of a location to the center.
+1. Calculate the distance of a location to the center.
 
-Most common issue we see:
+Most common issues we see:
 
 - Many of you use `pow(x, 2)` to square an integer.  `pow` is a powerful function and is written to be general, so it is slower than just doing `x*x`.
 
-- Many of you use `labs()` or `fabs()` on the result of a square or a square root function.  This is redundant, since square of a number and the square root of a number is always positive!
+- Many of you use `labs()` or `fabs()` on the result of a square or a square root function.  This is redundant since the square of a number and the square root of a number is always positive!
 
 2. Draw each "pixel" of the circle.  The drawing part is actually easy.  
 
 - Suppose you have a function to compute the distance, say, `dist(row, col, r)`, and you do this:
 ```C
 if (dist(row, col, r) > 0.7) {
-	cs1010_println_string("+");
+    cs1010_println_string("+");
 } else if (dist(row, col, r) > 0.5) {
-	cs1010_println_string("*");
+    cs1010_println_string("*");
 } else ..
 ```
 
-This is functionally correct, but it leads to multiple invocation of `dist` and calculation of the distance, even though the result does not change.  When we starts to factor in efficiency into grading criteria, you will be penalized for this.
+This is functionally correct, but it leads to multiple invocations of `dist` and calculation of the distance, even though the result does not change.  When we start to factor in efficiency into grading criteria, you will be penalized for this.
 
 3. Draw each row of the circle.
 
@@ -156,7 +156,7 @@ Most students have no problem with (3) and (4) above.
 
 Some students creatively call this the "Christmas Tree" problem :) 
 
-This might seems daunting at first, but once you break it down into smaller problems, it can be solve fairly easily.  This question is designed to see if students can, at this stage, solve problems by breaking it down into multiple smaller problems -- something that we have been iterating since Lecture 2.
+This might seems daunting at first, but once you break it down into smaller problems, it can be solved fairly easily.  This question is designed to see if students can, at this stage, solve problems by breaking it down into multiple smaller problems -- something that we have been iterating since Lecture 2.
 
 Let say the input be the interval $n$ and height $h$.
 
@@ -177,10 +177,10 @@ long leading_number(long row, long n) {
 2. Find the rest of the $n-1$ numbers in each leading cell at each row.   Once we have the first number, we just loop through the rest of the $n - 1$, increment by `row + 1` each time, something like this:
 ```C
 void print_pattern(long row, long col, long n) {
-	long num = leading_number(row, n);
-	for (long i = 0; i < n; i += 1) {
-		num += (row + 1);
-	}
+    long num = leading_number(row, n);
+    for (long i = 0; i < n; i += 1) {
+        num += (row + 1);
+    }
 }
 ```
 
@@ -188,10 +188,10 @@ void print_pattern(long row, long col, long n) {
 
 ```C
 void print_pattern(long row, long col, long n) {
-	long num = leading_number(row, n) + col; // note the change here
-	for (long i = 0; i < n; i += 1) {
-		num += (row + 1);
-	}
+    long num = leading_number(row, n) + col; // note the change here
+    for (long i = 0; i < n; i += 1) {
+        num += (row + 1);
+    }
 }
 ```
 
@@ -200,18 +200,18 @@ void print_pattern(long row, long col, long n) {
 ```C
 void print_pattern(long row, long col, long n) {
     long num = leading_number(row, n) + col; // note the change here
-	bool found = false;
+    bool found = false;
     for (long i = 0; i < n && !found; i += 1) {
-		if (num == 1 || is_prime(num)) {
-			cs1010_print_string("#");
-			found = true;
-		} else {
-			num += (row + 1);
-		}
+        if (num == 1 || is_prime(num)) {
+            cs1010_print_string("#");
+            found = true;
+        } else {
+            num += (row + 1);
+        }
     }
-	if (!found) {
-		cs1010_print_string(" ");
-	}
+    if (!found) {
+        cs1010_print_string(" ");
+    }
 }
 ```
 
@@ -279,7 +279,7 @@ bool is_prime(long n)
 
 We can further optimize this.  Some of you actually use the fact that every prime besides 2 and 3 must be of the form `6k - 1` or `6k + 1` and use this to speed up the `is_prime()` function.  :+1:
 
-6. Now, coming back to printing the christmas tree.  Now that we know what to print in each cell, we just need to write functions to print each row and each col, padding the pattern properly to be a triangle.
+6. Now, coming back to printing the Christmas tree.  Now that we know what to print in each cell, we just need to write functions to print each row and each col, padding the pattern properly to be a triangle.
 
 ```C
 void print_blanks(long width) {
