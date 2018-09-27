@@ -132,6 +132,7 @@ for ( ... ) { // good
 Add a single space before and after `=`.
 
 ```
+a=b; // no
 a= b; // no
 a =b; // no
 a = b; // OK!
