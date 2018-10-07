@@ -50,7 +50,7 @@ After the stack frame for `add` is set up, the code is executed.  The memory loc
 
 ![stack](figures/stack/stack.003.png)
 
-When a function returns, the stack frame for `sum` is removed.  The variables `sum`, `a`, `b` crumble into dust and no longer exist in the memory.  The value of the variable being returned (`sum` in this case) is then copied back to the stack frame of the `main` (the _callee_).  In this example, this value is copied into the memory location of `y`.
+When a function returns, the stack frame for `add` is removed.  The variables `sum`, `a`, `b` crumble into dust and no longer exist in the memory.  The value of the variable being returned (`sum` in this case) is then copied back to the stack frame of the `main` (the _callee_).  In this example, this value is copied into the memory location of `y`.
 
 ![stack](figures/stack/stack.004.png)
 
@@ -100,7 +100,7 @@ There are two other types of variables, _global variable_, which we have mention
 
 ## Stack Size
 
-The OS typically reserves a limited amount of memory for each program for the stack.  You can find out, on your system, what is the maximum allocated stack size with the command 
+The OS typically reserves a limited amount of memory for each program for the stack.  You can find out, on your system, what is the maximum allocated stack size with the command
 ```
 ulimit -s
 ```
