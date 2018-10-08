@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://nus-cs1010.github.io/1819-s1/accounts/index.html">
+        <link rel="canonical" href="https://nus-cs1010.github.io/1819-s1/17-call-by-reference/index.html">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>Accounts - CS1010 Programming Methodology</title>
+        <title>17. Call by Reference - CS1010 Programming Methodology</title>
       
     
     
@@ -100,7 +100,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#cs1010-accounts" tabindex="1" class="md-skip">
+      <a href="#unit-17-call-by-value-call-by-reference" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -126,7 +126,7 @@
                 CS1010 Programming Methodology
               </span>
               <span class="md-header-nav__topic">
-                Accounts
+                17. Call by Reference
               </span>
             
           
@@ -277,12 +277,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       General
@@ -334,63 +332,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Accounts
-      </label>
-    
-    <a href="index.html" title="Accounts" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../accounts/index.html" title="Accounts" class="md-nav__link">
       Accounts
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#soc-unix-account" title="SoC UNIX Account" class="md-nav__link">
-    SoC UNIX Account
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#github-account" title="GitHub Account" class="md-nav__link">
-    GitHub Account
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#piazza-account" title="Piazza Account" class="md-nav__link">
-    Piazza Account
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -415,10 +361,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       Notes
@@ -626,11 +574,104 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../17-call-by-reference/index.html" title="17. Call by Reference" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        17. Call by Reference
+      </label>
+    
+    <a href="index.html" title="17. Call by Reference" class="md-nav__link md-nav__link--active">
       17. Call by Reference
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functions-with-side-effects" title="Functions with Side Effects" class="md-nav__link">
+    Functions with Side Effects
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#call-by-reference" title="Call by Reference" class="md-nav__link">
+    Call by Reference
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-collatz" title="Example: Collatz" class="md-nav__link">
+    Example: Collatz
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-swapping-two-variables" title="Example: Swapping Two Variables" class="md-nav__link">
+    Example: Swapping Two Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documenting-call-by-reference-parameters" title="Documenting Call-by-Reference Parameters" class="md-nav__link">
+    Documenting Call-by-Reference Parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-set" title="Problem Set" class="md-nav__link">
+    Problem Set
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-191" title="Problem 19.1" class="md-nav__link">
+    Problem 19.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-192" title="Problem 19.2" class="md-nav__link">
+    Problem 19.2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1044,23 +1085,64 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#soc-unix-account" title="SoC UNIX Account" class="md-nav__link">
-    SoC UNIX Account
+  <a href="#functions-with-side-effects" title="Functions with Side Effects" class="md-nav__link">
+    Functions with Side Effects
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#github-account" title="GitHub Account" class="md-nav__link">
-    GitHub Account
+  <a href="#call-by-reference" title="Call by Reference" class="md-nav__link">
+    Call by Reference
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#piazza-account" title="Piazza Account" class="md-nav__link">
-    Piazza Account
+  <a href="#example-collatz" title="Example: Collatz" class="md-nav__link">
+    Example: Collatz
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-swapping-two-variables" title="Example: Swapping Two Variables" class="md-nav__link">
+    Example: Swapping Two Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documenting-call-by-reference-parameters" title="Documenting Call-by-Reference Parameters" class="md-nav__link">
+    Documenting Call-by-Reference Parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-set" title="Problem Set" class="md-nav__link">
+    Problem Set
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-191" title="Problem 19.1" class="md-nav__link">
+    Problem 19.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-192" title="Problem 19.2" class="md-nav__link">
+    Problem 19.2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1080,18 +1162,207 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/nus-cs1010/1819-s1/edit/master/docs/accounts.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/nus-cs1010/1819-s1/edit/master/docs/17-call-by-reference.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="cs1010-accounts">CS1010 Accounts</h1>
-<p>We will be using a variety of services for CS1010.  To take CS1010, please make sure you have the following accounts:</p>
-<h2 id="soc-unix-account">SoC UNIX Account</h2>
-<p>You can get one here: <a href="https://mysoc.nus.edu.sg/~newacct/">https://mysoc.nus.edu.sg/~newacct/</a></p>
-<p>This account allows you to access SoC UNIX resources, including the main computing host running Solaris, <code class="codehilite">sunfire</code>, and computer clusters running Ubuntu / CentOS.  We will be using the compute clusters for CS1010 (details coming soon).</p>
-<h2 id="github-account">GitHub Account</h2>
-<p>CS1010 uses GitHub Classroom for programming assignment submissions and grading.  You should <a href="https://github.com/">register for a GitHub account</a> if you do not have one. </p>
-<h2 id="piazza-account">Piazza Account</h2>
-<p>CS1010 uses Piazza for Q&amp;A and discussion.  You should receive an email to register for Piazza.  </p>
+                <h1 id="unit-17-call-by-value-call-by-reference">Unit 17: Call by Value &amp; Call by Reference</h1>
+<p>So far, in CS1010, we have considered a very "clean" notion of functions -- each function is a black box, it takes in zero or more parameters, and it returns zero or one value.  We also said that within this black box, whatever happens inside the function stays inside, and the function has no effect on the variables outside.  Such "effect-free" programming leads to code that is easy to reason about and understandable.  For instance, suppose we have a code like this:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">long</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="n">foo</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<span class="c1">// { x == 1 }</span>
+</pre></div>
+</td></tr></table>
+
+<p>We can assert that, after calling <code class="codehilite">foo</code>, the value of <code class="codehilite">x</code> is still 1.</p>
+<p>Such functions are called <em>pure functions</em>.  There is a class of programming languages, called functional programming languages, that is built entirely based on such pure functions.  </p>
+<p>As much as possible, we should write functions that are pure as it is less bug-prone, is easier to understand, and easier to prove that the code is correct.</p>
+<p>All the functions that we have written before are invoked using a mechanism called <em>call by value</em>.  This is because the <em>value</em> of the variable is <em>copied</em> onto the call stack.</p>
+<h2 id="functions-with-side-effects">Functions with Side Effects</h2>
+<p>In <a href="../15-array/index.html">Unit 15</a>, we have seen a mechanism that breaks this rule.  When we pass an array into a function, due to array decay, we are actually passing in the pointer to the first element of the array.  So, what gets copied onto the call stack is the pointer, not the array.  Now, with this pointer, we can modify the elements in the array directly.o</p>
+<p>For example, the code below reset all elements in the array to 0.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>void set_to_zeros(long length, long a[length])
+{
+  for (long i = 0; i &lt; length; i += 1) {
+    a[i] = 0;
+  }
+}
+</pre></div>
+</td></tr></table>
+
+<p>Whatever happens in the function no longer stays in the function.  When you see code like this:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">long</span> <span class="n">a</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="n">foo</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+<span class="c1">// { a[0] == ?? }</span>
+</pre></div>
+</td></tr></table></p>
+<p>We can no longer be certain that the value of <code class="codehilite">a[0]</code> after calling <code class="codehilite">foo</code> remains 1, since <code class="codehilite">foo</code>, or functions that it calls, could have modified <code class="codehilite">a[0]</code>.  We have to trace through the code of <code class="codehilite">foo</code> and all the function it calls to understand and reason about that changes to <code class="codehilite">a[0]</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">The keyword <code class="codehilite">const</code></p>
+<p>Since a function taking in an array parameter can potentially modify the content of the array, as a courtesy, it is useful to add the C keyword <code class="codehilite">const</code> in the declaration of the array parameter:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>void foo(long length, const long a[]) {
+    :
+}
+</pre></div>
+</td></tr></table>
+to signal to the readers of the code that this function only reads from the array and does not modify it.  This simplifies the reasoning about the behavior of the code.</p>
+</div>
+<h2 id="call-by-reference">Call by Reference</h2>
+<p>The call-by-value mechanism has its limitation.  Sometimes, it is useful for a function to return more than one results.  You have seen an example before in your <a href="../as02/index.html">Assignment 2</a>, where, for the <code class="codehilite">collatz</code> problem, you are supposed to find both the largest stopping time and the value with the largest stopping time.  </p>
+<p>C functions, however, can only return at most one value.  One way to get around this limitation is to use call-by-reference, the other is to use <code class="codehilite">struct</code>.  We will leave the discussion of <code class="codehilite">struct</code> for another day, so let's see how call by reference works in this unit.</p>
+<p>Calling by reference works by passing the (value of a) pointer to a variable into a function, instead of the (value of) variable.  Here is an example from the <code class="codehilite">collatz</code> problem.</p>
+<h2 id="example-collatz">Example: Collatz</h2>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">find_max_steps</span><span class="p">(</span><span class="kt">long</span> <span class="n">n</span><span class="p">,</span> <span class="kt">long</span> <span class="o">*</span><span class="n">max_n</span><span class="p">,</span> <span class="kt">long</span> <span class="o">*</span><span class="n">max_num_steps</span><span class="p">)</span> <span class="p">{</span>
+  <span class="o">*</span><span class="n">max_num_steps</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="o">*</span><span class="n">max_n</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">long</span> <span class="n">num_of_steps</span> <span class="o">=</span> <span class="n">count_num_of_steps</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">num_of_steps</span> <span class="o">&gt;=</span> <span class="o">*</span><span class="n">max_num_steps</span><span class="p">)</span> <span class="p">{</span>
+      <span class="o">*</span><span class="n">max_n</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+      <span class="o">*</span><span class="n">max_num_steps</span> <span class="o">=</span> <span class="n">num_of_steps</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>The method <code class="codehilite">find_max</code> takes in two pointers.  Inside the function, we use the deference operator <code class="codehilite">*</code> to modify the variable pointed to by the pointers (Lines 2, 3, 7 and 8).</p>
+<p>To use this function, we have:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="n">n</span> <span class="o">=</span> <span class="n">cs1010_read_long</span><span class="p">();</span>
+  <span class="kt">long</span> <span class="n">max_num_steps</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kt">long</span> <span class="n">max_n</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="n">find_max_steps</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">max_n</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">max_num_steps</span><span class="p">);</span>
+  <span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">max_n</span><span class="p">);</span>
+  <span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">max_num_steps</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>In Line 4 above, we pass in the address of <code class="codehilite">max_n</code> and <code class="codehilite">max_num_steps</code> into <code class="codehilite">find_max_steps</code>.  <code class="codehilite">find_max_steps</code> updates both variables for us.</p>
+<h2 id="example-swapping-two-variables">Example: Swapping Two Variables</h2>
+<p>Another example for call-by-reference is a function that swaps two variables.  Here is one that swaps two <code class="codehilite">long</code> variables.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">swap</span><span class="p">(</span><span class="kt">long</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="kt">long</span> <span class="o">*</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">long</span> <span class="n">temp</span> <span class="o">=</span> <span class="o">*</span><span class="n">a</span><span class="p">;</span>
+  <span class="o">*</span><span class="n">a</span> <span class="o">=</span> <span class="o">*</span><span class="n">b</span><span class="p">;</span>
+  <span class="o">*</span><span class="n">b</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>To see <code class="codehilite">swap</code> in action, consider:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">long</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="kt">long</span> <span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mi">4</span><span class="p">;</span>
+<span class="n">swap</span><span class="p">(</span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">);</span>
+</pre></div>
+</td></tr></table></p>
+<p>After calling <code class="codehilite">swap</code>, the value for <code class="codehilite">a</code> becomes -4, <code class="codehilite">b</code> becomes 10.</p>
+<h2 id="documenting-call-by-reference-parameters">Documenting Call-by-Reference Parameters</h2>
+<p>A parameter passed as a pointer could be used in three different ways:</p>
+<ul>
+<li>The parameter could be a read-only input, and the main purpose of passing in the value is so that the function has access to the value of the pointer.  </li>
+<li>The parameter could be used as a vessel for the function to pass a value to the caller, similar to the parameters <code class="codehilite">max_n</code> and <code class="codehilite">max_num_steps</code> in the function <code class="codehilite">find_max_steps</code> above.  In this case, the value contained in the variable pointed to by the pointer does not matter.</li>
+<li>The parameter could be used as both input and output.  The value contained in the parameter is read inside the function, and the value is updated from inside the function.  For example, the parameters passed to <code class="codehilite">swap</code> above.</li>
+</ul>
+<p>In CS1010, we will be using <code class="codehilite">Doxygen</code> format to document our functions.  There are three types of parameters, corresponding to the three situations above: <code class="codehilite">@param[in]</code> is used to document a read-only parameter (note that this applies to all read-only parameters, not just pointers).  <code class="codehilite">@param[out]</code> is used to document an output-only parameter, and <code class="codehilite">@param[in,out]</code> is used to document a parameter that is both input and output.</p>
+<h2 id="problem-set">Problem Set</h2>
+<h3 id="problem-191">Problem 19.1</h3>
+<p>Complete the function <code class="codehilite">find_min_max</code> that takes in a <code class="codehilite">length</code>  and an array containing <code class="codehilite">long</code> values of size <code class="codehilite">length</code>, and update the parameter <code class="codehilite">min</code> and <code class="codehilite">max</code> with the minimum and the maximum value from this array, respectively.  Show how to call this function from <code class="codehilite">main</code>.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">find_min_max</span><span class="p">(</span><span class="kt">long</span> <span class="n">length</span><span class="p">,</span> <span class="kt">long</span> <span class="n">array</span><span class="p">[</span><span class="n">length</span><span class="p">],</span> <span class="kt">long</span> <span class="o">*</span><span class="n">min</span><span class="p">,</span> <span class="kt">long</span> <span class="o">*</span><span class="n">max</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="o">:</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">long</span> <span class="n">list</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">};</span>
+    <span class="o">:</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="problem-192">Problem 19.2</h3>
+<p>Consider the program below:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">foo</span><span class="p">(</span><span class="kt">double</span> <span class="o">*</span><span class="n">ptr</span><span class="p">,</span> <span class="kt">double</span> <span class="n">trouble</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">ptr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">trouble</span><span class="p">;</span>
+  <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="mf">10.0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">double</span> <span class="o">*</span><span class="n">ptr</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">7.0</span><span class="p">;</span>
+  <span class="n">ptr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">;</span>
+
+  <span class="n">foo</span><span class="p">(</span><span class="n">ptr</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+
+  <span class="n">cs1010_println_double</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+  <span class="n">cs1010_println_double</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></p>
+<p>What would be printed?</p>
                 
                   
                 
@@ -1112,7 +1383,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../schedule/index.html" title="Schedule" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../16-string/index.html" title="16. Strings" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1121,19 +1392,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Schedule
+                16. Strings
               </span>
             </div>
           </a>
         
         
-          <a href="../policies/index.html" title="Policies" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../18-heap/index.html" title="18. Heap" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Policies
+                18. Heap
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
