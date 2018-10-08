@@ -55,7 +55,7 @@ declares a variable `addr` that is an address to a variable of type `double`.  T
     ```C
     double* addr;
     ```
-    too, but this is not recommended.  Suppose you want to declare two addresses, you might write, 
+    too, but this is not recommended.  Suppose you want to declare two addresses, you might write,
     ```C
     double* from_addr, to_addr;
     ```
@@ -83,7 +83,7 @@ This is where things can get dangerous.  You could be changing the value in a me
 
 So, _always make sure that your pointer is pointing to the right location before dereferencing and writing to the location._
 
-[^2]: I leave it to the later OS classes CG2271 / CS2016 to explain the term "segmentation" and "fault".  Interested students can always google and [read on Wikipedia](https://en.wikipedia.org/wiki/Segmentation_fault).
+[^2]: I leave it to the later OS classes CG2271 / CS2106 to explain the term "segmentation" and "fault".  Interested students can always google and [read on Wikipedia](https://en.wikipedia.org/wiki/Segmentation_fault).
 
 In the code above, if we write:
 ```C
@@ -129,7 +129,7 @@ I am just doing it the complicated way (which you should avoid unless you have g
 	```C
 	long x = 1;
 	long y = 2;
-	&x = &y; 
+	&x = &y;
 	```
 
 	We try to set the address of `x` to be the address of `y`.  This is not allowed since allocation of variables in the memory is determined by the OS, a process we have no control over.
@@ -145,7 +145,7 @@ I am just doing it the complicated way (which you should avoid unless you have g
 	ptr += 1;
 	```
 
-	Suppose that `x` is stored in memory address 1000, after Line 4, `ptr` would have the value of 1000. 
+	Suppose that `x` is stored in memory address 1000, after Line 4, `ptr` would have the value of 1000.
 	After the line `ptr += 1`, using normal arithmetic operation, we would think that `ptr` will have the value of 1001.  However, the semantic for arithmetic operation is different for pointers.  The `+` operation for `ptr` causes the `ptr` variable to move forward by the size of the variable pointed to by the pointer.  In this example, `ptr` points to `long`, assuming that `long` is 8 bytes, after `ptr += 1`, `ptr` will have the value of 1008.
 
 	We can only do addition and subtraction for pointers.

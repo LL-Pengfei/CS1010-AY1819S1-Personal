@@ -100,7 +100,7 @@ There are two other types of variables, _global variable_, which we have mention
 
 ## Stack Size
 
-The OS typically reserves a limited amount of memory for each program for the stack.  You can find out, on your system, what is the maximum allocated stack size with the command 
+The OS typically reserves a limited amount of memory for each program for the stack.  You can find out, on your system, what is the maximum allocated stack size with the command
 ```
 ulimit -s
 ```
