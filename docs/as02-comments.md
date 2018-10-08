@@ -1,5 +1,23 @@
 # Assignment 2: Comments
 
+## Mark Distribution
+
+Output from `histogram`.  Marks are scaled up by 3x.
+
+```
+          ┴┴┴┴┴┴┴┴┴┴
+  0 - 10
+ 10 - 20
+ 20 - 30
+ 30 - 40  █
+ 40 - 50  ██
+ 50 - 60
+ 60 - 70  █
+ 70 - 80  █
+ 80 - 90  ███▌
+ 90 - 100 ██▌
+```
+
 ## Notes on Marking Schemes
 
 - We apply the penalty to each program independently, i.e., the same mistake repeated in the different program get penalized multiple times.  
