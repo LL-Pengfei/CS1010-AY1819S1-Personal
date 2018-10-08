@@ -125,6 +125,8 @@ long max(long list[], long length)
 }
 ```
 
+{++Please see the [Appendix](#appendix) for the complete code++}
+
 Note that, in the type of the array passed into the function above, we only need to use `[]` without specifying the length.  It is also almost always necessary to pass in the number of elements in the array together with the array so that we know how many elements are there to process.  To understand why, we have to understand something called _array decay_.
 
 ## Array and Pointers
@@ -227,8 +229,10 @@ Such arrays, where the number of elements (or length) depends on the value of a 
 If we have a large array, and we want most of it to be initialized to 0, and only some non-zero, we can use _element designators_, putting the index of the element we want to initialize to non-zero in square brackets `[` and `]`.
 
 ```C
-long vector[100] = {1, [5] = 2, 3, [100] = -1};
+long vector[100] = {1, [5] = 2, 3, [99] = -1};
 ```
+
+{++An earlier version of this note has a typo, initializing `[100] = -1` instead.++}
 
 This statement initializes `vector[0]` to 1, `vector[5]` to 2, `vector[6]` to 3, and `vector[99]` to -1.  The rest of the elements will be 0.
 
@@ -338,5 +342,47 @@ long max(long *list, long length)
     curr += 1;
   }
   return max_so_far;
+}
+```
+
+## Appendix: Complete Code Example
+
+```C
+#include "cs1010.h"
+
+long days_till_beginning_of(long month)
+{
+  long days_in_month[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+  long num_of_days = 0;
+  for (long i = 0; i < month - 1; i += 1) {
+    num_of_days += days_in_month[i];
+  }
+  return num_of_days;
+}
+
+int main()
+{
+  long month = cs1010_read_long();
+  long day = cs1010_read_long();
+  cs1010_println_long(day + days_till_beginning_of(month));
+}
+```
+
+```C
+long max(long list[], long length)
+{
+  long max_so_far = list[0];
+  for (long i = 1; i != length; i += 1) {
+    if (list[i] > max_so_far) {
+      max_so_far = list[i];
+    }
+  }
+  return max_so_far;
+}
+
+int main()
+{
+  long a[10] = {1, 2, 3, 4, 1, 9, 10, 44, -1, -5};
+  cs1010_println_long(max(a, 10));
 }
 ```
