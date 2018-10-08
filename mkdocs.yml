@@ -29,15 +29,21 @@ pages:
       - 1. Freezer: 'ex01.md'
       - 2. Leap, Suffix, Days: 'ex02.md'
       - 3. Binary, Rectangle, Fibonacci, Prime: 'ex03.md'
+      - 4. ID, Grade, Index, Max: 'ex04.md'
   - Assignments: 
       - General Guide: 'assignment.md'
       - 1. Invest, Box, Digits, and Taxi: 'as01.md'
+      - 1. Comments and Answer Keys: 'as01-comments.md'
       - 2. Collatz, Weekday, Circle, Pattern: 'as02.md'
+      - 2. Comments and Answer Keys: 'as02-comments.md'
+      - 3. Kendall, Histogram, CountingSort: 'as03.md'
+      - 4. SelectionSort, Add, Mastermind: 'as04.md'
   - Quizzes: 'quiz.md'
   - Kahoot!:
       - Flow Charts: 'kahoot01.md'
   - C in CS1010: 'c-in-cs1010.md'
   - Style Guide: 'style.md'
+  - Documentation Guide: 'documentation.md'
   - Readings: 'readings.md'
   - Software/Tools:
       - Programming Environments: 'environments.md'
