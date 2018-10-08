@@ -2,21 +2,30 @@
 
 ## What's New
 
-### Info on [Midterm](midterm.md) and [Practical Exam 1](pe1.md)
-
-### [Summary of CS1010's Rules on C](c-in-cs1010.md)
-
-### [Exercise 3: Binary, Rectangle, Fibonacci, Prime](ex03.md)
-  Released 13 September 2018
-
-### [Assignment 2: Collatz, Weekday, Circle, Pattern](as02.md)
-  Released 14 September 2018, Due 21 September 2018, 6pm.
+### [Assignment 4: SelectionSort, Add, Mastermind](as04.md)
+  Released 5 October 2018, Due 12 October 2018, 6pm.
 
 ### Lecture 6
 
-In this lecture, we will discuss how call stack works, giving more insights about how a C program is executed, particularly when we call a function and when a function returns.  We then discuss about pointers and arrays, ending with a brief introduction to strings as an array of `char`.
+- [Slides](https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1/slides/cs1010-lec6.pdf) | [Screencast](https://vimeo.com/292715268)
+
+In this lecture, we discussed how call stack works, giving more insights about how a C program is executed, particularly when we call a function and when a function returns.  We then discussed about pointers and arrays, ending with a brief introduction to strings as an array of `char`.
 
 Units covered are Units 13 - 16: [Unit 13: Call Stack](13-call-stack.md), [Unit 14: Pointers](14-pointers.md), [Unit 15: Arrays](15-array.md) and [Unit 16: Strings](16-string.md).
+
+### Info on [Midterm](midterm.md) and [Practical Exam 1](pe1.md)
+
+### [Tutor and Grader Survey](https://ivle.nus.edu.sg/v1/Survey/Student/default.aspx?CourseID=44f45aad-fc38-4674-9505-5492f5629bd4#)
+Please tell us how we are doing so that we can improve.
+
+### [Quiz 3: Basic C Syntax](https://goo.gl/forms/4LM8K7Fol0b2fYeD3)
+
+### [Assignment 2: Comments and Answer Keys](as02-comments.md)
+
+### [Exercise 4: ID, Grade, Index, Max](ex04.md)
+  Released 20 September 2018
+
+### [Summary of CS1010's Rules on C](c-in-cs1010.md)
 
 ----
 
