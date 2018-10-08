@@ -12,3 +12,4 @@ There are two types of quizzes: (a) in-class Kahoot! quizzes, and (b) out-of-cla
 
 ### [Quiz 1: Using PE and UNIX](https://goo.gl/forms/aD4n7SbQltY1BUz63)
 ### [Quiz 2: Compiling Your Code](https://goo.gl/forms/M8rZWkTgvkowB3Yy2)
+### [Quiz 3: Basic C Syntax](https://goo.gl/forms/4LM8K7Fol0b2fYeD3)
