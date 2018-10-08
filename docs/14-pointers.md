@@ -203,7 +203,8 @@ cs1010_println_long(y);
 cs1010_println_long(*ptr1);
 cs1010_println_long(*ptr2);
 
-ptr1 = ptr1;
+// ptr1 = ptr1; // <-- typo in the first version of this question 😅
+ptr1 = ptr2;
 *ptr1 = 1946;
 
 cs1010_println_long(x);
