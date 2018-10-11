@@ -1404,6 +1404,7 @@ for <code class="codehilite">15 23 16 4 42 8</code>, <code class="codehilite">42
 <li>followed by <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> integers</li>
 </ul>
 <p>into an array, and prints, to the standard output, <span><span class="MathJax_Preview">n - 1</span><script type="math/tex">n - 1</script></span> lines, each line showing the array after moving the largest or the next largest element into position.</p>
+<p><ins class="critic">You can assume that the input list of <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> integers to be sorted are unique -- i.e., no repetition.</ins></p>
 <h3 id="sample-run">Sample Run</h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -1442,14 +1443,14 @@ ooiwt@pe119:~/as04-skeleton$ ./selectionsort
 </td></tr></table>
 
 <h2 id="question-2-add-15-marks">Question 2: Add (15 marks)</h2>
-<p>In this question, you are asked to write a program that adds two numbers -- two arbitrary large numbers.  The types provided by C can only represent a number up to a certain value.  We have seen that <code class="codehilite">long long int</code> is not even big enough to represent 21!.  </p>
+<p>In this question, you are asked to write a program that adds two <ins class="critic">non-negative</ins> numbers which can be arbitrarily large.  The types provided by C can only represent a number up to a certain value.  We have seen that <code class="codehilite">long long int</code> is not even big enough to represent 21!.  </p>
 <p>For this question, we will represent a number using an arbitrarily long string consisting of characters (of type <code class="codehilite">char</code>) <code class="codehilite">&#39;0&#39;</code> to <code class="codehilite">&#39;9&#39;</code> (note: not integer 0 to 9).  C supports arithmetic operations on <code class="codehilite">char</code> values as well.  To convert between the numerical value of a digit character, we can do the following:</p>
 <ul>
 <li>To convert from a digit character to its numerical value, we subtract the <code class="codehilite">char</code> <code class="codehilite">&#39;0&#39;</code>.  For instance, <code class="codehilite">&#39;6&#39; - &#39;0&#39;</code> will give us the value <code class="codehilite">6</code>.</li>
 <li>To convert from a numerical value of a digit to its character, we add the <code class="codehilite">char</code> <code class="codehilite">&#39;0&#39;</code>.  For instance, <code class="codehilite">6 + &#39;0&#39;</code> will give us the character <code class="codehilite">&#39;6&#39;</code>.</li>
 </ul>
 <p>You can read a sequence of non-space characters from the standard input using <code class="codehilite">cs1010_read_word</code>, and print a sequence of characters (i.e., a string) to the standard output using <code class="codehilite">cs1010_println_string</code>.</p>
-<p>Write a program <code class="codehilite">add</code> that reads from the standard input two numbers represented as strings consisting of digits '0' to '9', and prints to the standard output the sum of the two numbers.</p>
+<p>Write a program <code class="codehilite">add</code> that reads from the standard input two <ins class="critic">non-negative</ins> numbers represented as strings consisting of digits '0' to '9', and prints to the standard output the sum of the two numbers.</p>
 <p>You will likely need to use the C standard library function <code class="codehilite">strlen</code>, which returns you the number of characters in a string (excluding the terminating '\0').  Look up on how to use this function on your own.</p>
 <h3 id="sample-run_1">Sample Run</h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
