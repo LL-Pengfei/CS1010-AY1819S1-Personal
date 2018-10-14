@@ -1284,7 +1284,7 @@ Note that we use nested <code class="codehilite">{</code> and <code class="codeh
 <h3 id="problem-set-192">Problem Set 19.2</h3>
 <p>We need to represent the distance in km between every major cities in the world. Let's label every city with a number, ranging from 0 .. <span>\(n-1\)</span>, where <span>\(n\)</span> is the number of cities.  The distance between city <span>\(i\)</span> and <span>\(j\)</span> is the same as the distance between city <span>\(j\)</span> and <span>\(i\)</span>.  The distance can be represented with <code class="codehilite">long</code>.</p>
 <p>Explain how you would represent this information using jagged two-dimensional array in C efficiently.  We have information of a few thousand cities to store.  </p>
-<p>Explain how you would write a function <code class="codehilite">long dist(long i, long j)</code> to retrieve the distance between any two city <span>\(i\)</span> and <span>\(j\)</span>.</p>
+<p>Explain how you would write a function <code class="codehilite">long dist(long **d, long i, long j)</code> to retrieve the distance between any two city <span>\(i\)</span> and <span>\(j\)</span>.</p>
                 
                   
                 
