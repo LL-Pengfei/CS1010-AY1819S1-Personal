@@ -16,13 +16,13 @@ long search(long n, const long list[n], long q) {
 }
 ```
 
-What is the worst case running time, expressed in Big-O notation, of the function above?  Suppose the query $q$ is not in the list, we will have to scan the whole list, once.  The worst case running time is therefore $O(n)$.
+What is the worst-case running time, expressed in Big-O notation, of the function above?  Suppose the query $q$ is not in the list, we will have to scan the whole list, once.  The worst case running time is, therefore, $O(n)$.
 
-Can we do better?  It turns out that this running time $O(n)$ is also the best that we can do, because we cannot be sure that $q$ does not exist until we check every single element in the list.  So there is no shortcut.
+Can we do better?  It turns out that this running time $O(n)$ is also the best that we can do because we cannot be sure that $q$ does not exist until we check every single element in the list.  So there is no shortcut.
 
 ## Binary Search
 
-But, do we always have to check every element in the list?  It turns out that, like many real-life situation, _if the input list is sorted_, we do not have to scan through every element.  We can eliminate a huge chunk of the elements based on whether a chosen element is bigger or smaller than $q$.
+But, do we always have to check every element in the list?  It turns out that, like many real-life situations, _if the input list is sorted_, we do not have to scan through every element.  We can eliminate a huge chunk of the elements based on whether a chosen element is bigger or smaller than $q$.
 
 Suppose that the input list is sorted in increasing order.  Pick a random element $x$ from the list.  Any element to the left of $x$ must be less than or equal to $x$, and any element to the right of $x$ must be greater or equal to $x$. 
 
@@ -57,13 +57,13 @@ We call this function with:
 search(list, 0, n-1, q);
 ```
 
-The search algorithm above is called _binary search_, since it repeatedly cut the range of values to search by half.
+The search algorithm above is called _binary search_ since it repeatedly cut the range of values to search by half.
 
 ## Why is it correct?
 
-It is not obvious at first glance that the code above correctly search for $q$ in $L$. 
+It is not obvious at first glance that the code above correctly searches for $q$ in $L$. 
 
-Let's analyze this function more systematically by writing an assertion for this function.  What we want to do here is to eliminate elements in the array that cannot possibly contain $q$ -- these are elements outside of the `list[i]` .. `list[j]` range.  In other words we want to assert that 
+Let's analyze this function more systematically by writing an assertion for this function.  What we want to do here is to eliminate elements in the array that cannot possibly contain $q$ -- these are elements outside of the `list[i]` .. `list[j]` range.  In other words, we want to assert that 
 
 ```C
 // { q is not in list[0]..list[i-1] and list[j+1]..list[n-1] }
