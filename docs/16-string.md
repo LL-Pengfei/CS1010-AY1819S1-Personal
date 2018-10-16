@@ -26,6 +26,25 @@ The null character is written as '\0'.  The use of the backslash `\` creates an 
 
 Furthermore, since we already use `\` to indicate the escape sequence, `'` to indicate a character, and `"` to indicate a string, in order to use these characters, we need to "escape" them -- we use '\\' for the backslash character, '\'', the single quote character, and the '\"' double quote character.
 
+## {++String Literals++}
+
+A _string literal_ refers to a string written between two `"` characters, such as `"Hello world!"`.  Such a string are still internally stored as an array of `char` values.  The location these arrays are stored depend on the platform, but usually they are stored in a read only region of the memory called the `text` region.  These strings are not meant to be modified.  Hence, trying something like this:
+
+```C
+char *str1 = "Hello!";
+str1[5] = '.';
+```
+
+is not allowed and would crash your program.
+
+The following, however, is OK:
+```C
+char str2[7] = "Hello!";
+str2[5] = '.';
+```
+
+The differences between the two is that, `str1` points to a read-only region in the memory, while `str2` contains a copy of the string on the stack.
+
 ## Empty String
 
 We commonly use the empty string `""` to indicate a special condition or to initialize a string variable, where appropriate.  The empty string is basically an array where the 0-th element is '\0'.
