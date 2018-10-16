@@ -25,6 +25,13 @@ pages:
       - 14. Pointers:  '14-pointers.md'
       - 15. Arrays:  '15-array.md'
       - 16. Strings:  '16-string.md'
+      - 17. Call by Reference:  '17-call-by-reference.md'
+      - 18. Heap:  '18-heap.md'
+      - 19. Multidimensional Array:  '19-md-array.md'
+      - 20. C Pre-processing:  '20-macro.md'
+      - 21. Assert:  '21-assert.md'
+      - 22. Efficiency:  '22-efficiency.md'
+      - 23. Binary Search:  '23-search.md'
   - Exercises: 
       - 1. Freezer: 'ex01.md'
       - 2. Leap, Suffix, Days: 'ex02.md'
@@ -38,6 +45,7 @@ pages:
       - 2. Comments and Answer Keys: 'as02-comments.md'
       - 3. Kendall, Histogram, CountingSort: 'as03.md'
       - 4. SelectionSort, Add, Mastermind: 'as04.md'
+      - 5. Social, Life: 'as05.md'
   - Quizzes: 'quiz.md'
   - Kahoot!:
       - Flow Charts: 'kahoot01.md'
