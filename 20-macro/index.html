@@ -735,6 +735,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../23-search/index.html" title="23. Binary Search" class="md-nav__link">
+      23. Binary Search
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1228,10 +1240,10 @@ or</p>
 </pre></div>
 </td></tr></table>
 
-<p>When the C preprocessor sees this directive, it reads the file specified by the given filename, and inserts the text, line-by-line, from this file, into the current file, in the location where the line <code class="codehilite">#include</code> occurs.   Any C preprocessor directive in the included file are recursively processed.</p>
+<p>When the C preprocessor sees this directive, it reads the file specified by the given filename, and inserts the text, line-by-line, from this file, into the current file, in the location where the line <code class="codehilite">#include</code> occurs.   Any C preprocessor directive in the included file is recursively processed.</p>
 <h2 id="define-constant">#define Constant</h2>
 <p>We have seen how we can use <code class="codehilite">#define</code> to define constant values in our code in our exercises and assignments.  </p>
-<p>We should avoid hardcoding constant values (also called <em>magic numbers</em>) in our code, so that our code can be easily changed when the requirement of our program has changed.</p>
+<p>We should avoid hardcoding constant values (also called <em>magic numbers</em>) in our code so that our code can be easily changed when the requirement of our program has changed.</p>
 <p>Take this code, for instance, from Taxi:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -1295,7 +1307,7 @@ or</p>
 </pre></div>
 </td></tr></table>
 
-<p>In my answer posted, I have used many hardcoded values.  Suppose one day, the taxi fare changes (and that day will come).  Perhaps the base fare is more, perhaps the distance threshold is shorter.  We will have to change the code above to calculate the new fare.  By littering the code above with hardcoded values, the code is difficult and error prone to change.  Suppose we rewrite the code as:</p>
+<p>In my answer posted, I have used many hardcoded values.  Suppose one day, the taxi fare changes (and that day will come).  Perhaps the base fare is more, perhaps the distance threshold is shorter.  We will have to change the code above to calculate the new fare.  By littering the code above with hardcoded values, the code is difficult and error-prone to change.  Suppose we rewrite the code as:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -1392,7 +1404,7 @@ or</p>
 </td></tr></table>
 
 <p>The logic of the code remains the same.   </p>
-<p>The <code class="codehilite">#define</code> directive should be followed an <em>identifier</em> and a <em>token</em>.  The token may contain space, but must be terminated by a newline.  In the example above, <code class="codehilite">BASE_FARE</code> is the identifier, and <code class="codehilite">3.20</code> is the token.</p>
+<p>The <code class="codehilite">#define</code> directive should be followed an <em>identifier</em> and a <em>token</em>.  The token may contain space but must be terminated by a newline.  In the example above, <code class="codehilite">BASE_FARE</code> is the identifier, and <code class="codehilite">3.20</code> is the token.</p>
 <p>When the C preprocessor sees the <code class="codehilite">#define</code> directive, it replaces all instances of the identifier in the file with the token.  This is merely a text substitution operation.</p>
 <h2 id="example">Example:</h2>
 <p>Consider the example below.  Suppose we have three files:</p>
@@ -1507,7 +1519,7 @@ or</p>
 <p>This macro is named <code class="codehilite">SQUARE</code>, just like a function we defined in Lecture 3 and it takes in a parameter <code class="codehilite">x</code> as well.  But that's where the similarity ends.  There are a few important differences between macros and functions in C:</p>
 <ul>
 <li>Macros are not called.  They are only substituted during preprocessing phase which performs text processing on the source code.</li>
-<li>Macros has no information about types. It has no return type and the parameters has no type.</li>
+<li>Macros have no information about types. It has no return type and the parameters have no type.</li>
 </ul>
 <p>Take the example below.  The file:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -1539,7 +1551,7 @@ or</p>
 </pre></div>
 </td></tr></table>
 
-<p>Let's look at another example.  We have seen how to write a function that swap two the value of variables.  The one we wrote swaps two <code class="codehilite">double</code>.  If we want to swap two <code class="codehilite">long</code>, or two <code class="codehilite">char *</code>, etc, we will need to write a new function for each one.  </p>
+<p>Let's look at another example.  We have seen how to write a function that swaps two the value of variables.  The one we wrote swaps two <code class="codehilite">double</code>.  If we want to swap two <code class="codehilite">long</code>, or two <code class="codehilite">char *</code>, etc, we will need to write a new function for each one.  </p>
 <p>Let's write a generic macro that does swapping for any type.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -1567,7 +1579,7 @@ or</p>
 </pre></div>
 </td></tr></table>
 
-<p>The macro <code class="codehilite">SWAP</code> takes in three parameters, the first is the type T, the second and the third are the variables to be swapped.  This macro definition spans multiple lines.  Since C preprocessor ends the definition of a macro with the end of line, we add a backslash character to "escape" the newline, telling the preprocessor not the treat the newline as the end of the macro definition.</p>
+<p>The macro <code class="codehilite">SWAP</code> takes in three parameters, the first is the type T, the second and the third are the variables to be swapped.  This macro definition spans multiple lines.  Since C preprocessor ends the definition of a macro with the end of the line, we add a backslash character to "escape" the newline, telling the preprocessor not to treat the newline as the end of the macro definition.</p>
 <p>The code above gets expanded to:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -1582,7 +1594,7 @@ or</p>
 </td></tr></table>
 
 <h2 id="pitfalls-and-best-practices">Pitfalls and Best Practices</h2>
-<p>It is easy to forget that macro is doing simple text substitution without understanding of C syntax.  When we write macros, we should always guard against inproper usage of macros.  Let's consider this:</p>
+<p>It is easy to forget that macro is doing simple text substitution without an understanding of C syntax.  When we write macros, we should always guard against improper usage of macros.  Let's consider this:</p>
 <p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#define SQUARE(x) x*x</span>
 </pre></div>
 </td></tr></table>
@@ -1590,7 +1602,7 @@ or</p>
 </pre></div>
 </td></tr></table></p>
 <p>When the preprocessor substitutes the macro <code class="codehilite">SQUARE</code>, it replaces all instances of the text <code class="codehilite">x</code> with the text <code class="codehilite">radius + 2</code>.  After substitution, we get <code class="codehilite">radius + 2*radius + 2</code>!  This is not what we expected.</p>
-<p>To prevent such unexpected expansion, we should always add parenthesis in our macro expression:</p>
+<p>To prevent such unexpected expansion, we should always add parenthesis to our macro expression:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#define SQUARE(x) ((x)*(x))</span>
 </pre></div>
 </td></tr></table>
@@ -1600,7 +1612,7 @@ or</p>
 </pre></div>
 </td></tr></table></p>
 <p>gets expanded into <code class="codehilite">((radius + 2)*(radius + 2))</code>, which is what we would expect when we call <code class="codehilite">SQUARE</code>.</p>
-<p>To help the readers of your code know that you are referencing a macro rather than a funciton, all macros should be written with upper case letter.</p>
+<p>To help the readers of your code know that you are referencing a macro rather than a function, all macros should be written with uppercase letters.</p>
 <h2 id="problem-set-20">Problem Set 20</h2>
 <h3 id="problem-201">Problem 20.1</h3>
 <p>a) Consider the macro below:</p>

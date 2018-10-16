@@ -700,6 +700,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../23-search/index.html" title="23. Binary Search" class="md-nav__link">
+      23. Binary Search
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1144,9 +1156,9 @@
                 
                 
                 <h1 id="unit-21-the-assert-macro">Unit 21: The <code class="codehilite">assert</code> Macro</h1>
-<p>You have learned what is an assertion and how it can help you to reason about your programs.  Previously we have only seen assertion as a commenting tool, to comment on certain properties that are guaranteed to be true at certain point of a program.</p>
+<p>You have learned what is an assertion and how it can help you to reason about your programs.  Previously we have only seen assertion as a commenting tool, to comment on certain properties that are guaranteed to be true at a certain point of a program.</p>
 <p>Now, we will make the concept of assertion even more powerful -- we can cause our program to throw an error if an assertion is ever violated.  This way, we can tell immediately if certain assumptions or properties that we made in our code are violated.</p>
-<p>C provides a macro called <code class="codehilite">assert()</code> (in the header file <code class="codehilite">assert.h</code>)  which takes in a logical expression.  This logical expression must always evaluate to true when <code class="codehilite">assert</code> is used.  Otherwise, assert will throw an error, giving the file and the line number where the error occured.</p>
+<p>C provides a macro called <code class="codehilite">assert()</code> (in the header file <code class="codehilite">assert.h</code>)  which takes in a logical expression.  This logical expression must always evaluate to true when <code class="codehilite">assert</code> is used.  Otherwise, assert will throw an error, giving the file and the line number where the error occurred.</p>
 <p>Using assertions and the <code class="codehilite">assert</code> macro can help us pinpoint exactly where our code goes wrong, quickly.</p>
 <p>Take the following code, for instance:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -1165,8 +1177,7 @@
 </pre></div>
 </td></tr></table>
 
-<p>Remember our rule: we can only access memory that has been allocated to us.  So we need to make sure that <code class="codehilite">i</code> and <code class="codehilite">j</code> must be 
-within range.  We can add an assert statement to check that <code class="codehilite">i</code> and <code class="codehilite">j</code> are correct.</p>
+<p>Remember our rule: we can only access memory that has been allocated to us.  So we need to make sure that <code class="codehilite">i</code> and <code class="codehilite">j</code> must be within the correct range.  We can add an assert statement to check that <code class="codehilite">i</code> and <code class="codehilite">j</code> are correct.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>    <span class="n">assert</span><span class="p">(</span><span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nrows</span> <span class="o">&amp;&amp;</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">ncols</span><span class="p">);</span>
     <span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
@@ -1180,7 +1191,7 @@ within range.  We can add an assert statement to check that <code class="codehil
 </pre></div>
 </td></tr></table>
 
-<p>So that we know on which line in our code the assertion has failed -- in this case, which line in our code we have tried to access memory that does not belong to us.</p>
+<p>So that we know on which line in our code the assertion has failed -- in this case, which is the line in our code we have tried to access memory that does not belong to us.</p>
 <p>As you reason about your code, sprinkle <code class="codehilite">assert</code> liberally in your code so that, if you are wrong about your reasoning or you make a careless mistake in your code, <code class="codehilite">assert</code> will spot that for you.</p>
 <h2 id="problem-set-21">Problem Set 21</h2>
 <h3 id="problem-211">Problem 21.1</h3>
@@ -1198,7 +1209,7 @@ within range.  We can add an assert statement to check that <code class="codehil
     }
 </pre></div>
 </td></tr></table></p>
-<p>Would the assert in Line 5 above ever failed?</p>
+<p>Would the assert in Line 5 above ever fail?</p>
 <h3 id="problem-212">Problem 21.2</h3>
 <p>Take your <code class="codehilite">add.c</code> from Assignment 3 and add as many <code class="codehilite">assert</code> as you code to your code.  </p>
                 

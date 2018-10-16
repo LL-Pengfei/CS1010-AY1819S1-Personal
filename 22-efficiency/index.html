@@ -762,6 +762,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../23-search/index.html" title="23. Binary Search" class="md-nav__link">
+      23. Binary Search
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1268,7 +1280,7 @@
                 
                 
                 <h1 id="unit-22-efficiency">Unit 22: Efficiency</h1>
-<p>We have been writing code and solving problems, focusing on producing the correct output and using the various construct of C language appropriately.  Now, we will introduce a new criteria on writing code: <em>efficiency</em>.  </p>
+<p>We have been writing code and solving problems, focusing on producing the correct output and using the various construct of C language appropriately.  Now, we will introduce a new criterion on writing code: <em>efficiency</em>.  </p>
 <h2 id="no-redundant-work">No Redundant Work</h2>
 <p>Writing efficient code basically means that we should not write code that runs unnecessarily.  In my comments on your <a href="https://nus-cs1010.github.io/1819-s1/as02-comments/index.html">Assignment 2</a>, I gave you an example where the same function <code class="codehilite">is_prime</code> has different implementations -- some runs very slowly, while some runs quickly.   I reproduce them here:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -1313,19 +1325,19 @@
 </pre></div>
 </td></tr></table>
 
-<p>In fact, on my machine, the slowest version of <code class="codehilite">is_prime</code> took ~100s, while the fast one runs ~3ms, when run with <code class="codehilite">is_prime(10000000001)</code>.  The time taken is five order of magnitude difference!  But there is no magic here, as we merely apply the following principle:</p>
+<p>In fact, on my machine, the slowest version of <code class="codehilite">is_prime</code> took ~100s, while the fast one runs ~3ms when invoked with <code class="codehilite">is_prime(10000000001)</code>.  The time taken is five orders of magnitude difference!  But there is no magic here, as we merely apply the following principle:</p>
 <p><em>"No redundant work"</em></p>
 <p>If you recall, we improve the efficiency of <code class="codehilite">is_prime</code> by (i) returning <code class="codehilite">false</code> as soon as we found a proof that the input is not a prime, and (ii) not checking for divisor that is redundant.</p>
 <h2 id="worst-case-performance">Worst Case Performance</h2>
 <p>The two techniques we employed above behave slightly differently.  For (i), we <em>opportunistically</em> stop our computation once we know the answer when the input is not a prime.  However, in the <em>worst case</em>, when the input is a prime, we still have to check through all <span><span class="MathJax_Preview">n-2</span><script type="math/tex">n-2</script></span> divisor, from 2 up to <span><span class="MathJax_Preview">n-1</span><script type="math/tex">n-1</script></span>, before we can conclude that the input is a prime.  Thus, for (i), we make our program faster for certain inputs but in the worst case, we are not able to speed up the program.</p>
 <p>The second technique is more interesting and more fruitful.  With a little math, we can show that we only need to check for the divisor up to <span><span class="MathJax_Preview">\sqrt{n}</span><script type="math/tex">\sqrt{n}</script></span>.  Here, we are improving the <em>worst case</em> performance of <code class="codehilite">is_prime</code>, so whether the input is a prime or not, we always have a speed up.  </p>
-<p>How much is the speed up in the worse case?  In the input above, with the original slow code, in the worst case I need to check through ~10,000,000,001 divisors.  With the faster version, I only need to check <sub><span><span class="MathJax_Preview">\sqrt{10,000,000,001}</span><script type="math/tex">\sqrt{10,000,000,001}</script></span> = </sub>10,000 divisors.  That's where the five order of magnitude speed up comes from.</p>
+<p>How much is the speed up in the worst case?  In the input above, with the original slow code, in the worst case I need to check through ~10,000,000,001 divisors.  With the faster version, I only need to check <sub><span><span class="MathJax_Preview">\sqrt{10,000,000,001}</span><script type="math/tex">\sqrt{10,000,000,001}</script></span> = </sub>10,000 divisors.  That's where the five orders of magnitude speed up comes from.</p>
 <h2 id="no-repetition">No Repetition</h2>
 <p>The second principle to improving the efficiency of the program is that <em>"No repetition"</em> -- we should not repeat work that has been done before.</p>
 <p>Let's look at the example from earlier this semester, where you are asked to compute the range of a list.  Recall that the range of a list is the absolute difference between the largest element and the smallest element.  We use this problem to motivate the use of function, where we denote <span><span class="MathJax_Preview">range(L, k) = |max(L, k) - min(L, k)|</span><script type="math/tex">range(L, k) = |max(L, k) - min(L, k)|</script></span>.  If we are to implement this solution in C, however, we would end up scanning through the list twice: first to find the max, then to find the min.  </p>
-<p>The example code from Lecture 7 has shown that we could easily just go through the list once, use call-by-reference to output both the max and the min, if we are willing to forgo the notion of pure functions and function-as-a-black-box.</p>
-<p>In your midterm, you see another example where we can go through the list once to find the second largest element, instead of twice as suggestion: first to find the max, then to find the next largest.</p>
-<p>The performance improvement for not scanning through a list (or an array) twice is modest at most.  Let's look at another example where, by not repeating ourselve, we can gain significant performance improvement.</p>
+<p>The example code from Lecture 7 has shown that we could easily just go through the list once, use call-by-reference to output both the max and the min if we are willing to forgo the notion of pure functions and function-as-a-black-box.</p>
+<p>In your midterm, you see another example where we can go through the list once to find the second largest element, instead of twice: first to find the max, then to find the next largest.</p>
+<p>The performance improvement for not scanning through a list (or an array) twice is modest at most.  Let's look at another example where, by not repeating ourselves, we can gain significant performance improvement.</p>
 <h3 id="finding-fibonacci-numbers">Finding Fibonacci Numbers</h3>
 <p>Recall from your Exercise 3, the Fibonacci sequence of numbers are numbers formed by adding the previous two numbers to form the next numbers. In other words, the <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>-th Fibonacci number is computed as the sum of the previous two Fibonacci numbers, the <span><span class="MathJax_Preview">(i-2)</span><script type="math/tex">(i-2)</script></span>-th, and the <span><span class="MathJax_Preview">(i-1)</span><script type="math/tex">(i-1)</script></span>-th.</p>
 <p>Here is one way we can find the Fibonacci numbers with a loop:</p>
@@ -1396,11 +1408,29 @@
 </td></tr></table>
 
 <p>If we consider each of the fundamental operations: comparison, addition, and assignment, as a step, then we can see that, in each loop, there is one comparison (<code class="codehilite">i != n</code>), two additions (<code class="codehilite">i + 1</code>, <code class="codehilite">third = first + second</code>), four assignments.  So we have seven operations per loop, with a total of <span><span class="MathJax_Preview">n-1</span><script type="math/tex">n-1</script></span> loops.  So we have <span><span class="MathJax_Preview">7n - 7</span><script type="math/tex">7n - 7</script></span> operations.  In addition, we also need to count for the assignment <code class="codehilite">i = 2</code> and the additional comparison before we exit the loop (<code class="codehilite">i != n</code>).  So, in total, we have <span><span class="MathJax_Preview">7n - 5</span><script type="math/tex">7n - 5</script></span> operations.</p>
-<p>As you can see, such detailed counting of steps in tedious, and in fact, not very meaningful.  For instance, we did not account for reading of values from the memory and writing of values into the memory, the performance of which becomes dependant on the architecture underneath.  </p>
+<p>As you can see, such detailed counting of the steps in tedious, and in fact, not very meaningful.  For instance, we did not account for reading values from the memory and writing of values into the memory, the performance of which becomes dependant on the architecture underneath.  </p>
 <p>To free us from such low-level accounting of the number of steps, let's focus on the big picture.  No matter how we count the number of steps, in the end, it is a linear function of <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>.  In order words, the number of steps taken by the algorithm to compute Fibonacci in a loop grows linearly with <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>.  Using the Big-O notation, we say that it takes <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> steps.</p>
 <p>Given a mathematical function with multiple terms, the Big-O of this function is obtained by dropping any multiplicative constants and all terms, except for the one with the <em>highest rate of growth</em>.  For instance, <span><span class="MathJax_Preview">O(\frac{n^4}{10} + 10000n^2 - n) = O(n^4)</span><script type="math/tex">O(\frac{n^4}{10} + 10000n^2 - n) = O(n^4)</script></span>.</p>
 <p>Due to this focus on the term with highest rate of growth, and not bothering about other terms or multiplicative constants, it becomes very convenient for us to expression the time efficiency of an algorithm with <span><span class="MathJax_Preview">O()</span><script type="math/tex">O()</script></span> -- we no longer need to count the steps precisely but just focus on the number of times it takes to run the algorithm in terms of <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>.  </p>
-<p>Take the example of <code class="codehilite">is_prime</code>.  The slow algorithm takes <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span>, the fast algorithm takes <span><span class="MathJax_Preview">O(\sqrt{n})</span><script type="math/tex">O(\sqrt{n})</script></span>.  Take another example: to finding the range of a list, both algorithms, regardless of whether we are taking two passes or one pass, takes <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> time. </p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+Take the example of <code class="codehilite">is_prime</code>.  The slow algorithm takes <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span>, the fast algorithm takes <span><span class="MathJax_Preview">O(\sqrt{n})</span><script type="math/tex">O(\sqrt{n})</script></span>.  Take another example: to finding the range of a list, both algorithms, regardless of whether we are taking two passes or one pass, takes <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> time. 
+=======
+Take the example of <code class="codehilite">is_prime</code>.  The slow algorithm takes <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span>, the fast algorithm takes <span><span class="MathJax_Preview">O(\sqrt(n))</span><script type="math/tex">O(\sqrt(n))</script></span>.  Take another example: to find the range of a list, both algorithms, regardless of whether we are taking two passes or one pass, takes <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> time. </p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>df82de93616f8c2a5c730042d462228b6d96f42d</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 <h2 id="rate-of-growth">Rate of Growth</h2>
 <p>Given two functions <span><span class="MathJax_Preview">f(n)</span><script type="math/tex">f(n)</script></span> and <span><span class="MathJax_Preview">g(n)</span><script type="math/tex">g(n)</script></span>, how do we determine which one has a higher rate of growth?  We say that <span><span class="MathJax_Preview">f(n)</span><script type="math/tex">f(n)</script></span> grows faster than <span><span class="MathJax_Preview">g(n)</span><script type="math/tex">g(n)</script></span> if we can find a <span><span class="MathJax_Preview">n_0</span><script type="math/tex">n_0</script></span>, such that <span><span class="MathJax_Preview">f(n) &gt; cg(n)</span><script type="math/tex">f(n) > cg(n)</script></span> for all <span><span class="MathJax_Preview">n \ge n_0</span><script type="math/tex">n \ge n_0</script></span> and for some constant <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span>.  </p>
 <p>For instance, which one grows faster?  <span><span class="MathJax_Preview">f(n) = n^n</span><script type="math/tex">f(n) = n^n</script></span> or <span><span class="MathJax_Preview">g(n) = 2^n</span><script type="math/tex">g(n) = 2^n</script></span>?  Pick <span><span class="MathJax_Preview">n = 1</span><script type="math/tex">n = 1</script></span>, we have <span><span class="MathJax_Preview">f(1) &lt; g(1)</span><script type="math/tex">f(1) < g(1)</script></span><sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>.  Pick <span><span class="MathJax_Preview">n = 2</span><script type="math/tex">n = 2</script></span>, we have <span><span class="MathJax_Preview">f(2)</span><script type="math/tex">f(2)</script></span> equals <span><span class="MathJax_Preview">g(2)</span><script type="math/tex">g(2)</script></span>.  Pick <span><span class="MathJax_Preview">n = 3</span><script type="math/tex">n = 3</script></span>, we have $f(3) &gt; <span><span class="MathJax_Preview">g(3)</span><script type="math/tex">g(3)</script></span> now, and we can see that for any <span><span class="MathJax_Preview">n &gt; 3</span><script type="math/tex">n > 3</script></span>, <span><span class="MathJax_Preview">n^n &gt; 2^n</span><script type="math/tex">n^n > 2^n</script></span>, so we can conclude that <span><span class="MathJax_Preview">f(n)</span><script type="math/tex">f(n)</script></span> grows faster than <span><span class="MathJax_Preview">g(n)</span><script type="math/tex">g(n)</script></span>.</p>
@@ -1447,14 +1477,14 @@
 </td></tr></table>
 
 <p>What is the running time of the function <code class="codehilite">kendall_tau</code>, expressed in Big-O notation in terms of <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>, the length of the input array?</p>
-<p>To analyze the running time, we focus on the big picture, the part of the code that takes the most time, and ignore all the other operations that take negligible time.  In the function <code class="codehilite">kendall_tau</code> above, Line 16 is repeated many times, so let's focus on that.  Looking at the looping conditions, we can conclude that Line 16 repeats <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> times.  </p>
+<p>To analyze the running time, we focus on the big picture, the part of the code that takes the most time, and we ignore all the other operations that take negligible time.  In the function <code class="codehilite">kendall_tau</code> above, Line 16 is repeated many times, so let's focus on that.  Looking at the looping conditions, we can conclude that Line 16 repeats <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> times.  </p>
 <p>It is tempting to conclude that <code class="codehilite">kentall_tau</code> takes <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> steps here, but it would be wrong.  </p>
 <p>Notice that Line 16 calls another function <code class="codehilite">count_inversion</code>.  What is the running time of <code class="codehilite">count_inversion</code>?  Inside <code class="codehilite">count_inversion</code>, there is another loop that repeats <span><span class="MathJax_Preview">n - i</span><script type="math/tex">n - i</script></span> times.  Each time we call <code class="codehilite">count_inversion</code>, <code class="codehilite">i</code> increases, so the loop in <code class="codehilite">count_inversion</code> takes fewer steps each time the function is called. </p>
 <p>To calculate the total number of steps, we can compute the following sum 
 <span><span class="MathJax_Preview">sum_{i = 0}^{n} (n - i)</span><script type="math/tex">sum_{i = 0}^{n} (n - i)</script></span>, which is just <span><span class="MathJax_Preview">n + (n-1) + (n-2) + .. + 2 + 1</span><script type="math/tex">n + (n-1) + (n-2) + .. + 2 + 1</script></span>.
-This sum is the sum of an arithmetic series, and equals to <span><span class="MathJax_Preview">n(n+1)/2</span><script type="math/tex">n(n+1)/2</script></span>.   Since we use the Big-O notation, we can focus on the term with the highest rate of growth, <span><span class="MathJax_Preview">n^2</span><script type="math/tex">n^2</script></span>, and ignore everything else.  We have obtained the running time for <code class="codehilite">kentall_tau</code> function above as <span><span class="MathJax_Preview">O(n^2)</span><script type="math/tex">O(n^2)</script></span>.</p>
+This sum is the sum of an arithmetic series and equals to <span><span class="MathJax_Preview">n(n+1)/2</span><script type="math/tex">n(n+1)/2</script></span>.   Since we use the Big-O notation, we can focus on the term with the highest rate of growth, <span><span class="MathJax_Preview">n^2</span><script type="math/tex">n^2</script></span>, and ignore everything else.  We have obtained the running time for <code class="codehilite">kentall_tau</code> function above as <span><span class="MathJax_Preview">O(n^2)</span><script type="math/tex">O(n^2)</script></span>.</p>
 <h2 id="efficiency-in-cs1010">Efficiency in CS1010</h2>
-<p>In CS1010, we will focus on the efficiency of your code in two sense: First, your code should not perform redundant work and it should not repeat itself unnecessarily.  This criteria is independent of Big-O notation -- i.e., even though by optimizing the performance of your code, you do not change the worst-case Big-O performance, you should still optimize your code that make it run faster.  Second, your algorithm should run within a given Big-O running time.  We will start to impose time limit on the running time of your code, such that if you choose the wrong algorithm with the higher rate of growth, your code would not pass the test.</p>
+<p>In CS1010, we will focus on the efficiency of your code in two senses: First, your code should not perform redundant work and it should not repeat itself unnecessarily.  This criterion is independent of Big-O notation -- i.e., even though by optimizing the performance of your code, you do not change the worst-case Big-O performance, you should still optimize your code that makes it run faster.  Second, your algorithm should run within a given Big-O running time.  We will start to impose time limitations on the running time of your code, such that if you choose the wrong algorithm with the higher rate of growth, your code would not pass the test.</p>
 <h2 id="problem-set-22">Problem Set 22</h2>
 <h3 id="problem-221">Problem 22.1</h3>
 <p>Order the following functions in the increasing order of rate of growth:</p>
@@ -1556,13 +1586,13 @@ This sum is the sum of an arithmetic series, and equals to <span><span class="Ma
           </a>
         
         
-          <a href="../ex01/index.html" title="1. Freezer" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../23-search/index.html" title="23. Binary Search" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                1. Freezer
+                23. Binary Search
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
