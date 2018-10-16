@@ -41,9 +41,9 @@ If you recall, we improve the efficiency of `is_prime` by (i) returning `false` 
 
 The two techniques we employed above behave slightly differently.  For (i), we _opportunistically_ stop our computation once we know the answer when the input is not a prime.  However, in the _worst case_, when the input is a prime, we still have to check through all $n-2$ divisor, from 2 up to $n-1$, before we can conclude that the input is a prime.  Thus, for (i), we make our program faster for certain inputs but in the worst case, we are not able to speed up the program.
 
-The second technique is more interesting and more fruitful.  With a little math, we can show that we only need to check for the divisor up to $\sqrt(n)$.  Here, we are improving the _worst case_ performance of `is_prime`, so whether the input is a prime or not, we always have a speed up.  
+The second technique is more interesting and more fruitful.  With a little math, we can show that we only need to check for the divisor up to $\sqrt{n}$.  Here, we are improving the _worst case_ performance of `is_prime`, so whether the input is a prime or not, we always have a speed up.  
 
-How much is the speed up in the worse case?  In the input above, with the original slow code, in the worst case I need to check through ~10,000,000,001 divisors.  With the faster version, I only need to check ~$\sqrt(10,000,000,001)$ = ~10,000 divisors.  That's where the five order of magnitude speed up comes from.
+How much is the speed up in the worse case?  In the input above, with the original slow code, in the worst case I need to check through ~10,000,000,001 divisors.  With the faster version, I only need to check ~$\sqrt{10,000,000,001}$ = ~10,000 divisors.  That's where the five order of magnitude speed up comes from.
 
 ## No Repetition
 
@@ -119,15 +119,15 @@ As you can see, such detailed counting of steps in tedious, and in fact, not ver
 
 To free us from such low-level accounting of the number of steps, let's focus on the big picture.  No matter how we count the number of steps, in the end, it is a linear function of $n$.  In order words, the number of steps taken by the algorithm to compute Fibonacci in a loop grows linearly with $n$.  Using the Big-O notation, we say that it takes $O(n)$ steps.
 
-Given a mathematical function with multiple terms, the Big-O of this function is obtained by dropping any multiplicative constants and all terms, except for the one with the _highest rate of growth_.  For instance, $O(\frac{n^4}{10} + 10000n^2 - n)$ = O(n^4)$.
+Given a mathematical function with multiple terms, the Big-O of this function is obtained by dropping any multiplicative constants and all terms, except for the one with the _highest rate of growth_.  For instance, $O(\frac{n^4}{10} + 10000n^2 - n) = O(n^4)$.
 
 Due to this focus on the term with highest rate of growth, and not bothering about other terms or multiplicative constants, it becomes very convenient for us to expression the time efficiency of an algorithm with $O()$ -- we no longer need to count the steps precisely but just focus on the number of times it takes to run the algorithm in terms of $n$.  
 
-Take the example of `is_prime`.  The slow algorithm takes $O(n)$, the fast algorithm takes $O(\sqrt(n))$.  Take another example: to finding the range of a list, both algorithms, regardless of whether we are taking two passes or one pass, takes $O(n)$ time. 
+Take the example of `is_prime`.  The slow algorithm takes $O(n)$, the fast algorithm takes $O(\sqrt{n})$.  Take another example: to finding the range of a list, both algorithms, regardless of whether we are taking two passes or one pass, takes $O(n)$ time. 
 
 ## Rate of Growth
 
-Given two functions $f(n)$ and $g(n)$, how do we determine which one has a higher rate of growth?  We say that $f(n)$ grows faster than $g(n)$ if we can find a $n_0$, such that $f(n) > g(n)$ for all $n \ge n_0$.  
+Given two functions $f(n)$ and $g(n)$, how do we determine which one has a higher rate of growth?  We say that $f(n)$ grows faster than $g(n)$ if we can find a $n_0$, such that $f(n) > cg(n)$ for all $n \ge n_0$ and for some constant $c$.  
 
 For instance, which one grows faster?  $f(n) = n^n$ or $g(n) = 2^n$?  Pick $n = 1$, we have $f(1) < g(1)$[^1].  Pick $n = 2$, we have $f(2)$ equals $g(2)$.  Pick $n = 3$, we have $f(3) > $g(3)$ now, and we can see that for any $n > 3$, $n^n > 2^n$, so we can conclude that $f(n)$ grows faster than $g(n)$.
 
@@ -181,7 +181,16 @@ In CS1010, we will focus on the efficiency of your code in two sense: First, you
 
 Order the following functions in the increasing order of rate of growth:
 
-$n!$, $2^n$, $\log_{10} n$, $\ln n$, $n^4$, $n\ln n$, $n$, $n^2$, $e^n$, $\sqrt(n)$
+- $n!$, 
+- $2^n$, 
+- $\log_{10} n$, 
+- $\ln n$, 
+- $n^4$, 
+- $n\ln n$, 
+- $n$, 
+- $n^2$, 
+- $e^n$, 
+- $\sqrt{n}$
 
 ### Problem 22.2
 
