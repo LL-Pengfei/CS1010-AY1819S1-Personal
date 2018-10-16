@@ -1,5 +1,12 @@
 # Practice Exam 1
 
+## Questions
+
+- [Exam Paper](https://www.comp.nus.edu.sg/~ooiwt/cs1010/1819s1/pe1.pdf)
+- Click on [GitHub Link](https://classroom.github.com/a/2OMG-uZi) to accept, run `get-pe01` and `submit-pe01` to solve this like any other assignments.
+
+## Basic Info
+
 - Date: 6 October, 2018 (Saturday)
 - Time: 9am to 12noon
 - Venue: Various programming labs
