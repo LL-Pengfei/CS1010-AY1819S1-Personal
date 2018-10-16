@@ -20,13 +20,13 @@ or
 #include "filename"
 ```
 
-When the C preprocessor sees this directive, it reads the file specified by the given filename, and inserts the text, line-by-line, from this file, into the current file, in the location where the line `#include` occurs.   Any C preprocessor directive in the included file are recursively processed.
+When the C preprocessor sees this directive, it reads the file specified by the given filename, and inserts the text, line-by-line, from this file, into the current file, in the location where the line `#include` occurs.   Any C preprocessor directive in the included file is recursively processed.
 
 ## #define Constant
 
 We have seen how we can use `#define` to define constant values in our code in our exercises and assignments.  
 
-We should avoid hardcoding constant values (also called _magic numbers_) in our code, so that our code can be easily changed when the requirement of our program has changed.
+We should avoid hardcoding constant values (also called _magic numbers_) in our code so that our code can be easily changed when the requirement of our program has changed.
 
 Take this code, for instance, from Taxi:
 
@@ -63,7 +63,7 @@ double metered_fare(long distance)
 }
 ```
 
-In my answer posted, I have used many hardcoded values.  Suppose one day, the taxi fare changes (and that day will come).  Perhaps the base fare is more, perhaps the distance threshold is shorter.  We will have to change the code above to calculate the new fare.  By littering the code above with hardcoded values, the code is difficult and error prone to change.  Suppose we rewrite the code as:
+In my answer posted, I have used many hardcoded values.  Suppose one day, the taxi fare changes (and that day will come).  Perhaps the base fare is more, perhaps the distance threshold is shorter.  We will have to change the code above to calculate the new fare.  By littering the code above with hardcoded values, the code is difficult and error-prone to change.  Suppose we rewrite the code as:
 
 ```C
 #define BASE_FARE 3.40
@@ -120,7 +120,7 @@ We have factored out all the hardcoded values into constants we defined.  It doe
 
 The logic of the code remains the same.   
 
-The `#define` directive should be followed an _identifier_ and a _token_.  The token may contain space, but must be terminated by a newline.  In the example above, `BASE_FARE` is the identifier, and `3.20` is the token.
+The `#define` directive should be followed an _identifier_ and a _token_.  The token may contain space but must be terminated by a newline.  In the example above, `BASE_FARE` is the identifier, and `3.20` is the token.
 
 When the C preprocessor sees the `#define` directive, it replaces all instances of the identifier in the file with the token.  This is merely a text substitution operation.
 
@@ -210,7 +210,7 @@ For instance, we can write the following:
 This macro is named `SQUARE`, just like a function we defined in Lecture 3 and it takes in a parameter `x` as well.  But that's where the similarity ends.  There are a few important differences between macros and functions in C:
 
 - Macros are not called.  They are only substituted during preprocessing phase which performs text processing on the source code.
-- Macros has no information about types. It has no return type and the parameters has no type.
+- Macros have no information about types. It has no return type and the parameters have no type.
 
 Take the example below.  The file:
 
@@ -234,7 +234,7 @@ int main()
 }
 ```
 
-Let's look at another example.  We have seen how to write a function that swap two the value of variables.  The one we wrote swaps two `double`.  If we want to swap two `long`, or two `char *`, etc, we will need to write a new function for each one.  
+Let's look at another example.  We have seen how to write a function that swaps two the value of variables.  The one we wrote swaps two `double`.  If we want to swap two `long`, or two `char *`, etc, we will need to write a new function for each one.  
 
 Let's write a generic macro that does swapping for any type.
 
@@ -253,7 +253,7 @@ int main(){
 }
 ```
 
-The macro `SWAP` takes in three parameters, the first is the type T, the second and the third are the variables to be swapped.  This macro definition spans multiple lines.  Since C preprocessor ends the definition of a macro with the end of line, we add a backslash character to "escape" the newline, telling the preprocessor not the treat the newline as the end of the macro definition.
+The macro `SWAP` takes in three parameters, the first is the type T, the second and the third are the variables to be swapped.  This macro definition spans multiple lines.  Since C preprocessor ends the definition of a macro with the end of the line, we add a backslash character to "escape" the newline, telling the preprocessor not to treat the newline as the end of the macro definition.
 
 The code above gets expanded to:
 
@@ -267,7 +267,7 @@ int main(){
 
 ## Pitfalls and Best Practices
 
-It is easy to forget that macro is doing simple text substitution without understanding of C syntax.  When we write macros, we should always guard against inproper usage of macros.  Let's consider this:
+It is easy to forget that macro is doing simple text substitution without an understanding of C syntax.  When we write macros, we should always guard against improper usage of macros.  Let's consider this:
 
 ```C
 #define SQUARE(x) x*x
@@ -278,7 +278,7 @@ SQUARE(radius + 2)
 
 When the preprocessor substitutes the macro `SQUARE`, it replaces all instances of the text `x` with the text `radius + 2`.  After substitution, we get `radius + 2*radius + 2`!  This is not what we expected.
 
-To prevent such unexpected expansion, we should always add parenthesis in our macro expression:
+To prevent such unexpected expansion, we should always add parenthesis to our macro expression:
 
 ```C
 #define SQUARE(x) ((x)*(x))
@@ -291,7 +291,7 @@ SQUARE(radius + 2)
 
 gets expanded into `((radius + 2)*(radius + 2))`, which is what we would expect when we call `SQUARE`.
 
-To help the readers of your code know that you are referencing a macro rather than a funciton, all macros should be written with upper case letter.
+To help the readers of your code know that you are referencing a macro rather than a function, all macros should be written with uppercase letters.
 
 ## Problem Set 20
 

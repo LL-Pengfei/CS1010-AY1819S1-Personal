@@ -1,6 +1,6 @@
 # Unit 22: Efficiency
 
-We have been writing code and solving problems, focusing on producing the correct output and using the various construct of C language appropriately.  Now, we will introduce a new criteria on writing code: _efficiency_.  
+We have been writing code and solving problems, focusing on producing the correct output and using the various construct of C language appropriately.  Now, we will introduce a new criterion on writing code: _efficiency_.  
 
 ## No Redundant Work
 
@@ -31,7 +31,7 @@ bool is_prime(long n)
 }
 ```
 
-In fact, on my machine, the slowest version of `is_prime` took ~100s, while the fast one runs ~3ms, when run with `is_prime(10000000001)`.  The time taken is five order of magnitude difference!  But there is no magic here, as we merely apply the following principle:
+In fact, on my machine, the slowest version of `is_prime` took ~100s, while the fast one runs ~3ms when invoked with `is_prime(10000000001)`.  The time taken is five orders of magnitude difference!  But there is no magic here, as we merely apply the following principle:
 
 _"No redundant work"_
 
@@ -43,7 +43,7 @@ The two techniques we employed above behave slightly differently.  For (i), we _
 
 The second technique is more interesting and more fruitful.  With a little math, we can show that we only need to check for the divisor up to $\sqrt{n}$.  Here, we are improving the _worst case_ performance of `is_prime`, so whether the input is a prime or not, we always have a speed up.  
 
-How much is the speed up in the worse case?  In the input above, with the original slow code, in the worst case I need to check through ~10,000,000,001 divisors.  With the faster version, I only need to check ~$\sqrt{10,000,000,001}$ = ~10,000 divisors.  That's where the five order of magnitude speed up comes from.
+How much is the speed up in the worst case?  In the input above, with the original slow code, in the worst case I need to check through ~10,000,000,001 divisors.  With the faster version, I only need to check ~$\sqrt{10,000,000,001}$ = ~10,000 divisors.  That's where the five orders of magnitude speed up comes from.
 
 ## No Repetition
 
@@ -51,11 +51,11 @@ The second principle to improving the efficiency of the program is that _"No rep
 
 Let's look at the example from earlier this semester, where you are asked to compute the range of a list.  Recall that the range of a list is the absolute difference between the largest element and the smallest element.  We use this problem to motivate the use of function, where we denote $range(L, k) = |max(L, k) - min(L, k)|$.  If we are to implement this solution in C, however, we would end up scanning through the list twice: first to find the max, then to find the min.  
 
-The example code from Lecture 7 has shown that we could easily just go through the list once, use call-by-reference to output both the max and the min, if we are willing to forgo the notion of pure functions and function-as-a-black-box.
+The example code from Lecture 7 has shown that we could easily just go through the list once, use call-by-reference to output both the max and the min if we are willing to forgo the notion of pure functions and function-as-a-black-box.
 
-In your midterm, you see another example where we can go through the list once to find the second largest element, instead of twice as suggestion: first to find the max, then to find the next largest.
+In your midterm, you see another example where we can go through the list once to find the second largest element, instead of twice: first to find the max, then to find the next largest.
 
-The performance improvement for not scanning through a list (or an array) twice is modest at most.  Let's look at another example where, by not repeating ourselve, we can gain significant performance improvement.
+The performance improvement for not scanning through a list (or an array) twice is modest at most.  Let's look at another example where, by not repeating ourselves, we can gain significant performance improvement.
 
 ### Finding Fibonacci Numbers
 
@@ -115,7 +115,7 @@ To motivate Big-O, let's consider how we can count the number of "steps" taken b
 
 If we consider each of the fundamental operations: comparison, addition, and assignment, as a step, then we can see that, in each loop, there is one comparison (`i != n`), two additions (`i + 1`, `third = first + second`), four assignments.  So we have seven operations per loop, with a total of $n-1$ loops.  So we have $7n - 7$ operations.  In addition, we also need to count for the assignment `i = 2` and the additional comparison before we exit the loop (`i != n`).  So, in total, we have $7n - 5$ operations.
 
-As you can see, such detailed counting of steps in tedious, and in fact, not very meaningful.  For instance, we did not account for reading of values from the memory and writing of values into the memory, the performance of which becomes dependant on the architecture underneath.  
+As you can see, such detailed counting of the steps in tedious, and in fact, not very meaningful.  For instance, we did not account for reading values from the memory and writing of values into the memory, the performance of which becomes dependant on the architecture underneath.  
 
 To free us from such low-level accounting of the number of steps, let's focus on the big picture.  No matter how we count the number of steps, in the end, it is a linear function of $n$.  In order words, the number of steps taken by the algorithm to compute Fibonacci in a loop grows linearly with $n$.  Using the Big-O notation, we say that it takes $O(n)$ steps.
 
@@ -123,7 +123,11 @@ Given a mathematical function with multiple terms, the Big-O of this function is
 
 Due to this focus on the term with highest rate of growth, and not bothering about other terms or multiplicative constants, it becomes very convenient for us to expression the time efficiency of an algorithm with $O()$ -- we no longer need to count the steps precisely but just focus on the number of times it takes to run the algorithm in terms of $n$.  
 
+<<<<<<< HEAD
 Take the example of `is_prime`.  The slow algorithm takes $O(n)$, the fast algorithm takes $O(\sqrt{n})$.  Take another example: to finding the range of a list, both algorithms, regardless of whether we are taking two passes or one pass, takes $O(n)$ time. 
+=======
+Take the example of `is_prime`.  The slow algorithm takes $O(n)$, the fast algorithm takes $O(\sqrt(n))$.  Take another example: to find the range of a list, both algorithms, regardless of whether we are taking two passes or one pass, takes $O(n)$ time. 
+>>>>>>> df82de93616f8c2a5c730042d462228b6d96f42d
 
 ## Rate of Growth
 
@@ -161,7 +165,7 @@ double kendall_tau(long n, const long rank[n])
 
 What is the running time of the function `kendall_tau`, expressed in Big-O notation in terms of $n$, the length of the input array?
 
-To analyze the running time, we focus on the big picture, the part of the code that takes the most time, and ignore all the other operations that take negligible time.  In the function `kendall_tau` above, Line 16 is repeated many times, so let's focus on that.  Looking at the looping conditions, we can conclude that Line 16 repeats $O(n)$ times.  
+To analyze the running time, we focus on the big picture, the part of the code that takes the most time, and we ignore all the other operations that take negligible time.  In the function `kendall_tau` above, Line 16 is repeated many times, so let's focus on that.  Looking at the looping conditions, we can conclude that Line 16 repeats $O(n)$ times.  
 
 It is tempting to conclude that `kentall_tau` takes $O(n)$ steps here, but it would be wrong.  
 
@@ -169,11 +173,11 @@ Notice that Line 16 calls another function `count_inversion`.  What is the runni
 
 To calculate the total number of steps, we can compute the following sum 
 $sum_{i = 0}^{n} (n - i)$, which is just $n + (n-1) + (n-2) + .. + 2 + 1$.
-This sum is the sum of an arithmetic series, and equals to $n(n+1)/2$.   Since we use the Big-O notation, we can focus on the term with the highest rate of growth, $n^2$, and ignore everything else.  We have obtained the running time for `kentall_tau` function above as $O(n^2)$.
+This sum is the sum of an arithmetic series and equals to $n(n+1)/2$.   Since we use the Big-O notation, we can focus on the term with the highest rate of growth, $n^2$, and ignore everything else.  We have obtained the running time for `kentall_tau` function above as $O(n^2)$.
 
 ## Efficiency in CS1010
 
-In CS1010, we will focus on the efficiency of your code in two sense: First, your code should not perform redundant work and it should not repeat itself unnecessarily.  This criteria is independent of Big-O notation -- i.e., even though by optimizing the performance of your code, you do not change the worst-case Big-O performance, you should still optimize your code that make it run faster.  Second, your algorithm should run within a given Big-O running time.  We will start to impose time limit on the running time of your code, such that if you choose the wrong algorithm with the higher rate of growth, your code would not pass the test.
+In CS1010, we will focus on the efficiency of your code in two senses: First, your code should not perform redundant work and it should not repeat itself unnecessarily.  This criterion is independent of Big-O notation -- i.e., even though by optimizing the performance of your code, you do not change the worst-case Big-O performance, you should still optimize your code that makes it run faster.  Second, your algorithm should run within a given Big-O running time.  We will start to impose time limitations on the running time of your code, such that if you choose the wrong algorithm with the higher rate of growth, your code would not pass the test.
 
 ## Problem Set 22
 
@@ -201,7 +205,7 @@ a)
 ```C
 for (long i = 0; i < n; i += 1) {
   for (long j = 0; j < n; j += 2) {
-	cs1010_println_long(i + j);
+    cs1010_println_long(i + j);
   }
 }
 ```
@@ -210,7 +214,7 @@ b)
 ```C
 for (long i = 0; i < n; i *= 2) {
   for (long j = 0; j < n; j *= 2) {
-	cs1010_println_long(i + j);
+    cs1010_println_long(i + j);
   }
 }
 ```
@@ -221,7 +225,7 @@ long k = 1;
 for (long j = 0; j < n; j += 1) {
   k *= 2;
   for (long i = 0; i < k; i += 1) {
-	cs1010_println_long(i + j);
+    cs1010_println_long(i + j);
   }
 }
 ```
