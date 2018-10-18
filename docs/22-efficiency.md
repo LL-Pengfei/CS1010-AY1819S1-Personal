@@ -1,6 +1,6 @@
 # Unit 22: Efficiency
 
-We have been writing code and solving problems, focusing on producing the correct output and using the various construct of C language appropriately.  Now, we will introduce a new criterion on writing code: _efficiency_.  
+We have been writing code and solving problems, focusing on producing the correct output and using the various construct of C language appropriately.  Now, we will introduce a new criterion on writing code: _efficiency_.
 
 ## No Redundant Work
 
@@ -123,11 +123,10 @@ Given a mathematical function with multiple terms, the Big-O of this function is
 
 Due to this focus on the term with highest rate of growth, and not bothering about other terms or multiplicative constants, it becomes very convenient for us to expression the time efficiency of an algorithm with $O()$ -- we no longer need to count the steps precisely but just focus on the number of times it takes to run the algorithm in terms of $n$.  
 
-<<<<<<< HEAD
-Take the example of `is_prime`.  The slow algorithm takes $O(n)$, the fast algorithm takes $O(\sqrt{n})$.  Take another example: to finding the range of a list, both algorithms, regardless of whether we are taking two passes or one pass, takes $O(n)$ time. 
-=======
-Take the example of `is_prime`.  The slow algorithm takes $O(n)$, the fast algorithm takes $O(\sqrt(n))$.  Take another example: to find the range of a list, both algorithms, regardless of whether we are taking two passes or one pass, takes $O(n)$ time. 
->>>>>>> df82de93616f8c2a5c730042d462228b6d96f42d
+Take the example of `is_prime`.  The slow algorithm takes $O(n)$, the fast algorithm takes $O(\sqrt{n})$.  
+
+Take another example: to find the range of a list, both algorithms, regardless of whether we are taking two passes or one pass, take $O(n)$ time. 
+
 
 ## Rate of Growth
 
