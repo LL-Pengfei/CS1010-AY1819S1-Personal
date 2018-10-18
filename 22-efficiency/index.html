@@ -1280,7 +1280,7 @@
                 
                 
                 <h1 id="unit-22-efficiency">Unit 22: Efficiency</h1>
-<p>We have been writing code and solving problems, focusing on producing the correct output and using the various construct of C language appropriately.  Now, we will introduce a new criterion on writing code: <em>efficiency</em>.  </p>
+<p>We have been writing code and solving problems, focusing on producing the correct output and using the various construct of C language appropriately.  Now, we will introduce a new criterion on writing code: <em>efficiency</em>.</p>
 <h2 id="no-redundant-work">No Redundant Work</h2>
 <p>Writing efficient code basically means that we should not write code that runs unnecessarily.  In my comments on your <a href="https://nus-cs1010.github.io/1819-s1/as02-comments/index.html">Assignment 2</a>, I gave you an example where the same function <code class="codehilite">is_prime</code> has different implementations -- some runs very slowly, while some runs quickly.   I reproduce them here:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -1412,25 +1412,8 @@
 <p>To free us from such low-level accounting of the number of steps, let's focus on the big picture.  No matter how we count the number of steps, in the end, it is a linear function of <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>.  In order words, the number of steps taken by the algorithm to compute Fibonacci in a loop grows linearly with <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>.  Using the Big-O notation, we say that it takes <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> steps.</p>
 <p>Given a mathematical function with multiple terms, the Big-O of this function is obtained by dropping any multiplicative constants and all terms, except for the one with the <em>highest rate of growth</em>.  For instance, <span><span class="MathJax_Preview">O(\frac{n^4}{10} + 10000n^2 - n) = O(n^4)</span><script type="math/tex">O(\frac{n^4}{10} + 10000n^2 - n) = O(n^4)</script></span>.</p>
 <p>Due to this focus on the term with highest rate of growth, and not bothering about other terms or multiplicative constants, it becomes very convenient for us to expression the time efficiency of an algorithm with <span><span class="MathJax_Preview">O()</span><script type="math/tex">O()</script></span> -- we no longer need to count the steps precisely but just focus on the number of times it takes to run the algorithm in terms of <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>.  </p>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-Take the example of <code class="codehilite">is_prime</code>.  The slow algorithm takes <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span>, the fast algorithm takes <span><span class="MathJax_Preview">O(\sqrt{n})</span><script type="math/tex">O(\sqrt{n})</script></span>.  Take another example: to finding the range of a list, both algorithms, regardless of whether we are taking two passes or one pass, takes <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> time. 
-=======
-Take the example of <code class="codehilite">is_prime</code>.  The slow algorithm takes <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span>, the fast algorithm takes <span><span class="MathJax_Preview">O(\sqrt(n))</span><script type="math/tex">O(\sqrt(n))</script></span>.  Take another example: to find the range of a list, both algorithms, regardless of whether we are taking two passes or one pass, takes <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> time. </p>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>df82de93616f8c2a5c730042d462228b6d96f42d</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
+<p>Take the example of <code class="codehilite">is_prime</code>.  The slow algorithm takes <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span>, the fast algorithm takes <span><span class="MathJax_Preview">O(\sqrt{n})</span><script type="math/tex">O(\sqrt{n})</script></span>.  </p>
+<p>Take another example: to find the range of a list, both algorithms, regardless of whether we are taking two passes or one pass, take <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> time. </p>
 <h2 id="rate-of-growth">Rate of Growth</h2>
 <p>Given two functions <span><span class="MathJax_Preview">f(n)</span><script type="math/tex">f(n)</script></span> and <span><span class="MathJax_Preview">g(n)</span><script type="math/tex">g(n)</script></span>, how do we determine which one has a higher rate of growth?  We say that <span><span class="MathJax_Preview">f(n)</span><script type="math/tex">f(n)</script></span> grows faster than <span><span class="MathJax_Preview">g(n)</span><script type="math/tex">g(n)</script></span> if we can find a <span><span class="MathJax_Preview">n_0</span><script type="math/tex">n_0</script></span>, such that <span><span class="MathJax_Preview">f(n) &gt; cg(n)</span><script type="math/tex">f(n) > cg(n)</script></span> for all <span><span class="MathJax_Preview">n \ge n_0</span><script type="math/tex">n \ge n_0</script></span> and for some constant <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span>.  </p>
 <p>For instance, which one grows faster?  <span><span class="MathJax_Preview">f(n) = n^n</span><script type="math/tex">f(n) = n^n</script></span> or <span><span class="MathJax_Preview">g(n) = 2^n</span><script type="math/tex">g(n) = 2^n</script></span>?  Pick <span><span class="MathJax_Preview">n = 1</span><script type="math/tex">n = 1</script></span>, we have <span><span class="MathJax_Preview">f(1) &lt; g(1)</span><script type="math/tex">f(1) < g(1)</script></span><sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>.  Pick <span><span class="MathJax_Preview">n = 2</span><script type="math/tex">n = 2</script></span>, we have <span><span class="MathJax_Preview">f(2)</span><script type="math/tex">f(2)</script></span> equals <span><span class="MathJax_Preview">g(2)</span><script type="math/tex">g(2)</script></span>.  Pick <span><span class="MathJax_Preview">n = 3</span><script type="math/tex">n = 3</script></span>, we have $f(3) &gt; <span><span class="MathJax_Preview">g(3)</span><script type="math/tex">g(3)</script></span> now, and we can see that for any <span><span class="MathJax_Preview">n &gt; 3</span><script type="math/tex">n > 3</script></span>, <span><span class="MathJax_Preview">n^n &gt; 2^n</span><script type="math/tex">n^n > 2^n</script></span>, so we can conclude that <span><span class="MathJax_Preview">f(n)</span><script type="math/tex">f(n)</script></span> grows faster than <span><span class="MathJax_Preview">g(n)</span><script type="math/tex">g(n)</script></span>.</p>
