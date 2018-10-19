@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://nus-cs1010.github.io/1819-s1/ex02/index.html">
+        <link rel="canonical" href="https://nus-cs1010.github.io/1819-s1/lldb/index.html">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>2. Leap, Suffix, Days - CS1010 Programming Methodology</title>
+        <title>LLDB - CS1010 Programming Methodology</title>
       
     
     
@@ -100,7 +100,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#exercise-2-leap-suffix-days" tabindex="1" class="md-skip">
+      <a href="#using-lldb-debugger" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -126,7 +126,7 @@
                 CS1010 Programming Methodology
               </span>
               <span class="md-header-nav__topic">
-                2. Leap, Suffix, Days
+                LLDB
               </span>
             
           
@@ -661,12 +661,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
       Exercises
@@ -694,77 +692,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        2. Leap, Suffix, Days
-      </label>
-    
-    <a href="index.html" title="2. Leap, Suffix, Days" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../ex02/index.html" title="2. Leap, Suffix, Days" class="md-nav__link">
       2. Leap, Suffix, Days
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisite" title="Prerequisite" class="md-nav__link">
-    Prerequisite
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#learning-outcomes" title="Learning Outcomes" class="md-nav__link">
-    Learning Outcomes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#setup" title="Setup" class="md-nav__link">
-    Setup
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#solving-the-assignments" title="Solving The Assignments" class="md-nav__link">
-    Solving The Assignments
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#submission" title="Submission" class="md-nav__link">
-    Submission
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -1029,10 +961,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14" checked>
     
     <label class="md-nav__link" for="nav-14">
       Software/Tools
@@ -1096,11 +1030,117 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../lldb/index.html" title="LLDB" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        LLDB
+      </label>
+    
+    <a href="index.html" title="LLDB" class="md-nav__link md-nav__link--active">
       LLDB
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-debugger" title="What is a debugger?" class="md-nav__link">
+    What is a debugger?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#starting-up-lldb" title="Starting Up LLDB" class="md-nav__link">
+    Starting Up LLDB
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-executable" title="Running the Executable" class="md-nav__link">
+    Running the Executable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-breakpoint-and-examining-states" title="Setting Breakpoint and Examining States" class="md-nav__link">
+    Setting Breakpoint and Examining States
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checking-the-value-of-a-variable" title="Checking the Value of A Variable" class="md-nav__link">
+    Checking the Value of A Variable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-the-content-of-the-stack" title="Checking the Content of the Stack" class="md-nav__link">
+    Checking the Content of the Stack
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executing-the-program-line-by-line" title="Executing the Program Line-by-Line" class="md-nav__link">
+    Executing the Program Line-by-Line
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pausing-with-conditions" title="Pausing with Conditions" class="md-nav__link">
+    Pausing with Conditions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conditional-breakpoint" title="Conditional Breakpoint" class="md-nav__link">
+    Conditional Breakpoint
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1142,37 +1182,77 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisite" title="Prerequisite" class="md-nav__link">
-    Prerequisite
+  <a href="#what-is-a-debugger" title="What is a debugger?" class="md-nav__link">
+    What is a debugger?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#learning-outcomes" title="Learning Outcomes" class="md-nav__link">
-    Learning Outcomes
+  <a href="#starting-up-lldb" title="Starting Up LLDB" class="md-nav__link">
+    Starting Up LLDB
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#setup" title="Setup" class="md-nav__link">
-    Setup
+  <a href="#running-the-executable" title="Running the Executable" class="md-nav__link">
+    Running the Executable
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#solving-the-assignments" title="Solving The Assignments" class="md-nav__link">
-    Solving The Assignments
+  <a href="#setting-breakpoint-and-examining-states" title="Setting Breakpoint and Examining States" class="md-nav__link">
+    Setting Breakpoint and Examining States
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checking-the-value-of-a-variable" title="Checking the Value of A Variable" class="md-nav__link">
+    Checking the Value of A Variable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-the-content-of-the-stack" title="Checking the Content of the Stack" class="md-nav__link">
+    Checking the Content of the Stack
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executing-the-program-line-by-line" title="Executing the Program Line-by-Line" class="md-nav__link">
+    Executing the Program Line-by-Line
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#submission" title="Submission" class="md-nav__link">
-    Submission
+  <a href="#pausing-with-conditions" title="Pausing with Conditions" class="md-nav__link">
+    Pausing with Conditions
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conditional-breakpoint" title="Conditional Breakpoint" class="md-nav__link">
+    Conditional Breakpoint
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1192,123 +1272,185 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/nus-cs1010/1819-s1/edit/master/docs/ex02.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/nus-cs1010/1819-s1/edit/master/docs/lldb.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="exercise-2-leap-suffix-days">Exercise 2: Leap, Suffix, Days</h1>
-<p>This is a programming exercise for you to solve on your own.  You can submit but it will not be graded.  Test cases are provided for the exercises so that you can test and check on your own if your code is correct.  Feel free to discuss your solution with your peers or your TAs.</p>
-<h3 id="prerequisite">Prerequisite</h3>
-<ul>
-<li>You are able to access the <a href="../environments/index.html">CS1010 programming environment</a>.</li>
-<li>You are familiar with <a href="../unix/index.html">basic UNIX CLI</a> and using terminal-based editor <a href="../vim/index.html"><code class="codehilite">vim</code></a>.</li>
-<li>You have a GitHub account and have setup <code class="codehilite"><span class="na">.gitconfig</span></code> (see <a href="index.html">Exercise 1</a>).</li>
-</ul>
-<h3 id="learning-outcomes">Learning Outcomes</h3>
-<ul>
-<li>Be comfortable writing correct C programs that involve <code class="codehilite">if</code>, <code class="codehilite">else</code>, and logical statements.</li>
-</ul>
-<h3 id="setup">Setup</h3>
-<ul>
-<li>Click on <a href="https://classroom.github.com/a/CRF7rQCd">this link</a> to accept the exercise.</li>
-<li>Log in to one of the hosts of <a href="../environments/index.html">CS1010 programming environment (PE)</a></li>
-<li>Run the following on the command line on one of the PE hosts:</li>
-</ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>~cs1010/get-ex02
-</pre></div>
-</td></tr></table>
-
-<ul>
-<li>You should see a new subdirectory <code class="codehilite">ex02-&lt;githubid&gt;</code> in your current working directory, where <code class="codehilite">githubid</code> is your GitHub ID.</li>
-<li>Inside that directory, you should see a bunch of files:<ul>
-<li><code class="codehilite">leap.c</code>, <code class="codehilite">suffix.c</code>, and <code class="codehilite">days.c</code> are the most important files.  They are the skeleton C code that you should edit to solve the exercise.</li>
-<li><code class="codehilite">inputs</code> and <code class="codehilite">outputs</code> are subdirectories that contain test inputs and test outputs.  We use the same convention as Exercise 1 so you should be familiar with them.</li>
-<li><code class="codehilite">Makefile</code>: This is the configuration for the tool <code class="codehilite">make</code> that we use to automate the compilation and testing of the programs.  </li>
-<li><code class="codehilite">test.sh</code>: This is a bash script for testing your code.</li>
-</ul>
-</li>
-</ul>
-<h3 id="solving-the-assignments">Solving The Assignments</h3>
-<ul>
-<li>Edit the .c files to solve the corresponding question as described below</li>
-<li>You can assume that all test inputs are valid inputs.</li>
-<li>To compile and run the given tests with the sample inputs and outputs, run on the command line,</li>
-</ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>make
-</pre></div>
-</td></tr></table>
-
-<p>This will compile all your C files and if there is no error, run the test scripts.</p>
-<h3 id="submission">Submission</h3>
-<p>When you are ready, run the following command while you are in the exercise directory:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>~cs1010/submit-ex02
-</pre></div>
-</td></tr></table>
-
-<p>The .c files will be uploaded to GitHub.  You can submit multiple times.  As an exercise is not graded, submitting your code only serves the purpose of archiving your work for backup purposes.</p>
-<hr />
-<h1 id="question-1-leap-year">Question 1: Leap Year</h1>
-<p>A <a href="https://en.wikipedia.org/wiki/Leap_year">leap year</a> is a calendar year containing an extra day to synchronize the calendar to seasons and astronomical events.  In the Gregorian calendar, years that are multiples of four (with the exception of years divisible by 100 but not by 400) are leap years.</p>
-<p>Write a program that reads in an integer representing a year from the standard input and prints out "<year> is a leap year" if the input is a leap year.  Otherwise, print "<year> is not a leap year" to the standard output.</p>
-<p>Your program should include a <code class="codehilite">bool</code> function <code class="codehilite">is_leap_year</code> that takes in the input year and returns <code class="codehilite">true</code> if the input is a leap year and returns <code class="codehilite">false</code> otherwise.</p>
-<h3 id="sample-run">Sample run:</h3>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ooiwt@pe112:~/ex02-ooiwt$ ./leap
-1995
-1995 is not a leap year
-ooiwt@pe112:~/ex02-ooiwt$ ./leap
-1996
-1996 is a leap year
-ooiwt@pe112:~/ex02-ooiwt$ ./leap
-1900
-1900 is not a leap year
-ooiwt@pe112:~/ex02-ooiwt$ ./leap
-2000
-2000 is a leap year
-</pre></div>
-</td></tr></table>
-
-<h1 id="question-2-ordinal-suffix">Question 2: Ordinal Suffix</h1>
-<p>In English, an ordinal number is written with numerals, followed by its letter suffixes.  For instance: 1<sup>st</sup>, 2<sup>nd</sup>, 3<sup>rd</sup>, 4<sup>th</sup>, 11<sup>th</sup>, 31<sup>st</sup>, etc.  The rule is that, a number that ends with digit 1 should have a suffix "st" (except if it ends with 11), a number that ends with 2 should have a suffix "nd" (except if it ends with 12), and a number that ends with 3 should have a suffix "rd" (except if it ends with 13).  All other numbers should end with "th".</p>
-<p>Write a program <code class="codehilite">suffix</code> that reads in an integer number from the standard input and prints out the number with its ordinal suffix.</p>
-<p>Your program should include a <code class="codehilite">void</code> function <code class="codehilite">print_with_suffix(long n)</code> that takes in the input and prints out the number followed by its suffix.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ooiwt@pe112:~/ex02-ooiwt$ ./suffix
+                <h1 id="using-lldb-debugger">Using LLDB Debugger</h1>
+<h2 id="what-is-a-debugger">What is a debugger?</h2>
+<p>A debugger is a tool that allows a programmer to examine the states of the execution of the program, while the program is executing.  It allows a programmer to trace through the program step-by-step, examine the flow of the execution and the values of the variables.  It is a tremendously valuable and powerful tool to help us trace through our code to understand the behavior and find bugs.</p>
+<p>In CS1010, we will use <code class="codehilite">lldb</code>, a debugger that comes from the same project as <code class="codehilite">clang</code>.  </p>
+<h2 id="starting-up-lldb">Starting Up LLDB</h2>
+<p>To use <code class="codehilite">lldb</code>, you first make sure that your code is compiled with <code class="codehilite">clang</code> using the flag <code class="codehilite">-g</code>.  This should be done for you already if you use the <code class="codehilite">Makefile</code> that we provide you for the assignments and exercises.  </p>
+<p>Then, you invoke <code class="codehilite">lldb</code> with the name of your executable as an argument.  For instance,
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-2nd
-ooiwt@pe112:~/ex02-ooiwt$ ./suffix
-13
-13th
-ooiwt@pe112:~/ex02-ooiwt$ ./suffix
-412
-412th
-ooiwt@pe112:~/ex02-ooiwt$ ./suffix
 3
-3rd
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ooiwt@pe113:~$ lldb social
+(lldb) target create &quot;social&quot;
+Current executable set to &#39;social&#39; (x86_64).
+(lldb)
+</pre></div>
+</td></tr></table></p>
+<p>You should see the following message, showing the <code class="codehilite">social</code> is loaded as the current executable, and you will be brought to a prompt that says <code class="codehilite">(lldb)</code>.</p>
+<p>At any time, you can type <code class="codehilite">help</code> on the prompt to see the list of commands, or type <code class="codehilite">help &lt;command-name&gt;</code> to get help for a particular command.</p>
+<p>As we use <code class="codehilite">lldb</code>, we are going to be bombarded with a lot of information about the internals of the program, so things might seem scary and you might be overwhelmed.  But, not too worry.  We only need to look for information that is useful to help you debug your program.  We can ignore other unnecessary details that <code class="codehilite">lldb</code> provide us.</p>
+<h2 id="running-the-executable">Running the Executable</h2>
+<p>To run the executable, you need to launch the process<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>(lldb) process launch
 </pre></div>
 </td></tr></table>
 
-<h1 id="question-3-days-since-1-january">Question 3: Days Since 1 January</h1>
-<p>Write a program called <code class="codehilite">days</code> that reads in two integers from the standard input, the first is the month (ranged 1 to 12, inclusive) and the second is the day (ranged 1 to 31, inclusive).  The program should print to the standard output which day of the year it is.  <ins class="critic">Assume that the year is not a leap year</ins>.  You can reuse the method <code class="codehilite">print_suffix</code> from the previous question.</p>
+<div class="admonition note">
+<p class="admonition-title">Save on Typing</p>
+<p>This is too long to type.  There are multiple ways to save typing.  Using <UP ARROW> to repeat previous commands is one.  The other is to use <TAB> to autocomplete.  You can also just type the prefix -- if it is unique enough, <code class="codehilite">lldb</code> can figure out what you want to do.  For instance, the following is the same as <code class="codehilite">process launch</code> since no other commands have the same prefix.
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>(lldb) pr la
+</pre></div>
+</td></tr></table></p>
+</div>
+<p>Launching the process is the same as running the executable on the command line.  If the program is reading from standard inputs, you should type in your inputs, after that the executable will run as per normal.</p>
+<p>If you want to redirect the input from a file (like <code class="codehilite">./social &lt; inputs/social.1.in</code>), you will need to pass in the <code class="codehilite">-i</code> flag to <code class="codehilite">process launch</code>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>(lldb) process launch -i inputs/social.1.in
+</pre></div>
+</td></tr></table>
+
+<p>This will cause the executable to read directly from the given input file.  An example output is as follows:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>(lldb) process launch -i inputs/social.1.in
+Process 29181 launched: &#39;/home/o/ooiwt/as05-weitsang/social&#39; (x86_64)
+1
+11
+011
+NO
+Process 29181 exited with status = 0 (0x00000000)
+</pre></div>
+</td></tr></table>
+
+<p>So far, nothing interesting happens.  Running the executable from <code class="codehilite">lldb</code> is the same as running it from <code class="codehilite">bash</code> command line.</p>
+<h2 id="setting-breakpoint-and-examining-states">Setting Breakpoint and Examining States</h2>
+<p>Let's do something more interesting.  Suppose that my program is giving us the wrong answer, and I suspect that there is a bug in the function <code class="codehilite">is_friend</code>.  I can set a <em>breakpoint</em>.  A breakpoint is a particular point in the code where you want to execution to pause.  Once the program pauses, you can then examine the state of the program.  You can set a breakpoint by specifying the line number or by the function name.  </p>
+<p>To set a breakpoint a function <code class="codehilite">is_friend</code>, I can do the following:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">(</span><span class="n">lldb</span><span class="p">)</span> <span class="n">breakpoint</span> <span class="n">set</span> <span class="o">-</span><span class="n">n</span> <span class="n">is_friend</span>
+<span class="n">Breakpoint</span> <span class="mi">1</span><span class="o">:</span> <span class="n">where</span> <span class="o">=</span> <span class="n">social</span><span class="err">`</span><span class="n">is_friend</span> <span class="o">+</span> <span class="mi">14</span> <span class="n">at</span> <span class="n">social</span><span class="p">.</span><span class="nl">c</span><span class="p">:</span><span class="mi">13</span><span class="p">,</span> <span class="n">address</span> <span class="o">=</span> <span class="mh">0x0000000000400a6e</span>
+</pre></div>
+</td></tr></table>
+
+<p>A short form is <code class="codehilite">b is_friend</code>:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">(</span><span class="n">lldb</span><span class="p">)</span> <span class="n">b</span> <span class="n">is_friend</span>
+<span class="n">Breakpoint</span> <span class="mi">1</span><span class="o">:</span> <span class="n">where</span> <span class="o">=</span> <span class="n">social</span><span class="err">`</span><span class="n">is_friend</span> <span class="o">+</span> <span class="mi">14</span> <span class="n">at</span> <span class="n">social</span><span class="p">.</span><span class="nl">c</span><span class="p">:</span><span class="mi">13</span><span class="p">,</span> <span class="n">address</span> <span class="o">=</span> <span class="mh">0x0000000000400a6e</span>
+</pre></div>
+</td></tr></table></p>
+<p>After setting the breakpoint, if I run the program again, I get
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>(lldb) b is_friend
+Breakpoint 1: where = social`is_friend + 14 at social.c:13, address = 0x0000000000400a6e
+(lldb) process launch -i inputs/social.2.in
+Process 29596 launched: &#39;/home/vagrant/cs1010/as05-solution/social&#39; (x86_64)
+Process 29596 stopped
+* thread #1: tid = 29596, 0x0000000000400a6e social`is_friend(socnet=0x0000000000605070, i=0, j=0) + 14 at social.c:13, name = &#39;social&#39;, stop reason = breakpoint 1.1
+    frame #0: 0x0000000000400a6e social`is_friend(socnet=0x0000000000605070, i=0, j=0) + 14 at social.c:13
+   10      }
+   11
+   12      bool is_friend(char **socnet, int i, int j) {
+-&gt; 13        if (i &gt;= j) {
+   14          return socnet[i][j] == &#39;1&#39;;
+   15        }
+   16        return socnet[j][i] == &#39;1&#39;;
+</pre></div>
+</td></tr></table></p>
+<p>At this point, the execution has paused, on Line 13 above.  We can now examine the state of the program.
+The line
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>    frame #0: 0x0000000000400a6e social`is_friend(socnet=0x0000000000605070, i=0, j=0) + 14 at social.c:13
+</pre></div>
+</td></tr></table></p>
+<p>shows the value of the parameters passed into <code class="codehilite">is_friend</code>.  <code class="codehilite">socnet</code> is a pointer to a memory location (shown in hexadecimal format).  <code class="codehilite">i</code> and <code class="codehilite">j</code> are both zeros.</p>
+<h3 id="checking-the-value-of-a-variable">Checking the Value of A Variable</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>(lldb) print i
+(int) $0 = 0
+(lldb) print j
+(int) $1 = 0
+(lldb) print socnet
+(char **) $2 = 0x0000000000605070
+</pre></div>
+</td></tr></table>
+
+<p>We can use the <code class="codehilite">print</code> (or <code class="codehilite">p</code>) command to display the value of a variable.  In the examples above, I print out the value for <code class="codehilite">i</code>, <code class="codehilite">j</code>, <code class="codehilite">socnet</code>.   The type, a temp variable name (<code class="codehilite">$0</code>, <code class="codehilite">$1</code>, etc), and the value of the variable are shown as output.</p>
+<p>In my program, <code class="codehilite">socnet</code> is the social network.  Suppose I want to know what is the value stored in different locations of this matrix, I can do the following:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>(lldb) p socnet[0][0]
+(char) $3 = &#39;1&#39;
+(lldb) p socnet[0][1]
+(char) $4 = &#39;\0&#39;
+(lldb) p socnet[1][1]
+(char) $5 = &#39;1&#39;
+(lldb) p socnet[1]
+(char *) $8 = 0x0000000000605150 &quot;01&quot;
+(lldb) p socnet[3]
+(char *) $10 = 0x0000000000605210 &quot;1011&quot;
+</pre></div>
+</td></tr></table>
+
+<h3 id="checking-the-content-of-the-stack">Checking the Content of the Stack</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>(lldb) bt
+(lldb) bt
+* thread #1: tid = 29596, 0x0000000000400a6e social`is_friend(socnet=0x0000000000605070, i=0, j=0) + 14 at social.c:13, name = &#39;social&#39;, stop reason = breakpoint 1.1
+  * frame #0: 0x0000000000400a6e social`is_friend(socnet=0x0000000000605070, i=0, j=0) + 14 at social.c:13
+    frame #1: 0x0000000000400b1f social`expand(n=4, socnet=0x0000000000605040, degree_k=0x0000000000605070, result=0x00000000006050a0) + 79 at social.c:22
+    frame #2: 0x0000000000400e7d social`main + 301 at social.c:79
+    frame #3: 0x00007ffff7724830 libc.so.6`__libc_start_main(main=(social`main at social.c:60), argc=1, argv=0x00007fffffffe578, init=&lt;unavailable&gt;, fini=&lt;unavailable&gt;, rtld_fini=&lt;unavailable&gt;, stack_end=0x00007fffffffe568) + 240 at libc-start.c:291
+    frame #4: 0x0000000000400949 social`_start + 41
+</pre></div>
+</td></tr></table>
+
+<p>The <code class="codehilite">bt</code>, or <code class="codehilite">backtrace</code> command shows all the call frames on the call stack.  <code class="codehilite">frame #0</code> is the current frame, where the breakpoint is.  <code class="codehilite">frame #1</code> is the function that calls <code class="codehilite">is_friend</code>.  You can ignore <code class="codehilite">frame #3</code> and <code class="codehilite">frame #4</code> in the example above, as they are relevant to how the OS invokes your executable.   So you can see the calls above: <code class="codehilite">main</code> calls <code class="codehilite">expand, which then calls</code>is_friend`.  </p>
+<p>In the example above, we can see that the function <code class="codehilite">expand</code> takes in four parameters.  What if I want to example what are these four parameters?  Now, I am at the frame <code class="codehilite">is_friend</code>.  If I try to print <code class="codehilite">k</code> or <code class="codehilite">degree_k</code>, I will get an error:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>(lldb) p degree_k
+error: use of undeclared identifier &#39;degree_k&#39;
+error: 1 errors parsing expression
+</pre></div>
+</td></tr></table>
+
+<p>To examine the variables of another frame, we can use the <code class="codehilite">up</code> command, to move up the call frame (but, actually, we are moving down the stack).</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -1317,17 +1459,137 @@ ooiwt@pe112:~/ex02-ooiwt$ ./suffix
 6
 7
 8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ooiwt@pe112:~/ex02-ooiwt$ ./days
-1 1
-1st
-ooiwt@pe112:~/ex02-ooiwt$ ./days
-8 15
-227th
-ooiwt@pe112:~/ex02-ooiwt$ ./days
-12 31
-365th
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>(lldb) up
+frame #1: 0x0000000000400b1f social`expand(n=4, socnet=0x0000000000605040, degree_k=0x0000000000605070, result=0x00000000006050a0) + 79 at social.c:22
+   19      void expand(long n, char **socnet, char **degree_k, char **result) {
+   20        for (int i = 0; i &lt; n; i += 1) {
+   21          for (int j = 0; j &lt;= i; j += 1) {
+-&gt; 22            if (is_friend(degree_k, i, j)) {
+   23              result[i][j] = &#39;1&#39;;
+   24            } else {
+   25              bool find_connection = false;
 </pre></div>
 </td></tr></table>
+
+<p>This shows us where exactly is <code class="codehilite">is_friend</code> called. And now we can examine the content of <code class="codehilite">socnet</code> in this frame.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>(lldb) p socnet[0][0]
+(char) $11 = &#39;1&#39;
+</pre></div>
+</td></tr></table>
+
+<p>To easily see what are the variables in the current frame, you can also run the commend
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>(lldb) frame variable
+(long) n = 4
+(char **) socnet = 0x0000000000605040
+(char **) degree_k = 0x0000000000605070
+(char **) result = 0x00000000006050a0
+(int) i = 0
+(int) j = 0
+</pre></div>
+</td></tr></table></p>
+<p>To move back to the earlier call frame, you can run <code class="codehilite">down</code>:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>(lldb) down
+frame #0: 0x0000000000400a6e social`is_friend(socnet=0x0000000000605070, i=0, j=0) + 14 at social.c:13
+   10      }
+   11
+   12      bool is_friend(char **socnet, int i, int j) {
+-&gt; 13        if (i &gt;= j) {
+   14          return socnet[i][j] == &#39;1&#39;;
+   15        }
+   16        return socnet[j][i] == &#39;1&#39;;
+</pre></div>
+</td></tr></table></p>
+<p>And now we are back in <code class="codehilite">is_friend</code>.</p>
+<h2 id="executing-the-program-line-by-line">Executing the Program Line-by-Line</h2>
+<p>To continue the execution of the program, we can run <code class="codehilite">next</code> (or <code class="codehilite">n</code>), which cause the execution to continue, in one line:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>(lldb) n
+Process 29596 stopped
+* thread #1: tid = 29596, 0x0000000000400a7a social`is_friend(socnet=0x0000000000605070, i=0, j=0) + 26 at social.c:14, name = &#39;social&#39;, stop reason = step over
+    frame #0: 0x0000000000400a7a social`is_friend(socnet=0x0000000000605070, i=0, j=0) + 26 at social.c:14
+   11
+   12      bool is_friend(char **socnet, int i, int j) {
+   13        if (i &gt;= j) {
+-&gt; 14          return socnet[i][j] == &#39;1&#39;;
+   15        }
+   16        return socnet[j][i] == &#39;1&#39;;
+   17      }
+</pre></div>
+</td></tr></table>
+
+<p>So now we see that the control flow actually cause the execution of Line 14 -- that is, it enters the true-block of the <code class="codehilite">if</code> statement.  We can keep typing <code class="codehilite">n</code> to continue to trace through the code, line-by-line.</p>
+<p>If the <code class="codehilite">next</code> command, encounters a function, it will go into the function.  Suppose you are not interested in tracing through the code in a particular function, line-by-line, you can use the <code class="codehilite">step</code> command (or <code class="codehilite">s</code>) to step over a function.  </p>
+<p>The <code class="codehilite">continue</code> command, or <code class="codehilite">c</code>, would cause lldb to continue (unpause) the execution.  The execution continues until the next breakpoint is encountered.</p>
+<h2 id="pausing-with-conditions">Pausing with Conditions</h2>
+<h3 id="conditional-breakpoint">Conditional Breakpoint</h3>
+<p>Suppose that I now suspect there is a problem with <code class="codehilite">is_friend</code> with j is 2.  Setting the breakpoint at <code class="codehilite">is_friend</code> is not going to help much, as it pauses the program <em>every time</em> <code class="codehilite">is_friend</code> is called.  Since this is inside a double for loop, it is going to take multiple stops at this breakpoint before I read that state that I am interested in.  </p>
+<p>To get around this, we can set a conditional breakpoint -- a breakpoint that will pause the program, only if the condition is true.  The command to do so is as follows:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>(lldb) b -n is_friend -c &#39;j == 2&#39;
+Breakpoint 15: where = social`is_friend + 14 at social.c:13, address = 0x0000000000400a6e
+</pre></div>
+</td></tr></table>
+
+<p>This command sets a breakpoint at the function <code class="codehilite">is_friend</code>, but only when the condition <code class="codehilite">j == 2</code> is true.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>(lldb) process launch -i inputs/social.2.in
+Process 30796 launched: &#39;/home/vagrant/cs1010/as05-solution/social&#39; (x86_64)
+Process 30796 stopped
+* thread #1: tid = 30796, 0x0000000000400a6e social`is_friend(socnet=0x0000000000605040, i=1, j=2) + 14 at social.c:13, name = &#39;social&#39;, stop reason = breakpoint 15.1
+    frame #0: 0x0000000000400a6e social`is_friend(socnet=0x0000000000605040, i=1, j=2) + 14 at social.c:13
+   10      }
+   11
+   12      bool is_friend(char **socnet, int i, int j) {
+-&gt; 13        if (i &gt;= j) {
+   14          return socnet[i][j] == &#39;1&#39;;
+   15        }
+   16        return socnet[j][i] == &#39;1&#39;;
+</pre></div>
+</td></tr></table>
+
+<p>Now, when we run the program, the breakpoint <code class="codehilite">is_friend</code> is triggered only when the value of j is 2.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>A <em>process</em> is the technical term for a running application -- it is more complicated than this, but this intuition will do for now.  You will learn what a process is in your OS module.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
                 
                   
                 
@@ -1348,7 +1610,7 @@ ooiwt@pe112:~/ex02-ooiwt$ ./days
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../ex01/index.html" title="1. Freezer" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../vim/index.html" title="Vim" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1357,19 +1619,19 @@ ooiwt@pe112:~/ex02-ooiwt$ ./days
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                1. Freezer
+                Vim
               </span>
             </div>
           </a>
         
         
-          <a href="../ex03/index.html" title="3. Binary, Rectangle, Fibonacci, Prime" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../library/index.html" title="CS1010 I/O" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                3. Binary, Rectangle, Fibonacci, Prime
+                CS1010 I/O
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
