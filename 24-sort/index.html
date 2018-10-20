@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://nus-cs1010.github.io/1819-s1/18-heap/index.html">
+        <link rel="canonical" href="https://nus-cs1010.github.io/1819-s1/24-sort/index.html">
       
       
       
@@ -34,7 +34,7 @@
     
     
       
-        <title>18. Heap - CS1010 Programming Methodology</title>
+        <title>24. Sorting - CS1010 Programming Methodology</title>
       
     
     
@@ -78,7 +78,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#unit-18-heap" tabindex="1" class="md-skip">
+      <a href="#unit-24-sorting" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -104,7 +104,7 @@
                 CS1010 Programming Methodology
               </span>
               <span class="md-header-nav__topic">
-                18. Heap
+                24. Sorting
               </span>
             
           
@@ -564,88 +564,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        18. Heap
-      </label>
-    
-    <a href="index.html" title="18. Heap" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../18-heap/index.html" title="18. Heap" class="md-nav__link">
       18. Heap
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#variables-on-heap" title="Variables on Heap" class="md-nav__link">
-    Variables on Heap
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manual-memory-allocation-deallocation" title="Manual Memory Allocation / Deallocation" class="md-nav__link">
-    Manual Memory Allocation / Deallocation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#memory-deallocation" title="Memory Deallocation" class="md-nav__link">
-    Memory Deallocation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#problem-set" title="Problem Set" class="md-nav__link">
-    Problem Set
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#problem-set-181" title="Problem Set 18.1" class="md-nav__link">
-    Problem Set 18.1
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#problem-set-182" title="Problem Set 18.2" class="md-nav__link">
-    Problem Set 18.2
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -713,11 +636,95 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../24-sort/index.html" title="24. Sorting" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        24. Sorting
+      </label>
+    
+    <a href="index.html" title="24. Sorting" class="md-nav__link md-nav__link--active">
       24. Sorting
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bubble-sort" title="Bubble Sort" class="md-nav__link">
+    Bubble Sort
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insertion-sort" title="Insertion Sort" class="md-nav__link">
+    Insertion Sort
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animation" title="Animation" class="md-nav__link">
+    Animation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-set-24" title="Problem Set 24" class="md-nav__link">
+    Problem Set 24
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-241" title="Problem 24.1" class="md-nav__link">
+    Problem 24.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-242" title="Problem 24.2" class="md-nav__link">
+    Problem 24.2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-243" title="Problem 24.3" class="md-nav__link">
+    Problem 24.3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1143,44 +1150,51 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#variables-on-heap" title="Variables on Heap" class="md-nav__link">
-    Variables on Heap
+  <a href="#bubble-sort" title="Bubble Sort" class="md-nav__link">
+    Bubble Sort
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#manual-memory-allocation-deallocation" title="Manual Memory Allocation / Deallocation" class="md-nav__link">
-    Manual Memory Allocation / Deallocation
+  <a href="#insertion-sort" title="Insertion Sort" class="md-nav__link">
+    Insertion Sort
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#memory-deallocation" title="Memory Deallocation" class="md-nav__link">
-    Memory Deallocation
+  <a href="#animation" title="Animation" class="md-nav__link">
+    Animation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#problem-set" title="Problem Set" class="md-nav__link">
-    Problem Set
+  <a href="#problem-set-24" title="Problem Set 24" class="md-nav__link">
+    Problem Set 24
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#problem-set-181" title="Problem Set 18.1" class="md-nav__link">
-    Problem Set 18.1
+  <a href="#problem-241" title="Problem 24.1" class="md-nav__link">
+    Problem 24.1
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#problem-set-182" title="Problem Set 18.2" class="md-nav__link">
-    Problem Set 18.2
+  <a href="#problem-242" title="Problem 24.2" class="md-nav__link">
+    Problem 24.2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-243" title="Problem 24.3" class="md-nav__link">
+    Problem 24.3
   </a>
   
 </li>
@@ -1204,46 +1218,66 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/nus-cs1010/1819-s1/edit/master/docs/18-heap.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/nus-cs1010/1819-s1/edit/master/docs/24-sort.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="unit-18-heap">Unit 18: Heap</h1>
-<p>We have already seen what a call stack is and how call stack works in <a href="../13-call-stack/index.html">Unit 13</a>.  There is another important area of memory used by our programs, called the <em>heap</em>.</p>
-<p>Recall that a variable allocated on the stack has two properties:</p>
-<ul>
-<li>Its lifetime is the same as the lifetime of the function the variable is declared in.</li>
-<li>The memory allocation and deallocation are automatic.  </li>
-</ul>
-<p>For stack, the memory is allocated automatically when the function is called and deallocated automatically as soon as the function exits.  For this reason, such a variable is sometimes called <em>automatic</em> variable, or <em>auto</em> variable for short.</p>
-<h2 id="variables-on-heap">Variables on Heap</h2>
-<p>The memory allocation on the heap can be done automatically or manually.  For variables allocated on the heap, its lifetime is either the same as the lifetime of the <em>whole</em> programme.  Example of such a variable is a <em>global</em> variable -- a variable that is declared <em>outside</em> of any function and can be read or write anywhere in the program.  We have banned the use of global variables in CS1010.  Using global variable makes your code hard to understand or reason about:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-<span class="n">foo</span><span class="p">();</span>
-<span class="c1">// { x == ?? }</span>
+                <h1 id="unit-24-sorting">Unit 24: Sorting</h1>
+<p>Sorting is one of the most fundamental computational problem.  Given a list of items, we want to rearrange the items in some order.</p>
+<p>We have actually seen two algorithms to sort in this module: counting sort and selection sort.  We are going to see two more today.</p>
+<h2 id="bubble-sort">Bubble Sort</h2>
+<p>Bubble sort is probably the most well known, under-performed sorting algorithm<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>, but is taught in most CS classes because of its simplicity.  The idea of bubble sort is to make multiple passes through the list.  In each pass, we look for all possible adjacent pair of items.  Any adjacent pair that is out of order are swapped so that they are in order.  This process repeats until everything is in order.</p>
+<p>Let's look at an example.  Suppose we have, as an input, the numbers <code class="codehilite">8 4 23 42 16 15</code>.  In the first pass, we starts from the first item and check from left to right.  The pair <code class="codehilite">8 4</code> is out of order, so we swap them, and we get <code class="codehilite">4 8 23 42 16 15</code>.  The pair <code class="codehilite">8 23</code> and <code class="codehilite">23 42</code> are in order, so we do not need to swap them.  The pair <code class="codehilite">42 16</code> is out of order.  We swap them and get <code class="codehilite">4 8 23 16 42 15</code>.  The pair <code class="codehilite">42 15</code> is again out of order, so we swap them and get <code class="codehilite">4 8 23 16 15 42</code>.</p>
+<p>The following sequence show the first pass through the array:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span> <span class="m">8</span>  <span class="m">4</span> <span class="m">23</span> <span class="m">42</span> <span class="m">16</span> <span class="m">15</span>   <span class="o">&lt;-</span> swap
+<span class="o">--</span> <span class="o">--</span>
+ <span class="m">4</span>  <span class="m">8</span> <span class="m">23</span> <span class="m">42</span> <span class="m">16</span> <span class="m">15</span>  
+   <span class="o">--</span> <span class="o">--</span> 
+ <span class="m">4</span>  <span class="m">8</span> <span class="m">23</span> <span class="m">42</span> <span class="m">16</span> <span class="m">15</span>  
+      <span class="o">--</span> <span class="o">--</span>
+ <span class="m">4</span>  <span class="m">8</span> <span class="m">23</span> <span class="m">42</span> <span class="m">16</span> <span class="m">15</span>   <span class="o">&lt;-</span> swap
+         <span class="o">--</span> <span class="o">--</span>
+ <span class="m">4</span>  <span class="m">8</span> <span class="m">23</span> <span class="m">16</span> <span class="m">42</span> <span class="m">15</span>   <span class="o">&lt;-</span> swap
+            <span class="o">--</span> <span class="o">--</span>
+ <span class="m">4</span>  <span class="m">8</span> <span class="m">23</span> <span class="m">16</span> <span class="m">15</span> <span class="m">42</span>  
 </pre></div>
 </td></tr></table>
 
-<p>Suppose <code class="codehilite">x</code> is a global variable, we cannot assert anything about the property of <code class="codehilite">x</code> after calling <code class="codehilite">foo</code>, since <code class="codehilite">x</code> can be modified by <code class="codehilite">foo</code> or any function it calls, even though we <em>never pass <code class="codehilite">x</code> into <code class="codehilite">foo</code></em>.  This is worse than passing an array as we have seen in <a href="../17-call-by-reference/index.html">Unit 17</a>!</p>
-<h2 id="manual-memory-allocation-deallocation">Manual Memory Allocation / Deallocation</h2>
-<p>Allocating memory on the heap, however, is useful if we want to allocate an array dynamically, i.e., not knowing what is the size of the array when we write the program.  Often, we need an array whose size depends on the input from the user, such as reading a string or reading a sequence of numbers.  We cannot use fixed length array unless we know for sure that the input size is limited, and we cannot use variable length array, since we may get a segfault if the array size is too big for the stack.  The only viable solution is to allocate the array on the heap.</p>
-<p>The C standard library provides a few functions related to memory allocation on the heap.  The header file for these functions is <code class="codehilite">stdlib.h</code>.  We are interested in <code class="codehilite">malloc</code> and <code class="codehilite">calloc</code>.  <code class="codehilite">malloc</code> (memory allocation) is declared as:
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="o">*</span><span class="nf">malloc</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">size</span><span class="p">);</span>
+<p>After the first pass, notice that the largest element, 42, "bubbles" up through the list until it reaches the maximum position.  We can now make the second pass, but we can exclude the last item, since it is already in place.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span> <span class="m">4</span>  <span class="m">8</span> <span class="m">23</span> <span class="m">16</span> <span class="m">15</span> <span class="m">42</span>  
+<span class="o">--</span> <span class="o">--</span>
+ <span class="m">4</span>  <span class="m">8</span> <span class="m">23</span> <span class="m">16</span> <span class="m">15</span> <span class="m">42</span>  
+   <span class="o">--</span> <span class="o">--</span> 
+ <span class="m">4</span>  <span class="m">8</span> <span class="m">23</span> <span class="m">16</span> <span class="m">15</span> <span class="m">42</span>   <span class="o">&lt;-</span> swap
+      <span class="o">--</span> <span class="o">--</span>
+ <span class="m">4</span>  <span class="m">8</span> <span class="m">16</span> <span class="m">23</span> <span class="m">15</span> <span class="m">42</span>   <span class="o">&lt;-</span> swap
+         <span class="o">--</span> <span class="o">--</span>
+ <span class="m">4</span>  <span class="m">8</span> <span class="m">16</span> <span class="m">15</span> <span class="m">23</span> <span class="m">42</span>   
+         <span class="o">--</span> <span class="o">--</span>
 </pre></div>
-</td></tr></table></p>
-<p>It takes in a parameter, <code class="codehilite">size</code>, which is the number of bytes of memory to be allocated and returns a pointer to the memory allocated if successful, or <code class="codehilite">NULL</code> otherwise.  This is a general function so the type of pointer returned is <code class="codehilite">void *</code> rather than a pointer to a specific type.  The type of <code class="codehilite">size</code> is <code class="codehilite">size_t</code>, which is a type defined in <code class="codehilite">stdlib.h</code> to represent the number of bytes in memory.</p>
-<p>The function <code class="codehilite">calloc</code> (clear allocation) is declared as:
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="o">*</span><span class="nf">calloc</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">count</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">size</span><span class="p">);</span>
-</pre></div>
-</td></tr></table></p>
-<p><code class="codehilite">calloc</code> allocates memory for <code class="codehilite">count</code> items, each of <code class="codehilite">size</code> number of bytes, in a contiguous region in the memory and initialize all bits in this memory region to 0.  Except for the fact that <code class="codehilite">calloc</code> initializes the bits to 0, <code class="codehilite">calloc(count, size)</code> is the same as <code class="codehilite">malloc(count * size)</code>.</p>
-<p>We have seen in <a href="../05-first-c/index.html">Unit 5</a> that the number of bytes needed to represent a type depends on the platform.  Suppose we want to allocate enough memory for, say, 10 <code class="codehilite">long</code> values, how do we know how many bytes are needed?  A <code class="codehilite">long</code> can be 4 bytes on some platforms, 8 bytes on others.  For this purpose, C provides a <code class="codehilite">sizeof</code> operator, that returns the number of bytes needed for a type or a variable.  So, to allocate memory for 10 <code class="codehilite">long</code> values, we say:
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">long</span> <span class="o">*</span><span class="n">array</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="mi">10</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">long</span><span class="p">));</span>
-</pre></div>
-</td></tr></table></p>
-<p>The CS1010 I/O library, internally, allocates memory on the heap so that we can read in words, lines, or arrays of arbitrary length.</p>
-<p>The following shows the example of how <code class="codehilite">cs1010_read_long_array</code> is implemented with <code class="codehilite">calloc</code>.</p>
+</td></tr></table>
+
+<p>After the second pass, the second largest element, 23, is in its position.  So we can exclude this item in the subsequent pass.</p>
+<p>The rest of the passes operates similarly.  In the <span>\(i\)</span>-th pass, we scan through array item 0 to <span>\(n-i\)</span>, swapping any adjacent element that is out of order, until <span>\(i = n - 1\)</span>, in which case we only have two elements, we swap them if we are out of order, and we are done!</p>
+<p>The code for bubble sort can be written as follows:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -1256,47 +1290,54 @@
 10
 11
 12
-13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">long</span><span class="o">*</span> <span class="nf">cs1010_read_long_array</span><span class="p">(</span><span class="kt">int</span> <span class="n">how_many</span><span class="p">)</span>
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">bubble_pass</span><span class="p">(</span><span class="kt">long</span> <span class="n">last</span><span class="p">,</span> <span class="kt">long</span> <span class="n">a</span><span class="p">[])</span> 
 <span class="p">{</span>
-  <span class="kt">long</span> <span class="o">*</span><span class="n">buffer</span> <span class="o">=</span> <span class="n">calloc</span><span class="p">(</span><span class="n">how_many</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">long</span><span class="p">));</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">buffer</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">last</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
+      <span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
   <span class="p">}</span>
+<span class="p">}</span>
 
-  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">how_many</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">buffer</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">cs1010_read_long</span><span class="p">();</span>
+<span class="kt">void</span> <span class="nf">bubble_sort</span><span class="p">(</span><span class="kt">long</span> <span class="n">n</span><span class="p">,</span> <span class="kt">long</span> <span class="n">a</span><span class="p">[</span><span class="n">n</span><span class="p">])</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">last</span> <span class="o">=</span> <span class="n">len</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">last</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="n">last</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">bubble_pass</span><span class="p">(</span><span class="n">last</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
   <span class="p">}</span>
-
-  <span class="k">return</span> <span class="n">buffer</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
 
-<h2 id="memory-deallocation">Memory Deallocation</h2>
-<p>Even though the memory available on the heap is larger than the stack, it is not unlimited, and therefore we should still use the memory judiciously.   In particular, after we are done using the memory allocated to us, we should call the method <code class="codehilite">free</code>, passing in the pointer the memory region allocated, to have the memory region deallocated, returned back to the OS to be reused by others.</p>
-<p>A common bug is for a programmer to access a memory that has been freed.  This would cause strange behaviors, possible crashes in random places since we will be accessing memory that is being used by others.  It is a good practice to set the pointer to NULL after <code class="codehilite">free</code>-ing the memory region so that we do not accidentally use it.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>free(buffer);
-buffer = NULL;
+<p>How many steps does it take to bubble-sort an array of <span>\(n\)</span> elements?   Since the <span>\(i\)</span>-th pass scans through <span>\(n-i\)</span> elements, and there are a <span>\(n\)</span> passes in total, the analysis is similar to the one we did for the algorithm to compute the Kendall-tau distance -- bubble sort takes <span>\(O(n^2)\)</span> steps.</p>
+<h2 id="insertion-sort">Insertion Sort</h2>
+<p>The next sorting algorithm we are going to discuss is insertion sort.  This is another classic algorithm, that could perform better than bubble sort in some scenario.  The idea of insertion sort is simple: we partition the input list into two, a sorted partition, and an unsorted partition.  Then we repeatedly take the first element from the unsorted partition, find its rightful place in the sorted partition, and <em>insert</em> it into place.  We start with a sorted partition of one element, and we end if the sorted partition contains all the elements.</p>
+<p>Take <code class="codehilite">8 4 23 42 16 15</code> as an example.  I will use <code class="codehilite">|</code> to partition the array into a left sorted partition, and a right, unsorted, partition.  </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>8 | 4 23 42 16 15 
 </pre></div>
 </td></tr></table>
 
-<p>Another common bug is for programmers to request memory via <code class="codehilite">malloc</code> or related functions, but forgot to <code class="codehilite">free</code> it back to the OS.  As a result, as the program runs, it starts to hog the memory and the system will become slower and slower.   This bug is known as <em>memory leak</em>.  </p>
-<p>Another possible bug is for programmers to change the pointer to the region of memory allocated.  For instance,
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>long *buffer = calloc(how_many, sizeof(long));
-long x;
+<p>We pick the first element on the unsorted partition, 4, and insert it into the sorted partition.  This involves shifting the elements in the sorted partition to the right until we find the rightful place for <code class="codehilite">4</code>.   After this step, the sorted partition grows by 1 and the unsorted partition shrinks by 1.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>4 8 | 23 42 16 15 
+</pre></div>
+</td></tr></table>
 
-buffer = &amp;x;
+<p>In the next round, we take <code class="codehilite">23</code>, and finds its rightful place.  It turns out <code class="codehilite">23</code> is already in its correct place.<br />
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>4 8 23 | 42 16 15 
 </pre></div>
 </td></tr></table></p>
-<p>After we execute the code such as the above, the pointer <code class="codehilite">buffer</code> will point to something new, and there is no longer a pointer pointing to allocate memory.  The memory allocated becomes unreachable, and therefore we can no longer free it!</p>
-<p>In CS1010, from now on, you are to make sure that memory that is allocated via <code class="codehilite">malloc</code> and related functions are <code class="codehilite">free</code> after it is used, including those allocated in CS1010 I/O library.  The <a href="../library/index.html">API documentation</a> tells you what are the values returned by the library that should be deallocated by the caller via <code class="codehilite">free</code>.</p>
-<h2 id="problem-set">Problem Set</h2>
-<h3 id="problem-set-181">Problem Set 18.1</h3>
-<p>Draw the call stack and the heap, showing what happened when we run the following code:</p>
+<p>In the next step, <code class="codehilite">42</code> is also in its correct place.
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>4 8 23 42 | 16 15 
+</pre></div>
+</td></tr></table></p>
+<p><code class="codehilite">16</code> is next element, and we insert it between 8 and 23.
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>4 8 16 23 42 | 15 
+</pre></div>
+</td></tr></table></p>
+<p>Finally we insert <code class="codehilite">15</code> and we are done, as there is no more element in the unsorted partition.
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>4 8 15 16 23 42
+</pre></div>
+</td></tr></table></p>
+<p>The code for insertion sort can be written as follows:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -1312,33 +1353,43 @@ buffer = &amp;x;
 13
 14
 15
-16
-17
-18
-19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">foo</span><span class="p">(</span><span class="kt">long</span> <span class="o">*</span><span class="n">y</span><span class="p">,</span> <span class="kt">long</span> <span class="o">*</span><span class="n">z</span><span class="p">)</span>
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">insert</span><span class="p">(</span><span class="kt">long</span> <span class="n">a</span><span class="p">[],</span> <span class="kt">long</span> <span class="n">curr</span><span class="p">)</span>
 <span class="p">{</span>
-  <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">7</span><span class="p">;</span>
-  <span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">8</span><span class="p">;</span>
-  <span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
-  <span class="n">z</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+  <span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="n">curr</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="kt">long</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">curr</span><span class="p">];</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">temp</span> <span class="o">&lt;</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
 <span class="p">}</span>
 
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>  
-  <span class="kt">long</span> <span class="n">y</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">};</span>
-  <span class="kt">long</span> <span class="o">*</span><span class="n">z</span> <span class="o">=</span> <span class="n">calloc</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">long</span><span class="p">));</span>
-
-  <span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-  <span class="n">z</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
-
-  <span class="n">foo</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">insertion_sort</span><span class="p">(</span><span class="kt">long</span> <span class="n">n</span><span class="p">,</span> <span class="kt">long</span> <span class="n">a</span><span class="p">[</span><span class="n">n</span><span class="p">])</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">curr</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">curr</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">curr</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">insert</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">curr</span><span class="p">);</span>
+  <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
 
-<h3 id="problem-set-182">Problem Set 18.2</h3>
-<p>Read the man page for the function <code class="codehilite">realloc</code> and explain what does it do.  Can you come up with a situation where it could be useful?</p>
+<h2 id="animation">Animation</h2>
+<p>Animations for various sorting algorithms, including some which you will learn in CS2040C, are available online on <a href="https://visualgo.net/bn/sorting">VisuAlgo</a></p>
+<h2 id="problem-set-24">Problem Set 24</h2>
+<h3 id="problem-241">Problem 24.1</h3>
+<p>In the implementation of bubble sort above, we always make <span>\(n-1\)</span> passes through the array.  It is, however, possible to stop the whole sorting procedure, when a pass through the array did not lead to any swapping.  Modify the code above to achieve this optimization.</p>
+<h3 id="problem-242">Problem 24.2</h3>
+<p>a) Suppose the input list to insertion sort is already sorted.  What is the running time of insertion sort?
+b) Suppose the input list to insertion sort is inversely sorted.  What is the running time of insertion sort?</p>
+<h3 id="problem-243">Problem 24.3</h3>
+<p>What is the loop invariant for the loop in the function <code class="codehilite">insert</code>? </p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p><a href="https://www.youtube.com/watch?v=k4RRi_ntQc8">https://www.youtube.com/watch?v=k4RRi_ntQc8</a>&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
                 
                   
                 
@@ -1357,7 +1408,7 @@ buffer = &amp;x;
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../17-call-by-reference/index.html" title="17. Call by Reference" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../23-search/index.html" title="23. Binary Search" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1366,19 +1417,19 @@ buffer = &amp;x;
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                17. Call by Reference
+                23. Binary Search
               </span>
             </div>
           </a>
         
         
-          <a href="../19-md-array/index.html" title="19. Multidimensional Array" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../ex01/index.html" title="1. Freezer" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                19. Multidimensional Array
+                1. Freezer
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
