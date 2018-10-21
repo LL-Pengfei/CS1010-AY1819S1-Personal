@@ -49,6 +49,7 @@ void foo(long x) {
     } else {
         assert(x % 2 == 1);
     }
+}
 ```
 
 Would the assert in Line 5 above ever fail?
