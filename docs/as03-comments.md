@@ -3,7 +3,7 @@
 
 ## Mark Distribution
 
-Output from `histogram`.  Marks are scaled up by 3x.
+The output from `histogram`.  Marks are scaled up by 3x.
 
 ```
           ┴┴┴┴┴┴┴┴┴┴
@@ -79,7 +79,7 @@ This question should be quite straightforward, except that we need to consider t
 
 - if the pair $a_i$ and $a_j$ are out of order, then we can count this pair as _one_ inversion only.  We need to fix a convention on how we account for inversion. I use convention that we count the inversion if $i < j$ and $a_i > $a_j$.  In other words, for the subproblem 1 above, we only need to check for inversions for each element $a_j$, if $j > i$.
 
-- $a_i$ shouldn't be the last element, since there is no $j$ that is bigger than $i$.
+- $a_i$ shouldn't be the last element since there is no $j$ that is bigger than $i$.
 
 Slightly more 4/5 of the class get this question correct, with full marks.  Well done!
 
@@ -115,7 +115,7 @@ void populate_histogram(long histogram[NUM_OF_BUCKETS], int num_of_items, const 
 }
 ```
 
-The only tricky part of this code is what happen if `marks[i]` is 100, in which case, `marks[i]/interval` would lead to `bucket` being `10`.  Since the indices to the buckets are `histogram[0]`,..., `histogram[9]` only, we would be writing into memory location that we do not own if we increment `histogram[10]`.  For this question, we were told that 100 belongs to $b_9$.  So, we need to decrement the variable `bucket` by 1.
+The only tricky part of this code is what happens if `marks[i]` is 100, in which case, `marks[i]/interval` would lead to `bucket` being `10`.  Since the indices to the buckets are `histogram[0]`,..., `histogram[9]` only, we would be writing into a memory location that we do not own if we increment `histogram[10]`.  For this question, we were told that 100 belongs to $b_9$.  So, we need to decrement the variable `bucket` by 1.
 
 Second, after populating the buckets, we need to draw out the histogram:
 
@@ -129,7 +129,7 @@ Second, after populating the buckets, we need to draw out the histogram:
     height[i] = BAR_LENGTH*histogram[i]/num_of_items;
 
     // Print full blocks
-	long num_of_cells = floor(height[i]);
+    long num_of_cells = floor(height[i]);
     for (long j = 0; j < num_of_cells; j += 1) {
       cs1010_print_string(BLOCK);
     }
@@ -150,9 +150,9 @@ Second, after populating the buckets, we need to draw out the histogram:
 
 The purpose of this question to see how arrays can be used as a list (the input marks) and a lookup table (for histogram frequency, height, and y-axis).
 
-This should be quite straight forward.  At least 4/5 of the class received 9 marks or above for this.  Well done!  
+This should be quite straightforward.  At least 4/5 of the class received 9 marks or above for this.  Well done!  
 
-There are some students, however, who tried to compare `double` variable using `==` operator, and got deducted one mark for it.  Revisit [Unit 08](https://nus-cs1010.github.io/1819-s1/08-if-else/index.html#comparing-real-numbers) if you have doubts about why we should never compare `double` variable using `==`.
+There are some students, however, who tried to compare `double` variable using `==` operator and got deducted one mark for it.  Revisit [Unit 08](https://nus-cs1010.github.io/1819-s1/08-if-else/index.html#comparing-real-numbers) if you have doubts about why we should never compare `double` variable using `==`.
 
 Another common mistake that students make, at least at the beginning of doing this assignment, is to use `cs1010_read_long()` to read a `double`.  The function `cs1010_read_long()` gives a warning if it is used to read a `double` value.  This is one of the advantages of using the CS1010 library to read instead of the `scanf` functions.  `scanf` would just silently failed and you would be left scratching your head why your code does not work!
 
@@ -162,20 +162,20 @@ This is the assignment question that most students are having trouble with.
 
 Students who do not follow the instructions and use any other sorting algorithm (e.g., bubble sort) will receive 0 for correctness.
 
-Students who just loops through the array and prints out all the numbers, without counting, will get at most 2 marks for correctness.  The question clearly asked you to count.
+Students who just loop through the array and prints out all the numbers, without counting, will get at most 2 marks for correctness.  The question clearly asked you to count.
 
 ```C
 // A 2 mark solution
 for (int i = 1; i <= k; i += 1) {
   for (int j = 0; j < n; j += 1) {
-	if (a[j] == i) {
-	  cs1010_println_long(i);
-	}
+    if (a[j] == i) {
+      cs1010_println_long(i);
+    }
   }
 }
 ```
 
-Students who just loops through the array and count, but goes through it multiple times to store the frequency of each number, will get at most 4 marks for correctness.  Here, you are not exploiting array properly to help you solve the problem!
+Students who just loop through the array and count, but goes through it multiple times to store the frequency of each number, will get at most 4 marks for correctness.  Here, you are not exploiting array properly to help you solve the problem!
 
 ```C
 // A 4 mark solution
@@ -183,9 +183,9 @@ long counter[k+1] = {0};
 
 for (int i = 1; i <= k; i += 1) {
   for (int j = 0; j < n; j += 1) {
-	if (a[j] == i) {
-	  counter[i] += 1;
-	}
+    if (a[j] == i) {
+      counter[i] += 1;
+    }
   }
 }
 
@@ -203,9 +203,9 @@ In the code above, the `counter` array is useless, since we could have just use 
 for (int i = 1; i <= k; i += 1) {
   long counter = 0;
   for (int j = 0; j < n; j += 1) {
-	if (a[j] == i) {
-	  counter += 1;
-	}
+    if (a[j] == i) {
+      counter += 1;
+    }
   }
   for (int j = 0; j < counter; j += 1) {
     cs1010_println_long(i);
@@ -213,7 +213,7 @@ for (int i = 1; i <= k; i += 1) {
 }
 ```
 
-What we are looking for, and the "mental leap" that we want to see in the students, is how we can use array as a lookup table to store the frequency counters.
+What we are looking for, and the "mental leap" that we want to see in the students, is how we can use an array as a lookup table to store the frequency counters.
 
 ```C
 // An 8 mark solution
@@ -230,7 +230,7 @@ for (int i = 1; i <= k; i += 1) {
 }
 ```
 
-Only about half the class get this.  But hopefully, after this assignment, everyone gets how powerful a lookup table is as a problem solving tool.
+Only about half the class get this.  But hopefully, after this assignment, everyone gets how powerful a lookup table is as a problem-solving tool.
 
 A final comment about the loop:
 
@@ -240,12 +240,12 @@ for (int j = 0; j < n; j += 1) {
 }
 ```
 
-We should not actually write code that looks like this, unless we can be sure that `a[j]` is within range of 1 and $k$.  There is a reason that we ask you to validate the input for this question, but not for any other questions.  Because, for this question, if you do not validate the input, it is very easy to access a location that is out-of-bound of your array and crash your program.
+We should not actually write code that looks like this unless we can be sure that `a[j]` is within range of 1 and $k$.  There is a reason that we ask you to validate the input for this question, but not for any other questions.  Because, for this question, if you do not validate the input, it is very easy to access a location that is out-of-bounds of your array and crash your program.
 
 ```C
 for (int j = 0; j < n; j += 1) {
   if (a[j] >= 1 && a[j] <= k) {
-	counter[a[j]] += 1;
+    counter[a[j]] += 1;
   }
 }
 ```
