@@ -42,7 +42,7 @@ As you reason about your code, sprinkle `assert` liberally in your code so that,
 ### Problem 21.1
 
 Consider the code:
-```
+```C
 void foo(long x) {
     if (x % 2 == 0) {
         // do something
