@@ -81,7 +81,7 @@ long fib(long n)
 }
 ```
 
-To find the $n$-th Fibonacci number, we take $n$ steps in a loop. 
+To find the $n$-th Fibonacci number, we take $n$ steps in a loop.
 
 Now, let's see the following elegant recursive solution:
 ```C
@@ -125,7 +125,7 @@ Due to this focus on the term with highest rate of growth, and not bothering abo
 
 Take the example of `is_prime`.  The slow algorithm takes $O(n)$, the fast algorithm takes $O(\sqrt{n})$.  
 
-Take another example: to find the range of a list, both algorithms, regardless of whether we are taking two passes or one pass, take $O(n)$ time. 
+Take another example: to find the range of a list, both algorithms, regardless of whether we are taking two passes or one pass, take $O(n)$ time.
 
 
 ## Rate of Growth
@@ -168,9 +168,9 @@ To analyze the running time, we focus on the big picture, the part of the code t
 
 It is tempting to conclude that `kentall_tau` takes $O(n)$ steps here, but it would be wrong.  
 
-Notice that Line 16 calls another function `count_inversion`.  What is the running time of `count_inversion`?  Inside `count_inversion`, there is another loop that repeats $n - i$ times.  Each time we call `count_inversion`, `i` increases, so the loop in `count_inversion` takes fewer steps each time the function is called. 
+Notice that Line 16 calls another function `count_inversion`.  What is the running time of `count_inversion`?  Inside `count_inversion`, there is another loop that repeats $n - i$ times.  Each time we call `count_inversion`, `i` increases, so the loop in `count_inversion` takes fewer steps each time the function is called.
 
-To calculate the total number of steps, we can compute the following sum 
+To calculate the total number of steps, we can compute the following sum
 $sum_{i = 0}^{n} (n - i)$, which is just $n + (n-1) + (n-2) + .. + 2 + 1$.
 This sum is the sum of an arithmetic series and equals to $n(n+1)/2$.   Since we use the Big-O notation, we can focus on the term with the highest rate of growth, $n^2$, and ignore everything else.  We have obtained the running time for `kentall_tau` function above as $O(n^2)$.
 
@@ -184,15 +184,15 @@ In CS1010, we will focus on the efficiency of your code in two senses: First, yo
 
 Order the following functions in the increasing order of rate of growth:
 
-- $n!$, 
-- $2^n$, 
-- $\log_{10} n$, 
-- $\ln n$, 
-- $n^4$, 
-- $n\ln n$, 
-- $n$, 
-- $n^2$, 
-- $e^n$, 
+- $n!$,
+- $2^n$,
+- $\log_{10} n$,
+- $\ln n$,
+- $n^4$,
+- $n\ln n$,
+- $n$,
+- $n^2$,
+- $e^n$,
 - $\sqrt{n}$
 
 ### Problem 22.2
@@ -211,8 +211,8 @@ for (long i = 0; i < n; i += 1) {
 
 b)
 ```C
-for (long i = 0; i < n; i *= 2) {
-  for (long j = 0; j < n; j *= 2) {
+for (long i = 1; i < n; i *= 2) {
+  for (long j = 1; j < n; j *= 2) {
     cs1010_println_long(i + j);
   }
 }
