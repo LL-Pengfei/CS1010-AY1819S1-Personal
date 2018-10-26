@@ -1002,6 +1002,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../as07/index.html" title="7. Peak, Scripts, Inversion" class="md-nav__link">
+      7. Peak, Scripts, Inversion
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1421,7 +1433,7 @@
 </pre></div>
 </td></tr></table>
 
-<p>To find the <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>-th Fibonacci number, we take <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> steps in a loop. </p>
+<p>To find the <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>-th Fibonacci number, we take <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> steps in a loop.</p>
 <p>Now, let's see the following elegant recursive solution:
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -1461,7 +1473,7 @@
 <p>Given a mathematical function with multiple terms, the Big-O of this function is obtained by dropping any multiplicative constants and all terms, except for the one with the <em>highest rate of growth</em>.  For instance, <span><span class="MathJax_Preview">O(\frac{n^4}{10} + 10000n^2 - n) = O(n^4)</span><script type="math/tex">O(\frac{n^4}{10} + 10000n^2 - n) = O(n^4)</script></span>.</p>
 <p>Due to this focus on the term with highest rate of growth, and not bothering about other terms or multiplicative constants, it becomes very convenient for us to expression the time efficiency of an algorithm with <span><span class="MathJax_Preview">O()</span><script type="math/tex">O()</script></span> -- we no longer need to count the steps precisely but just focus on the number of times it takes to run the algorithm in terms of <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>.  </p>
 <p>Take the example of <code class="codehilite">is_prime</code>.  The slow algorithm takes <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span>, the fast algorithm takes <span><span class="MathJax_Preview">O(\sqrt{n})</span><script type="math/tex">O(\sqrt{n})</script></span>.  </p>
-<p>Take another example: to find the range of a list, both algorithms, regardless of whether we are taking two passes or one pass, take <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> time. </p>
+<p>Take another example: to find the range of a list, both algorithms, regardless of whether we are taking two passes or one pass, take <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> time.</p>
 <h2 id="rate-of-growth">Rate of Growth</h2>
 <p>Given two functions <span><span class="MathJax_Preview">f(n)</span><script type="math/tex">f(n)</script></span> and <span><span class="MathJax_Preview">g(n)</span><script type="math/tex">g(n)</script></span>, how do we determine which one has a higher rate of growth?  We say that <span><span class="MathJax_Preview">f(n)</span><script type="math/tex">f(n)</script></span> grows faster than <span><span class="MathJax_Preview">g(n)</span><script type="math/tex">g(n)</script></span> if we can find a <span><span class="MathJax_Preview">n_0</span><script type="math/tex">n_0</script></span>, such that <span><span class="MathJax_Preview">f(n) &gt; cg(n)</span><script type="math/tex">f(n) > cg(n)</script></span> for all <span><span class="MathJax_Preview">n \ge n_0</span><script type="math/tex">n \ge n_0</script></span> and for some constant <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span>.  </p>
 <p>For instance, which one grows faster?  <span><span class="MathJax_Preview">f(n) = n^n</span><script type="math/tex">f(n) = n^n</script></span> or <span><span class="MathJax_Preview">g(n) = 2^n</span><script type="math/tex">g(n) = 2^n</script></span>?  Pick <span><span class="MathJax_Preview">n = 1</span><script type="math/tex">n = 1</script></span>, we have <span><span class="MathJax_Preview">f(1) &lt; g(1)</span><script type="math/tex">f(1) < g(1)</script></span><sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>.  Pick <span><span class="MathJax_Preview">n = 2</span><script type="math/tex">n = 2</script></span>, we have <span><span class="MathJax_Preview">f(2)</span><script type="math/tex">f(2)</script></span> equals <span><span class="MathJax_Preview">g(2)</span><script type="math/tex">g(2)</script></span>.  Pick <span><span class="MathJax_Preview">n = 3</span><script type="math/tex">n = 3</script></span>, we have $f(3) &gt; <span><span class="MathJax_Preview">g(3)</span><script type="math/tex">g(3)</script></span> now, and we can see that for any <span><span class="MathJax_Preview">n &gt; 3</span><script type="math/tex">n > 3</script></span>, <span><span class="MathJax_Preview">n^n &gt; 2^n</span><script type="math/tex">n^n > 2^n</script></span>, so we can conclude that <span><span class="MathJax_Preview">f(n)</span><script type="math/tex">f(n)</script></span> grows faster than <span><span class="MathJax_Preview">g(n)</span><script type="math/tex">g(n)</script></span>.</p>
@@ -1510,8 +1522,8 @@
 <p>What is the running time of the function <code class="codehilite">kendall_tau</code>, expressed in Big-O notation in terms of <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>, the length of the input array?</p>
 <p>To analyze the running time, we focus on the big picture, the part of the code that takes the most time, and we ignore all the other operations that take negligible time.  In the function <code class="codehilite">kendall_tau</code> above, Line 16 is repeated many times, so let's focus on that.  Looking at the looping conditions, we can conclude that Line 16 repeats <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> times.  </p>
 <p>It is tempting to conclude that <code class="codehilite">kentall_tau</code> takes <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> steps here, but it would be wrong.  </p>
-<p>Notice that Line 16 calls another function <code class="codehilite">count_inversion</code>.  What is the running time of <code class="codehilite">count_inversion</code>?  Inside <code class="codehilite">count_inversion</code>, there is another loop that repeats <span><span class="MathJax_Preview">n - i</span><script type="math/tex">n - i</script></span> times.  Each time we call <code class="codehilite">count_inversion</code>, <code class="codehilite">i</code> increases, so the loop in <code class="codehilite">count_inversion</code> takes fewer steps each time the function is called. </p>
-<p>To calculate the total number of steps, we can compute the following sum 
+<p>Notice that Line 16 calls another function <code class="codehilite">count_inversion</code>.  What is the running time of <code class="codehilite">count_inversion</code>?  Inside <code class="codehilite">count_inversion</code>, there is another loop that repeats <span><span class="MathJax_Preview">n - i</span><script type="math/tex">n - i</script></span> times.  Each time we call <code class="codehilite">count_inversion</code>, <code class="codehilite">i</code> increases, so the loop in <code class="codehilite">count_inversion</code> takes fewer steps each time the function is called.</p>
+<p>To calculate the total number of steps, we can compute the following sum
 <span><span class="MathJax_Preview">sum_{i = 0}^{n} (n - i)</span><script type="math/tex">sum_{i = 0}^{n} (n - i)</script></span>, which is just <span><span class="MathJax_Preview">n + (n-1) + (n-2) + .. + 2 + 1</span><script type="math/tex">n + (n-1) + (n-2) + .. + 2 + 1</script></span>.
 This sum is the sum of an arithmetic series and equals to <span><span class="MathJax_Preview">n(n+1)/2</span><script type="math/tex">n(n+1)/2</script></span>.   Since we use the Big-O notation, we can focus on the term with the highest rate of growth, <span><span class="MathJax_Preview">n^2</span><script type="math/tex">n^2</script></span>, and ignore everything else.  We have obtained the running time for <code class="codehilite">kentall_tau</code> function above as <span><span class="MathJax_Preview">O(n^2)</span><script type="math/tex">O(n^2)</script></span>.</p>
 <h2 id="efficiency-in-cs1010">Efficiency in CS1010</h2>
@@ -1520,15 +1532,15 @@ This sum is the sum of an arithmetic series and equals to <span><span class="Mat
 <h3 id="problem-221">Problem 22.1</h3>
 <p>Order the following functions in the increasing order of rate of growth:</p>
 <ul>
-<li><span><span class="MathJax_Preview">n!</span><script type="math/tex">n!</script></span>, </li>
-<li><span><span class="MathJax_Preview">2^n</span><script type="math/tex">2^n</script></span>, </li>
-<li><span><span class="MathJax_Preview">\log_{10} n</span><script type="math/tex">\log_{10} n</script></span>, </li>
-<li><span><span class="MathJax_Preview">\ln n</span><script type="math/tex">\ln n</script></span>, </li>
-<li><span><span class="MathJax_Preview">n^4</span><script type="math/tex">n^4</script></span>, </li>
-<li><span><span class="MathJax_Preview">n\ln n</span><script type="math/tex">n\ln n</script></span>, </li>
-<li><span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>, </li>
-<li><span><span class="MathJax_Preview">n^2</span><script type="math/tex">n^2</script></span>, </li>
-<li><span><span class="MathJax_Preview">e^n</span><script type="math/tex">e^n</script></span>, </li>
+<li><span><span class="MathJax_Preview">n!</span><script type="math/tex">n!</script></span>,</li>
+<li><span><span class="MathJax_Preview">2^n</span><script type="math/tex">2^n</script></span>,</li>
+<li><span><span class="MathJax_Preview">\log_{10} n</span><script type="math/tex">\log_{10} n</script></span>,</li>
+<li><span><span class="MathJax_Preview">\ln n</span><script type="math/tex">\ln n</script></span>,</li>
+<li><span><span class="MathJax_Preview">n^4</span><script type="math/tex">n^4</script></span>,</li>
+<li><span><span class="MathJax_Preview">n\ln n</span><script type="math/tex">n\ln n</script></span>,</li>
+<li><span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>,</li>
+<li><span><span class="MathJax_Preview">n^2</span><script type="math/tex">n^2</script></span>,</li>
+<li><span><span class="MathJax_Preview">e^n</span><script type="math/tex">e^n</script></span>,</li>
 <li><span><span class="MathJax_Preview">\sqrt{n}</span><script type="math/tex">\sqrt{n}</script></span></li>
 </ul>
 <h3 id="problem-222">Problem 22.2</h3>
@@ -1551,8 +1563,8 @@ This sum is the sum of an arithmetic series and equals to <span><span class="Mat
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span> <span class="o">*=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span> <span class="o">*=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span> <span class="o">*=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span> <span class="o">*=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="n">j</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">}</span>
