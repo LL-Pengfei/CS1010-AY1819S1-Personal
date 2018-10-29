@@ -1,6 +1,6 @@
 # Unit 27: N Queens
 
-We now look at how recursion can help with solving problems that require _searching and backtracking_.  A classical example for this is the $n$-queens problem, which can be stated as: given a $n \times n$ chessboard, find a possible placements of $n$ queens on the chessboard, such that the queens do not threaten each other.	In other words, there is exactly one queen in each row, in each column, and in each diagonal.  The 8-queens puzzle was first published by Max Bezzel in 1848, with the first solution published Franz Nauck in 1850.
+We now look at how recursion can help with solving problems that require _searching and backtracking_.  A classical example for this is the $n$-queens problem, which can be stated as given a $n \times n$ chessboard, find a possible placement of $n$ queens on the chessboard, such that the queens do not threaten each other.    In other words, there is exactly one queen in each row, in each column, and in each diagonal.  The 8-queens puzzle was first published by Max Bezzel in 1848, with the first solution published Franz Nauck in 1850.
 The generalized $n$-queens problems were introduced later.  It is known that there is no solution for $n = 2$ and $n = 3$, but a solution exists for $n > 3$.
 
 If we visualize the chessboard as a 2D array, with `#` as the position of a queen, and `.` as an empty position on the board, then a solution to the 4-queens problem looks like this:
@@ -14,13 +14,13 @@ If we visualize the chessboard as a 2D array, with `#` as the position of a quee
 
 ## Recursive Formulation
 
-Let's see how we can formulate the problem recursively.  The first step is to simplify the problem to the most trivial case where we can solve it.  It is tempting to say that a simpler version of the problem is a $n-1$-queens problem, and so the most trivial case is 1-queen.  While the solution to 1-queen is trivial, there is no solution to both 2-queen and 3-queen problems.  Further, if we have found a solution to the $n-1$-queens problem, extending it to a solution of $n$-queens problem is not trivial.  
+Let's see how we can formulate the problem recursively.  The first step is to simplify the problem to the most trivial case where we can solve it.  It is tempting to say that a simpler version of the problem is an $n-1$-queens problem, and so the most trivial case is 1-queen.  While the solution to 1-queen is trivial, there is no solution to both 2-queen and 3-queen problems.  Further, if we have found a solution to the $n-1$-queens problem, extending it to a solution of $n$-queens problem is not trivial.  
 
 ### Approach 1: Generate All Permutations
 
-As a start, let's borrow the idea from [Unit 26](26-permutations.md) and generate all permutations of the queens positions.  Let's label the columns `a`, `b`, `c`, .. etc.  Since we know that there must be exactly one queen in each row, and one queen in each column, the positions of the queens can be represented as a string that is a permutation of `abcde..`.  For instance, the solution of the 4-queen problem depicted above can be represented by `bdac`.
+As a start, let's borrow the idea from [Unit 26](26-permutations.md) and generate all permutations of the queens' positions.  Let's label the columns `a`, `b`, `c`, .. etc.  Since we know that there must be exactly one queen in each row, and one queen in each column, the positions of the queens can be represented as a string that is a permutation of `abcde..`.  For instance, the solution of the 4-queen problem depicted above can be represented by `bdac`.
 
-A simple algorithm is thus to generate all possible $n!$ permutations, and for each one, check if it is a valid placement.  We already ensure that there is exactly one queen per row and one queen per column.  It remains to check that the queens does not threaten each other diagonally.
+A simple algorithm is thus to generate all possible $n!$ permutations, and for each one, check if it is a valid placement.  We already ensure that there is exactly one queen per row and one queen per column.  It remains to check that the queens do not threaten each other diagonally.
 
 Let's write a function that checks, given a string representation of the queen positions, whether there is any queen that threaten another or not:
 
@@ -76,7 +76,7 @@ void nqueens(char queens[], long n, long row) {
 
 One of the principles to writing efficient code is to avoid doing useless work.  The code above, which tests all permutations, actually generates much work that is useless.  Suppose the queens in the first two rows already threaten each other, then, there is no need to continue to generate all possible placements of queens for the remaining rows.
 
-This concept is called _pruning_, and is a key to speeding up many searching-based solutions.  We want to prune away bad solutions as early as possible.  This can be achieved easily, by checking if the queens already placed on the first $k$ rows threaten each other.
+This concept is called _pruning_ and is a key to speeding up many searching-based solutions.  We want to prune away bad solutions as early as possible.  This can be achieved easily, by checking if the queens already placed on the first $k$ rows threaten each other.
 
 ```C
 void nqueens(char queens[], long n, long row) {
@@ -112,7 +112,3 @@ In the code for Approach 2 above, we check if the queens placed on Rows 0 to `ro
 ### Problem 27.2
 
 Consider the code to generate all possible permutations of a string from Problem 26.1.  Suppose that we restrict the permutations to those where the same character does not appear next to each other.  Modify the solution to Problem 26.1 to prune away permutations where the same character appears more than once consecutively.
-
-
-
-Consider the permutation generation algorithm.  

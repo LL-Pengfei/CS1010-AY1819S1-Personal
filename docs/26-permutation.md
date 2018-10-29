@@ -6,7 +6,7 @@ Let's see a simple example of this: generate all permutations of the characters 
 
 ## Recursive Formulation
 
-To formulate a recursive solution, as usual, let's simplify the problem.  A simplier version of the problem is to permute a string of length $n-1$.
+To formulate a recursive solution, as usual, let's simplify the problem.  A simpler version of the problem is to permute a string of length $n-1$.
 
 The trivial case is when we generate the permutation of a string with one character.  There is only one possible permutation!  Now, by wishful thinking, we assume that we know how to generate all permutations of a string of length $n-1$.  Here is what we do to generate all permutations of a string of length $n$.
 
@@ -35,9 +35,9 @@ void permute(char a[], long len, long curr) {
 }
 ```
 
-Lines 3-6 above corresponds to the base case, where we have reach the end of the string, there is only one character left to permutate.  Since there is only one possible permutation, we do not need to do anything except to print out the permutated string.
+Lines 3-6 above corresponds to the base case, where we have reached the end of the string, there is only one character left to permutate.  Since there is only one possible permutation, we do not need to do anything except to print out the permutated string.
 
-Line 8 permutes the remaining string, `a[curr + 1]` to `a[len - 1]`, with character `a[curr]` in tact.  Lines 9-13 is a for loop which loops through all characters `a[curr + 1]` to `a[len - 1]`, and swaps each one to the position of `a[curr]`, and recursively permutes the string `a[curr + 1]`..`a[len - 1]`.   When we are done, we swap back the original `a[curr]`, this is to ensure that the string remains unchanged after `permute` is called.
+Line 8 permutes the remaining string, `a[curr + 1]` to `a[len - 1]`, with character `a[curr]` intact.  Lines 9-13 is a for loop which loops through all characters `a[curr + 1]` to `a[len - 1]`, and swaps each one to the position of `a[curr]`, and recursively permutes the string `a[curr + 1]`..`a[len - 1]`.   When we are done, we swap back the original `a[curr]`, this is to ensure that the string remains unchanged after `permute` is called.
 
 ## Running Time
 
@@ -57,7 +57,7 @@ We made $n!$ calls to `permute`, so the function `permute` is as efficient as it
 
 In the code above, we assume that the string contains distinct characters.  If there are duplicate characters in the string, duplicate permutations will be generated.  For instance, if the input is `aaa`, the code above would print `aaa` six times.
 
-We can fix this by making a small change to the function `permute` above, so that it does not generate duplicate permutations.  This can be done by adding a condition (Line A).  Write a boolean function that we can call in Line A to check if we should continue to permute the rest of the string, and therefore avoid generating duplicate permutations when the input string contains duplicate characters.
+We can fix this by making a small change to the function `permute` above so that it does not generate duplicate permutations.  This can be done by adding a condition (Line A).  Write a boolean function that we can call in Line A to check if we should continue to permute the rest of the string, and therefore avoid generating duplicate permutations when the input string contains duplicate characters.
 
 ```C
 void permute(char a[], long len, long curr) {
