@@ -5,10 +5,10 @@ In this unit and the next, we will see how we can use recursion to solve more co
 The Tower of Hanoi problem is a famous mathematical puzzle invented by French mathematician Édouard Lucas in 1883.  It goes like this: There are three pegs and $n$ disks of various size that we can slide into any of the pegs.  There are a few rules that we have to obey: 
 
 - we can only move one disk at a time;
-- we can only move the top most disk from one peg and place the disk on another peg;
+- we can only move the topmost disk from one peg and place the disk on another peg;
 - no disk can be placed on top of a smaller disk.
 
-At the beginning, we have all the disks in one peg.  The goal is to move all the disks onto another peg.  
+In the beginning, we have all the disks in one peg.  The goal is to move all the disks onto another peg.  
 
 Wikipedia has the following animation showing how to solve the puzzle with 4 disks in 15 steps.  
 
@@ -25,18 +25,18 @@ Recall the two steps in recursive problem solving: (i) reduce the problem to the
 
 What is the simplest version of the Tower of Hanoi puzzle?  It is the version with only a single disk.  In this version, the solution is trivial -- we just move the disk from the source peg to the destination peg
 
-Let's label the pegs A, B, and C, with A being the source and C being the destination.  We will use peg B as the temporary place holder.  
+Let's label the pegs A, B, and C, with A being the source and C being the destination.  We will use peg B as the temporary placeholder.  
 
 Now, let's assume that we can solve the Tower of Hanoi puzzle for $k-1$ disks.  How can we solve the puzzle for $k$ disks?  It turns out the solution is equally trivial.  First, move the top $k-1$ disk from A to B.  This would free up the largest disk, which we move from A to C.  Then, we move the $k-1$ disk from B to C.
 
 ![Tower of Hanoi](figures/tower-of-hanoi/tower-of-hanoi.001.png)
 ![Tower of Hanoi](figures/tower-of-hanoi/tower-of-hanoi.002.png)
 
-The figures above illustrates the recursion steps.  The first figure shows the original configuration.  The second figures shows the recursive step -- by wishful thinking, we believe that we can solve the puzzle for $k-1$ disks and move $k-1$ disks from A to B, using C as the placeholder.  The third figure shows the move after moving the largest disk from A to C.  The last figure shows the move of $k-1$ disks from B to C.  Now that A is empty, the last move uses A as the placeholder.
+The figures above illustrate the recursion steps.  The first figure shows the original configuration.  The second figure shows the recursive step -- by wishful thinking, we believe that we can solve the puzzle for $k-1$ disks and move $k-1$ disks from A to B, using C as the placeholder.  The third figure shows the move after moving the largest disk from A to C.  The last figure shows the move of $k-1$ disks from B to C.  Now that A is empty, the last move uses A as the placeholder.
 
 ## Representing the Tower of Hanoi in Code
 
-To write a solution for Tower of Hanoi, we need to decide how to represent the disks and the pegs in our code.  We are going to _abstract_ out only the necessary details.  Such abstraction process is similar to what we have done so far, representing elevations data as integers, student ids as integers, etc.  Here, we are representing physical objects, but note that, the actual size of the disks, the location of the pegs, etc, do not matter in our code.  As such, we will represent the disks with integers 1 to $k$ (1 being smallest, $k$ being the largest) and pegs with integers 1 to 3.
+To write a solution for the Tower of Hanoi, we need to decide how to represent the disks and the pegs in our code.  We are going to _abstract_ out only the necessary details.  Such an abstraction process is similar to what we have done so far, representing elevations data as integers, student ids as integers, etc.  Here, we are representing physical objects, but note that the actual size of the disks, the location of the pegs, etc, do not matter in our code.  As such, we will represent the disks with integers 1 to $k$ (1 being smallest, $k$ being the largest) and pegs with integers 1 to 3.
 
 ## The Solution
 
@@ -73,7 +73,7 @@ How many moves does it take to solve the Tower of Hanoi puzzle with $k$ disks?
 
 If $k$ is 1, then it takes one move.  Otherwise, let us denote the number of moves taken as $T(k)$.  From the code, we can see that it takes $T(k) = 2T(k-1) + 1$.
 
-An equations of this form is called a _recurrance equation_.  You can learn how to solve such equations generally in later modules (e.g., CS3230), but, for now, we will expand the equation to derive the solution for $T(k)$.
+An equation of this form is called a _recurrance equation_.  You can learn how to solve such equations generally in later modules (e.g., CS3230), but, for now, we will expand the equation to derive the solution for $T(k)$.
 
 You can see that:
 
@@ -94,6 +94,6 @@ Thus, solving the Tower of Hanoi with $k$ disks takes $2^k-1$ steps.
 
 ### Problem 25.1
 
-Suppose that we add a new restriction to the Tower of Hanoi puzzle.  Let's say that the disks are on Peg A (or Peg 1) to begin with, and we are only allowed to move a disk either to Peg A from another peg, or from Peg A to another peg.  In other words, we cannot move the disks between Peg B or Peg C.  
+Suppose that we add a new restriction to the Tower of Hanoi puzzle.  Let's say that the disks are on Peg A (or Peg 1) to begin with, and we are only allowed to move a disk either to Peg A from another peg or from Peg A to another peg.  In other words, we cannot move the disks between Peg B or Peg C.  
 
-Change the recursive algorithm above to solve Tower of Hanoi with this new restriction.  How many steps (use big O notation) are needed now?
+Change the recursive algorithm above to solve the Tower of Hanoi with this new restriction.  How many steps (use big O notation) are needed now?
