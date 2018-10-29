@@ -112,7 +112,3 @@ In the code for Approach 2 above, we check if the queens placed on Rows 0 to `ro
 ### Problem 27.2
 
 Consider the code to generate all possible permutations of a string from Problem 26.1.  Suppose that we restrict the permutations to those where the same character does not appear next to each other.  Modify the solution to Problem 26.1 to prune away permutations where the same character appears more than once consecutively.
-
-
-
-Consider the permutation generation algorithm.  
