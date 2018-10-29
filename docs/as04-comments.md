@@ -1,4 +1,4 @@
-# Assignment 3: Comments
+# Assignment 4: Comments
 
 ## Mark Distribution
 
@@ -21,14 +21,14 @@ To be safe, please follow strictly the CS1010 coding standards.
 
 ## Documentation
 
-Two marks are allocated for each question. We do not penalize for formatting errors violation in Assignment 4.  If you did not document your function, parameters, return values, or document wrongly (e.g., confused between `@param[out]` with `@return`, you will get a deduction of 1 mark.
+Two marks are allocated for each question. We do not penalize for formatting errors violation in Assignment 4.  If you did not document your function, parameters, return values, or document wrongly (e.g., confused between `@param[out]` with `@return`, you will get a deduction of 1 mark.  You get 0 if there is no documentation at all.  
 
 The following are common formatting errors:
 
 - `@param` command used in a comment that is not attached to a function declaration 
 - `@return` command used in a comment that is attached to a function returning `void` 
 - Parameter name not found in the function declaration.  You should put the name of the variable only, exclude the type, `*`, `[]`.
-- Putting `@param` with parameter name, but no description of what the parameter does.
+- Putting `@param` with the parameter name, but no description of what the parameter does.
 - Missing `[in]`, `[out]`, or `[in,out]`.  Note that there is no space after `,` in `[in,out]`. 
 
 ## General Mistakes
@@ -66,7 +66,7 @@ In general, -1 for each bug.
 
 ### SelectionSort
 
-This is an easy question, but unfortunately less than half the class received full marks.  Most of these are due to lack of documentation >.<
+This is an easy question, but unfortunately, less than half the class received full marks.  Most of these are due to lack of documentation >.<
 
 ```C
 /**
@@ -80,7 +80,7 @@ void selection_sort(long length, long list[length])
   long last = length;
   for (long i = 1; i <= length - 1; i += 1) {
     long curr_pos = last - 1;
-	// Find the position of the max number between list[0]..list[last-1]
+    // Find the position of the max number between list[0]..list[last-1]
     long max_pos = max(last, list);
     if (max_pos != curr_pos) {
       long temp = list[max_pos];
@@ -97,7 +97,7 @@ The only common mistake we see here is that the `max` function does not handle n
 
 ### Add
 
-The most common mistakes is accessing memory locations outside of the bound of the array.  This is usually due to careless mistakes (forgetting to allocate an extra space for null character at the end of string, or forgetting to allocate the extra carry).
+The most common mistake is accessing memory locations outside of the bound of the array.  This is usually due to careless mistakes (forgetting to allocate an extra space for null character at the end of the string, or forgetting to allocate the extra carry).
 
 I have seen lots of code that compute the addition in one long chunk of code, making it hard to read, understand, and debug.  Remember to practice decomposition -- breaking down the problem into smaller subproblems, and solve each one by writing a small function.
 
@@ -158,7 +158,7 @@ Then, I add digits by digits, starting from least significant digits.  Some stud
   }
 ```
 
-Once I exit the while loop, I have either `i < 0 || j < 0`.  I have exhausted the digits in one of the operands.   I figure out which one, and continue to add 0 to the remaining operand.
+Once I exit the while loop, I have either `i < 0 || j < 0`.  I have exhausted the digits in one of the operands.   I figure out which one and continue to add 0 to the remaining operand.
 
 ```C
 // done with the shorter number.  Now handle the rest.
