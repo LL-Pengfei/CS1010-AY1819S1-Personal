@@ -21,6 +21,10 @@
       
         <meta name="lang:search.language" content="en">
       
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
         <meta name="lang:search.result.none" content="No matching documents">
       
         <meta name="lang:search.result.one" content="1 matching document">
@@ -30,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.5.1">
+      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.2">
     
     
       
@@ -38,19 +42,21 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.aa3de92b.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.ba0fd1a6.css">
+      
       
     
     
       <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
       <link rel="stylesheet" href="../stylesheets/extra.css">
     
@@ -63,20 +69,36 @@
     
   </head>
   
-  
     <body dir="ltr">
   
     <svg class="md-svg">
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
         
       </defs>
     </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
-    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
       <a href="#assignment-3-kendall-histogram-countingsort" tabindex="1" class="md-skip">
         Skip to content
@@ -94,7 +116,7 @@
         </a>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
@@ -113,14 +135,14 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
             
 <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="search"></label>
+  <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="search"></label>
+      <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
       </button>
@@ -153,7 +175,7 @@
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#github" width="24" height="24"></use>
+          <use xlink:href="#__github" width="24" height="24"></use>
         </svg>
       </div>
     
@@ -182,7 +204,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="drawer">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
     <span class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
@@ -202,7 +224,7 @@
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#github" width="24" height="24"></use>
+          <use xlink:href="#__github" width="24" height="24"></use>
         </svg>
       </div>
     
@@ -845,12 +867,12 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="toc">
+      <label class="md-nav__link md-nav__link--active" for="__toc">
         3. Kendall, Histogram, CountingSort
       </label>
     
@@ -865,7 +887,7 @@
     
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -983,6 +1005,8 @@
     </nav>
   
 </li>
+      
+      
       
       
       
@@ -1279,7 +1303,7 @@
     
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -1400,6 +1424,8 @@
       
       
       
+      
+      
     </ul>
   
 </nav>
@@ -1489,7 +1515,7 @@
 <p>Suppose that we are given a set of items and we ask two different parties to rank the items according to some order.  We may get two different order of the items.  How do we measure how similar (or dissimilar) the two rankings are?</p>
 <p>For example, consider a search engine that returns a list of web pages ranked by their relevance to the search query.  A user may not always agree with the ranking of the search engine and may judge the relevance of the search result differently, i.e., the user may have his or her own ranking.  This measurement of similarity between the ranking by the search engine and the ranking by the user gives us a metric on how good the search engine result is.  The more similar it is to the ranking of the user, the better the search engine is in ranking in the search results.</p>
 <p>One way to measure the similarity of two rankings is the <em>Kendall tau distance</em>.  You will write a program <code class="codehilite">kendall</code> that calculates the <em>normalized</em> Kendall tau distance for this question.</p>
-<p>We will represent a ranking by the order of the items.  The first item is ranked 1, second is ranked 2, and so on.  To simplify the problem, we take one of the ranking that we want to calculate the Kendall tau distance on, and label the items sequentially, as the sequence 1, 2, 3, 4, 5, ...<span>\(n\)</span>, where <span>\(n\)</span> is the number of items.  We call this the <em>base</em> ranking.  The other ranking will then be a permutation of the numbers 1 to <span>\(n\)</span>.</p>
+<p>We will represent a ranking by the order of the items.  The first item is ranked 1, second is ranked 2, and so on.  To simplify the problem, we take one of the ranking that we want to calculate the Kendall tau distance on, and label the items sequentially, as the sequence 1, 2, 3, 4, 5, ...<span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>, where <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> is the number of items.  We call this the <em>base</em> ranking.  The other ranking will then be a permutation of the numbers 1 to <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>.</p>
 <p>For example, suppost we have three items A, B, C. the first ranking ranks the items as B, C, A.  The second ranking ranks the items C, A, B.  After relabelling the first ranking as 1, 2, 3, the second ranking becomes 2, 3, 1.</p>
 <p>The Kendall tau distance counts the number of pairs of items in one ranking that are ranked in different order in the other ranking.  In the example above, we have three possible pairs:</p>
 <table>
@@ -1523,10 +1549,10 @@
 <p>In the example above, the <em>normalized</em> Kendall distance is &#8532; = 0.6666.</p>
 <p>Your program should read the following from the standard input:</p>
 <ul>
-<li>The first positive integer, <span>\(n\)</span>, is the number of items (<span>\(n &gt; 1\)</span>).</li>
-<li>The next <span>\(n\)</span> numbers is a permutation of integers between 1 to <span>\(n\)</span>. This corresponds to the ranking of the items from 1 to <span>\(n\)</span>.  </li>
+<li>The first positive integer, <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>, is the number of items (<span><span class="MathJax_Preview">n &gt; 1</span><script type="math/tex">n > 1</script></span>).</li>
+<li>The next <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> numbers is a permutation of integers between 1 to <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>. This corresponds to the ranking of the items from 1 to <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>.  </li>
 </ul>
-<p>Your program should print the normalized Kendall tau distance between the ranking read above and the base ranking (1, 2, 3, .. <span>\(n\)</span>) to the standard output.</p>
+<p>Your program should print the normalized Kendall tau distance between the ranking read above and the base ranking (1, 2, 3, .. <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>) to the standard output.</p>
 <h3 id="sample-run">Sample Run</h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -1556,18 +1582,18 @@ ooiwt@pe118:~/as03-skeleton$ ./kendall
 
 <h2 id="question-2-histogram-10-marks">Question 2: Histogram (10 marks)</h2>
 <p>It is often useful to visualize the distribution of numerical data using a histogram.  In this question, you will write a program called <code class="codehilite">histogram</code> that plots the histogram for real numbers ranged between 0 and 100 (inclusive). </p>
-<p>Our histogram will have 10 buckets, <span>\(b_0, b_1, ... b_9\)</span>.  The bucket <span>\(b_i\)</span> corresponds to the interval [<span>\(10i, 10(i+1)\)</span>) (includes <span>\(10i\)</span>, but excludes <span>\(10(i+1)\)</span>), <em>except <span>\(b_9\)</span>, which includes 100</em>.  </p>
-<p>To plot the histogram, we count how many percent of the data falls into each bucket.  Let the percentage of data that falls into bucket <span>\(b_i\)</span> be <span>\(k_i\)</span>%.  We set the length of each bar in histogram to be at most 10 characters, so we scale down <span>\(k_i\)</span> by 10 to get the length <span>\(l_i\)</span>.</p>
+<p>Our histogram will have 10 buckets, <span><span class="MathJax_Preview">b_0, b_1, ... b_9</span><script type="math/tex">b_0, b_1, ... b_9</script></span>.  The bucket <span><span class="MathJax_Preview">b_i</span><script type="math/tex">b_i</script></span> corresponds to the interval [<span><span class="MathJax_Preview">10i, 10(i+1)</span><script type="math/tex">10i, 10(i+1)</script></span>) (includes <span><span class="MathJax_Preview">10i</span><script type="math/tex">10i</script></span>, but excludes <span><span class="MathJax_Preview">10(i+1)</span><script type="math/tex">10(i+1)</script></span>), <em>except <span><span class="MathJax_Preview">b_9</span><script type="math/tex">b_9</script></span>, which includes 100</em>.  </p>
+<p>To plot the histogram, we count how many percent of the data falls into each bucket.  Let the percentage of data that falls into bucket <span><span class="MathJax_Preview">b_i</span><script type="math/tex">b_i</script></span> be <span><span class="MathJax_Preview">k_i</span><script type="math/tex">k_i</script></span>%.  We set the length of each bar in histogram to be at most 10 characters, so we scale down <span><span class="MathJax_Preview">k_i</span><script type="math/tex">k_i</script></span> by 10 to get the length <span><span class="MathJax_Preview">l_i</span><script type="math/tex">l_i</script></span>.</p>
 <p>We then draw on the screen using character "█" and "▌", according to the following rules:</p>
 <ul>
-<li>If <span>\(l_i\)</span> is an integer, then we draw "█" <span>\(l_i\)</span> times.  </li>
-<li>Otherwise, if <span>\(x &lt; l_i \le x + 0.5\)</span> for some integer <span>\(x\)</span>, then we draw "█" <span>\(x\)</span> times followed by a "▌".</li>
-<li>Otherwise, if <span>\(x + 0.5 &lt; l_i &lt; x + 1\)</span> for some integer <span>\(x\)</span>, then we draw "█" <span>\(x+1\)</span> times.</li>
+<li>If <span><span class="MathJax_Preview">l_i</span><script type="math/tex">l_i</script></span> is an integer, then we draw "█" <span><span class="MathJax_Preview">l_i</span><script type="math/tex">l_i</script></span> times.  </li>
+<li>Otherwise, if <span><span class="MathJax_Preview">x &lt; l_i \le x + 0.5</span><script type="math/tex">x < l_i \le x + 0.5</script></span> for some integer <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>, then we draw "█" <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> times followed by a "▌".</li>
+<li>Otherwise, if <span><span class="MathJax_Preview">x + 0.5 &lt; l_i &lt; x + 1</span><script type="math/tex">x + 0.5 < l_i < x + 1</script></span> for some integer <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>, then we draw "█" <span><span class="MathJax_Preview">x+1</span><script type="math/tex">x+1</script></span> times.</li>
 </ul>
 <p>Your program should read the following from the standard input:</p>
 <ul>
-<li>a positive integer <span>\(n\)</span>, followed by</li>
-<li><span>\(n\)</span> real numbers, corresponding to data to plot the histogram with.</li>
+<li>a positive integer <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>, followed by</li>
+<li><span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> real numbers, corresponding to data to plot the histogram with.</li>
 </ul>
 <p>Your program should print the axis and labels, as well as the bars for the histogram as shown in the same run.
 The code to print both axis and labels are already given in the skeleton <code class="codehilite">histogram.c</code>.  The string that corresponding to "█" and "▌" are also given in the code, defined as <code class="codehilite">BLOCK</code> and <code class="codehilite">HALF_BLOCK</code>.</p>
@@ -1658,7 +1684,7 @@ ooiwt@pe118:~/as03-skeleton$ ./histogram &lt; inputs/histogram.5.in
 <h2 id="question-3-countingsort-10-marks">Question 3: CountingSort (10 marks)</h2>
 <p>Sorting is a fundamental computational problem: given a list of items, we want to rearrange the items in some order.</p>
 <p>In this question, you will write you first sorting algorithm, called <em>counting sort</em>.  This is an extremely fast algorithm for sorting positive integers if the range of the integers are limited.</p>
-<p>The idea of counting sort is that, given the list of integers (each guranteed to be between 1 to <span>\(k\)</span>) to sort, we count how many times 1 appear in the list, how many times 2 appears in the list, etc.  Finally, we print out each number between 1 to <span>\(k\)</span> according to how many times they appear in the list, skipping those numbers who do not appear.</p>
+<p>The idea of counting sort is that, given the list of integers (each guranteed to be between 1 to <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>) to sort, we count how many times 1 appear in the list, how many times 2 appears in the list, etc.  Finally, we print out each number between 1 to <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> according to how many times they appear in the list, skipping those numbers who do not appear.</p>
 <p>For instance, suppose we have 6 integers between 1 to 9: <code class="codehilite">5 5 3 2 8 2</code>.  We first count how many times each number appears.  Then we print the sorted list the following way: <code class="codehilite">2</code> appears twice, so we print 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>2
@@ -1696,12 +1722,12 @@ ooiwt@pe118:~/as03-skeleton$ ./histogram &lt; inputs/histogram.5.in
 <p>which is the numbers sorted in increasing order.  </p>
 <p>Write a program <code class="codehilite">countingsort.c</code> that reads the following in order from the standard input:</p>
 <ul>
-<li><span>\(n\)</span> the number of integers to sort</li>
-<li><span>\(k\)</span> the maximum value of the integers to sort</li>
-<li>The next <span>\(n\)</span> numbers are the integers to be sorted, each guaranteed to be between 1 and <span>\(k\)</span>.</li>
+<li><span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> the number of integers to sort</li>
+<li><span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> the maximum value of the integers to sort</li>
+<li>The next <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> numbers are the integers to be sorted, each guaranteed to be between 1 and <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>.</li>
 </ul>
 <p>Sort the integers using the algorithms above and print them in increasing order to the standard output, one integer on each line.  Note that if you use any other algorithms to sort the numbers, you will be penalized heavily.</p>
-<p><strong>Input Validation:</strong> For this question, you need to validate that the numbers are actually ranged between 1 and <span>\(k\)</span>.  Any inputs that are not in this range must be omitted in the output.</p>
+<p><strong>Input Validation:</strong> For this question, you need to validate that the numbers are actually ranged between 1 and <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>.  Any inputs that are not in this range must be omitted in the output.</p>
 <h3 id="sample-run_2">Sample Run</h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -1752,6 +1778,8 @@ ooiwt@pe118:~/as03-skeleton$ ./countingsort
               
               
                 
+
+
               
             </article>
           </div>
@@ -1805,7 +1833,7 @@ ooiwt@pe118:~/as03-skeleton$ ./countingsort
           </div>
         
         powered by
-        <a href="http://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org">MkDocs</a>
         and
         <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
@@ -1819,9 +1847,9 @@ ooiwt@pe118:~/as03-skeleton$ ./countingsort
       
     </div>
     
-      <script src="../assets/javascripts/application.ed2cc613.js"></script>
+      <script src="../assets/javascripts/application.a59e2a89.js"></script>
       
-      <script>app.initialize({version:"0.17.2",url:{base:".."}})</script>
+      <script>app.initialize({version:"0.17.5",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

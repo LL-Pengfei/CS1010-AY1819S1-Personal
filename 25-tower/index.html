@@ -21,6 +21,10 @@
       
         <meta name="lang:search.language" content="en">
       
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
         <meta name="lang:search.result.none" content="No matching documents">
       
         <meta name="lang:search.result.one" content="1 matching document">
@@ -30,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.5.1">
+      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.2">
     
     
       
@@ -38,19 +42,21 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.aa3de92b.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.ba0fd1a6.css">
+      
       
     
     
       <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
       <link rel="stylesheet" href="../stylesheets/extra.css">
     
@@ -63,20 +69,36 @@
     
   </head>
   
-  
     <body dir="ltr">
   
     <svg class="md-svg">
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
         
       </defs>
     </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
-    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
       <a href="#unit-25-tower-of-hanoi" tabindex="1" class="md-skip">
         Skip to content
@@ -94,7 +116,7 @@
         </a>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
@@ -113,14 +135,14 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
             
 <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="search"></label>
+  <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="search"></label>
+      <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
       </button>
@@ -153,7 +175,7 @@
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#github" width="24" height="24"></use>
+          <use xlink:href="#__github" width="24" height="24"></use>
         </svg>
       </div>
     
@@ -182,7 +204,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="drawer">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
     <span class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
@@ -202,7 +224,7 @@
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#github" width="24" height="24"></use>
+          <use xlink:href="#__github" width="24" height="24"></use>
         </svg>
       </div>
     
@@ -653,12 +675,12 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="toc">
+      <label class="md-nav__link md-nav__link--active" for="__toc">
         25. Tower of Hanoi
       </label>
     
@@ -673,7 +695,7 @@
     
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -723,6 +745,8 @@
     </nav>
   
 </li>
+      
+      
       
       
       
@@ -1211,7 +1235,7 @@
     
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -1264,6 +1288,8 @@
       
       
       
+      
+      
     </ul>
   
 </nav>
@@ -1281,7 +1307,7 @@
                 
                 <h1 id="unit-25-tower-of-hanoi">Unit 25: Tower of Hanoi</h1>
 <p>In this unit and the next, we will see how we can use recursion to solve more complex problems.  We will start with the Tower of Hanoi problem in this unit.</p>
-<p>The Tower of Hanoi problem is a famous mathematical puzzle invented by French mathematician Édouard Lucas in 1883.  It goes like this: There are three pegs and <span>\(n\)</span> disks of various size that we can slide into any of the pegs.  There are a few rules that we have to obey: </p>
+<p>The Tower of Hanoi problem is a famous mathematical puzzle invented by French mathematician Édouard Lucas in 1883.  It goes like this: There are three pegs and <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> disks of various size that we can slide into any of the pegs.  There are a few rules that we have to obey: </p>
 <ul>
 <li>we can only move one disk at a time;</li>
 <li>we can only move the topmost disk from one peg and place the disk on another peg;</li>
@@ -1298,14 +1324,14 @@ by André Karwath aka <a href="//commons.wikimedia.org/wiki/User:Aka" title="Use
 <p>Recall the two steps in recursive problem solving: (i) reduce the problem to the simplest version where we can solve it trivially; and (ii) assuming that we can solve the simpler version of the problem, we combine the solution to solve the more complex version.</p>
 <p>What is the simplest version of the Tower of Hanoi puzzle?  It is the version with only a single disk.  In this version, the solution is trivial -- we just move the disk from the source peg to the destination peg</p>
 <p>Let's label the pegs A, B, and C, with A being the source and C being the destination.  We will use peg B as the temporary placeholder.  </p>
-<p>Now, let's assume that we can solve the Tower of Hanoi puzzle for <span>\(k-1\)</span> disks.  How can we solve the puzzle for <span>\(k\)</span> disks?  It turns out the solution is equally trivial.  First, move the top <span>\(k-1\)</span> disk from A to B.  This would free up the largest disk, which we move from A to C.  Then, we move the <span>\(k-1\)</span> disk from B to C.</p>
+<p>Now, let's assume that we can solve the Tower of Hanoi puzzle for <span><span class="MathJax_Preview">k-1</span><script type="math/tex">k-1</script></span> disks.  How can we solve the puzzle for <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> disks?  It turns out the solution is equally trivial.  First, move the top <span><span class="MathJax_Preview">k-1</span><script type="math/tex">k-1</script></span> disk from A to B.  This would free up the largest disk, which we move from A to C.  Then, we move the <span><span class="MathJax_Preview">k-1</span><script type="math/tex">k-1</script></span> disk from B to C.</p>
 <p><img alt="Tower of Hanoi" src="../figures/tower-of-hanoi/tower-of-hanoi.001.png" />
 <img alt="Tower of Hanoi" src="../figures/tower-of-hanoi/tower-of-hanoi.002.png" /></p>
-<p>The figures above illustrate the recursion steps.  The first figure shows the original configuration.  The second figure shows the recursive step -- by wishful thinking, we believe that we can solve the puzzle for <span>\(k-1\)</span> disks and move <span>\(k-1\)</span> disks from A to B, using C as the placeholder.  The third figure shows the move after moving the largest disk from A to C.  The last figure shows the move of <span>\(k-1\)</span> disks from B to C.  Now that A is empty, the last move uses A as the placeholder.</p>
+<p>The figures above illustrate the recursion steps.  The first figure shows the original configuration.  The second figure shows the recursive step -- by wishful thinking, we believe that we can solve the puzzle for <span><span class="MathJax_Preview">k-1</span><script type="math/tex">k-1</script></span> disks and move <span><span class="MathJax_Preview">k-1</span><script type="math/tex">k-1</script></span> disks from A to B, using C as the placeholder.  The third figure shows the move after moving the largest disk from A to C.  The last figure shows the move of <span><span class="MathJax_Preview">k-1</span><script type="math/tex">k-1</script></span> disks from B to C.  Now that A is empty, the last move uses A as the placeholder.</p>
 <h2 id="representing-the-tower-of-hanoi-in-code">Representing the Tower of Hanoi in Code</h2>
-<p>To write a solution for the Tower of Hanoi, we need to decide how to represent the disks and the pegs in our code.  We are going to <em>abstract</em> out only the necessary details.  Such an abstraction process is similar to what we have done so far, representing elevations data as integers, student ids as integers, etc.  Here, we are representing physical objects, but note that the actual size of the disks, the location of the pegs, etc, do not matter in our code.  As such, we will represent the disks with integers 1 to <span>\(k\)</span> (1 being smallest, <span>\(k\)</span> being the largest) and pegs with integers 1 to 3.</p>
+<p>To write a solution for the Tower of Hanoi, we need to decide how to represent the disks and the pegs in our code.  We are going to <em>abstract</em> out only the necessary details.  Such an abstraction process is similar to what we have done so far, representing elevations data as integers, student ids as integers, etc.  Here, we are representing physical objects, but note that the actual size of the disks, the location of the pegs, etc, do not matter in our code.  As such, we will represent the disks with integers 1 to <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> (1 being smallest, <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> being the largest) and pegs with integers 1 to 3.</p>
 <h2 id="the-solution">The Solution</h2>
-<p>Let's write the code for a function <code class="codehilite">void solve_tower_of_hanoi(long k, long source, long dest)</code>, which will print out the solution for moving <span>\(k\)</span> disks from the peg <code class="codehilite">source</code> to the peg <code class="codehilite">dest</code>.</p>
+<p>Let's write the code for a function <code class="codehilite">void solve_tower_of_hanoi(long k, long source, long dest)</code>, which will print out the solution for moving <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> disks from the peg <code class="codehilite">source</code> to the peg <code class="codehilite">dest</code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -1347,13 +1373,25 @@ by André Karwath aka <a href="//commons.wikimedia.org/wiki/User:Aka" title="Use
 </pre></div>
 </td></tr></table></p>
 <h2 id="running-time">Running Time</h2>
-<p>How many moves does it take to solve the Tower of Hanoi puzzle with <span>\(k\)</span> disks?  </p>
-<p>If <span>\(k\)</span> is 1, then it takes one move.  Otherwise, let us denote the number of moves taken as <span>\(T(k)\)</span>.  From the code, we can see that it takes <span>\(T(k) = 2T(k-1) + 1\)</span>.</p>
-<p>An equation of this form is called a <em>recurrance equation</em>.  You can learn how to solve such equations generally in later modules (e.g., CS3230), but, for now, we will expand the equation to derive the solution for <span>\(T(k)\)</span>.</p>
+<p>How many moves does it take to solve the Tower of Hanoi puzzle with <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> disks?  </p>
+<p>If <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> is 1, then it takes one move.  Otherwise, let us denote the number of moves taken as <span><span class="MathJax_Preview">T(k)</span><script type="math/tex">T(k)</script></span>.  From the code, we can see that it takes <span><span class="MathJax_Preview">T(k) = 2T(k-1) + 1</span><script type="math/tex">T(k) = 2T(k-1) + 1</script></span>.</p>
+<p>An equation of this form is called a <em>recurrance equation</em>.  You can learn how to solve such equations generally in later modules (e.g., CS3230), but, for now, we will expand the equation to derive the solution for <span><span class="MathJax_Preview">T(k)</span><script type="math/tex">T(k)</script></span>.</p>
 <p>You can see that:</p>
-<span>\[T(k) = 2T(k-1) + 1 = 4T(k-2) + 2 + 1 = 8T(k-2) + 4 + 2 + 1 = ...\]</span><p>So,</p>
-<span>\[T(k) = 2^{k-1}T(1) + 2^{k-2} + ... + 4 + 2 + 1\]</span><p>Since <span>\(T(1) = 1\)</span>, we have</p>
-<span>\[T(k) = 2^{k-1} + 2^{k-2} + ... + 4 + 2 + 1 = 2^k - 1\]</span><p>Thus, solving the Tower of Hanoi with <span>\(k\)</span> disks takes <span>\(2^k-1\)</span> steps.   </p>
+<div>
+<div class="MathJax_Preview">T(k) = 2T(k-1) + 1 = 4T(k-2) + 2 + 1 = 8T(k-2) + 4 + 2 + 1 = ...</div>
+<script type="math/tex; mode=display">T(k) = 2T(k-1) + 1 = 4T(k-2) + 2 + 1 = 8T(k-2) + 4 + 2 + 1 = ...</script>
+</div>
+<p>So,</p>
+<div>
+<div class="MathJax_Preview">T(k) = 2^{k-1}T(1) + 2^{k-2} + ... + 4 + 2 + 1</div>
+<script type="math/tex; mode=display">T(k) = 2^{k-1}T(1) + 2^{k-2} + ... + 4 + 2 + 1</script>
+</div>
+<p>Since <span><span class="MathJax_Preview">T(1) = 1</span><script type="math/tex">T(1) = 1</script></span>, we have</p>
+<div>
+<div class="MathJax_Preview">T(k) = 2^{k-1} + 2^{k-2} + ... + 4 + 2 + 1 = 2^k - 1</div>
+<script type="math/tex; mode=display">T(k) = 2^{k-1} + 2^{k-2} + ... + 4 + 2 + 1 = 2^k - 1</script>
+</div>
+<p>Thus, solving the Tower of Hanoi with <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> disks takes <span><span class="MathJax_Preview">2^k-1</span><script type="math/tex">2^k-1</script></span> steps.   </p>
 <h2 id="problem-set">Problem Set</h2>
 <h3 id="problem-251">Problem 25.1</h3>
 <p>Suppose that we add a new restriction to the Tower of Hanoi puzzle.  Let's say that the disks are on Peg A (or Peg 1) to begin with, and we are only allowed to move a disk either to Peg A from another peg or from Peg A to another peg.  In other words, we cannot move the disks between Peg B or Peg C.  </p>
@@ -1364,6 +1402,8 @@ by André Karwath aka <a href="//commons.wikimedia.org/wiki/User:Aka" title="Use
               
               
                 
+
+
               
             </article>
           </div>
@@ -1417,7 +1457,7 @@ by André Karwath aka <a href="//commons.wikimedia.org/wiki/User:Aka" title="Use
           </div>
         
         powered by
-        <a href="http://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org">MkDocs</a>
         and
         <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
@@ -1431,9 +1471,9 @@ by André Karwath aka <a href="//commons.wikimedia.org/wiki/User:Aka" title="Use
       
     </div>
     
-      <script src="../assets/javascripts/application.ed2cc613.js"></script>
+      <script src="../assets/javascripts/application.a59e2a89.js"></script>
       
-      <script>app.initialize({version:"0.17.2",url:{base:".."}})</script>
+      <script>app.initialize({version:"0.17.5",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
