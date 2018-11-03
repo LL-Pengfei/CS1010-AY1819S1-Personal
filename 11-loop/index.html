@@ -21,6 +21,10 @@
       
         <meta name="lang:search.language" content="en">
       
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
         <meta name="lang:search.result.none" content="No matching documents">
       
         <meta name="lang:search.result.one" content="1 matching document">
@@ -30,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.5.1">
+      <meta name="generator" content="mkdocs-0.17.5, mkdocs-material-2.9.2">
     
     
       
@@ -38,19 +42,21 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.aa3de92b.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.ba0fd1a6.css">
+      
       
     
     
       <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
       <link rel="stylesheet" href="../stylesheets/extra.css">
     
@@ -63,20 +69,36 @@
     
   </head>
   
-  
     <body dir="ltr">
   
     <svg class="md-svg">
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
         
       </defs>
     </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
-    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
       <a href="#unit-11-loops" tabindex="1" class="md-skip">
         Skip to content
@@ -94,7 +116,7 @@
         </a>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
@@ -113,14 +135,14 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
             
 <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="search"></label>
+  <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="search"></label>
+      <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
       </button>
@@ -153,7 +175,7 @@
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#github" width="24" height="24"></use>
+          <use xlink:href="#__github" width="24" height="24"></use>
         </svg>
       </div>
     
@@ -182,7 +204,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="drawer">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
     <span class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
@@ -202,7 +224,7 @@
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#github" width="24" height="24"></use>
+          <use xlink:href="#__github" width="24" height="24"></use>
         </svg>
       </div>
     
@@ -485,12 +507,12 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="toc">
+      <label class="md-nav__link md-nav__link--active" for="__toc">
         11. Loops
       </label>
     
@@ -505,7 +527,7 @@
     
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -603,6 +625,8 @@
     </nav>
   
 </li>
+      
+      
       
       
       
@@ -1057,6 +1081,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../as08/index.html" title="8. Maze, Fill" class="md-nav__link">
+      8. Maze, Fill
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1271,7 +1307,7 @@
     
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -1372,6 +1408,8 @@
       
       
       
+      
+      
     </ul>
   
 </nav>
@@ -1389,7 +1427,7 @@
                 
                 <h1 id="unit-11-loops">Unit 11: Loops</h1>
 <p>In <a href="../08-if-else/index.html">Unit 8</a>, you were introduced to writing code that follows one of two possible execution paths using the <code class="codehilite">if</code>-<code class="codehilite">else</code> statements, using a logical expression to decide which path to take.</p>
-<p>Sometimes, we want to execute one of the branches repeatedly (or interatively), over-and-over again, until a certain logical condition is met.  You have seen this construct in the <span>\(max\)</span> and <span>\(sum\)</span> example, where we repeatedly go through the numbers in the list until <span>\(i == k\)</span>.</p>
+<p>Sometimes, we want to execute one of the branches repeatedly (or interatively), over-and-over again, until a certain logical condition is met.  You have seen this construct in the <span><span class="MathJax_Preview">max</span><script type="math/tex">max</script></span> and <span><span class="MathJax_Preview">sum</span><script type="math/tex">sum</script></span> example, where we repeatedly go through the numbers in the list until <span><span class="MathJax_Preview">i == k</span><script type="math/tex">i == k</script></span>.</p>
 <h2 id="writing-loops">Writing Loops</h2>
 <p>To write a loop, we need to think about the following four questions:</p>
 <ul>
@@ -1402,28 +1440,28 @@
 <p>Let's revisit the example of <code class="codehilite">max</code>.  Here is the answer to the questions:</p>
 <ul>
 <li>
-<p>What do we want to do repeatedly?  We want to compare the element <span>\(l_i\)</span> to <span>\(m\)</span>, and update <span>\(m\)</span> to <span>\(l_i\)</span> if <span>\(l_i &gt; m\)</span>.</p>
+<p>What do we want to do repeatedly?  We want to compare the element <span><span class="MathJax_Preview">l_i</span><script type="math/tex">l_i</script></span> to <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>, and update <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> to <span><span class="MathJax_Preview">l_i</span><script type="math/tex">l_i</script></span> if <span><span class="MathJax_Preview">l_i &gt; m</span><script type="math/tex">l_i > m</script></span>.</p>
 </li>
 <li>
-<p>What do we need to set up before repeating the above?  We need to have some initial value of <span>\(m\)</span> and <span>\(i\)</span>.  We set it up as <span>\(m = l_0\)</span> and <span>\(i = 1\)</span>.</p>
+<p>What do we need to set up before repeating the above?  We need to have some initial value of <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> and <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>.  We set it up as <span><span class="MathJax_Preview">m = l_0</span><script type="math/tex">m = l_0</script></span> and <span><span class="MathJax_Preview">i = 1</span><script type="math/tex">i = 1</script></span>.</p>
 </li>
 <li>
-<p>What would be different each time we repeat the above?  Every time we repeat, <span>\(i\)</span> will be different.  To be more precise, <span>\(i\)</span> is one more than before.</p>
+<p>What would be different each time we repeat the above?  Every time we repeat, <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> will be different.  To be more precise, <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> is one more than before.</p>
 </li>
 <li>
-<p>How to decide if we should continue repeating the above?  We stop when there is no more element to compare, i.e., <span>\(i\)</span> equals <span>\(k\)</span>.  In other words, we continue if <span>\(i &lt; k\)</span>.</p>
+<p>How to decide if we should continue repeating the above?  We stop when there is no more element to compare, i.e., <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> equals <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>.  In other words, we continue if <span><span class="MathJax_Preview">i &lt; k</span><script type="math/tex">i < k</script></span>.</p>
 </li>
 </ul>
 <p><img alt="max" src="../figures/max-flowchart/max-flowchart.001.png" /></p>
 <p>Let's consider another example.  We have seen how to compute factorial recursively.  Let's try to compute factorial using a loop.</p>
-<p>Recall that <span>\(n! = n \times n-1 \times n-2 .. 2 \times 1\)</span>.  Given <span>\(n\)</span>, how do we find <span>\(n!\)</span> using a loop?  </p>
-<p>The idea to solve this with a loop is to start with the value <span>\(n\)</span>, and repeatedly multiply another value <span>\(i\)</span>, starting with <span>\(i = n - 1\)</span>, then <span>\(i = n - 2\)</span>, etc, until <span>\(i = 2\)</span>.  We do not need to multiple with <span>\(i = 1\)</span> since it does not change the value.</p>
-<p>Like any other problem, we need to consider what are the variables we need to maintain.  In this case, we should maintain the partial product of the factorial and a variable <span>\(i\)</span> that corresponds to value to multiple into the partial product.</p>
+<p>Recall that <span><span class="MathJax_Preview">n! = n \times n-1 \times n-2 .. 2 \times 1</span><script type="math/tex">n! = n \times n-1 \times n-2 .. 2 \times 1</script></span>.  Given <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>, how do we find <span><span class="MathJax_Preview">n!</span><script type="math/tex">n!</script></span> using a loop?  </p>
+<p>The idea to solve this with a loop is to start with the value <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>, and repeatedly multiply another value <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>, starting with <span><span class="MathJax_Preview">i = n - 1</span><script type="math/tex">i = n - 1</script></span>, then <span><span class="MathJax_Preview">i = n - 2</span><script type="math/tex">i = n - 2</script></span>, etc, until <span><span class="MathJax_Preview">i = 2</span><script type="math/tex">i = 2</script></span>.  We do not need to multiple with <span><span class="MathJax_Preview">i = 1</span><script type="math/tex">i = 1</script></span> since it does not change the value.</p>
+<p>Like any other problem, we need to consider what are the variables we need to maintain.  In this case, we should maintain the partial product of the factorial and a variable <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> that corresponds to value to multiple into the partial product.</p>
 <ul>
-<li>What do we want to do repeatedly?  Multiply <span>\(i\)</span> into the partial product. </li>
-<li>What do we need to set up before repeating the above?  We set up the partial product to be <span>\(n\)</span> and <span>\(i\)</span> to be <span>\(n - 1\)</span>.</li>
-<li>What changes from one repetition to another?  <span>\(i\)</span> would decrease by one every time we repeat the above.</li>
-<li>How to decide if we should stop repeating (or conversely, to continue repeating?)  We can stop when we have multiplied <span>\(i = 2\)</span> to the partial product.</li>
+<li>What do we want to do repeatedly?  Multiply <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> into the partial product. </li>
+<li>What do we need to set up before repeating the above?  We set up the partial product to be <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> and <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> to be <span><span class="MathJax_Preview">n - 1</span><script type="math/tex">n - 1</script></span>.</li>
+<li>What changes from one repetition to another?  <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> would decrease by one every time we repeat the above.</li>
+<li>How to decide if we should stop repeating (or conversely, to continue repeating?)  We can stop when we have multiplied <span><span class="MathJax_Preview">i = 2</span><script type="math/tex">i = 2</script></span> to the partial product.</li>
 </ul>
 <p>We can express the algorithm above using the following flowchart:</p>
 <p><img alt="factorial" src="../figures/loops/loops.004.png" /></p>
@@ -1447,7 +1485,7 @@
 </ul>
 <p><img alt="for" src="../figures/loops/loops.003.png" /></p>
 <p>For the <code class="codehilite">initialize</code> and <code class="codehilite">update</code> statement, even though C allows us to include multiple initializations and multiple updates, it makes the code harder to read and understand.  C also allows us to have empty statements for <code class="codehilite">initialize</code>, <code class="codehilite">condition</code> and/or <code class="codehilite">update</code>.  As such, in CS1010, we will stick to performing one initialization and one update only.</p>
-<p>For example, in the setup phase for factorial, we should initialize the partial product to <span>\(n\)</span> and <span>\(i\)</span> to <span>\(n - 1\)</span>, that's two assignments.  We commonly choose the index which we increment or decrement as we loop, hence we choose to initialize <span>\(i\)</span> in the <code class="codehilite">initialize</code> statement of the <code class="codehilite">for</code> loop, and leave the initialization of <code class="codehilite">product</code> to a separate assignment before the <code class="codehilite">for</code> loop.</p>
+<p>For example, in the setup phase for factorial, we should initialize the partial product to <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> and <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> to <span><span class="MathJax_Preview">n - 1</span><script type="math/tex">n - 1</script></span>, that's two assignments.  We commonly choose the index which we increment or decrement as we loop, hence we choose to initialize <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> in the <code class="codehilite">initialize</code> statement of the <code class="codehilite">for</code> loop, and leave the initialization of <code class="codehilite">product</code> to a separate assignment before the <code class="codehilite">for</code> loop.</p>
 <p>Here is the example for computing the factorial:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -1712,6 +1750,8 @@ Give a pair of inputs that would cause the function to loop forever.</p>
               
               
                 
+
+
               
             </article>
           </div>
@@ -1765,7 +1805,7 @@ Give a pair of inputs that would cause the function to loop forever.</p>
           </div>
         
         powered by
-        <a href="http://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org">MkDocs</a>
         and
         <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
@@ -1779,9 +1819,9 @@ Give a pair of inputs that would cause the function to loop forever.</p>
       
     </div>
     
-      <script src="../assets/javascripts/application.ed2cc613.js"></script>
+      <script src="../assets/javascripts/application.a59e2a89.js"></script>
       
-      <script>app.initialize({version:"0.17.2",url:{base:".."}})</script>
+      <script>app.initialize({version:"0.17.5",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
