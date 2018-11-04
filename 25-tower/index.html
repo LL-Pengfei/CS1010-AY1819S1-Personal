@@ -1432,7 +1432,7 @@ by André Karwath aka <a href="//commons.wikimedia.org/wiki/User:Aka" title="Use
 <p>Thus, solving the Tower of Hanoi with <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> disks takes <span><span class="MathJax_Preview">2^k-1</span><script type="math/tex">2^k-1</script></span> steps.   </p>
 <h2 id="problem-set">Problem Set</h2>
 <h3 id="problem-251">Problem 25.1</h3>
-<p>Suppose that we add a new restriction to the Tower of Hanoi puzzle.  Let's say that the disks are on Peg A (or Peg 1) to begin with, and we are only allowed to move a disk either to Peg A from another peg or from Peg A to another peg.  In other words, we cannot move the disks between Peg B or Peg C.  </p>
+<p>Suppose that we add a new restriction to the Tower of Hanoi puzzle.  Let's say that the disks are on Peg A (or Peg 1) to begin with, and <ins class="critic"> we want to move the disk to Peg C (or Peg 3). </ins> We are only allowed to move a disk either to <del class="critic"> Peg A </del> Peg B from another peg or from <del class="critic"> Peg A </del> Peg B to another peg.  In other words, we cannot move the disks between <del class="critic"> Peg B or Peg C. </del> Peg A and Peg C directly.</p>
 <p>Change the recursive algorithm above to solve the Tower of Hanoi with this new restriction.  How many steps (use big O notation) are needed now?</p>
 <h2 id="appendix-complete-code">Appendix: Complete Code</h2>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
