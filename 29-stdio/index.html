@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://nus-cs1010.github.io/1819-s1/04-type/index.html">
+        <link rel="canonical" href="https://nus-cs1010.github.io/1819-s1/29-stdio/index.html">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>4. Types - CS1010 Programming Methodology</title>
+        <title>29. stdio - CS1010 Programming Methodology</title>
       
     
     
@@ -100,7 +100,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#unit-4-types" tabindex="1" class="md-skip">
+      <a href="#unit-29-standard-io-functions" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -126,7 +126,7 @@
                 CS1010 Programming Methodology
               </span>
               <span class="md-header-nav__topic">
-                4. Types
+                29. stdio
               </span>
             
           
@@ -418,70 +418,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        4. Types
-      </label>
-    
-    <a href="index.html" title="4. Types" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../04-type/index.html" title="4. Types" class="md-nav__link">
       4. Types
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#integers" title="Integers" class="md-nav__link">
-    Integers
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#characters" title="Characters" class="md-nav__link">
-    Characters
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#real-numbers" title="Real Numbers" class="md-nav__link">
-    Real Numbers
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#type-declaration" title="Type Declaration" class="md-nav__link">
-    Type Declaration
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -777,11 +718,144 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../29-stdio/index.html" title="29. stdio" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        29. stdio
+      </label>
+    
+    <a href="index.html" title="29. stdio" class="md-nav__link md-nav__link--active">
       29. stdio
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#printf" title="printf" class="md-nav__link">
+    printf
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pitfalls-when-using-printf" title="Pitfalls when using printf" class="md-nav__link">
+    Pitfalls when using printf
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mismatch-types" title="Mismatch Types" class="md-nav__link">
+    Mismatch Types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mismatch-number-of-arguments" title="Mismatch Number of Arguments" class="md-nav__link">
+    Mismatch Number of Arguments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#printing-user-input" title="Printing User Input" class="md-nav__link">
+    Printing User Input
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scanf" title="scanf" class="md-nav__link">
+    scanf
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pitfalls-when-using-scanf" title="Pitfalls When Using scanf" class="md-nav__link">
+    Pitfalls When Using scanf
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checking-for-error" title="Checking for Error" class="md-nav__link">
+    Checking for Error
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invalid-pointers" title="Invalid Pointers" class="md-nav__link">
+    Invalid Pointers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buffer-overflow" title="Buffer Overflow" class="md-nav__link">
+    Buffer Overflow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fgets" title="fgets" class="md-nav__link">
+    fgets
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#avoid-atol-or-atof" title="Avoid atol or atof" class="md-nav__link">
+    Avoid atol or atof
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1279,30 +1353,104 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#integers" title="Integers" class="md-nav__link">
-    Integers
+  <a href="#printf" title="printf" class="md-nav__link">
+    printf
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#characters" title="Characters" class="md-nav__link">
-    Characters
+  <a href="#pitfalls-when-using-printf" title="Pitfalls when using printf" class="md-nav__link">
+    Pitfalls when using printf
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mismatch-types" title="Mismatch Types" class="md-nav__link">
+    Mismatch Types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mismatch-number-of-arguments" title="Mismatch Number of Arguments" class="md-nav__link">
+    Mismatch Number of Arguments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#printing-user-input" title="Printing User Input" class="md-nav__link">
+    Printing User Input
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scanf" title="scanf" class="md-nav__link">
+    scanf
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#real-numbers" title="Real Numbers" class="md-nav__link">
-    Real Numbers
+  <a href="#pitfalls-when-using-scanf" title="Pitfalls When Using scanf" class="md-nav__link">
+    Pitfalls When Using scanf
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checking-for-error" title="Checking for Error" class="md-nav__link">
+    Checking for Error
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invalid-pointers" title="Invalid Pointers" class="md-nav__link">
+    Invalid Pointers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buffer-overflow" title="Buffer Overflow" class="md-nav__link">
+    Buffer Overflow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#type-declaration" title="Type Declaration" class="md-nav__link">
-    Type Declaration
+  <a href="#fgets" title="fgets" class="md-nav__link">
+    fgets
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#avoid-atol-or-atof" title="Avoid atol or atof" class="md-nav__link">
+    Avoid atol or atof
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1322,41 +1470,158 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/nus-cs1010/1819-s1/edit/master/docs/04-type.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/nus-cs1010/1819-s1/edit/master/docs/29-stdio.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="unit-4-types">Unit 4: Types</h1>
-<p>Recall from Unit 1 that machine code and data manipulated by machine code are all stored as a sequence of 1s and 0s in the memory.  Each unit of either 1 or 0 is known as a <em>bit</em>.  8 bits form a <em>byte</em>.</p>
-<p>Remember from Unit 2 that a variable is a memory location that stores a value, as a sequence of bits.  The bits stored in the memory has no meaning by itself.  It has to be interpreted by the machine code.  Does a sequence of 1s and 0s represent an integer?  A pixel of an image?  A sound sample in an audio clip?  A month?   As a programmer, we have to tag the variable with its <em>type</em>, so that the machine code knows how to interpret the sequence of bits.  In addition, the type also tells the machine code, how many bits "belong" to this variable.  The number of bits of a type is also known as the <em>size</em> of a type.</p>
-<p>The size of a type determines how many different values a variable of that type can hold.  For instance, a type of one bit can only hold two possible values (e.g., <code class="codehilite">0</code> or <code class="codehilite">1</code>, <code class="codehilite">true</code> or <code class="codehilite">false</code>, <code class="codehilite">black</code> or <code class="codehilite">white</code>).  A type of two bits can hold four values, represented as <code class="codehilite">00</code>, <code class="codehilite">01</code>, <code class="codehilite">10</code>, <code class="codehilite">11</code>.  In general, a type of <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> bits can hold <span><span class="MathJax_Preview">2^k</span><script type="math/tex">2^k</script></span> values.</p>
-<h3 id="integers">Integers</h3>
-<p>To represent integers, a type of 8 bits can represent 256 different values.  If the type only represents non-negative integers (called <code class="codehilite">unsigned</code>), then it can hold any value between 0 to 255.  If it represents both positive and negative integers (called <code class="codehilite">signed</code>), it can hold any value between -128 to 127.  Depending on the needs (how much memory we have, how big is the number we need to represent), programmers have to decide on the size of the type used for a variable in their programs.  With 64 bits, a signed integer can store any value between -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.  This might look big enough for you -- but we can't even fit the results from <span><span class="MathJax_Preview">factorial(21)</span><script type="math/tex">factorial(21)</script></span> here!<br />
-We have to go to 128 bits to represent larger integers.</p>
-<h3 id="characters">Characters</h3>
-<p>To represent a character (i.e., a symbol representing a letter, number, punctuation, etc), we use 8 bits for English characters.  The ASCII standard maps 127 binary sequences to common characters you can type on your keyboard (including 0-9, A-Z, a-z, all sorts of punctuations: &lt;&gt;?:"{}!@#$%^&amp;*()_+-=[]\';/., and special characters like return and escape).  The unicode standard uses up to 32 bits per character, allowing many non-English letter characters (e.g., <a href="https://www.unicode.org/charts/PDF/U1F600.pdf">Emoticons</a>, <a href="https://www.unicode.org/charts/PDF/U2800.pdf">Braille</a>, <a href="https://www.unicode.org/charts/PDF/U1F000.pdf">Mahjong Tiles</a>) to be represented.</p>
-<h3 id="real-numbers">Real Numbers</h3>
-<p>For real numbers, because we need to represent a huge number of possible values, we normally use 32 bits or 64 bits.  In CS1231, you will learn that there are uncountably many possible real numbers.  But, no matter how many bits we use, we can only represent a finite number of possible values for real numbers.  Here, we run into a limit of digitizing information into 0s and 1s -- we can never represent all possible real numbers in a computer!  Because of this, programs that manipulate real numbers leads to weird answers (such as 0.1 + 0.2 is not exactly the same as 0.3) and so, we have to take special care when dealing with real numbers when writing programs (not just in C, but in many other languages as well).  Hence, if we only expect a variable to hold an integer, we should not choose a type that represents real numbers.</p>
-<p>The details of how a sequence of bits can represent integers and real numbers (both positive and negative numbers) are covered in CS2100. </p>
-<p>You should have also noticed that in the discussion above, we talk about types that are 8, 16, 32, 64, 128 bits -- all power of twos.  We do not have a type of size, say, 41 bits.  The reason for this has to do with how memory location is addressed.  This will again be explained in CS2100.</p>
-<h2 id="type-declaration">Type Declaration</h2>
-<p>In C, which we will use in CS1010, we have to associate <em>every</em> variable with a type, and once a variable is <em>declared</em> with a type, the type cannot be changed<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>.</p>
-<p>When we write a function, we have to declare the types of each of the parameters and the return value as well.  </p>
-<p>Take the function <span><span class="MathJax_Preview">mean(L, k)</span><script type="math/tex">mean(L, k)</script></span> as an example.  We have said that <span><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span> is a list<sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup> of integers.  So each element in <span><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span> should have an integer type (how many bits to use will depend on the range of numbers we want the program to possibly handle and how frugal we are about memory usage).  What about <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>?  <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> refers to the number of elements in <span><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>, so it has to be an integer.  As for the value returned by <span><span class="MathJax_Preview">mean(L, k)</span><script type="math/tex">mean(L, k)</script></span>, even when the inputs are all integers (and thus, the sum is an integer), the mean value can be a real number.  So we should choose a type that represents a real number for the return value.  </p>
-<div class="admonition warning">
-<p class="admonition-title">Importance of Type</p>
-<p>Choosing a wrong type to represent a variable can lead to buggy code.  Suppose we say that <span><span class="MathJax_Preview">mean(L, k)</span><script type="math/tex">mean(L, k)</script></span> returns an integer, then when we call <span><span class="MathJax_Preview">mean</span><script type="math/tex">mean</script></span> on the input <code class="codehilite">1 2 3 4</code>, we will get <code class="codehilite">2</code> as the answer, instead of <code class="codehilite">2.5</code> as it should.</p>
-</div>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p>This behavior is known as static typing.  Some programming languages, such as Javascript and Python, are dynamically typed.  The type of a variable may change depending on the value the variable is assigned to.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-<li id="fn:2">
-<p>We have not talked about how to represent a list yet.  I will do that in a later unit.&#160;<a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
+                <h1 id="unit-29-standard-io-functions">Unit 29: Standard I/O Functions</h1>
+<p>We have been shielding you from the pain and pitfalls of using C I/O functions.  Since you are close to "graduate" from CS1010, this is a good time to show you what the real world is like.</p>
+<h2 id="printf">printf</h2>
+<p>The function <code class="codehilite">printf</code> is used to print a formatted string to the standard output.  Unlike functions that we have seen so far, <code class="codehilite">printf</code> can take in variable number of arguments, but it must have at least one argument -- a string written in a certain format.  The rest of the arguments can be of different types.  Let's look at an example:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">char</span> <span class="o">*</span><span class="n">name</span> <span class="o">=</span> <span class="s">&quot;Siri&quot;</span><span class="p">;</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello! My name is %s.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span>
+</pre></div>
+</td></tr></table>
+
+<p>The code above prints <code class="codehilite">Hello! My name is Siri.</code>.</p>
+<p>There are two arguments to <code class="codehilite">printf</code>, both are strings.  The first is the string to print.  There is a placeholder <code class="codehilite"><span class="nf">%s</span></code> in the string, which will be replaced by the second argument <code class="codehilite">name</code>.  The string to print ends with <code class="codehilite">\n</code>, which is the new line character.</p>
+<p>The placeholder <code class="codehilite"><span class="nf">%s</span></code> is called a <em>format modifier</em>.  It controls how to interpret the arguments (i.e., what type) and how to format the output.   The general format is:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c">%[flags][field_width][.precision][length_modifier]specifier</span>
+</pre></div>
+</td></tr></table>
+
+<p>The letter after <code class="codehilite"><span class="c">%</span></code> controls the interpretion of the argument.  <code class="codehilite">s</code> for string, <code class="codehilite">c</code> for character, <code class="codehilite">d</code> for integer (base 10), <code class="codehilite">f</code> for floating point number, <code class="codehilite">p</code> for pointer (base 16).  We can additionally preprend this with <em>length modifier</em>.  <code class="codehilite">ld</code> for <code class="codehilite">long</code> integer, <code class="codehilite">lld</code> for <code class="codehilite">long long</code>, and <code class="codehilite">lf</code> for <code class="codehilite">double</code>.</p>
+<p>To format the output, we can prepend it with a number to indicate its <em>field width</em>, or minimum space used when printing.  E.g., <code class="codehilite"><span class="c">%3d</span></code> will pad the number printed with space if the number printed is less than 3 digits.  Adding a <em>flag</em> 0 in front, <code class="codehilite"><span class="c">%03d</span></code>, will pad the number with 0s if the number printed is less than 3 digits.  Other flags include <code class="codehilite">+</code>, which tells <code class="codehilite">printf</code> to print a sign (<code class="codehilite">+</code> or <code class="codehilite">-</code>) for the number.  For floating point numbers, we can additionally control the <em>precision</em>, or the number of digits printed after the decimal point.  <code class="codehilite"><span class="c">%3.4lf</span></code> will print a double to four decimal points.</p>
+<p>Note: <code class="codehilite">cs1010_println_double</code> uses <code class="codehilite"><span class="c">%.4lf</span></code> as the format modifier.</p>
+<h2 id="pitfalls-when-using-printf">Pitfalls when using <code class="codehilite">printf</code></h2>
+<h3 id="mismatch-types">Mismatch Types</h3>
+<p><code class="codehilite">printf</code> does not check for the type of arguments we pass to it.  The compiler does, but it only politely warns us instead of throwing error like other type mismatches.</p>
+<p>If you ignore such warnings, you might print strange things like:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="mi">100000000000</span><span class="p">,</span> <span class="mi">100000000000</span><span class="p">);</span>
+</pre></div>
+</td></tr></table>
+
+<p>or worse, crash your program:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="mi">100000000000</span><span class="p">,</span> <span class="mi">100000000000</span><span class="p">);</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="mismatch-number-of-arguments">Mismatch Number of Arguments</h3>
+<p>Since <code class="codehilite">printf</code> expects a variable number of arguments, you can pass it fewer arguments than expected and the code would still compile (with warnings).  If you push ahead and run it anyway, <code class="codehilite">printf</code> will start to fetch arguments from the stack, pretending that it is there, causing weird things to happen.</p>
+<p>Consider:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d %s %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+</pre></div>
+</td></tr></table>
+
+<p>It would cause <code class="codehilite">printf</code> to access memory content of the stack as strings. </p>
+<h3 id="printing-user-input">Printing User Input</h3>
+<p>We should also never do this:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">char</span> <span class="o">*</span><span class="n">str</span> <span class="o">=</span> <span class="n">cs1010_read_word</span><span class="p">();</span>
+<span class="n">printf</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+</pre></div>
+</td></tr></table>
+
+<p>The reason is that we have no control over what the user would type as input: the user may type "%s" into the standard  input, so the variable <code class="codehilite">str</code> now points to <code class="codehilite"><span class="nf">%s</span></code>, which <code class="codehilite">printf</code> treats as a format modifier, and output the content of the stack!  This is a huge security risk.</p>
+<p>We should always print a string using:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="n">str</span><span class="p">);</span>
+</pre></div>
+</td></tr></table>
+
+<h2 id="scanf">scanf</h2>
+<p>The function <code class="codehilite">scanf</code> is used to read inputs from the standard input.  It requires us to pass in pointers to variables where we want to store the input value is.  Like <code class="codehilite">printf</code>, it takes in one or more arguments, with the first argument being a format string containing one or more format specifier.  The format specifier for <code class="codehilite">scanf</code> is simpler and has the following pattern:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c">%[*][field_width][length_modifier]specifier</span>
+</pre></div>
+</td></tr></table>
+
+<p>For instance, to read an integer, a floating point number, and a string of at most 10 characters, </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">long</span> <span class="n">l</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">d</span><span class="p">;</span>
+<span class="kt">char</span> <span class="n">s</span><span class="p">[</span><span class="mi">11</span><span class="p">];</span> 
+<span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%ld %lf %10s&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">l</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">d</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>
+</pre></div>
+</td></tr></table>
+
+<p><code class="codehilite">scanf</code> scans the standard input, try to match it to the format specified.
+The space in between the format specifier matches zero or more white spaces (space, tab, newline).  Scanning stops when an input character does not match such a format character or when an input conversion fails.</p>
+<p>Adding a <code class="codehilite">*</code> to the format modifier means that scanf should consume the inputs but not stored it in any variables.  This, combined with <code class="codehilite"><span class="c">%[``]</span></code> is useful to clear any remaining data from the standard input.</p>
+<h2 id="pitfalls-when-using-scanf">Pitfalls When Using <code class="codehilite">scanf</code></h2>
+<h3 id="checking-for-error">Checking for Error</h3>
+<p>The function <code class="codehilite">scanf</code> fails silently when the input character does not match a format or when the input conversion fails.  It might return a totally unexpected input.  We should always check the return value of <code class="codehilite">scanf</code> to make sure that it is reading properly.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">long</span> <span class="n">a</span><span class="p">;</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%ld&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%ld&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+</pre></div>
+</td></tr></table>
+
+<p>The code above might print uninitialized value if the input is not an integer.</p>
+<p>We should check</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">long</span> <span class="n">a</span><span class="p">;</span>
+<span class="kt">long</span> <span class="n">result</span> <span class="o">=</span> <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%ld&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">result</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%ld&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>The above, however, does not properly "clear" the standard input of the incorrect input.  So the next <code class="codehilite">scanf</code> calls would still try to read it again!</p>
+<p>Th clear the input, we can use the <code class="codehilite"><span class="c">%*[^\n]</span></code> modifier, which read in any characters expect (<code class="codehilite">^</code>) the newline (<code class="codehilite">\n</code>).  </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">long</span> <span class="n">a</span><span class="p">;</span>
+<span class="kt">long</span> <span class="n">result</span> <span class="o">=</span> <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%ld&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">result</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%ld&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;*[^</span><span class="se">\n</span><span class="s">]&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>As a side note, the <code class="codehilite"><span class="c">%[]</span></code> modifier is useful to read in strings containing certain range of characters only.  E.g., you can read <code class="codehilite"><span class="c">%[a-zA-Z0-9]</span></code> to match any sequence of alphanumeric characters.</p>
+<h3 id="invalid-pointers">Invalid Pointers</h3>
+<p>Since <code class="codehilite">scanf</code> expects the caller to pass in pointers to variables for it to store the results, we need to be careful about what we pass in.  It is easy to pass in something like this:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">long</span> <span class="o">*</span><span class="n">a</span><span class="p">;</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%ld&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+</pre></div>
+</td></tr></table>
+
+<p>The compiler would not warn us since the type matches perfectly.  The program may crash since the pointer is not pointing to a valid memory location accessible by the program.</p>
+<h3 id="buffer-overflow">Buffer Overflow</h3>
+<p>When we use <code class="codehilite">scanf</code> to read a string, it keeps reading until it reaches an empty space, and stores everything that it reads into an array.  The problem here is that, we do not know when it will stop reading, and therefore how big is the array that we need to allocate for the input!</p>
+<p>Let's say we do:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;What&#39;s your name?&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello %s!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span>
+</pre></div>
+</td></tr></table>
+
+<p>The program would crash if we enter a very long string in the standard input.</p>
+<p>You can read <a href="http://sekrit.de/webdocs/c/beginners-guide-away-from-scanf.html">a beginners' guide away from scanf()</a> for more information.</p>
+<h2 id="fgets">fgets</h2>
+<p><code class="codehilite">fgets</code> is a better alternative to <code class="codehilite">scanf</code> for reading inputs (Note: this is what CS1010 library use internally).  <code class="codehilite">fgets</code> takes three parameters, a pointer to a string (or buffer), the size of the buffer, and the input to read from (which can be a file, a network socket, or in our case, most of the time <code class="codehilite">stdin</code>).</p>
+<p>The advantage of <code class="codehilite">fgets</code> is that it never overflows the buffer (it knows the size).  Once we read the input, we can use functions such as <code class="codehilite">strtol</code> or <code class="codehilite">strtod</code> to convert the strings to <code class="codehilite">long</code> or <code class="codehilite">double</code>.</p>
+<h3 id="avoid-atol-or-atof">Avoid atol or atof</h3>
+<p>Instead of <code class="codehilite">strtol</code> or <code class="codehilite">strtof</code>, some old school textbooks might show you that you can convert a string to a <code class="codehilite">long</code> or a <code class="codehilite">double</code> using <code class="codehilite">atol</code> or <code class="codehilite">atof</code>.  You should avoid these two functions (even the man pages of <code class="codehilite">atof</code> says so!).  They do not provide any mechanism for error checking if the string is not a valid integer or if the input is out of range of the type.</p>
+<p>You can read <a href="https://github.com/nus-cs1010-1819-s1/libcs1010">the source code for the CS1010 library</a> to see how it uses <code class="codehilite">fgets</code>, <code class="codehilite">strtol</code> and related functions to parse numbers and strings from the standard inputs.</p>
                 
                   
                 
@@ -1377,7 +1642,7 @@ We have to go to 128 bits to represent larger integers.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../03-func/index.html" title="3. Functions" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../28-struct/index.html" title="28. Structure" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1386,19 +1651,19 @@ We have to go to 128 bits to represent larger integers.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                3. Functions
+                28. Structure
               </span>
             </div>
           </a>
         
         
-          <a href="../05-first-c/index.html" title="5. First C Program" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../ex01/index.html" title="1. Freezer" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                5. First C Program
+                1. Freezer
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://nus-cs1010.github.io/1819-s1/04-type/index.html">
+        <link rel="canonical" href="https://nus-cs1010.github.io/1819-s1/28-struct/index.html">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>4. Types - CS1010 Programming Methodology</title>
+        <title>28. Structure - CS1010 Programming Methodology</title>
       
     
     
@@ -100,7 +100,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#unit-4-types" tabindex="1" class="md-skip">
+      <a href="#unit-28-structures" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -126,7 +126,7 @@
                 CS1010 Programming Methodology
               </span>
               <span class="md-header-nav__topic">
-                4. Types
+                28. Structure
               </span>
             
           
@@ -418,70 +418,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        4. Types
-      </label>
-    
-    <a href="index.html" title="4. Types" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../04-type/index.html" title="4. Types" class="md-nav__link">
       4. Types
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#integers" title="Integers" class="md-nav__link">
-    Integers
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#characters" title="Characters" class="md-nav__link">
-    Characters
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#real-numbers" title="Real Numbers" class="md-nav__link">
-    Real Numbers
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#type-declaration" title="Type Declaration" class="md-nav__link">
-    Type Declaration
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -765,11 +706,83 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../28-struct/index.html" title="28. Structure" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        28. Structure
+      </label>
+    
+    <a href="index.html" title="28. Structure" class="md-nav__link md-nav__link--active">
       28. Structure
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#structure-in-c" title="Structure in C" class="md-nav__link">
+    Structure in C
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declaring-and-initializing-a-structure-variable" title="Declaring and Initializing a Structure Variable" class="md-nav__link">
+    Declaring and Initializing a Structure Variable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#structure-as-parameters" title="Structure as Parameters" class="md-nav__link">
+    Structure as Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returning-a-structure" title="Returning a Structure" class="md-nav__link">
+    Returning a Structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defining-a-structure-as-a-type" title="Defining a Structure as a Type" class="md-nav__link">
+    Defining a Structure as a Type
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1279,30 +1292,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#integers" title="Integers" class="md-nav__link">
-    Integers
+  <a href="#structure-in-c" title="Structure in C" class="md-nav__link">
+    Structure in C
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declaring-and-initializing-a-structure-variable" title="Declaring and Initializing a Structure Variable" class="md-nav__link">
+    Declaring and Initializing a Structure Variable
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#characters" title="Characters" class="md-nav__link">
-    Characters
+        
+          <li class="md-nav__item">
+  <a href="#structure-as-parameters" title="Structure as Parameters" class="md-nav__link">
+    Structure as Parameters
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#real-numbers" title="Real Numbers" class="md-nav__link">
-    Real Numbers
+        
+          <li class="md-nav__item">
+  <a href="#returning-a-structure" title="Returning a Structure" class="md-nav__link">
+    Returning a Structure
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#type-declaration" title="Type Declaration" class="md-nav__link">
-    Type Declaration
+        
+          <li class="md-nav__item">
+  <a href="#defining-a-structure-as-a-type" title="Defining a Structure as a Type" class="md-nav__link">
+    Defining a Structure as a Type
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1322,41 +1348,213 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/nus-cs1010/1819-s1/edit/master/docs/04-type.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/nus-cs1010/1819-s1/edit/master/docs/28-struct.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="unit-4-types">Unit 4: Types</h1>
-<p>Recall from Unit 1 that machine code and data manipulated by machine code are all stored as a sequence of 1s and 0s in the memory.  Each unit of either 1 or 0 is known as a <em>bit</em>.  8 bits form a <em>byte</em>.</p>
-<p>Remember from Unit 2 that a variable is a memory location that stores a value, as a sequence of bits.  The bits stored in the memory has no meaning by itself.  It has to be interpreted by the machine code.  Does a sequence of 1s and 0s represent an integer?  A pixel of an image?  A sound sample in an audio clip?  A month?   As a programmer, we have to tag the variable with its <em>type</em>, so that the machine code knows how to interpret the sequence of bits.  In addition, the type also tells the machine code, how many bits "belong" to this variable.  The number of bits of a type is also known as the <em>size</em> of a type.</p>
-<p>The size of a type determines how many different values a variable of that type can hold.  For instance, a type of one bit can only hold two possible values (e.g., <code class="codehilite">0</code> or <code class="codehilite">1</code>, <code class="codehilite">true</code> or <code class="codehilite">false</code>, <code class="codehilite">black</code> or <code class="codehilite">white</code>).  A type of two bits can hold four values, represented as <code class="codehilite">00</code>, <code class="codehilite">01</code>, <code class="codehilite">10</code>, <code class="codehilite">11</code>.  In general, a type of <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> bits can hold <span><span class="MathJax_Preview">2^k</span><script type="math/tex">2^k</script></span> values.</p>
-<h3 id="integers">Integers</h3>
-<p>To represent integers, a type of 8 bits can represent 256 different values.  If the type only represents non-negative integers (called <code class="codehilite">unsigned</code>), then it can hold any value between 0 to 255.  If it represents both positive and negative integers (called <code class="codehilite">signed</code>), it can hold any value between -128 to 127.  Depending on the needs (how much memory we have, how big is the number we need to represent), programmers have to decide on the size of the type used for a variable in their programs.  With 64 bits, a signed integer can store any value between -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.  This might look big enough for you -- but we can't even fit the results from <span><span class="MathJax_Preview">factorial(21)</span><script type="math/tex">factorial(21)</script></span> here!<br />
-We have to go to 128 bits to represent larger integers.</p>
-<h3 id="characters">Characters</h3>
-<p>To represent a character (i.e., a symbol representing a letter, number, punctuation, etc), we use 8 bits for English characters.  The ASCII standard maps 127 binary sequences to common characters you can type on your keyboard (including 0-9, A-Z, a-z, all sorts of punctuations: &lt;&gt;?:"{}!@#$%^&amp;*()_+-=[]\';/., and special characters like return and escape).  The unicode standard uses up to 32 bits per character, allowing many non-English letter characters (e.g., <a href="https://www.unicode.org/charts/PDF/U1F600.pdf">Emoticons</a>, <a href="https://www.unicode.org/charts/PDF/U2800.pdf">Braille</a>, <a href="https://www.unicode.org/charts/PDF/U1F000.pdf">Mahjong Tiles</a>) to be represented.</p>
-<h3 id="real-numbers">Real Numbers</h3>
-<p>For real numbers, because we need to represent a huge number of possible values, we normally use 32 bits or 64 bits.  In CS1231, you will learn that there are uncountably many possible real numbers.  But, no matter how many bits we use, we can only represent a finite number of possible values for real numbers.  Here, we run into a limit of digitizing information into 0s and 1s -- we can never represent all possible real numbers in a computer!  Because of this, programs that manipulate real numbers leads to weird answers (such as 0.1 + 0.2 is not exactly the same as 0.3) and so, we have to take special care when dealing with real numbers when writing programs (not just in C, but in many other languages as well).  Hence, if we only expect a variable to hold an integer, we should not choose a type that represents real numbers.</p>
-<p>The details of how a sequence of bits can represent integers and real numbers (both positive and negative numbers) are covered in CS2100. </p>
-<p>You should have also noticed that in the discussion above, we talk about types that are 8, 16, 32, 64, 128 bits -- all power of twos.  We do not have a type of size, say, 41 bits.  The reason for this has to do with how memory location is addressed.  This will again be explained in CS2100.</p>
-<h2 id="type-declaration">Type Declaration</h2>
-<p>In C, which we will use in CS1010, we have to associate <em>every</em> variable with a type, and once a variable is <em>declared</em> with a type, the type cannot be changed<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>.</p>
-<p>When we write a function, we have to declare the types of each of the parameters and the return value as well.  </p>
-<p>Take the function <span><span class="MathJax_Preview">mean(L, k)</span><script type="math/tex">mean(L, k)</script></span> as an example.  We have said that <span><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span> is a list<sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup> of integers.  So each element in <span><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span> should have an integer type (how many bits to use will depend on the range of numbers we want the program to possibly handle and how frugal we are about memory usage).  What about <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>?  <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> refers to the number of elements in <span><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>, so it has to be an integer.  As for the value returned by <span><span class="MathJax_Preview">mean(L, k)</span><script type="math/tex">mean(L, k)</script></span>, even when the inputs are all integers (and thus, the sum is an integer), the mean value can be a real number.  So we should choose a type that represents a real number for the return value.  </p>
-<div class="admonition warning">
-<p class="admonition-title">Importance of Type</p>
-<p>Choosing a wrong type to represent a variable can lead to buggy code.  Suppose we say that <span><span class="MathJax_Preview">mean(L, k)</span><script type="math/tex">mean(L, k)</script></span> returns an integer, then when we call <span><span class="MathJax_Preview">mean</span><script type="math/tex">mean</script></span> on the input <code class="codehilite">1 2 3 4</code>, we will get <code class="codehilite">2</code> as the answer, instead of <code class="codehilite">2.5</code> as it should.</p>
-</div>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p>This behavior is known as static typing.  Some programming languages, such as Javascript and Python, are dynamically typed.  The type of a variable may change depending on the value the variable is assigned to.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-<li id="fn:2">
-<p>We have not talked about how to represent a list yet.  I will do that in a later unit.&#160;<a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
+                <h1 id="unit-28-structures">Unit 28: Structures</h1>
+<p>We have so far been working with numbers, characters, and strings.  Not all real world objects can be easily abstracted and represented with numbers and characters.  It is useful to create our own <em>compound data type</em> that represent real worlds objects.  Each object typically has one or more attributes, which can be of different types: A module has a code, a title, and the number of MCs; A person has a name, height, weight, and age; A phone has a model, price, and brand.</p>
+<p>If you look back at the code that we have written, often there are multiple variables that are related to each other and "belongs together."  When we pass one as argument into a function, often we need to pass another.  It is useful to group them into a compound data type as well.  For instance: A 1D array and its length; A 2D array, its width, and its height; A pixel, its row, its column, and its color.</p>
+<h2 id="structure-in-c">Structure in C</h2>
+<p>In C, we can define a compound data type using a structure, through the C keyword <code class="codehilite">struct</code>.  The syntax looks like this:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">struct</span> <span class="n">matrix</span> <span class="p">{</span>
+  <span class="kt">double</span><span class="o">**</span> <span class="n">array</span><span class="p">;</span>
+  <span class="kt">long</span> <span class="n">num_of_rows</span><span class="p">;</span>
+  <span class="kt">long</span> <span class="n">num_of_columns</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</td></tr></table>
+
+<p>In the definition above, the structure is given a name, <code class="codehilite">matrix</code>.  The structure contains three <em>members</em>.  The first is a pointer to a 2D array, the other two is the number of rows and number of columns of that array.</p>
+<p><strong>Note</strong> that we need a semicolon <code class="codehilite">;</code> after the definition of a <code class="codehilite">struct</code>.</p>
+<p>Here are a few more examples:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">struct</span> <span class="n">circle</span> <span class="p">{</span>
+  <span class="kt">double</span> <span class="n">x_of_center</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">y_of_center</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">radius</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">struct</span> <span class="n">module</span> <span class="p">{</span>
+  <span class="kt">char</span> <span class="o">*</span><span class="n">code</span><span class="p">;</span>
+  <span class="kt">char</span> <span class="o">*</span><span class="n">title</span>
+  <span class="kt">long</span> <span class="n">mc</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="declaring-and-initializing-a-structure-variable">Declaring and Initializing a Structure Variable</h3>
+<p>Let's see an example of how we can declare and initialize a structure variable:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">struct</span> <span class="n">module</span> <span class="n">cs1010</span><span class="p">;</span>
+<span class="n">cs1010</span><span class="p">.</span><span class="n">code</span> <span class="o">=</span> <span class="s">&quot;CS1010&quot;</span><span class="p">;</span>
+<span class="n">cs1010</span><span class="p">.</span><span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Programming Methodology&quot;</span><span class="p">;</span>
+<span class="n">cs1010</span><span class="p">.</span><span class="n">mc</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+</pre></div>
+</td></tr></table>
+
+<p>Line 1 above declares a variable called <code class="codehilite">cs1010</code>.  Lines 2-4 initialize each member of the structure.  Note that we use <code class="codehilite">.</code> to access each member.</p>
+<p>An alternative is to use a <em>compound literal</em>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">struct</span> <span class="n">module</span> <span class="n">cs1010</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">.</span><span class="n">code</span> <span class="o">=</span> <span class="s">&quot;CS1010&quot;</span><span class="p">,</span>
+  <span class="p">.</span><span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Programming Methodology&quot;</span><span class="p">,</span>
+  <span class="p">.</span><span class="n">mc</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="p">};</span>
+</pre></div>
+</td></tr></table>
+
+<p>Using compound literal is convenient in certain cases, as uninitialized members are set to 0 (similar to initializers of arrays).</p>
+<p>You can read and write to individual members of a structure variable just like any other variables. </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cs1010.mc = hours_spent_per_week/2.5;
+cs1010_println_long(cs1010.mc);
+</pre></div>
+</td></tr></table>
+
+<h3 id="structure-as-parameters">Structure as Parameters</h3>
+<p>We can pass a structure variable into a function just like a non-array variable.  Unlike array, a <code class="codehilite">struct</code> is called by value, i.e., it is copied onto the call stack of the function.</p>
+<p>Hence, the code below does not actually update the MCs of CS1010:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>void update_mc(struct module cs1010, long hours_spent_per_week) {
+  cs1010.mc = hours_spent_per_week/2.5;
+}
+</pre></div>
+</td></tr></table>
+
+<p>To call a structure by reference, we can pass in its pointer.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>void update_mc(struct module *cs1010, long hours_spent_per_week) {
+  (*cs1010).mc = hours_spent_per_week/2.5;
+}
+</pre></div>
+</td></tr></table>
+
+<p>The latter example is a more common idiom.  Since a structure can contain multiple fields and usually occupies more bytes than a pointer, it is less efficient to copy a structure onto the call stack compared to copying its pointer.  </p>
+<p>Since this is common, C provides another syntax for accessing the member of a structure through its pointer, using the "arrow" notation"</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>void update_mc(struct module *cs1010, long hours_spent_per_week) {
+  cs1010-&gt;mc = hours_spent_per_week/2.5;
+}
+</pre></div>
+</td></tr></table>
+
+<h3 id="returning-a-structure">Returning a Structure</h3>
+<p>A function can return structure.  Remember in <a href="../17-call-by-reference/index.html">Unit 17</a> we said that C functions can return only one value and and one way to get around this limitation is to use call by reference and the other is to use <code class="codehilite">struct</code>?  Here is how we use <code class="codehilite">struct</code> to return more than one values:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>struct answer {
+  long max_n;
+  long max_num_steps
+}
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">struct</span> <span class="n">answer</span> <span class="nf">find_max_steps</span><span class="p">(</span><span class="kt">long</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">struct</span> <span class="n">answer</span> <span class="n">ans</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">.</span><span class="n">max_n</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">.</span><span class="n">max_num_steps</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="p">};</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">long</span> <span class="n">num_of_steps</span> <span class="o">=</span> <span class="n">count_num_of_steps</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">num_of_steps</span> <span class="o">&gt;=</span> <span class="n">ans</span><span class="p">.</span><span class="n">max_num_steps</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">ans</span><span class="p">.</span><span class="n">max_n</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+      <span class="n">ans</span><span class="p">.</span><span class="n">max_num_steps</span> <span class="o">=</span> <span class="n">num_of_steps</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>When a function returns a <code class="codehilite">struct</code>, the structure gets <em>copied</em> back to the caller.</p>
+<h3 id="defining-a-structure-as-a-type">Defining a Structure as a Type</h3>
+<p>To avoid writing the keyword 'struct<code class="codehilite">everytime we declare a variable or parameter, let&#39;s introduce another keyword in C:</code>typedef`.  </p>
+<p>C allows programmers to define their own type based on the existing types.  Suppose that I want a type that represent a color component (red, green, or blue) of a pixel.  Each pixel can has a value between 0 to 255.  So we can represent it with an <code class="codehilite">unsigned char</code>.  I can define:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">typedef</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">color_t</span><span class="p">;</span>
+</pre></div>
+</td></tr></table>
+
+<p>Recall that we use the suffix <code class="codehilite">_t</code> convention to denote user-defined type.  You have probably seen these two types elsewhere <code class="codehilite">size_t</code> and <code class="codehilite">time_t</code> in the past.</p>
+<p>Now that we have defined <code class="codehilite">color_t</code> as a new type that is equivalent to <code class="codehilite">unsigned char</code>, we can use it just like another other type:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>color_t r;
+
+void paint(color_t r, color_t g, color_t b);
+</pre></div>
+</td></tr></table>
+
+<p>Using <code class="codehilite">typedef</code> on <code class="codehilite">struct</code> frees us from typing the word <code class="codehilite">struct</code> everytime.  We can do so with either:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">typedef</span> <span class="k">struct</span> <span class="n">module</span> <span class="p">{</span>
+  <span class="kt">char</span> <span class="o">*</span><span class="n">code</span><span class="p">;</span>
+  <span class="kt">char</span> <span class="o">*</span><span class="n">title</span>
+  <span class="kt">long</span> <span class="n">mc</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">module</span><span class="p">;</span>
+</pre></div>
+</td></tr></table>
+
+<p>or</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+  <span class="kt">char</span> <span class="o">*</span><span class="n">code</span><span class="p">;</span>
+  <span class="kt">char</span> <span class="o">*</span><span class="n">title</span>
+  <span class="kt">long</span> <span class="n">mc</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">module</span><span class="p">;</span>
+</pre></div>
+</td></tr></table>
+
+<p>In either case, we can just use <code class="codehilite"><span class="k">module</span></code> like any other type:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>void update_mc(module cs1010, long hours_spent_per_week) {
+  cs1010.mc = hours_spent_per_week/2.5;
+}
+</pre></div>
+</td></tr></table>
+
+<p>If you use a third party libraries or C libraries, chances are you will come across such type.  Use of <code class="codehilite">typedef</code> on <code class="codehilite">struct</code> is controversial.  There is a school of thoughts that think it makes the code harder to read as it obscured the fact that a variable is a struct.  Hidden costs in copying the variable onto the call stack as parameter or returned value become non-obvious.  Interested students can read <a href="https://www.kernel.org/doc/html/v4.10/process/coding-style.html#typedefs">Linux's Kernel Coding Style</a> for the pros and cons of this approach.</p>
                 
                   
                 
@@ -1377,7 +1575,7 @@ We have to go to 128 bits to represent larger integers.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../03-func/index.html" title="3. Functions" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../27-queens/index.html" title="27. N Queens" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1386,19 +1584,19 @@ We have to go to 128 bits to represent larger integers.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                3. Functions
+                27. N Queens
               </span>
             </div>
           </a>
         
         
-          <a href="../05-first-c/index.html" title="5. First C Program" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../29-stdio/index.html" title="29. stdio" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                5. First C Program
+                29. stdio
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
