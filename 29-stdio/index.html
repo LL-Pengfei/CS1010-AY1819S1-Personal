@@ -304,6 +304,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pe2/index.html" title="Info About PE2" class="md-nav__link">
+      Info About PE2
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1512,7 +1524,7 @@
                 <h1 id="unit-29-standard-io-functions">Unit 29: Standard I/O Functions</h1>
 <p>We have been shielding you from the pain and pitfalls of using C I/O functions.  Since you are close to "graduate" from CS1010, this is a good time to show you what the real world is like.</p>
 <h2 id="printf">printf</h2>
-<p>The function <code class="codehilite">printf</code> is used to print a formatted string to the standard output.  Unlike functions that we have seen so far, <code class="codehilite">printf</code> can take in variable number of arguments, but it must have at least one argument -- a string written in a certain format.  The rest of the arguments can be of different types.  Let's look at an example:</p>
+<p>The function <code class="codehilite">printf</code> is used to print a formatted string to the standard output.  Unlike functions that we have seen so far, <code class="codehilite">printf</code> can take in a variable number of arguments, but it must have at least one argument -- a string written in a certain format.  The rest of the arguments can be of different types.  Let's look at an example:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">char</span> <span class="o">*</span><span class="n">name</span> <span class="o">=</span> <span class="s">&quot;Siri&quot;</span><span class="p">;</span>
 <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello! My name is %s.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span>
@@ -1526,12 +1538,12 @@
 </pre></div>
 </td></tr></table>
 
-<p>The letter after <code class="codehilite"><span class="c">%</span></code> controls the interpretion of the argument.  <code class="codehilite">s</code> for string, <code class="codehilite">c</code> for character, <code class="codehilite">d</code> for integer (base 10), <code class="codehilite">f</code> for floating point number, <code class="codehilite">p</code> for pointer (base 16).  We can additionally preprend this with <em>length modifier</em>.  <code class="codehilite">ld</code> for <code class="codehilite">long</code> integer, <code class="codehilite">lld</code> for <code class="codehilite">long long</code>, and <code class="codehilite">lf</code> for <code class="codehilite">double</code>.</p>
+<p>The letter after <code class="codehilite"><span class="c">%</span></code> controls the interpretation of the argument.  <code class="codehilite">s</code> for string, <code class="codehilite">c</code> for character, <code class="codehilite">d</code> for integer (base 10), <code class="codehilite">f</code> for floating point number, <code class="codehilite">p</code> for pointer (base 16).  We can additionally prepend this with <em>length modifier</em>.  <code class="codehilite">ld</code> for <code class="codehilite">long</code> integer, <code class="codehilite">lld</code> for <code class="codehilite">long long</code>, and <code class="codehilite">lf</code> for <code class="codehilite">double</code>.</p>
 <p>To format the output, we can prepend it with a number to indicate its <em>field width</em>, or minimum space used when printing.  E.g., <code class="codehilite"><span class="c">%3d</span></code> will pad the number printed with space if the number printed is less than 3 digits.  Adding a <em>flag</em> 0 in front, <code class="codehilite"><span class="c">%03d</span></code>, will pad the number with 0s if the number printed is less than 3 digits.  Other flags include <code class="codehilite">+</code>, which tells <code class="codehilite">printf</code> to print a sign (<code class="codehilite">+</code> or <code class="codehilite">-</code>) for the number.  For floating point numbers, we can additionally control the <em>precision</em>, or the number of digits printed after the decimal point.  <code class="codehilite"><span class="c">%3.4lf</span></code> will print a double to four decimal points.</p>
 <p>Note: <code class="codehilite">cs1010_println_double</code> uses <code class="codehilite"><span class="c">%.4lf</span></code> as the format modifier.</p>
 <h2 id="pitfalls-when-using-printf">Pitfalls when using <code class="codehilite">printf</code></h2>
 <h3 id="mismatch-types">Mismatch Types</h3>
-<p><code class="codehilite">printf</code> does not check for the type of arguments we pass to it.  The compiler does, but it only politely warns us instead of throwing error like other type mismatches.</p>
+<p><code class="codehilite">printf</code> does not check for the type of arguments we pass to it.  The compiler does, but it only politely warns us instead of throwing an error like other type mismatches.</p>
 <p>If you ignore such warnings, you might print strange things like:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="mi">100000000000</span><span class="p">,</span> <span class="mi">100000000000</span><span class="p">);</span>
 </pre></div>
@@ -1558,7 +1570,7 @@
 </pre></div>
 </td></tr></table>
 
-<p>The reason is that we have no control over what the user would type as input: the user may type "%s" into the standard  input, so the variable <code class="codehilite">str</code> now points to <code class="codehilite"><span class="nf">%s</span></code>, which <code class="codehilite">printf</code> treats as a format modifier, and output the content of the stack!  This is a huge security risk.</p>
+<p>The reason is that we have no control over what the user would type as input: the user may type "%s" into the standard input, so the variable <code class="codehilite">str</code> now points to <code class="codehilite"><span class="nf">%s</span></code>, which <code class="codehilite">printf</code> treats as a format modifier, and output the content of the stack!  This is a huge security risk.</p>
 <p>We should always print a string using:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="n">str</span><span class="p">);</span>
 </pre></div>
@@ -1583,7 +1595,7 @@
 
 <p><code class="codehilite">scanf</code> scans the standard input, try to match it to the format specified.
 The space in between the format specifier matches zero or more white spaces (space, tab, newline).  Scanning stops when an input character does not match such a format character or when an input conversion fails.</p>
-<p>Adding a <code class="codehilite">*</code> to the format modifier means that scanf should consume the inputs but not stored it in any variables.  This, combined with <code class="codehilite"><span class="c">%[``]</span></code> is useful to clear any remaining data from the standard input.</p>
+<p>Adding a <code class="codehilite">*</code> to the format modifier means that scanf should consume the inputs but not store it in any variables.  This, combined with <code class="codehilite"><span class="c">%[``]</span></code> is useful to clear any remaining data from the standard input.</p>
 <h2 id="pitfalls-when-using-scanf">Pitfalls When Using <code class="codehilite">scanf</code></h2>
 <h3 id="checking-for-error">Checking for Error</h3>
 <p>The function <code class="codehilite">scanf</code> fails silently when the input character does not match a format or when the input conversion fails.  It might return a totally unexpected input.  We should always check the return value of <code class="codehilite">scanf</code> to make sure that it is reading properly.</p>
@@ -1610,7 +1622,7 @@ The space in between the format specifier matches zero or more white spaces (spa
 </td></tr></table>
 
 <p>The above, however, does not properly "clear" the standard input of the incorrect input.  So the next <code class="codehilite">scanf</code> calls would still try to read it again!</p>
-<p>Th clear the input, we can use the <code class="codehilite"><span class="c">%*[^\n]</span></code> modifier, which read in any characters expect (<code class="codehilite">^</code>) the newline (<code class="codehilite">\n</code>).  </p>
+<p>To clear the input, we can use the <code class="codehilite"><span class="c">%*[^\n]</span></code> modifier, which read in any characters expect (<code class="codehilite">^</code>) the newline (<code class="codehilite">\n</code>).  </p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -1627,7 +1639,7 @@ The space in between the format specifier matches zero or more white spaces (spa
 </pre></div>
 </td></tr></table>
 
-<p>As a side note, the <code class="codehilite"><span class="c">%[]</span></code> modifier is useful to read in strings containing certain range of characters only.  E.g., you can read <code class="codehilite"><span class="c">%[a-zA-Z0-9]</span></code> to match any sequence of alphanumeric characters.</p>
+<p>As a side note, the <code class="codehilite"><span class="c">%[]</span></code> modifier is useful to read in strings containing a certain range of characters only.  E.g., you can read <code class="codehilite"><span class="c">%[a-zA-Z0-9]</span></code> to match any sequence of alphanumeric characters.</p>
 <h3 id="invalid-pointers">Invalid Pointers</h3>
 <p>Since <code class="codehilite">scanf</code> expects the caller to pass in pointers to variables for it to store the results, we need to be careful about what we pass in.  It is easy to pass in something like this:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -1638,7 +1650,7 @@ The space in between the format specifier matches zero or more white spaces (spa
 
 <p>The compiler would not warn us since the type matches perfectly.  The program may crash since the pointer is not pointing to a valid memory location accessible by the program.</p>
 <h3 id="buffer-overflow">Buffer Overflow</h3>
-<p>When we use <code class="codehilite">scanf</code> to read a string, it keeps reading until it reaches an empty space, and stores everything that it reads into an array.  The problem here is that, we do not know when it will stop reading, and therefore how big is the array that we need to allocate for the input!</p>
+<p>When we use <code class="codehilite">scanf</code> to read a string, it keeps reading until it reaches an empty space, and stores everything that it reads into an array.  The problem here is that we do not know when it will stop reading, and therefore how big is the array that we need to allocate for the input!</p>
 <p>Let's say we do:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
