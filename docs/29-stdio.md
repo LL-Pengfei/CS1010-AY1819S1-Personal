@@ -4,7 +4,7 @@ We have been shielding you from the pain and pitfalls of using C I/O functions. 
 
 ## printf
 
-The function `printf` is used to print a formatted string to the standard output.  Unlike functions that we have seen so far, `printf` can take in variable number of arguments, but it must have at least one argument -- a string written in a certain format.  The rest of the arguments can be of different types.  Let's look at an example:
+The function `printf` is used to print a formatted string to the standard output.  Unlike functions that we have seen so far, `printf` can take in a variable number of arguments, but it must have at least one argument -- a string written in a certain format.  The rest of the arguments can be of different types.  Let's look at an example:
 
 ```C
 char *name = "Siri";
@@ -21,7 +21,7 @@ The placeholder `%s` is called a _format modifier_.  It controls how to interpre
 %[flags][field_width][.precision][length_modifier]specifier
 ```
 
-The letter after `%` controls the interpretion of the argument.  `s` for string, `c` for character, `d` for integer (base 10), `f` for floating point number, `p` for pointer (base 16).  We can additionally preprend this with _length modifier_.  `ld` for `long` integer, `lld` for `long long`, and `lf` for `double`.
+The letter after `%` controls the interpretation of the argument.  `s` for string, `c` for character, `d` for integer (base 10), `f` for floating point number, `p` for pointer (base 16).  We can additionally prepend this with _length modifier_.  `ld` for `long` integer, `lld` for `long long`, and `lf` for `double`.
 
 To format the output, we can prepend it with a number to indicate its _field width_, or minimum space used when printing.  E.g., `%3d` will pad the number printed with space if the number printed is less than 3 digits.  Adding a _flag_ 0 in front, `%03d`, will pad the number with 0s if the number printed is less than 3 digits.  Other flags include `+`, which tells `printf` to print a sign (`+` or `-`) for the number.  For floating point numbers, we can additionally control the _precision_, or the number of digits printed after the decimal point.  `%3.4lf` will print a double to four decimal points.
 
@@ -31,7 +31,7 @@ Note: `cs1010_println_double` uses `%.4lf` as the format modifier.
 
 ### Mismatch Types
 
-`printf` does not check for the type of arguments we pass to it.  The compiler does, but it only politely warns us instead of throwing error like other type mismatches.
+`printf` does not check for the type of arguments we pass to it.  The compiler does, but it only politely warns us instead of throwing an error like other type mismatches.
 
 If you ignore such warnings, you might print strange things like:
 
@@ -67,7 +67,7 @@ char *str = cs1010_read_word();
 printf(str);
 ```
 
-The reason is that we have no control over what the user would type as input: the user may type "%s" into the standard  input, so the variable `str` now points to `%s`, which `printf` treats as a format modifier, and output the content of the stack!  This is a huge security risk.
+The reason is that we have no control over what the user would type as input: the user may type "%s" into the standard input, so the variable `str` now points to `%s`, which `printf` treats as a format modifier, and output the content of the stack!  This is a huge security risk.
 
 We should always print a string using:
 
@@ -95,7 +95,7 @@ scanf("%ld %lf %10s", &l, &d, s);
 `scanf` scans the standard input, try to match it to the format specified.
 The space in between the format specifier matches zero or more white spaces (space, tab, newline).  Scanning stops when an input character does not match such a format character or when an input conversion fails.
 
-Adding a `*` to the format modifier means that scanf should consume the inputs but not stored it in any variables.  This, combined with `%[``]` is useful to clear any remaining data from the standard input.
+Adding a `*` to the format modifier means that scanf should consume the inputs but not store it in any variables.  This, combined with `%[``]` is useful to clear any remaining data from the standard input.
 
 ## Pitfalls When Using `scanf`
 
@@ -123,7 +123,7 @@ if (result != 1) {
 
 The above, however, does not properly "clear" the standard input of the incorrect input.  So the next `scanf` calls would still try to read it again!
 
-Th clear the input, we can use the `%*[^\n]` modifier, which read in any characters expect (`^`) the newline (`\n`).  
+To clear the input, we can use the `%*[^\n]` modifier, which read in any characters expect (`^`) the newline (`\n`).  
 
 ```C
 long a;
@@ -135,7 +135,7 @@ if (result != 1) {
 }
 ```
 
-As a side note, the `%[]` modifier is useful to read in strings containing certain range of characters only.  E.g., you can read `%[a-zA-Z0-9]` to match any sequence of alphanumeric characters.
+As a side note, the `%[]` modifier is useful to read in strings containing a certain range of characters only.  E.g., you can read `%[a-zA-Z0-9]` to match any sequence of alphanumeric characters.
 
 ### Invalid Pointers
 
@@ -150,7 +150,7 @@ The compiler would not warn us since the type matches perfectly.  The program ma
 
 ### Buffer Overflow
 
-When we use `scanf` to read a string, it keeps reading until it reaches an empty space, and stores everything that it reads into an array.  The problem here is that, we do not know when it will stop reading, and therefore how big is the array that we need to allocate for the input!
+When we use `scanf` to read a string, it keeps reading until it reaches an empty space, and stores everything that it reads into an array.  The problem here is that we do not know when it will stop reading, and therefore how big is the array that we need to allocate for the input!
 
 Let's say we do:
 

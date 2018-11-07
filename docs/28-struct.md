@@ -1,8 +1,8 @@
 # Unit 28: Structures
 
-We have so far been working with numbers, characters, and strings.  Not all real world objects can be easily abstracted and represented with numbers and characters.  It is useful to create our own _compound data type_ that represent real worlds objects.  Each object typically has one or more attributes, which can be of different types: A module has a code, a title, and the number of MCs; A person has a name, height, weight, and age; A phone has a model, price, and brand.
+We have so far been working with numbers, characters, and strings.  Not all real-world objects can be easily abstracted and represented with numbers and characters.  It is useful to create our own _compound data type_ that represent real worlds objects.  Each object typically has one or more attributes, which can be of different types: A module has a code, a title, and the number of MCs; A person has a name, height, weight, and age; A phone has a model, price, and brand.
 
-If you look back at the code that we have written, often there are multiple variables that are related to each other and "belongs together."  When we pass one as argument into a function, often we need to pass another.  It is useful to group them into a compound data type as well.  For instance: A 1D array and its length; A 2D array, its width, and its height; A pixel, its row, its column, and its color.
+If you look back at the code that we have written, often there are multiple variables that are related to each other and "belongs together."  When we pass one as an argument into a function, often we need to pass another.  It is useful to group them into a compound data type as well.  For instance: A 1D array and its length; A 2D array, its width, and its height; A pixel, its row, its column, and its color.
 
 ## Structure in C
 
@@ -72,7 +72,7 @@ cs1010_println_long(cs1010.mc);
 
 ### Structure as Parameters
 
-We can pass a structure variable into a function just like a non-array variable.  Unlike array, a `struct` is called by value, i.e., it is copied onto the call stack of the function.
+We can pass a structure variable into a function just like a non-array variable.  Unlike an array, a `struct` is called by value, i.e., it is copied onto the call stack of the function.
 
 Hence, the code below does not actually update the MCs of CS1010:
 
@@ -102,7 +102,7 @@ void update_mc(struct module *cs1010, long hours_spent_per_week) {
 
 ### Returning a Structure
 
-A function can return structure.  Remember in [Unit 17](17-call-by-reference.md) we said that C functions can return only one value and and one way to get around this limitation is to use call by reference and the other is to use `struct`?  Here is how we use `struct` to return more than one values:
+A function can return structure.  Remember in [Unit 17](17-call-by-reference.md) we said that C functions can return only one value and one way to get around this limitation is to use call by reference and the other is to use `struct`?  Here is how we use `struct` to return more than one values:
 
 ```
 struct answer {
@@ -133,9 +133,9 @@ When a function returns a `struct`, the structure gets _copied_ back to the call
 
 ### Defining a Structure as a Type
 
-To avoid writing the keyword 'struct` everytime we declare a variable or parameter, let's introduce another keyword in C: `typedef`.  
+To avoid writing the keyword 'struct` every time we declare a variable or parameter, let's introduce another keyword in C: `typedef`.  
 
-C allows programmers to define their own type based on the existing types.  Suppose that I want a type that represent a color component (red, green, or blue) of a pixel.  Each pixel can has a value between 0 to 255.  So we can represent it with an `unsigned char`.  I can define:
+C allows programmers to define their own type based on the existing types.  Suppose that I want a type that represents a color component (red, green, or blue) of a pixel.  Each pixel can have a value between 0 to 255.  So we can represent it with an `unsigned char`.  I can define:
 
 ```C
 typedef unsigned char color_t;
@@ -143,7 +143,7 @@ typedef unsigned char color_t;
 
 Recall that we use the suffix `_t` convention to denote user-defined type.  You have probably seen these two types elsewhere `size_t` and `time_t` in the past.
 
-Now that we have defined `color_t` as a new type that is equivalent to `unsigned char`, we can use it just like another other type:
+Now that we have defined `color_t` as a new type that is equivalent to `unsigned char`, we can use it just like another type:
 
 ```
 color_t r;
@@ -151,7 +151,7 @@ color_t r;
 void paint(color_t r, color_t g, color_t b);
 ```
 
-Using `typedef` on `struct` frees us from typing the word `struct` everytime.  We can do so with either:
+Using `typedef` on `struct` frees us from typing the word `struct` every time.  We can do so with either:
 
 ```C
 typedef struct module {
@@ -180,6 +180,6 @@ void update_mc(module cs1010, long hours_spent_per_week) {
 }
 ```
 
-If you use a third party libraries or C libraries, chances are you will come across such type.  Use of `typedef` on `struct` is controversial.  There is a school of thoughts that think it makes the code harder to read as it obscured the fact that a variable is a struct.  Hidden costs in copying the variable onto the call stack as parameter or returned value become non-obvious.  Interested students can read [Linux's Kernel Coding Style](https://www.kernel.org/doc/html/v4.10/process/coding-style.html#typedefs) for the pros and cons of this approach.
+If you use third-party libraries or C libraries, chances are you will come across such type.  Use of `typedef` on `struct` is controversial.  There is a school of thoughts that think it makes the code harder to read as it obscured the fact that a variable is a struct.  Hidden costs in copying the variable onto the call stack as a parameter or returned value become non-obvious.  Interested students can read [Linux's Kernel Coding Style](https://www.kernel.org/doc/html/v4.10/process/coding-style.html#typedefs) for the pros and cons of this approach.
 
 
