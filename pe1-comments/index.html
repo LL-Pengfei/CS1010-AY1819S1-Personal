@@ -1867,18 +1867,86 @@
 <p><strong>Unnecessary Loops</strong>  This is another strange but common code that you have written.  I did not deduct marks since efficiency is not a criterion for PE1 -- but I am puzzled why you write code like this. </p>
 <p>Let's say I ask you this question: 31 plus what equals to 100?  Any primary school students can tell you, take 100, subtract 31, you get 69.  So 31 + 69 = 100.   </p>
 <p>This is not many of you do to find the answer.  What you do is equivalent to:</p>
-<p><code class="codehilite">Cfor (j = 1; j &lt;= 100; j += 1) {if (31 + j == 100) {cs1010_println_long(j);}}</code></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">;</span> <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="mi">31</span> <span class="o">+</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">100</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cs1010_println_long</span><span class="p">(</span><span class="n">j</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
 <p>Essentially, checking is 31 + 1 equal to 100?  is 31 + 2 equals to 100? etc. until you find an answer.  After that, you continue to check, is 31 + 70 equals to 100? is 31 + 71 equal to 100? and so on.</p>
 <p>This is just silly &gt;.&lt;</p>
 <p>In the context of <code class="codehilite">goldbach</code>, the code you wrote is:</p>
-<p><code class="codehilite">Cfor (long i = 0; i &lt;= n/2; i += 1) {if (is_prime(i)) {for (long j = 0; j &lt; n; j += 1) {if (i + j == n) {if (is_prime(j)) {count += 1;}}}}}</code></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">is_prime</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="n">j</span> <span class="o">==</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">is_prime</span><span class="p">(</span><span class="n">j</span><span class="p">))</span> <span class="p">{</span>
+           <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
 <p>Can you see where the silly loop appears above?</p>
 </li>
 <li>
 <p><strong>Short Circuiting</strong> I have shown an example of short-circuiting in class, using exactly checking of prime as an example.  However, some of you still wrote code like the following.  This is another disappointment and I am tempted to deduct marks (but didn't).  The improper use of short-circuiting often occurs with the silly loop to solve <code class="codehilite">n - i</code> above.</p>
-<p><code class="codehilite">Cfor (long i = 0; i &lt;= n/2; i += 1) {if (is_prime(i)) {for (long j = 0; j &lt; n; j += 1) {if (is_prime(j) &amp;&amp; i + j == n) {count += 1;}}}}</code></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">is_prime</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">is_prime</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">+</span> <span class="n">j</span> <span class="o">==</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
 <p>Here, the code is spending lots of time checking if j is a prime.  After that, if i + j is not n, (which is likely since there is only one such j), we do nothing.  The effort in checking if j is prime is wasted.  Remember: do not do redundant work.</p>
-<p><code class="codehilite">Cfor (long i = 0; i &lt;= n/2; i += 1) {for (long j = 0; j &lt; n; j += 1) {if (is_prime(i) &amp;&amp; is_prime(j) &amp;&amp; i + j == n) {count += 1;}}}</code></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">long</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">is_prime</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">is_prime</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">+</span> <span class="n">j</span> <span class="o">==</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
 <p>This is even worse -- note that the code above checks if i is prime, repeatedly, even if i does not change between Lines 3-5.  Remember: do not do repetitive work.</p>
 </li>
 <li>
