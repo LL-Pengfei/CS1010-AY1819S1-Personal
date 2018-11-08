@@ -1610,14 +1610,16 @@
 42
 43
 44
-45</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cm">/**</span>
+45
+46</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Update the frequency table for a new subtring of length k of s2,</span>
 <span class="cm"> * starting from position start.</span>
 <span class="cm"> *</span>
-<span class="cm"> * @pre start &gt;= 1 &amp;&amp; start &lt;= n - k</span>
-<span class="cm"> * @param[in,out] freq The frequency table to update</span>
-<span class="cm"> * @param[in] s2 The string</span>
-<span class="cm"> * @param[in] start The beginning position of the substring</span>
+<span class="cm"> * @pre start &gt;= 1 &amp;&amp; start &lt;= n - k.  The input string s2 contains </span>
+<span class="cm"> *      only &#39;a&#39;-&#39;z&#39;.</span>
+<span class="cm"> * @param[in,out] freq The frequency table to update.</span>
+<span class="cm"> * @param[in] s2 The string.</span>
+<span class="cm"> * @param[in] start The beginning position of the substring.</span>
 <span class="cm"> * @param[in] k The length of the substring.</span>
 <span class="cm"> */</span>
 <span class="kt">void</span> <span class="nf">update_frequency</span><span class="p">(</span><span class="kt">long</span> <span class="n">freq2</span><span class="p">[</span><span class="mi">26</span><span class="p">],</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">s2</span><span class="p">,</span> <span class="kt">int</span> <span class="n">start</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
@@ -1628,7 +1630,7 @@
 <span class="cm">/**</span>
 <span class="cm"> * Find if s1 is a permutation of a substring of s2.</span>
 <span class="cm"> *</span>
-<span class="cm"> * @param[in] s1 The (shorter) string</span>
+<span class="cm"> * @param[in] s1 The (shorter) string.</span>
 <span class="cm"> * @param[in] s2 The string to search for a permutation of s1 in.</span>
 <span class="cm"> *</span>
 <span class="cm"> * @return true if s1 is a permutation of a substring of s2.</span>
