@@ -1,10 +1,11 @@
+
 # Assignment 6: Comments
 
 ## Notes on Marking Schemes
 
 For brevity, I won't repeat the detailed marking scheme, as it is the same as before.  One major change is that we start to deduct marks for documentation format errors.
 
-The other major change is that we starts to award marks based on efficiency of the solution.
+The other major change is that we start to award marks based on the efficiency of the solution.
 
 ### Permutation 1
 
@@ -18,7 +19,7 @@ If the code does not produce the correct output, 0 marks for both efficiency and
 
 If the code produces the correct output, then give up to 3 marks for correctness. If the solution is in O(n), then add 5 marks for efficiency. If it is slower than O(n), 0 marks for efficiency.
 
-If the code does unnecessary or repetitive work (e.g., compute strlen repeatedly even if the string does not change). We may deduct 1 mark per occurance of such inefficient code even if the code still runs in the same big O.
+If the code does unnecessary or repetitive work (e.g., compute strlen repeatedly even if the string does not change). We may deduct 1 mark per occurrence of such inefficient code even if the code still runs in the same big O.
 
 ### Permutation 3
 
@@ -26,19 +27,19 @@ If the code does not produce the correct output, 0 marks for both efficiency and
 
 If the code produces the correct output, then give up to 5 marks for correctness. Maximum marks for efficiency: 2 for O(nk^2) solution, 4 for O(nk) and 7 for O(n+k).
 
-Same as before, if students are doing unnecessary work or repetitive work (e.g., compute strlen repeatedly even if the string does not change). You can deduct 1 mark per occurance of such inefficient code even if the code still runs in the same big O (they have been told).
+Same as before, if students are doing unnecessary work or repetitive work (e.g., compute strlen repeatedly even if the string does not change). You can deduct 1 mark per occurrence of such inefficient code even if the code still runs in the same big O (they have been told).
 
 ## Answer Keys
 
 ### Permutation 1
 
-This is an easy question, since the limit for this is $O(n^2)$.  There are many different ways to solve this.  A solution is to sort the input arrays using either selection sort, bubble sort, or insertion sort, then checks if both arrays are equal.  If you know of a faster sort (quick sort or merge sort -- CS2040C stuff) then you can actually solve this in $O(n \log n)$ time.
+This is an easy question since the limit for this is $O(n^2)$.  There are many different ways to solve this.  A solution is to sort the input arrays using either selection sort, bubble sort, or insertion sort then checks if both arrays are equal.  If you know of a faster sort (quick sort or merge sort -- CS2040C stuff) then you can actually solve this in $O(n \log n)$ time.
 
-Another approach is the following: for every element in $L_1$, look for it in $L_2$, then remove the matched element from the $L_2$.  If we can find every element of $L_1$ in $L_2$, then they are permutation of each other.
+Another approach is the following: for every element in $L_1$, look for it in $L_2$, then remove the matched element from the $L_2$.  If we can find every element of $L_1$ in $L_2$, then they are a permutation of each other.
 
-The tricky part here is how to remove the matched element in $L_2$.  If you remove the matched element by shifting the elements in $L_2$ to "cover the hole", you will end up with an $O(n^3)$ algorithm.  You might also want to erase the element by setting the element to 0 or -1 (similar to `mastermind`).  But, since 0 and -1 are both valid inputs, we can't distinguish between an erased element and a valid input in this case.   A better way is to move the matched element to the end of the array (similar to selection sort) and don't check it again.  
+The tricky part here is how to remove the matched element in $L_2$.  If you remove the matched element by shifting the elements in $L_2$ to "cover the hole", you will end up with a $O(n^3)$ algorithm.  You might also want to erase the element by setting the element to 0 or -1 (similar to `mastermind`).  But, since 0 and -1 are both valid inputs, we can't distinguish between an erased element and a valid input in this case.   A better way is to move the matched element to the end of the array (similar to selection sort) and don't check it again.  
 
-Some students take the solution for Permutation 2 and applies it to Permutation 1.  This does not work, since for Permutation 2 the range of the elements is small (lowercase alphabets), while for Permutation 1, it's all possible integers!  
+Some students take the solution for Permutation 2 and apply it to Permutation 1.  This does not work, since for Permutation 2 the range of the elements is small (lowercase alphabets), while for Permutation 1, it's all possible integers!  
 
 ### Permutation 2
 
@@ -84,11 +85,11 @@ bool is_permutation(const long freq1[26], const long freq2[26]) {
 
 ### Permutation 3
 
-This is a more interesting and challenging question.  Let's see first how we can solve this naively.  A straightforward method is to find all possible substring of length $k$ from $S_2$, and then use the solution to Permutation 1 to solve it.  We have to check $O(n-k) = $O(n)$ such possible subtrings, and each check takes $O(k^2)$ time.  
+This is a more interesting and challenging question.  Let's see first how we can solve this naively.  A straightforward method is to find all possible substring of length $k$ from $S_2$, and then use the solution to Permutation 1 to solve it.  We have to check $O(n-k) = $O(n)$ such possible substrings, and each check takes $O(k^2)$ time.  
 
 If we use the solution of Permutation 2 to check each substring, each check takes $O(k)$ time only, and so the total running time is $O(nk)$.  Doing so would already give you 11 out of 14 marks!
 
-To get $O(n + k)$ time, we need a bit of analyze to avoid redundant work.  Let's think about how we find all possible substring of length $k$ from a string `s`.  We can scan from left to right, checking substring `s[0]..s[k-1]`, then `s[1]..s[k]`, then `s[2]..s[k+1]`.  Remember that, from the solution of Permutation 2, "checking" means that we count how many times each alphabet appears in the string `s[0]..s[k-1]`, in the string `s[1]..s[k]` etc.  But do we really need to to re-count everything everytime we check a new substring?  The principle of avoiding repetitive work applies here -- the two substrings `s[0]..s[k-1]` and `s[1]..s[k]` share a common substring `s[1]..s[k-1]` so we do not really need to count those alphabets again!
+To get $O(n + k)$ time, we need a bit of analyzing to avoid redundant work.  Let's think about how we find all possible substring of length $k$ from a string `s`.  We can scan from left to right, checking substring `s[0]..s[k-1]`, then `s[1]..s[k]`, then `s[2]..s[k+1]`.  Remember that, from the solution of Permutation 2, "checking" means that we count how many times each alphabet appears in the string `s[0]..s[k-1]`, in the string `s[1]..s[k]` etc.  But do we really need to re-count everything everytime we check a new substring?  The principle of avoiding repetitive work applies here -- the two substrings `s[0]..s[k-1]` and `s[1]..s[k]` share a common substring `s[1]..s[k-1]` so we do not really need to count those alphabets again!
 
 As such, we can just update incrementally the number of occurances of each alphabet, by decrementing the count for `s[0]`, and incrementing the count for `s[k]`.  As we move from `s[1]..s[k]` to `s[2]..s[k+1]`, we decrement the count for `s[1]` and increment the count for `s[k+1]`, etc.  This can be done in constant time (irrespective of $k$ and $n$), or $O(1)$ time.
 
