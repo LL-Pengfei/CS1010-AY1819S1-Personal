@@ -1667,11 +1667,11 @@ Every element in in[right+1]..in[len-1] &lt; min(in[left], in[right])
 Every element in in[left+1]..in[right-1] &gt; min(in[left], in[right])
 </pre></div>
 </td></tr></table></p>
-<p>which is why it is safe to output the minimum among <code class="codehilite">in[left]</code> and <code class="codehilite">in[right]</code> to the output array ensuring that it is in sorted order.</p>
+<p>which is why putting the minimum of <code class="codehilite">in[left]</code> and <code class="codehilite">in[right]</code> to the output array ensures that it is in sorted order.</p>
 <p>The figures below illustrate this invariant -- elements in <code class="codehilite">in[0]..in[left-1]</code> and <code class="codehilite">in[right+1]..in[len-1]</code> are in gray.</p>
 <p><img alt="invariant" src="../figures/scripts/scripts.003.png" /></p>
 <p>Since we only move <code class="codehilite">left</code> or <code class="codehilite">right</code> on the smaller of the <code class="codehilite">in[left]</code> or <code class="codehilite">in[right]</code>, the invariant is maintained in every loop. </p>
-<p>Let's consider the case where <code class="codehilite">in[right] &lt; in[left]</code>.    We know that </p>
+<p>Let's consider the case where <code class="codehilite">in[right] &lt; in[left]</code>.    We can simplify the invariants to:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Every element in in[0]..in[left-1] &lt; in[right]
