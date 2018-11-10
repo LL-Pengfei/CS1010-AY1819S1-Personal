@@ -1767,12 +1767,12 @@
 <h3 id="the-algorithm">The Algorithm</h3>
 <p>Let's define the distance between the two handwritten digits <span><span class="MathJax_Preview">d(x_1, x_2)</span><script type="math/tex">d(x_1, x_2)</script></span> as the number of pixels that are different between them, i.e., how many pixels are <code class="codehilite">#</code> in one image but is <code class="codehilite">.</code> in the image.</p>
 <p>Given a test sample, <span><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span>, we find the distance between <span><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> and all the available training samples and find the <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> training samples with the smallest distance (i.e., <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> nearest neighbors).  <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> is usually small -- we use <span><span class="MathJax_Preview">k = 5</span><script type="math/tex">k = 5</script></span> in this assignment.</p>
-<p>The intuition is that <span><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> must be "close" to the training data that has the same labels (i.e., the same digits).  So we look at the these <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> nearest neighbors and find the most common digit <span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> among them.   We then recognize <span><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> as containing the digit <span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>.  If the most common digit is not unique, then we break ties by returning the smaller digit (we should return the closer digit, but let's do this for simplicity).</p>
+<p>The intuition is that <span><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> must be "close" to the training data that has the same labels (i.e., the same digits).  So we look at the these <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> nearest neighbors and find the most common digit <span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span> among them.   We then recognize <span><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> as containing the digit <span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>.  If there are <ins class="critic"> more than one most common digits or more than k nearest neighbors </ins>, then we break ties by returning the smaller digit (we should do something smarter than this, by return the closer digit, but let's do this for simplicity).</p>
 <h3 id="efficiency">Efficiency</h3>
 <p>Suppose we have <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> training samples, recognizing a digit should take no more than <span><span class="MathJax_Preview">O(kn)</span><script type="math/tex">O(kn)</script></span> time (or <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> since <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> is a constant).</p>
 <p>There is also an opportunity to stop early the calculation of the distance between two handwritten digits if the distance is too large, pruning away redundant work. </p>
 <h3 id="example">Example</h3>
-<p>Consider the following simple example with six training samples and testing query.
+<p>Consider the following simple example with six training samples and a test sample.
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
   2
   3
@@ -2124,7 +2124,7 @@
 ............................
 </pre></div>
 </td></tr></table></p>
-<p>The query is 
+<p>The test sample is 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -2186,7 +2186,7 @@
 ............................
 </pre></div>
 </td></tr></table></p>
-<p>The distance between the test and the training data are 101, 120, 162, 174, 173, 162 respectively.  The <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> nearest neighbors belongs to digit 0, 0, 0, 1, 1.  The majority of these neighbors is 0, so we conclude (correctly) that the test data contains digit 0.</p>
+<p>The distances between the test sample and each of the training sampes are 101, 120, 162, 174, 173, 162.  The <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> nearest neighbors belong to digits 0, 0, 0, 1, and 1.  The most common digit among these neighbors is 0, so we conclude (correctly) that the test sample is digit 0.</p>
 <h3 id="using-struct">Using <code class="codehilite">struct</code></h3>
 <p>One of the objectives of this assignment is to see if you know how to use <code class="codehilite">struct</code> (refer to <a href="../28-struct/index.html">Unit 28</a>.  Appropriate use of <code class="codehilite">struct</code> is critical for the design and correctness marks for this assignment.</p>
 <h3 id="inputoutput">Input/Output</h3>
@@ -2208,7 +2208,7 @@
 <p>Then prints, to the standard output, the following:</p>
 <p>For each testing sample, 
 - print the digit it is labeled as, followed by a space, followed by the digit it is recognized as</p>
-<p>Finally, print a <code class="codehilite">double</code> value that corresponds to the accuracy, i.e, the percentage of training samples correctly recognized.</p>
+<p>Finally, print a <code class="codehilite">double</code> value that corresponds to the accuracy, i.e, the percentage of <del class="critic">training</del> testing samples correctly recognized.</p>
 <p>We separated the training samples and testing samples into two files, so the usual way of redirecting a file into your program does not work anymore (since you need two files). </p>
 <p>The way to run your program is to do the following:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cat &lt;training samples&gt; &lt;testing samples&gt; | ./digits
