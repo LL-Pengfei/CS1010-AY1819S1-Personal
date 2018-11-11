@@ -27,7 +27,7 @@ struct circle {
   double x_of_center;
   double y_of_center;
   double radius;
-}
+};
 ```
 
 ```C
@@ -35,7 +35,7 @@ struct module {
   char *code;
   char *title;
   long mc;
-}
+};
 ```
 
 ### Declaring and Initializing a Structure Variable
@@ -107,15 +107,15 @@ A function can return structure.  Remember in [Unit 17](17-call-by-reference.md)
 ```
 struct answer {
   long max_n;
-  long max_num_steps
-}
+  long max_num_steps;
+};
 ```
 
 ```C
 struct answer find_max_steps(long n) {
   struct answer ans = {
     .max_n = 1,
-    .max_num_steps = 0,
+    .max_num_steps = 0
   };
   for (long i = 1; i <= n; i += 1) {
     long num_of_steps = count_num_of_steps(i);
