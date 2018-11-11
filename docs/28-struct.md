@@ -156,7 +156,7 @@ Using `typedef` on `struct` frees us from typing the word `struct` every time.  
 ```C
 typedef struct module {
   char *code;
-  char *title
+  char *title;
   long mc;
 } module;
 ```
@@ -167,7 +167,7 @@ or
 ```C
 typedef struct {
   char *code;
-  char *title
+  char *title;
   long mc;
 } module;
 ```
