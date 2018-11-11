@@ -33,7 +33,7 @@ struct circle {
 ```C
 struct module {
   char *code;
-  char *title
+  char *title;
   long mc;
 }
 ```
@@ -63,7 +63,7 @@ struct module cs1010 = {
 
 Using compound literal is convenient in certain cases, as uninitialized members are set to 0 (similar to initializers of arrays).
 
-You can read and write to individual members of a structure variable just like any other variables. 
+You can read and write to individual members of a structure variable just like any other variables.
 
 ```
 cs1010.mc = hours_spent_per_week/2.5;
@@ -181,5 +181,3 @@ void update_mc(module cs1010, long hours_spent_per_week) {
 ```
 
 If you use third-party libraries or C libraries, chances are you will come across such type.  Use of `typedef` on `struct` is controversial.  There is a school of thoughts that think it makes the code harder to read as it obscured the fact that a variable is a struct.  Hidden costs in copying the variable onto the call stack as a parameter or returned value become non-obvious.  Interested students can read [Linux's Kernel Coding Style](https://www.kernel.org/doc/html/v4.10/process/coding-style.html#typedefs) for the pros and cons of this approach.
-
-
