@@ -1,0 +1,15 @@
+# Bonus Unit 31: Dynamic list
+
+Let's say that we have create a `struct` called `list` that represents a dynamic list of numbers, where we can insert and remove numbers from the list.
+
+```C
+typedef struct list {
+  long *array;
+  long size;
+  long last;
+} list;
+```
+
+where the member `array` points to the memory where an array has been allocated, the member `size` points to the number of elements allocated, and the member `last` points to the index of the last element in the list.
+
+Let's say we write two functions, `list_create` that
