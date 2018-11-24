@@ -18,7 +18,7 @@ Let's see how we can formulate the problem recursively.  The first step is to si
 
 ### Approach 1: Generate All Permutations
 
-As a start, let's borrow the idea from [Unit 26](26-permutations.md) and generate all permutations of the queens' positions.  Let's label the columns `a`, `b`, `c`, .. etc.  Since we know that there must be exactly one queen in each row, and one queen in each column, the positions of the queens can be represented as a string that is a permutation of `abcde..`.  For instance, the solution of the 4-queen problem depicted above can be represented by `bdac`.
+As a start, let's borrow the idea from [Unit 26](26-permutation.md) and generate all permutations of the queens' positions.  Let's label the columns `a`, `b`, `c`, .. etc.  Since we know that there must be exactly one queen in each row, and one queen in each column, the positions of the queens can be represented as a string that is a permutation of `abcde..`.  For instance, the solution of the 4-queen problem depicted above can be represented by `bdac`.
 
 A simple algorithm is thus to generate all possible $n!$ permutations, and for each one, check if it is a valid placement.  We already ensure that there is exactly one queen per row and one queen per column.  It remains to check that the queens do not threaten each other diagonally.
 
@@ -112,3 +112,107 @@ In the code for Approach 2 above, we check if the queens placed on Rows 0 to `ro
 ### Problem 27.2
 
 Consider the code to generate all possible permutations of a string from Problem 26.1.  Suppose that we restrict the permutations to those where the same character does not appear next to each other.  Modify the solution to Problem 26.1 to prune away permutations where the same character appears more than once consecutively.
+
+## Appendix: Complete Code Written in Lecture
+
+```C
+#include "cs1010.h"
+#include <stdbool.h>
+#include <unistd.h>
+
+void draw(char queens[], long n, long row) {
+  static char clear_screen[] = { 27, '[', '2', 'J',27, '[', ';', 'H', 0};
+  cs1010_print_string(clear_screen);
+  for (long i = 0; i <= row; i += 1) {
+    for (char col = 'a'; col < 'a' + n; col += 1) {
+      if (queens[i] == col) {
+        putchar('#');
+      } else {
+        putchar('.');
+      }
+    }
+    putchar('\n');
+  }
+  for (long i = row+1; i < n; i += 1) {
+    for (long col = 0; col < n; col += 1) {
+      putchar('.');
+    }
+    putchar('\n');
+  }
+  usleep(10000);
+}
+
+void swap(char a[], long i, long j) {
+  char temp = a[i];
+  a[i] = a[j];
+  a[j] = temp;
+}
+
+bool has_a_queen_in_diagonal(const char queens[], long len, long i) {
+  char curr_col = queens[i];
+  char left_col = curr_col - 1;
+  char right_col = curr_col + 1;
+  for (long row = i+1; row < len; row += 1) {
+    if (queens[row] == left_col || queens[row] == right_col) {
+      return true;
+    }
+    left_col -= 1;
+    right_col += 1;
+  }
+  return false;
+}
+
+bool threaten_each_other_diagonally(char queens[], long len) {
+  for (long i = 0; i < len; i += 1) {
+    // for each queen in row i, check rows i+1 onwards, 
+    // on both left (-=1) and right (+=1) side, if there 
+    // is a queen in that column.
+    if (has_a_queen_in_diagonal(queens, len, i)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+bool nqueens(char queens[], long n, long row) {
+  if (row == n-1) {
+    draw(queens, n, row);
+    if (!threaten_each_other_diagonally(queens, n)) {
+      cs1010_println_string(queens);
+      return true;
+    }
+    return false;
+  }
+  if (!threaten_each_other_diagonally(queens, row)) {
+    bool result = nqueens(queens, n, row+1);
+    if (result) {
+      return true;
+    }
+  }
+  for (long i = row+1; i < n; i+= 1) {
+    swap(queens, row, i);
+    if (!threaten_each_other_diagonally(queens, row)) {
+      bool result = nqueens(queens, n, row+1);
+      if (result) {
+        return true;
+      }
+    }
+    swap(queens, i, row);
+  }
+  return false;
+}
+
+int main() 
+{
+  long n = cs1010_read_long();
+  char queens[n+1];
+  char curr = 'a';
+  for (long i = 0; i < n; i++) {
+    queens[i] = curr;
+    curr += 1;
+  }
+  queens[n] = '\0';
+
+  nqueens(queens, n, 0);
+}
+```
