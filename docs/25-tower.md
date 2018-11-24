@@ -97,3 +97,41 @@ Thus, solving the Tower of Hanoi with $k$ disks takes $2^k-1$ steps.
 Suppose that we add a new restriction to the Tower of Hanoi puzzle.  Let's say that the disks are on Peg A (or Peg 1) to begin with, and {++ we want to move the disk to Peg C (or Peg 3). ++} We are only allowed to move a disk either to {-- Peg A --} Peg B from another peg or from {-- Peg A --} Peg B to another peg.  In other words, we cannot move the disks between {-- Peg B or Peg C. --} Peg A and Peg C directly.
 
 Change the recursive algorithm above to solve the Tower of Hanoi with this new restriction.  How many steps (use big O notation) are needed now?
+
+## Appendix: Complete Code
+
+```C
+#include "cs1010.h"
+
+/**
+ * Move Disk k from Peg source to Peg dest.
+ *
+ * @param[in] k The disk to move
+ * @param[in] source The peg Disk k is currently at.
+ * @param[in] dest The peg Disk k is moved to.
+ */
+void move(long k, long source, long dest) {
+  cs1010_print_string("Disk ");
+  cs1010_print_long(k);
+  cs1010_print_string(": Peg ");
+  cs1010_print_long(source);
+  cs1010_print_string(" -> Peg ");
+  cs1010_println_long(dest);
+}
+
+void solve(long k, long source, long dest, long placeholder) {
+  if (k == 1) {
+    move(k, source, dest);
+    return;
+  }
+
+  solve(k - 1, source, placeholder, dest);
+  move(k, source, dest);
+  solve(k - 1, placeholder, dest, source);
+}
+
+int main() {
+  long k = cs1010_read_long();
+  solve(k, 1, 3, 2);
+}
+```
