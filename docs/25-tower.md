@@ -77,7 +77,7 @@ An equation of this form is called a _recurrance equation_.  You can learn how t
 
 You can see that:
 
-$$T(k) = 2T(k-1) + 1 = 4T(k-2) + 2 + 1 = 8T(k-2) + 4 + 2 + 1 = ...$$
+$$T(k) = 2T(k-1) + 1 = 4T(k-2) + 2 + 1 = 8T(k-3) + 4 + 2 + 1 = ...$$
 
 So,
 
@@ -94,6 +94,6 @@ Thus, solving the Tower of Hanoi with $k$ disks takes $2^k-1$ steps.
 
 ### Problem 25.1
 
-Suppose that we add a new restriction to the Tower of Hanoi puzzle.  Let's say that the disks are on Peg A (or Peg 1) to begin with, and we are only allowed to move a disk either to Peg A from another peg or from Peg A to another peg.  In other words, we cannot move the disks between Peg B or Peg C.  
+Suppose that we add a new restriction to the Tower of Hanoi puzzle.  Let's say that the disks are on Peg A (or Peg 1) to begin with, and {++ we want to move the disk to Peg C (or Peg 3). ++} We are only allowed to move a disk either to {-- Peg A --} Peg B from another peg or from {-- Peg A --} Peg B to another peg.  In other words, we cannot move the disks between {-- Peg B or Peg C. --} Peg A and Peg C directly.
 
 Change the recursive algorithm above to solve the Tower of Hanoi with this new restriction.  How many steps (use big O notation) are needed now?
