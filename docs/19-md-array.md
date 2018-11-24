@@ -129,7 +129,7 @@ long matrix[3][3] = {
 Note that we use nested `{` and `}` here.  There are other variations to the syntax above, which you may read up on your own if you are interested as we do not need to write complex initializers for multi-dimensional arrays that often.
 
 ## Problem Set
-### Problem Set 19.1
+### Problem 19.1
 
 Write two functions described below.  Show how you would declare the parameters to each function and how you would call each function.
 
@@ -137,7 +137,7 @@ a) Write a function `add` that performs 3x3 matrix addition. The function should
 
 b) Write a function `multiply` that performs 3x3 matrix multiplication. The function should operate on 3x3 matrices of `long`, takes in three parameters, the first two are the operands for multiplication and the third is the result.
 
-### Problem Set 19.2
+### Problem 19.2
 
 We need to represent the distance in km between every major cities in the world. Let's label every city with a number, ranging from 0 .. $n-1$, where $n$ is the number of cities.  The distance between city $i$ and $j$ is the same as the distance between city $j$ and $i$.  The distance can be represented with `long`.
 
