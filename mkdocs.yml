@@ -1,7 +1,11 @@
 pages:
   - Home: 'index.md'
   - Midterm: 'midterm.md'
-  - Practical Exam: 'pe1.md'
+  - Practical Exams: 
+      - Info About PE1: 'pe1.md'
+      - PE1 Comments and Answers: 'pe1-comments.md'
+      - Info About PE2: 'pe2.md'
+      - PE2 Comments and Answers: 'pe2-comments.md'
   - General:
       - About CS1010: 'about.md'
       - Learning Outcomes: 'outcomes.md'
@@ -32,11 +36,18 @@ pages:
       - 21. Assert:  '21-assert.md'
       - 22. Efficiency:  '22-efficiency.md'
       - 23. Binary Search:  '23-search.md'
+      - 24. Sorting:  '24-sort.md'
+      - 25. Tower of Hanoi:  '25-tower.md'
+      - 26. Permutation:  '26-permutation.md'
+      - 27. N Queens:  '27-queens.md'
+      - 28. Structure:  '28-struct.md'
+      - 29. stdio:  '29-stdio.md'
   - Exercises: 
       - 1. Freezer: 'ex01.md'
       - 2. Leap, Suffix, Days: 'ex02.md'
       - 3. Binary, Rectangle, Fibonacci, Prime: 'ex03.md'
       - 4. ID, Grade, Index, Max: 'ex04.md'
+      - 5. Square, Escape, Magic: 'ex05.md'
   - Assignments: 
       - General Guide: 'assignment.md'
       - 1. Invest, Box, Digits, and Taxi: 'as01.md'
@@ -44,8 +55,19 @@ pages:
       - 2. Collatz, Weekday, Circle, Pattern: 'as02.md'
       - 2. Comments and Answer Keys: 'as02-comments.md'
       - 3. Kendall, Histogram, CountingSort: 'as03.md'
+      - 3. Comments and Answer Keys: 'as03-comments.md'
       - 4. SelectionSort, Add, Mastermind: 'as04.md'
+      - 4. Comments and Answer Keys: 'as04-comments.md'
       - 5. Social, Life: 'as05.md'
+      - 5. Comments and Answer Keys: 'as05-comments.md'
+      - 6. Permutation 1 2 3: 'as06.md'
+      - 6. Comments and Answer Keys: 'as06-comments.md'
+      - 7. Peak, Scripts, Inversion: 'as07.md'
+      - 7. Comments and Answer Keys: 'as07-comments.md'
+      - 8. Maze, Fill: 'as08.md'
+      - 8. Comments and Answer Keys: 'as08-comments.md'
+      - 9. Digits: 'as09.md'
+      - 9. Comments and Answer Keys: 'as09-comments.md'
   - Quizzes: 'quiz.md'
   - Kahoot!:
       - Flow Charts: 'kahoot01.md'
@@ -58,6 +80,7 @@ pages:
       - UNIX: 'unix.md'
       - CLang: 'clang.md'
       - Vim: 'vim.md'
+      - LLDB: 'lldb.md'
       - CS1010 I/O: 'library.md'
 
 # pip install pymdown-extensions
