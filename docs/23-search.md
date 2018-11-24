@@ -129,3 +129,36 @@ We have seen that if the input list is not sorted, then we minimally have to che
 
 With a sorted input and using binary search, however, we can do a better.  Let's consider the worst case, where $q$ is not in the list.  Note that every comparison we make, we reduce the range of elements to search by half, until we reach one element.  We start with $n$ elements that could possibly contain $q$.  After one comparison, we are left with $n/2$.  After another comparison, we are left with $n/4$, etc.  It takes only $O(\log_2 n)$ steps until we reach one element in the list.  This is a big improvement over $O(n)$ time!
 
+## Appendix: Complete Code
+
+```C
+#include "cs1010.h"
+
+/* Look for q in list[i]..list[j].
+ *
+ * @pre list is sorted in increasing order
+ * @pre q is not in list[0]..list[i-1], list[j+1]..list[n-1]
+ * @return -1 if not found, the position of q in list otherwise.
+ */
+long search(const long list[], long i, long j, long q) {
+  if (j < i) {
+    return -1;
+  }
+  long mid = (i+j)/2;
+  if (list[mid] == q) {
+    return mid;
+  }
+  if (list[mid] > q) {
+    return search(list, i, mid-1, q);
+  } 
+  // { list[mid] < q }
+  return search(list, mid+1, j, q);
+}
+
+int main()
+{
+  long a[] = {1, 3, 5, 9, 11, 13, 14, 19};
+  long q = cs1010_read_long();
+  cs1010_println_long(search(a, 0, 7, q)); 
+}
+```
