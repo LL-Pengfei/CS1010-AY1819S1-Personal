@@ -1869,12 +1869,12 @@
 <p><ins class="critic">Update:</ins> Line 6 of the function was originally:
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>      <span class="k">if</span> <span class="p">(</span><span class="n">is_prime_or_semiprime</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">==</span> <span class="n">PRIME</span> <span class="o">&amp;&amp;</span> <span class="n">is_prime_or_semiprime</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="n">i</span><span class="p">)</span> <span class="o">==</span> <span class="n">PRIME</span><span class="p">)</span> <span class="p">{</span>
 </pre></div>
-</td></tr></table>
-We have replaced the line with
+</td></tr></table></p>
+<p>We have replaced the line with
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>      <span class="k">if</span> <span class="p">(</span><span class="n">is_prime</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">is_prime</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="n">i</span><span class="p">))</span> <span class="p">{</span>
 </pre></div>
-</td></tr></table>
-so that the running time is clearly <span><span class="MathJax_Preview">O(\sqrt{n})</span><script type="math/tex">O(\sqrt{n})</script></span>.  </p>
+</td></tr></table></p>
+<p>so that the running time can be analyzed to be <span><span class="MathJax_Preview">O(\sqrt{n})</span><script type="math/tex">O(\sqrt{n})</script></span> in a more straight forward manner.  </p>
 <p>With the above function, finding the number of pairs is not much different from <code class="codehilite">goldbach</code>:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
